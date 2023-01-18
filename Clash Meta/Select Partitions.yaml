@@ -47,16 +47,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  ;D:
-    type: http
-    path: ./profiles/proxies/D.yaml
-    url: 订阅链接
-    interval: 259200
-    filter: 
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
       
 proxy-groups:
   - name: PROXY
@@ -66,7 +56,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - Hong Kong
       - Taiwan
@@ -84,7 +73,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - HK
 
@@ -95,7 +83,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - TW
 
@@ -106,7 +93,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - SG
 
@@ -117,7 +103,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - KR
 
@@ -128,7 +113,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - JP
 
@@ -139,7 +123,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - US
 
@@ -150,7 +133,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - UK
 
@@ -161,11 +143,10 @@ proxy-groups:
       - A
       - B
       - C
-      - D
     proxies:
       - TR
 
-  - name: HK
+  - name: 🇭🇰 HK
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan)).*(香港))'
     url: http://www.gstatic.com/generate_204
@@ -174,9 +155,8 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
-  - name: TW
+  - name: 🇨🇳 TW
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan)).*(台湾))'
     url: http://www.gstatic.com/generate_204
@@ -185,9 +165,8 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
-  - name: SG
+  - name: 🇸🇬 SG
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan|日，美，韩，)).*(新加坡|狮城))'
     url: http://www.gstatic.com/generate_204
@@ -196,9 +175,8 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
-  - name: KR
+  - name: 🇰🇷 KR
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan)).*(韩国))'
     url: http://www.gstatic.com/generate_204
@@ -207,9 +185,8 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
-  - name: JP
+  - name: 🇯🇵 JP
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan)).*(日本))'
     url: http://www.gstatic.com/generate_204
@@ -218,9 +195,8 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
-  - name: US
+  - name: 🇺🇲 US
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan)).*(美国))'
     url: http://www.gstatic.com/generate_204
@@ -229,9 +205,8 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
-  - name: UK
+  - name: 🇬🇧 UK
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan)).*(英国))'
     url: http://www.gstatic.com/generate_204
@@ -240,9 +215,8 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
-  - name: TR
+  - name: 🇹🇷 TR
     type: fallback
     filter: '(^(?!.*(日用|TEST|Trojan)).*(土耳其))'
     url: http://www.gstatic.com/generate_204
@@ -251,7 +225,6 @@ proxy-groups:
       - A
       - B
       - C
-      - D
 
 rule-providers:
   reject:
