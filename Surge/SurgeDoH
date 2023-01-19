@@ -1,0 +1,45 @@
+[General]
+loglevel = notify
+bypass-system = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
+internet-test-url = http://www.cdn.aliyun.com/generate_204
+proxy-test-url = http://cp.cloudflare.com/generate_204
+test-timeout = 5
+dns-server = 119.29.29.29, 223.5.5.5
+allow-wifi-access = false
+doh-server = https://dns.alidns.com/dns-query
+
+
+[Proxy Group]
+Proxy = select, Fallback,policy-regex-filter=(?!.*(A)).*(B),policy-path=订阅链接
+Fallback = fallback,include-all-proxies=true,update-interval=43200,hidden=1
+[Rule]
+PROCESS-NAME,v2ray,DIRECT
+PROCESS-NAME,xray,DIRECT
+PROCESS-NAME,clash,DIRECT
+PROCESS-NAME,naive,DIRECT
+PROCESS-NAME,trojan,DIRECT
+PROCESS-NAME,trojan-go,DIRECT
+PROCESS-NAME,ss-local,DIRECT
+PROCESS-NAME,privoxy,DIRECT
+PROCESS-NAME,leaf,DIRECT
+PROCESS-NAME,Thunder,DIRECT
+PROCESS-NAME,DownloadService,DIRECT
+PROCESS-NAME,qBittorrent,DIRECT
+PROCESS-NAME,Transmission,DIRECT
+PROCESS-NAME,fdm,DIRECT
+PROCESS-NAME,aria2c,DIRECT
+PROCESS-NAME,Folx,DIRECT
+PROCESS-NAME,NetTransport,DIRECT
+PROCESS-NAME,uTorrent,DIRECT
+PROCESS-NAME,WebTorrent,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,REJECT
+RULE-SET,SYSTEM,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt,Proxy,force-remote-dns
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/direct.txt,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/telegramcidr.txt,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt,DIRECT
+RULE-SET,LAN,DIRECT
+FINAL,Proxy,dns-failed
