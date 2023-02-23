@@ -94,3 +94,4 @@ rename_node=(美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉
 rename_node=(乌拉圭|UY|Uruguay)@UY 
 rename_node=(南非|ZA|South Africa)@ZA 
 rename_node=(欧洲|欧盟)@EU 
+rename_node=!!script:https://raw.githubusercontent.com/Saw1g88/Saw/main/handle.js
