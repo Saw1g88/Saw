@@ -16,7 +16,7 @@ allow-wifi-access = false
 🌏 亚澳节点 = select,🇹🇼 台湾节点,🇹🇷 土耳其节点,🇮🇳 印度节点,🇲🇾 马来西亚节点,🇦🇪 迪拜节点,🇰🇭 柬埔寨节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇵🇭 菲律宾节点,🇮🇩 印尼节点,🇦🇺 澳洲节点
 🌍 欧非节点 = select,🇷🇺 俄罗斯节点,🇬🇧 英国节点,🇩🇪 德国节点,🇫🇷 法国节点,🇮🇹 意大利节点,🇭🇺 匈牙利节点,🇵🇱 波兰节点,🇪🇬 埃及节点
 🌎 美洲节点 = select,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇦🇷 阿根廷节点,🇧🇷 巴西节点
-🪙 低倍率节点 = select,policy-regex-filter=(.*0\.[1-9]),policy-path=https://v1.cutdog.net/api/v1/client/subscribe?token=92476ea8f614112872235cf05b73e1c1|https://xsus.buzz/api/v1/client/subscribe?token=0875eb752b8ee5ce9f88dc5de9c75f80|https://dy.xftld.xyz/api/v1/client/subscribe?token=cdabc96be3151e6fd2c7c48c0c47307f|https://api.yuansu.uk/v1/client/subscribe?token=a5081c25f9883732655081797587ee5f
+🪙 低倍率节点 = select,policy-regex-filter=(.*0\.[1-9]),policy-path=订阅链接
 🇨🇳 国内直连 = select,DIRECT,hidden=1
 🇭🇰 香港节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(香港|HK|Hong Kong)),hidden=1
 🇹🇼 台湾节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(台湾|台北|台中|新北|彰化|TW|Taiwan))
