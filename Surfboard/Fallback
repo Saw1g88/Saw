@@ -7,76 +7,58 @@ allow-wifi-access = false
 
 
 [Proxy Group]
-💻 代理网站 = select,🇭🇰 香港节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇲 美国节点,🇨🇳 国内直连,🌏 亚澳节点,🌍 欧非节点,🌎 美洲节点,🪙 低倍率节点
-🎬 影视媒体 = select,🇭🇰 香港节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇲 美国节点,🇨🇳 国内直连,🌏 亚澳节点,🌍 欧非节点,🌎 美洲节点,🪙 低倍率节点
-📱 社交媒体 = select,🇭🇰 香港节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇲 美国节点,🇨🇳 国内直连,🌏 亚澳节点,🌍 欧非节点,🌎 美洲节点,🪙 低倍率节点
-🧩 谷歌服务 = select,🇭🇰 香港节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇲 美国节点,🇨🇳 国内直连,🌏 亚澳节点,🌍 欧非节点,🌎 美洲节点,🪙 低倍率节点
-Ⓜ️ 微软服务 = select,🇭🇰 香港节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇲 美国节点,🇨🇳 国内直连,🌏 亚澳节点,🌍 欧非节点,🌎 美洲节点,🪙 低倍率节点
-©️ ChatGPT = select,🇭🇰 香港节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇲 美国节点,🇨🇳 国内直连,🌏 亚澳节点,🌍 欧非节点,🌎 美洲节点,🪙 低倍率节点
-🌏 亚澳节点 = select,🇹🇼 台湾节点,🇹🇷 土耳其节点,🇮🇳 印度节点,🇲🇾 马来西亚节点,🇦🇪 迪拜节点,🇰🇭 柬埔寨节点,🇹🇭 泰国节点,🇻🇳 越南节点,🇵🇭 菲律宾节点,🇮🇩 印尼节点,🇦🇺 澳洲节点
-🌍 欧非节点 = select,🇷🇺 俄罗斯节点,🇬🇧 英国节点,🇩🇪 德国节点,🇫🇷 法国节点,🇮🇹 意大利节点,🇭🇺 匈牙利节点,🇵🇱 波兰节点,🇪🇬 埃及节点
-🌎 美洲节点 = select,🇨🇦 加拿大节点,🇲🇽 墨西哥节点,🇦🇷 阿根廷节点,🇧🇷 巴西节点
-🪙 低倍率节点 = select,policy-regex-filter=(.*0\.[1-9]),policy-path=订阅链接
-🇨🇳 国内直连 = select,DIRECT,hidden=1
-🇭🇰 香港节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(香港|HK|Hong Kong)),hidden=1
-🇹🇼 台湾节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(台湾|台北|台中|新北|彰化|TW|Taiwan))
-🇸🇬 新加坡节点 = fallbackinclude-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(新加坡|狮城|SG|Singapore))
-🇯🇵 日本节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(日本|东京|大阪|埼玉|JP|Japan))
-🇰🇷 韩国节点 = fallbackinclude-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(韩国|韩|韓|首尔|KR|KOR|Korea))
-🇹🇷 土耳其节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(土耳其|伊斯坦布尔|TR|Turkey))
-🇮🇳 印度节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(印度|孟买|新德里|IN|India))
-🇰🇭 柬埔寨节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(柬埔寨|金边|KH|Kampuchea|Cambodia))
-🇦🇪 迪拜节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(阿联酋|迪拜|AE|United Arab Emirates))
-🇲🇾 马来西亚节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(马来西亚|马来|大马|MY|Malaysia))
-🇹🇭 泰国节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(泰国|泰|曼谷|TH|Thailand))
-🇻🇳 越南节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(越南|VN|Vietnam))
-🇵🇭 菲律宾节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(菲律宾|菲|马尼拉|PH|Philippines))
-🇮🇩 印尼节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(印度尼西亚|印尼|雅加达|ID|Indonesia))
-🇦🇺 澳洲节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(澳大利亚|澳洲|澳|悉尼|AU|Australia|Sydney))
-🇷🇺 俄罗斯节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(俄罗斯|莫斯科|RU|Russia))
-🇬🇧 英国节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(英国|伦敦|UK|GBR|England|United Kingdom))
-🇩🇪 德国节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(德国|法兰克福|DE|Germany))
-🇫🇷 法国节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(法国|巴黎|FR|France))
-🇮🇹 意大利节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(意大利|意|米兰|IT|Italy))
-🇭🇺 匈牙利节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(匈牙利|HU|Hungary))
-🇵🇱 波兰节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(波兰|波蘭|Poland))
-🇪🇬 埃及节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(埃及|开罗|EG|Egypt))
-🇺🇲 美国节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(美国|US|USA|America|United States))
-🇨🇦 加拿大节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(加拿大|蒙特利尔|温哥华|CA|Canada))
-🇲🇽 墨西哥节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(墨西哥|MX|Mexico))
-🇦🇷 阿根廷节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(阿根廷|AR|Argentina))
-🇧🇷 巴西节点 = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(巴西|圣保罗|BR|Brazil))
+🎬 Videos = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+🎵 Music = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+📱 Social = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+💭 AI = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+🇬 Google = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+🪟 Microsoft = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+🗺️ Proxy = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+🇨🇳 China = fallback,DIRECT,hidden=1
+🇭🇰 Hong Kong = fallback,policy-path=订阅链接,policy-regex-filter=香港|HK|Hong Kong,hidden=1
+🇹🇼 Taiwan = fallback,include-all-proxies=true,policy-regex-filter=台湾|台北|台中|新北|彰化|TW|Taiwan,hidden=1
+🇸🇬 Singapore = fallbackinclude-all-proxies=true,policy-regex-filter=新加坡|狮城|SG|Singapore,hidden=1
+🇯🇵 Japan = fallback,include-all-proxies=true,policy-regex-filter=日本|东京|大阪|埼玉|JP|Japan,hidden=1
+🇰🇷 South Korea = fallbackinclude-all-proxies=true,policy-regex-filter=韩国|韩|韓|首尔|KR|KOR|Korea,hidden=1
+🇹🇷 Turkey = fallback,include-all-proxies=true,policy-regex-filter=土耳其|伊斯坦布尔|TR|Turkey,hidden=1
+🇮🇳 India = fallback,include-all-proxies=true,policy-regex-filter=印度|孟买|新德里|IN|India,hidden=1
+🇬🇧 United Kingdom = fallback,include-all-proxies=true,policy-regex-filter=英国|伦敦|UK|GBR|England|United Kingdom,hidden=1
+🇺🇲 United States = fallback,include-all-proxies=true,policy-regex-filter=美国|US|USA|America|United States,hidden=1
 
 
 [Rule]
-DOMAIN-KEYWORD,netfly.tv,DIRECT
-DOMAIN-KEYWORD,netfly.one,DIRECT
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/LocalAreaNetwork.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/UnBan.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleCN.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/BanAD.list,REJECT
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/BanProgramAD.list,REJECT
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/BanEasyListChina.list,REJECT
-DOMAIN-KEYWORD,openai,©️ ChatGPT
-PROCESS-NAME,com.google.android.youtube,🎬 影视媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/YouTube.list,🎬 影视媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Porn.list,🎬 影视媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,🧩 谷歌服务
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list,🧩 谷歌服务
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Google.list,🧩 谷歌服务
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/OneDrive.list,Ⓜ️ 微软服务
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Microsoft.list,Ⓜ️ 微软服务
-PROCESS-NAME,org.telegram.messenger,📱 社交媒体
-PROCESS-NAME,com.twitter.android,📱 社交媒体
-PROCESS-NAME,com.facebook.katana,📱 社交媒体
-PROCESS-NAME,com.instagram.android,📱 社交媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Telegram.list,📱 社交媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Twitter.list,📱 社交媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Facebook.list,📱 社交媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Instagram.list,📱 社交媒体
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/ProxyLite.list,💻 代理网站
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list,💭 AI
+DOMAIN-KEYWORD,bing.com,💭 AI
+PROCESS-NAME,com.google.android.apps.youtube.music,🎵 Music
+PROCESS-NAME,com.spotify.music,🎵 Music
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTubeMusic.list,🎵 Music
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Spotify.list,🎵 Music
+PROCESS-NAME,com.google.android.youtube,🎬 Videos
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/YouTube.list,🎬 Videos
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Porn.list,🎬 Videos
+PROCESS-NAME,org.telegram.messenger,📱 Social
+PROCESS-NAME,com.twitter.android,📱 Social
+PROCESS-NAME,com.facebook.katana,📱 Social
+PROCESS-NAME,com.instagram.android,📱 Social
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Telegram.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Twitter.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Facebook.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Instagram.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,🇬 Google
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list,🇬 Google
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Google.list,🇬 Google
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/OneDrive.list,🪟 Microsoft
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Microsoft.list,🪟 Microsoft
+
+RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/ProxyLite.list,🗺️ Proxy
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/ChinaDomain.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/ChinaCompanyIp.list,DIRECT
 IP-CIDR,192.168.0.0/16,DIRECT
 GEOIP,CN,DIRECT
-FINAL,💻 代理网站
+FINAL,🗺️ Proxy
