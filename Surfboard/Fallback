@@ -17,26 +17,25 @@ allow-wifi-access = false
 
 
 #Nodes
-Proxy = fallback,policy-path=订阅链接,hidden=1
 🇨🇳 China = fallback,DIRECT,hidden=1
-🇭🇰 Hong Kong = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(香港|HK|Hong Kong)),hidden=1
-🇹🇼 Taiwan = fallback,include-all-proxies=true,policy-regex-filter=台湾|台北|台中|新北|彰化|TW|Taiwan,hidden=1
-🇸🇬 Singapore = fallbackinclude-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(新加坡|狮城|SG|Singapore)),hidden=1
-🇯🇵 Japan = fallback,include-all-proxies=true,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(日本|东京|大阪|埼玉|JP|Japan)),hidden=1
-🇰🇷 South Korea = fallbackinclude-all-proxies=true,policy-regex-filter=韩国|韩|韓|首尔|KR|KOR|Korea,hidden=1
-🇹🇷 Turkey = fallback,include-all-proxies=true,policy-regex-filter=土耳其|伊斯坦布尔|TR|Turkey,hidden=1
-🇮🇳 India = fallback,include-all-proxies=true,policy-regex-filter=印度|孟买|新德里|IN|India,hidden=1
-🇬🇧 United Kingdom = fallback,include-all-proxies=true,policy-regex-filter=英国|伦敦|UK|GBR|England|United Kingdom,hidden=1
-🇺🇲 United States = fallback,include-all-proxies=true,policy-regex-filter=美国|US|USA|America|United States,hidden=1
+🇭🇰 Hong Kong = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(香港|HK|Hong Kong)),hidden=1
+🇹🇼 Taiwan = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(台湾|台北|台中|新北|彰化|TW|Taiwan)),hidden=1
+🇸🇬 Singapore = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(新加坡|狮城|SG|Singapore)),hidden=1
+🇯🇵 Japan = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(日本|东京|大阪|埼玉|JP|Japan)),hidden=1
+🇰🇷 South Korea = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(韩国|韩|韓|首尔|KR|KOR|Korea)),hidden=1
+🇹🇷 Turkey = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(土耳其|伊斯坦布尔|TR|Turkey)),hidden=1
+🇮🇳 India = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(印度|孟买|新德里|IN|India)),hidden=1
+🇬🇧 United Kingdom = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(英国|伦敦|UK|GBR|England|United Kingdom)),hidden=1
+🇺🇲 United States = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(美国|US|USA|America|United States)),hidden=1
 
 
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/LocalAreaNetwork.list,DIRECT
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/UnBan.list,DIRECT
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleCN.list,DIRECT
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/BanAD.list,REJECT
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/BanProgramAD.list,REJECT
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/BanEasyListChina.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list,REJECT
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list,💭 AI
 DOMAIN-KEYWORD,bing.com,💭 AI
 PROCESS-NAME,com.google.android.apps.youtube.music,🎵 Music
@@ -44,25 +43,24 @@ PROCESS-NAME,com.spotify.music,🎵 Music
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTubeMusic.list,🎵 Music
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Spotify.list,🎵 Music
 PROCESS-NAME,com.google.android.youtube,🎬 Videos
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/YouTube.list,🎬 Videos
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Porn.list,🎬 Videos
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list,🎬 Videos
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Porn.list,🎬 Videos
 PROCESS-NAME,org.telegram.messenger,📱 Social
 PROCESS-NAME,com.twitter.android,📱 Social
 PROCESS-NAME,com.facebook.katana,📱 Social
 PROCESS-NAME,com.instagram.android,📱 Social
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Telegram.list,📱 Social
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Twitter.list,📱 Social
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Facebook.list,📱 Social
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Instagram.list,📱 Social
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,🇬 Google
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list,🇬 Google
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Google.list,🇬 Google
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/OneDrive.list,🪟 Microsoft
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Ruleset/Microsoft.list,🪟 Microsoft
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Telegram.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Twitter.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Facebook.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Instagram.list,📱 Social
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,🇬 Google
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list,🇬 Google
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list,🇬 Google
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OneDrive.list,🪟 Microsoft
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Microsoft.list,🪟 Microsoft
 
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/ProxyLite.list,🗺️ Proxy
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/ChinaDomain.list,DIRECT
-RULE-SET,https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/ChinaCompanyIp.list,DIRECT
-IP-CIDR,192.168.0.0/16,DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list,🗺️ Proxy
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,DIRECT
 GEOIP,CN,DIRECT
 FINAL,🗺️ Proxy
