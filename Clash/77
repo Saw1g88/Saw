@@ -1,0 +1,298 @@
+mixed-port: 7890
+allow-lan: false
+mode: Rule
+log-level: silent
+external-controller: 127.0.0.1:60000
+dns:
+enable: true
+listen: 0.0.0.0:53
+ipv6: false
+enhanced-mode: fake-ip
+fake-ip-range: 198.18.0.1/16
+fake-ip-filter:
+  - ‘*.lan’
+  - localhost.ptlogin2.qq.com
+nameserver:
+  - 119.29.29.29
+  - 223.5.5.5
+
+proxy-providers:
+  A:
+    type: http
+    path: ./profiles/proxies/A.yaml
+    url: 订阅链接
+    interval: 259200
+    filter: 
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  B:
+    type: http
+    path: ./profiles/proxies/B.yaml
+    url: 订阅链接
+    interval: 259200
+    filter: 
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  C:
+    type: http
+    path: ./profiles/proxies/C.yaml
+    url: 订阅链接
+    interval: 259200
+    filter: 
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  D:
+    type: http
+    path: ./profiles/proxies/C.yaml
+    url: 订阅链接
+    interval: 259200
+    filter: 
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300      
+   
+      
+proxy-groups:
+  - name: 🎬 Videos
+    type: select
+    filter: 
+    use:
+    
+    proxies:
+      - 🇭🇰 Hong Kong
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇺🇲 United States
+      - 🇹🇼 Taiwan
+      - 🇰🇷 South Korea
+      - 🇮🇳 India
+      - 🇹🇷 Turkey
+      - 🇬🇧 United Kingdom
+      - 🇨🇳 China
+      
+  - name: 🎵 Music
+    type: select
+    filter: 
+    use:
+    
+    proxies:
+      - 🇭🇰 Hong Kong
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇺🇲 United States
+      - 🇹🇼 Taiwan
+      - 🇰🇷 South Korea
+      - 🇮🇳 India
+      - 🇹🇷 Turkey
+      - 🇬🇧 United Kingdom
+      - 🇨🇳 China
+      
+  - name: 📱 Social
+    type: select
+    filter: 
+    use:
+    
+    proxies:
+      - 🇭🇰 Hong Kong
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇺🇲 United States
+      - 🇹🇼 Taiwan
+      - 🇰🇷 South Korea
+      - 🇮🇳 India
+      - 🇹🇷 Turkey
+      - 🇬🇧 United Kingdom
+      - 🇨🇳 China
+      
+  - name: 💭 AI
+    type: select
+    filter: 
+    use:
+    
+    proxies:
+      - 🇭🇰 Hong Kong
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇺🇲 United States
+      - 🇹🇼 Taiwan
+      - 🇰🇷 South Korea
+      - 🇮🇳 India
+      - 🇹🇷 Turkey
+      - 🇬🇧 United Kingdom
+      - 🇨🇳 China
+      
+  - name: 🇬 Google
+    type: select
+    filter: 
+    use:
+    
+    proxies:
+      - 🇭🇰 Hong Kong
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇺🇲 United States
+      - 🇹🇼 Taiwan
+      - 🇰🇷 South Korea
+      - 🇮🇳 India
+      - 🇹🇷 Turkey
+      - 🇬🇧 United Kingdom
+      - 🇨🇳 China
+      
+  - name: 🪟 Microsoft
+    type: select
+    filter: 
+    use:
+    
+    proxies:
+      - 🇭🇰 Hong Kong
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇺🇲 United States
+      - 🇹🇼 Taiwan
+      - 🇰🇷 South Korea
+      - 🇮🇳 India
+      - 🇹🇷 Turkey
+      - 🇬🇧 United Kingdom
+      - 🇨🇳 China
+      
+  - name: 🗺️ Proxy
+    type: select
+    filter: 
+    use:
+    
+    proxies:
+      - 🇭🇰 Hong Kong
+      - 🇸🇬 Singapore
+      - 🇯🇵 Japan
+      - 🇺🇲 United States
+      - 🇹🇼 Taiwan
+      - 🇰🇷 South Korea
+      - 🇮🇳 India
+      - 🇹🇷 Turkey
+      - 🇬🇧 United Kingdom
+      - 🇨🇳 China      
+
+  - name: 🇭🇰 Hong Kong
+    type: fallback
+    filter: '香港'
+    use:
+      - A
+      - B
+      - C
+      - D
+      
+  - name: 🇸🇬 Singapore
+    type: fallback
+    filter: '新加坡'
+    use:
+      - A
+      - B
+      - C
+      - D
+      
+  - name: 🇯🇵 Japan
+    type: fallback
+    filter: '日本'
+    use:
+      - A
+      - B
+      - C
+      - D 
+      
+  - name: 🇺🇲 United States
+    type: fallback
+    filter: '美国'
+    use:
+      - A
+      - B
+      - C
+      - D 
+      
+  - name: 🇹🇼 Taiwan
+    type: fallback
+    filter: '台湾'
+    use:
+      - A
+      - B
+      - C
+      - D  
+      
+  - name: 🇰🇷 South Korea
+    type: fallback
+    filter: '韩国'
+    use:
+      - A
+      - B
+      - C
+      - D    
+      
+  - name: 🇮🇳 India
+    type: fallback
+    filter: '印度'
+    use:
+      - A
+      - B
+      - C
+      - D   
+      
+  - name: 🇹🇷 Turkey
+    type: fallback
+    filter: '土耳其'
+    use:
+      - A
+      - B
+      - C
+      - D   
+      
+  - name: 🇬🇧 United Kingdom
+    type: fallback
+    filter: '英国'
+    use:
+      - A
+      - B
+      - C
+      - D 
+      
+  - name: 🇨🇳 China
+    type: fallback
+    filter: 
+    use:
+     
+    proxies:
+      - DIRECT
+      
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
+    path: ./ruleset/LocalAreaNetwork.yaml
+    interval: 864000
+  
+  UnBan:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
+    path: ./ruleset/UnBan.yaml
+    interval: 864000
+    
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml"
+    path: ./ruleset/GoogleCN.yaml
+    interval: 864000  
+    
+  BanAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+    path: ./ruleset/BanAD.yaml
+    interval: 864000    
