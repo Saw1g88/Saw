@@ -295,4 +295,25 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
     path: ./ruleset/BanAD.yaml
+    interval: 864000 
+    
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    path: ./ruleset/BanProgramAD.yaml
+    interval: 864000    
+    
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
+    path: ./ruleset/BanEasyListChina.yaml
+    interval: 864000 
+    
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
+    path: ./ruleset/BanEasyListChina.yaml
     interval: 864000    
