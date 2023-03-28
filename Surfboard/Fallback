@@ -7,13 +7,13 @@ allow-wifi-access = false
 
 
 [Proxy Group]
-🎬 Videos = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
-🎵 Music = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
-📱 Social = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
-💭 AI = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
-🇬 Google = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
-🪟 Microsoft = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
-🗺️ Proxy = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea,🇮🇳 India,🇹🇷 Turkey,🇬🇧 United Kingdom,🇨🇳 China
+🎬 Videos = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea
+🎵 Music = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea
+📱 Social = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea
+💭 AI = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea
+🇬 Google = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea
+🪟 Microsoft = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇨🇳 China
+🗺️ Final = select,🇭🇰 Hong Kong,🇸🇬 Singapore,🇯🇵 Japan,🇺🇲 United States,🇹🇼 Taiwan,🇰🇷 South Korea
 
 
 #Nodes
@@ -23,10 +23,10 @@ allow-wifi-access = false
 🇸🇬 Singapore = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(新加坡|狮城|SG|Singapore)),hidden=1
 🇯🇵 Japan = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(日本|东京|大阪|埼玉|JP|Japan)),hidden=1
 🇰🇷 South Korea = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(韩国|韩|韓|首尔|KR|KOR|Korea)),hidden=1
-🇹🇷 Turkey = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(土耳其|伊斯坦布尔|TR|Turkey)),hidden=1
-🇮🇳 India = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(印度|孟买|新德里|IN|India)),hidden=1
-🇬🇧 United Kingdom = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(英国|伦敦|UK|GBR|England|United Kingdom)),hidden=1
-🇺🇲 United States = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(美国|US|USA|America|United States)),hidden=1
+#🇹🇷 Turkey = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(土耳其|伊斯坦布尔|TR|Turkey)),hidden=1
+#🇮🇳 India = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(印度|孟买|新德里|IN|India)),hidden=1
+#🇬🇧 United Kingdom = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(英国|伦敦|UK|GBR|England|United Kingdom)),hidden=1
+#🇺🇲 United States = fallback,policy-path=订阅链接,policy-regex-filter=(^(?!.*(.*0\.[1-9])).*(美国|US|USA|America|United States)),hidden=1
 
 
 [Rule]
@@ -59,8 +59,8 @@ RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OneDrive.list,🪟 Microsoft
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Microsoft.list,🪟 Microsoft
 
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list,🗺️ Proxy
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list,🗺️ Final
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,DIRECT
 GEOIP,CN,DIRECT
-FINAL,🗺️ Proxy
+FINAL,🗺️ Final
