@@ -72,10 +72,6 @@ proxy-groups:
       - 🇺🇲 United States
       - 🇹🇼 Taiwan
       - 🇰🇷 South Korea
-      - 🇮🇳 India
-      - 🇹🇷 Turkey
-      - 🇬🇧 United Kingdom
-      - 🇨🇳 China
       
   - name: 🎵 Music
     type: select
@@ -89,10 +85,6 @@ proxy-groups:
       - 🇺🇲 United States
       - 🇹🇼 Taiwan
       - 🇰🇷 South Korea
-      - 🇮🇳 India
-      - 🇹🇷 Turkey
-      - 🇬🇧 United Kingdom
-      - 🇨🇳 China
       
   - name: 📱 Social
     type: select
@@ -106,10 +98,6 @@ proxy-groups:
       - 🇺🇲 United States
       - 🇹🇼 Taiwan
       - 🇰🇷 South Korea
-      - 🇮🇳 India
-      - 🇹🇷 Turkey
-      - 🇬🇧 United Kingdom
-      - 🇨🇳 China
       
   - name: 💭 AI
     type: select
@@ -123,10 +111,6 @@ proxy-groups:
       - 🇺🇲 United States
       - 🇹🇼 Taiwan
       - 🇰🇷 South Korea
-      - 🇮🇳 India
-      - 🇹🇷 Turkey
-      - 🇬🇧 United Kingdom
-      - 🇨🇳 China
       
   - name: 🇬 Google
     type: select
@@ -140,10 +124,6 @@ proxy-groups:
       - 🇺🇲 United States
       - 🇹🇼 Taiwan
       - 🇰🇷 South Korea
-      - 🇮🇳 India
-      - 🇹🇷 Turkey
-      - 🇬🇧 United Kingdom
-      - 🇨🇳 China
       
   - name: 🪟 Microsoft
     type: select
@@ -156,13 +136,9 @@ proxy-groups:
       - 🇯🇵 Japan
       - 🇺🇲 United States
       - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea
-      - 🇮🇳 India
-      - 🇹🇷 Turkey
-      - 🇬🇧 United Kingdom
       - 🇨🇳 China
       
-  - name: 🗺️ Proxy
+  - name: 🗺️ Final
     type: select
     filter: 
     use:
@@ -173,15 +149,11 @@ proxy-groups:
       - 🇯🇵 Japan
       - 🇺🇲 United States
       - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea
-      - 🇮🇳 India
-      - 🇹🇷 Turkey
-      - 🇬🇧 United Kingdom
-      - 🇨🇳 China      
+      - 🇰🇷 South Korea     
 
   - name: 🇭🇰 Hong Kong
     type: fallback
-    filter: '香港'
+    filter: '(^(?!.*(.*0\.[1-9])).*(香港|HK|Hong Kong))'
     use:
       - A
       - B
@@ -190,7 +162,7 @@ proxy-groups:
       
   - name: 🇸🇬 Singapore
     type: fallback
-    filter: '新加坡'
+    filter: '(^(?!.*(.*0\.[1-9])).*(新加坡|狮城|SG|Singapore))'
     use:
       - A
       - B
@@ -199,7 +171,7 @@ proxy-groups:
       
   - name: 🇯🇵 Japan
     type: fallback
-    filter: '日本'
+    filter: '(^(?!.*(.*0\.[1-9])).*(日本|东京|大阪|埼玉|JP|Japan))'
     use:
       - A
       - B
@@ -208,7 +180,7 @@ proxy-groups:
       
   - name: 🇺🇲 United States
     type: fallback
-    filter: '美国'
+    filter: '(^(?!.*(.*0\.[1-9])).*(美国|US|USA|America|United States))'
     use:
       - A
       - B
@@ -217,7 +189,7 @@ proxy-groups:
       
   - name: 🇹🇼 Taiwan
     type: fallback
-    filter: '台湾'
+    filter: '(^(?!.*(.*0\.[1-9])).*(台湾|台北|台中|新北|彰化|TW|Taiwan))'
     use:
       - A
       - B
@@ -226,39 +198,12 @@ proxy-groups:
       
   - name: 🇰🇷 South Korea
     type: fallback
-    filter: '韩国'
+    filter: '(^(?!.*(.*0\.[1-9])).*(韩国|韩|韓|首尔|KR|KOR|Korea))'
     use:
       - A
       - B
       - C
       - D    
-      
-  - name: 🇮🇳 India
-    type: fallback
-    filter: '印度'
-    use:
-      - A
-      - B
-      - C
-      - D   
-      
-  - name: 🇹🇷 Turkey
-    type: fallback
-    filter: '土耳其'
-    use:
-      - A
-      - B
-      - C
-      - D   
-      
-  - name: 🇬🇧 United Kingdom
-    type: fallback
-    filter: '英国'
-    use:
-      - A
-      - B
-      - C
-      - D 
       
   - name: 🇨🇳 China
     type: fallback
