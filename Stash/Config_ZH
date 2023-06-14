@@ -9,7 +9,6 @@ log-level: info
 mode: rule
 
 
-proxies:
 proxy-groups:
 - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
   name: 影视媒体
