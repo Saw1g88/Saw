@@ -343,7 +343,7 @@ rules:
 - RULE-SET,ChinaDomain,DIRECT
 - RULE-SET,ChinaCompanyIp,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,Proxy
+- MATCH,代理网站
 script:
   shortcuts:
     quic: network == 'udp' and dst_port == 443
