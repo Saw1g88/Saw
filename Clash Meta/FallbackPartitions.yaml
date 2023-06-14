@@ -49,114 +49,229 @@ proxy-providers:
       interval: 300
       
 proxy-groups:
-  - name: PROXY
+  - name: 🎥 影视媒体
     type: select
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(魑魅魍魉))'
-    use:
-      - A
-      - B
-      - C
+    filter:
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Singapore
-      - South Korea
-      - Japan
-      - United States
-      - United Kingdom
-      - Turkey
-
-  - name: Hong Kong
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      
+  - name: 📱 社交媒体
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      
+   - name: 🎧️ 音乐平台
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      
+   - name: 💭 人工智能
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      
+   - name: 📬 通讯软件
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线  
+      
+   - name: 🇬 谷歌云盘
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线 
+      
+   - name: 🇬 谷歌服务
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线 
+      
+   - name: 🪟 微软云盘
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      - 国内直连
+      
+   - name: 🪟 微软服务
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      - 国内直连
+      
+   - name: 💻 代理网站
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      
+  - name: 香港节点
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(香港))'
+    filter: '香港'
     use:
       - A
       - B
       - C
 
-  - name: Taiwan
+  - name: 狮城节点
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(台湾))'
+    filter: '狮城'
     use:
       - A
       - B
       - C
 
-  - name: Singapore
+  - name: 日本节点
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan|日，美，韩，)).*(新加坡|狮城))'
+    filter: '日本'
     use:
       - A
       - B
       - C
 
-  - name: South Korea
+  - name: 美国节点
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(韩国))'
+    filter: '美国'
     use:
       - A
       - B
       - C
 
-  - name: Japan
+  - name: 香港专线
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(日本))'
+    filter: '香港专线'
     use:
       - A
       - B
       - C
 
-  - name: United States
+  - name: 狮城专线
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(美国))'
+    filter: '狮城专线'
     use:
       - A
       - B
       - C
 
-  - name: United Kingdom
+  - name: 日本专线
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(英国))'
+    filter: '日本专线'
     use:
       - A
       - B
       - C
 
-  - name: Turkey
+  - name: 美国专线
     type: fallback
-    filter: '(^(?!.*(日用|TEST|Trojan)).*(土耳其))'
+    filter: '美国专线'
     use:
       - A
       - B
       - C
 
 rule-providers:
-  reject:
+  LocalAreaNetwork:
     type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/reject.yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
+    path: ./ruleset/LocalAreaNetwork.yaml
     interval: 864000
 
-  icloud:
+  UnBan:
     type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
     path: ./ruleset/icloud.yaml
     interval: 864000
 
-  apple:
+  BanAD:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
-    path: ./ruleset/apple.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+    path: ./ruleset/BanAD.yaml
     interval: 864000
 
-  google:
+  BanProgramAD:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
-    path: ./ruleset/google.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    path: ./ruleset/BanProgramAD.yaml
     interval: 864000
 
   proxy:
