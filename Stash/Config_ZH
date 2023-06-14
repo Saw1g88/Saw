@@ -1,0 +1,360 @@
+dns:
+  default-nameserver:
+  - 119.29.29.29
+  - 223.5.5.5
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+log-level: info
+mode: rule
+proxies:
+proxy-groups:
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
+  name: 影视媒体
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+  url: http://cp.cloudflare.com/generate_204
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+  name: 社交媒体
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_Music.png
+  name: 音乐平台
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png
+  name: 人工智能
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+  name: 通讯软件
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Drive.png
+  name: 谷歌云盘
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+  name: 谷歌服务
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/OneDrive.png
+  name: 微软云盘
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  - 国内直连
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+  name: 微软服务
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  - 国内直连
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+  name: 代理网站
+  proxies:
+  - 香港节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 香港专线
+  - 狮城专线
+  - 日本专线
+  - 美国专线
+  type: select
+- icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+  interval: 120
+  name: 国内直连
+  proxies:
+  - DIRECT
+  tolerance: 50
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+- filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: 香港节点
+  tolerance: 50
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+- filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
+  icon: https://raw.githubusercontent.com/Orz-3/face/master/TW.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: TW 台湾
+  tolerance: 50
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+- filter: "新加坡|坡|狮城|\U0001F1F8\U0001F1EC|SG|(?i)Singapore"
+  icon: https://raw.githubusercontent.com/Orz-3/face/master/SG.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: SG 新加坡
+  tolerance: 50
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+- filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
+  icon: https://raw.githubusercontent.com/Orz-3/face/master/JP.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: JP 日本
+  tolerance: 50
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+- filter: "美|\U0001F1FA\U0001F1F2|US|(?i)States|American"
+  icon: https://raw.githubusercontent.com/Orz-3/face/master/US.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: US 美国
+  tolerance: 50
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+- filter: "印度|ind"
+  icon: https://raw.githubusercontent.com/Orz-3/face/master/UN.png
+  include-all: true
+  interval: 120
+  lazy: true
+  name: IN 印度
+  tolerance: 50
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+
+rule-providers:
+  ADBlock:
+    behavior: classical
+    interval: 86400
+    url: https://github.com/chengkongyiban/stash/raw/main/rule-set/ADBlock.yaml
+  ASN_China:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/chengkongyiban/stash/main/rule-set/ASN_China.yaml
+  Adblock4limbo:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4limbo_surge.listr_parser.list
+  Advertising:
+    behavior: classical
+    interval: 86400
+    url: https://github.com/chengkongyiban/stash/raw/main/rule-set/Advertising.yaml
+  AliPay:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AliPay/AliPay.yaml
+  Apple:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+  DouYin:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin.yaml
+  GaoDe:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GaoDe/GaoDe.yaml
+  JingDong:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong.yaml
+  KugouKuwo:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/KugouKuwo/KugouKuwo.yaml
+  Lan:
+    behavior: classical
+    interval: 86400
+    url: https://github.com/chengkongyiban/stash/raw/main/rule-set/Lan.yaml
+  MeiTuan:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MeiTuan/MeiTuan.yaml
+  SMZDM:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SMZDM/SMZDM.yaml
+  Tencent:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Tencent/Tencent.yaml
+  TikTok:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+  Unbreak:
+    behavior: classical
+    interval: 86400
+    url: https://github.com/DivineEngine/Profiles/raw/master/Clash/RuleSet/Unbreak.yaml
+  WeChat:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
+  WeiboLiteAd:
+    behavior: classical
+    interval: 86400
+    url: https://github.com/chengkongyiban/stash/raw/main/rule-set/WeiboLiteAd.yaml
+  bilibili:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml
+  defaultDirect:
+    behavior: classical
+    interval: 86400
+    url: https://github.com/chengkongyiban/stash/raw/main/rule-set/defaultDirect.yaml
+  defaultProxy:
+    behavior: classical
+    interval: 86400
+    url: https://github.com/chengkongyiban/stash/raw/main/rule-set/defaultProxy.yaml
+  disney:
+    behavior: classical
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+  facebook:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
+  github:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+  google:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+  instagram:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml
+  netflix:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+  spotify:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+  telegram:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+  twitter:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+  youtube:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+rules:
+- SCRIPT,quic,REJECT
+- RULE-SET,Unbreak,DIRECT
+- RULE-SET,Advertising,REJECT
+- RULE-SET,WeiboLiteAd,REJECT
+- RULE-SET,Adblock4limbo,REJECT
+- RULE-SET,ADBlock,REJECT
+- RULE-SET,netflix,Netflix
+- RULE-SET,disney,Disney+
+- RULE-SET,spotify,Spotify
+- RULE-SET,github,Proxy
+- RULE-SET,telegram,Proxy
+- RULE-SET,youtube,YouTube
+- RULE-SET,google,Proxy
+- RULE-SET,twitter,Proxy
+- RULE-SET,instagram,Proxy
+- RULE-SET,facebook,Proxy
+- RULE-SET,TikTok,Proxy
+- RULE-SET,bilibili,bilibili
+- RULE-SET,AliPay,DIRECT
+- RULE-SET,Apple,Apple
+- RULE-SET,DouYin,DIRECT
+- RULE-SET,GaoDe,DIRECT
+- RULE-SET,JingDong,DIRECT
+- RULE-SET,KugouKuwo,DIRECT
+- RULE-SET,MeiTuan,DIRECT
+- RULE-SET,SMZDM,DIRECT
+- RULE-SET,Tencent,DIRECT
+- RULE-SET,WeChat,DIRECT
+- RULE-SET,defaultDirect,DIRECT
+- RULE-SET,defaultProxy,Proxy
+- RULE-SET,Lan,DIRECT
+- RULE-SET,ASN_China,DIRECT
+- MATCH,Proxy
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
