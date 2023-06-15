@@ -232,6 +232,10 @@ rule-providers:
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml
+  Apple:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml    
   BanAD:
     behavior: classical
     interval: 86400
@@ -327,6 +331,7 @@ rules:
 - SCRIPT,quic,REJECT
 - RULE-SET,LocalAreaNetwork,DIRECT
 - RULE-SET,UnBan,DIRECT
+- RULE-SET,Apple,DIRECT
 - RULE-SET,BanAD,REJECT
 - RULE-SET,BanProgramAD,REJECT
 - RULE-SET,BanEasyListChina,REJECT
