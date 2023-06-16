@@ -127,6 +127,34 @@ proxy-groups:
       - 狮城专线
       - 日本专线
       - 美国专线
+
+  - name: 苹果云盘
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/iCloud.png
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      - 国内直连
+  
+  - name: 苹果服务
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 香港专线
+      - 狮城专线
+      - 日本专线
+      - 美国专线
+      - 国内直连
  
   - name: 微软云盘
     type: select
@@ -140,6 +168,7 @@ proxy-groups:
       - 狮城专线
       - 日本专线
       - 美国专线
+      - 国内直连
   
   - name: 微软服务
     type: select
@@ -153,6 +182,7 @@ proxy-groups:
       - 狮城专线
       - 日本专线
       - 美国专线
+      - 国内直连
   
   - name: 代理网站
     type: select
@@ -258,11 +288,7 @@ rule-providers:
   UnBan:
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml
-  Apple:
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml    
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml    
   BanAD:
     behavior: classical
     interval: 86400
@@ -331,6 +357,14 @@ rule-providers:
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Instagram.yaml
+  iCloud:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.yaml
+  Apple:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml   
   OneDrive:
     behavior: classical
     interval: 86400
@@ -358,7 +392,6 @@ rules:
 - SCRIPT,quic,REJECT
 - RULE-SET,LocalAreaNetwork,DIRECT
 - RULE-SET,UnBan,DIRECT
-- RULE-SET,Apple,DIRECT
 - RULE-SET,BanAD,REJECT
 - RULE-SET,BanProgramAD,REJECT
 - RULE-SET,BanEasyListChina,REJECT
@@ -376,6 +409,8 @@ rules:
 - RULE-SET,Twitter,社交媒体
 - RULE-SET,Facebook,社交媒体
 - RULE-SET,Instagram,社交媒体
+- RULE-SET,iCloud,苹果云盘
+- RULE-SET,Apple,苹果服务
 - RULE-SET,OneDrive,微软云盘
 - RULE-SET,Microsoft,微软服务
 - RULE-SET,ProxyLite,代理网站
