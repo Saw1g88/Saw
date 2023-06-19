@@ -20,7 +20,7 @@ proxy-providers:
   A:
     type: http
     path: ./profiles/proxies/A.yaml
-    url: 
+    url: 订阅链接
     interval: 259200
     filter: 
     health-check:
