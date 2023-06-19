@@ -20,7 +20,7 @@ proxy-providers:
   A:
     type: http
     path: ./profiles/proxies/A.yaml
-    url: https:订阅链接
+    url: 
     interval: 259200
     filter: 
     health-check:
@@ -171,7 +171,7 @@ proxy-groups:
       
   - name: 香港节点
     type: fallback
-    filter: '香港'
+    filter: '^(?!.*专线).*(香港)'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
@@ -179,7 +179,7 @@ proxy-groups:
 
   - name: 狮城节点
     type: fallback
-    filter: '狮城'
+    filter: '^(?!.*专线).*(狮城)'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
@@ -187,7 +187,7 @@ proxy-groups:
 
   - name: 日本节点
     type: fallback
-    filter: '日本'
+    filter: '^(?!.*专线).*(日本)'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
@@ -195,7 +195,7 @@ proxy-groups:
 
   - name: 美国节点
     type: fallback
-    filter: '美国'
+    filter: '^(?!.*专线).*(美国)'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
@@ -372,6 +372,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml
     path: ./ruleset/ChinaDomain.yaml 
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml
+    path: ./ruleset/ChinaCompanyIp.yaml
 
 rules:
 - RULE-SET,LocalAreaNetwork,DIRECT
@@ -397,5 +403,6 @@ rules:
 - RULE-SET,Microsoft,🪟 微软服务
 - RULE-SET,ProxyLite,💻 代理网站
 - RULE-SET,ChinaDomain,DIRECT
+- RULE-SET,ChinaCompanyIp,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,💻 代理网站
