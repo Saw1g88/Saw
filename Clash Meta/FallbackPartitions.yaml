@@ -33,104 +33,104 @@ proxy-groups:
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线
-      
+          
   - name: 📱 社交媒体
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线
       
   - name: 🎧️ 音乐平台
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线
       
   - name: 💭 人工智能
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线
       
   - name: 📬 通讯软件
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线  
       
   - name: 🇬 谷歌云盘
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线 
       
   - name: 🇬 谷歌服务
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线 
       
   - name: 🪟 微软云盘
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线
       - 🇨🇳 国内直连
       
@@ -138,13 +138,13 @@ proxy-groups:
     type: select
     filter:
     proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇯🇵 日本节点
-      - 🇺🇸 美国节点
+      - 🇭🇰 香港公网
       - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
       - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
       - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
       - 🇺🇸 美国专线
       - 🇨🇳 国内直连
       
@@ -152,14 +152,14 @@ proxy-groups:
     type: select
     filter:
     proxies:
-      - 香港节点
-      - 狮城节点
-      - 日本节点
-      - 美国节点
-      - 香港专线
-      - 狮城专线
-      - 日本专线
-      - 美国专线
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
 
   - name: 🇨🇳 国内直连
     type: fallback
@@ -169,33 +169,33 @@ proxy-groups:
     proxies:
       - DIRECT
       
-  - name: 🇭🇰 香港节点
+  - name: 🇭🇰 香港公网
     type: fallback
-    filter: '^(?!.*专线).*(香港)'
+    filter: '香港公网'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - A
 
-  - name: 🇸🇬 狮城节点
+  - name: 🇸🇬 狮城公网
     type: fallback
-    filter: '^(?!.*专线).*(狮城)'
+    filter: '狮城公网'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - A
 
-  - name: 🇯🇵 日本节点
+  - name: 🇯🇵 日本公网
     type: fallback
-    filter: '^(?!.*专线).*(日本)'
+    filter: '日本公网'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
       - A
 
-  - name: 🇺🇸 美国节点
+  - name: 🇺🇸 美国公网
     type: fallback
-    filter: '^(?!.*专线).*(美国)'
+    filter: '美国公网'
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
