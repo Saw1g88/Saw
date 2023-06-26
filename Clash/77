@@ -27,238 +27,375 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  B:
-    type: http
-    path: ./profiles/proxies/B.yaml
-    url: 订阅链接
-    interval: 259200
-    filter: 
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  C:
-    type: http
-    path: ./profiles/proxies/C.yaml
-    url: 订阅链接
-    interval: 259200
-    filter: 
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  D:
-    type: http
-    path: ./profiles/proxies/C.yaml
-    url: 订阅链接
-    interval: 259200
-    filter: 
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300      
-   
       
 proxy-groups:
-  - name: 🎬 Videos
+  - name: 🎥 影视媒体
     type: select
-    filter: 
-    use:
-    
+    filter:
     proxies:
-      - 🇭🇰 Hong Kong
-      - 🇸🇬 Singapore
-      - 🇯🇵 Japan
-      - 🇺🇲 United States
-      - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
+          
+  - name: 👥 社交媒体
+    type: select
+    filter:
+    proxies:
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
       
-  - name: 🎵 Music
+  - name: 🎧️ 音乐平台
     type: select
-    filter: 
-    use:
-    
+    filter:
     proxies:
-      - 🇭🇰 Hong Kong
-      - 🇸🇬 Singapore
-      - 🇯🇵 Japan
-      - 🇺🇲 United States
-      - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
       
-  - name: 📱 Social
+  - name: 💭 人工智能
     type: select
-    filter: 
-    use:
-    
+    filter:
     proxies:
-      - 🇭🇰 Hong Kong
-      - 🇸🇬 Singapore
-      - 🇯🇵 Japan
-      - 🇺🇲 United States
-      - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
       
-  - name: 💭 AI
+  - name: 📬 通讯软件
     type: select
-    filter: 
-    use:
-    
+    filter:
     proxies:
-      - 🇭🇰 Hong Kong
-      - 🇸🇬 Singapore
-      - 🇯🇵 Japan
-      - 🇺🇲 United States
-      - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线  
       
-  - name: 🇬 Google
+  - name: 🧩 谷歌云盘
     type: select
-    filter: 
-    use:
-    
+    filter:
     proxies:
-      - 🇭🇰 Hong Kong
-      - 🇸🇬 Singapore
-      - 🇯🇵 Japan
-      - 🇺🇲 United States
-      - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线 
       
-  - name: 🪟 Microsoft
+  - name: 🧩 谷歌服务
     type: select
-    filter: 
-    use:
-    
+    filter:
     proxies:
-      - 🇭🇰 Hong Kong
-      - 🇸🇬 Singapore
-      - 🇯🇵 Japan
-      - 🇺🇲 United States
-      - 🇹🇼 Taiwan
-      - 🇨🇳 China
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线 
       
-  - name: 🗺️ Final
+  - name: Ⓜ️ 微软云盘
     type: select
-    filter: 
-    use:
-    
+    filter:
     proxies:
-      - 🇭🇰 Hong Kong
-      - 🇸🇬 Singapore
-      - 🇯🇵 Japan
-      - 🇺🇲 United States
-      - 🇹🇼 Taiwan
-      - 🇰🇷 South Korea     
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
+      - 🇨🇳 国内直连
+      
+  - name: Ⓜ️ 微软服务
+    type: select
+    filter:
+    proxies:
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
+      - 🇨🇳 国内直连
+      
+  - name: 💻 代理网站
+    type: select
+    filter:
+    proxies:
+      - 🇭🇰 香港公网
+      - 🇭🇰 香港专线
+      - 🇸🇬 狮城公网
+      - 🇸🇬 狮城专线
+      - 🇯🇵 日本公网
+      - 🇯🇵 日本专线
+      - 🇺🇸 美国公网
+      - 🇺🇸 美国专线
 
-  - name: 🇭🇰 Hong Kong
+  - name: 🇨🇳 国内直连
     type: fallback
-    filter: '(^(?!.*(.*0\.[1-9])).*(香港|HK|Hong Kong))'
-    use:
-      - A
-      - B
-      - C
-      - D
-      
-  - name: 🇸🇬 Singapore
-    type: fallback
-    filter: '(^(?!.*(.*0\.[1-9])).*(新加坡|狮城|SG|Singapore))'
-    use:
-      - A
-      - B
-      - C
-      - D
-      
-  - name: 🇯🇵 Japan
-    type: fallback
-    filter: '(^(?!.*(.*0\.[1-9])).*(日本|东京|大阪|埼玉|JP|Japan))'
-    use:
-      - A
-      - B
-      - C
-      - D 
-      
-  - name: 🇺🇲 United States
-    type: fallback
-    filter: '(^(?!.*(.*0\.[1-9])).*(美国|US|USA|America|United States))'
-    use:
-      - A
-      - B
-      - C
-      - D 
-      
-  - name: 🇹🇼 Taiwan
-    type: fallback
-    filter: '(^(?!.*(.*0\.[1-9])).*(台湾|台北|台中|新北|彰化|TW|Taiwan))'
-    use:
-      - A
-      - B
-      - C
-      - D  
-      
-  - name: 🇰🇷 South Korea
-    type: fallback
-    filter: '(^(?!.*(.*0\.[1-9])).*(韩国|韩|韓|首尔|KR|KOR|Korea))'
-    use:
-      - A
-      - B
-      - C
-      - D    
-      
-  - name: 🇨🇳 China
-    type: fallback
-    filter: 
-    use:
-     
+    filter:
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
       - DIRECT
       
+  - name: 🇭🇰 香港公网
+    type: fallback
+    filter: '香港公网'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
+  - name: 🇸🇬 狮城公网
+    type: fallback
+    filter: '狮城公网'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
+  - name: 🇯🇵 日本公网
+    type: fallback
+    filter: '日本公网'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
+  - name: 🇺🇸 美国公网
+    type: fallback
+    filter: '美国公网'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
+  - name: 🇭🇰 香港专线
+    type: fallback
+    filter: '香港专线'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
+  - name: 🇸🇬 狮城专线
+    type: fallback
+    filter: '狮城专线'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
+  - name: 🇯🇵 日本专线
+    type: fallback
+    filter: '日本专线'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
+  - name: 🇺🇸 美国专线
+    type: fallback
+    filter: '美国专线'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - A
+
 rule-providers:
   LocalAreaNetwork:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
-    path: ./ruleset/LocalAreaNetwork.yaml
-    interval: 864000
-  
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml
+    path: ./ruleset/LocalAreaNetwork.yaml    
   UnBan:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
-    path: ./ruleset/UnBan.yaml
-    interval: 864000
-    
-  GoogleCN:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml"
-    path: ./ruleset/GoogleCN.yaml
-    interval: 864000  
-    
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml    
+    path: ./ruleset/UnBan.yaml  
   BanAD:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
-    path: ./ruleset/BanAD.yaml
-    interval: 864000 
-    
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml
+    path: ./ruleset/BanAD.yaml 
   BanProgramAD:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
-    path: ./ruleset/BanProgramAD.yaml
-    interval: 864000    
-    
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
+    path: ./ruleset/BanProgramAD.yaml 
   BanEasyListChina:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
-    path: ./ruleset/BanEasyListChina.yaml
-    interval: 864000 
-    
-  BanEasyListChina:
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml
+    path: ./ruleset/BanEasyListChina.yaml 
+  Telegram:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
-    path: ./ruleset/BanEasyListChina.yaml
-    interval: 864000    
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml
+    path: ./ruleset/Telegram.yaml 
+  Ai:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/ACL4SSR/master/Clash/Providers/Ai.yaml
+    path: ./ruleset/Ai.yaml 
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml
+    path: ./ruleset/YouTubeMusic.yaml 
+  Spotify:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Spotify.yaml
+    path: ./ruleset/Spotify.yaml 
+  YouTube:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml
+    path: ./ruleset/YouTube.yaml 
+  Porn:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Porn.yaml
+    path: ./ruleset/Porn.yaml 
+  GoogleDrive:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml
+    path: ./ruleset/GoogleDrive.yaml 
+  GoogleFCM:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml
+    path: ./ruleset/GoogleFCM.yaml 
+  Google:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Google.yaml
+    path: ./ruleset/Google.yaml 
+  GoogleCNProxyIP:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCNProxyIP.yaml
+    path: ./ruleset/GoogleCNProxyIP.yaml 
+  GoogleCN:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml
+    path: ./ruleset/GoogleCN.yaml 
+  Twitter:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Twitter.yaml
+    path: ./ruleset/Twitter.yaml 
+  Facebook:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Facebook.yaml
+    path: ./ruleset/Facebook.yaml 
+  Instagram:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Instagram.yaml
+    path: ./ruleset/Instagram.yaml 
+  OneDrive:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OneDrive.yaml
+    path: ./ruleset/OneDrive.yaml 
+  Microsoft:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml
+    path: ./ruleset/Microsoft.yaml 
+  ProxyLite:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyLite.yaml
+    path: ./ruleset/ProxyLite.yaml 
+  ChinaDomain:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml
+    path: ./ruleset/ChinaDomain.yaml 
+
+rules:
+- RULE-SET,LocalAreaNetwork,DIRECT
+- RULE-SET,UnBan,DIRECT
+- RULE-SET,BanAD,REJECT
+- RULE-SET,BanProgramAD,REJECT
+- RULE-SET,BanEasyListChina,REJECT
+- RULE-SET,Telegram,📬 通讯软件
+- RULE-SET,Ai,💭 人工智能
+- RULE-SET,YouTubeMusic,🎧️ 音乐平台
+- RULE-SET,Spotify,🎧️ 音乐平台
+- RULE-SET,YouTube,🎥 影视媒体
+- RULE-SET,Porn,🎥 影视媒体
+- RULE-SET,GoogleDrive,🧩 谷歌云盘
+- RULE-SET,GoogleFCM,🧩 谷歌服务
+- RULE-SET,Google,🧩 谷歌服务
+- RULE-SET,GoogleCN,🧩 谷歌服务
+- RULE-SET,GoogleCNProxyIP,🧩 谷歌服务
+- RULE-SET,Twitter,👥 社交媒体
+- RULE-SET,Facebook,👥 社交媒体
+- RULE-SET,Instagram,👥 社交媒体
+- RULE-SET,OneDrive,Ⓜ️ 微软云盘
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- RULE-SET,ProxyLite,💻 代理网站
+- RULE-SET,ChinaDomain,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,💻 代理网站
