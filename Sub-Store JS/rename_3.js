@@ -25,10 +25,13 @@ function operator(y) {
   if (inname !== "") {
     var inputList = gl(inname);
   } else {
-    const inn = y.slice(0, 10).map((proxy) => gReg(proxy.name)).reduce((counts, region) => {
-      counts[region] = (counts[region] || 0) + 1;
-      return counts;
-    }, {});
+    const inn = y
+      .slice(0, 10)
+      .map((proxy) => gReg(proxy.name))
+      .reduce((counts, region) => {
+        counts[region] = (counts[region] || 0) + 1;
+        return counts;
+      }, {});
     const rein = Object.entries(inn);
     rein.sort((a, b) => b[1] - a[1]);
     const regss = rein[0][0];
@@ -47,20 +50,18 @@ function operator(y) {
     });
   });
 
-  // 保留过滤功能
   if (clear) {
-    y = y.filter(res => !nameclear.test(res.name));
+    y = y.filter((res) => !nameclear.test(res.name));
   }
   if (nx) {
-    y = y.filter(res => !res.name.match(namenx));
+    y = y.filter((res) => !res.name.match(namenx));
   }
   if (blnx) {
-    y = y.filter(res => res.name.match(nameblnx));
+    y = y.filter((res) => res.name.match(nameblnx));
   }
   if (key) {
-    y = y.filter(res => res.name.match(keya) && res.name.match(/2|4|6|7/i));
+    y = y.filter((res) => res.name.match(keya) && res.name.match(/2|4|6|7/i));
   }
-
   const delFgf = [];
   const newPr = [];
   y.forEach((res) => {
@@ -73,6 +74,7 @@ function operator(y) {
       if (res.name.indexOf(elem) !== -1) {
         if (!isFgf) {
           isFgf = true;
+          ik[elem][1] += 1;
           let namekey = nf ? jcname + FGF : "";
           if (addflag) {
             ikey.push(gF(us[Object.keys(ik).indexOf(elem)]) + FGF + namekey + ik[elem][0]);
@@ -112,14 +114,13 @@ function operator(y) {
     }
   });
 
-  // 去除自动添加序号的部分
   y = newPr;
-
   y = jxh(y);
   numone && (y = oneP(y));
   blpx && (y = fampx(y));
   if (key) {
-    y = y.filter(res => !res.name.match(keyb));
+    y = y.filter((res) => !res.name.match(keyb));
   }
+
   return y;
 }
