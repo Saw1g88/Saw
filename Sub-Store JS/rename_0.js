@@ -77,7 +77,7 @@ function operator(y) {
           ik[elem][1] += 1;
           let namekey = nf ? jcname + FGF : "";
           if (addflag) {
-            ikey.push(gF(us[Object.keys(ik).indexOf(elem)]) + FGF + namekey + ik[elem][0]);
+            ikey.push(gF(us[Object.keys(ik).indexOf(elem)]) + FGF + namekey);
           } else {
             ikey.push(ik[elem][0]);
           }
