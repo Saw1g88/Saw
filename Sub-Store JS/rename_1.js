@@ -129,4 +129,5 @@ function operator(proxies) {
     proxies = stripOnes(proxies);
   }
   return proxies;
+  proxies.sort((a, b) => a.name.localeCompare(b.name));
 }
