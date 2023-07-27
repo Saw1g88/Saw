@@ -77,7 +77,7 @@ function operator(y) {
           ik[elem][1] += 1;
           let namekey = nf ? jcname + FGF : "";
           if (addflag) {
-            ikey.push(gF(us[Object.keys(ik).indexOf(elem)]) + FGF + namekey);
+            ikey.push(gF(us[Object.keys(ik).indexOf(elem)]) + FGF + namekey); // 不再添加序号ik[elem][0]
           } else {
             ikey.push(ik[elem][0]);
           }
@@ -124,4 +124,3 @@ function operator(y) {
 
   return y;
 }
-
