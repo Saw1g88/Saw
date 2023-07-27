@@ -46,19 +46,26 @@ function operator(y) {
       e.name = e.name.replace(rurekey[ikey], ikey);
     });
   });
-  if(clear){y = y.filter(res => !nameclear.test(res.name))}
-  if(nx){y = y.filter(res => !res.name.match(namenx))}
-  if(blnx){y = y.filter(res => res.name.match(nameblnx))}
-  if (key) {y = y.filter(res =>
-    res.name.match(keya) &&
-    res.name.match(/2|4|6|7/i))
+  if (clear) {
+    y = y.filter(res => !nameclear.test(res.name));
+  }
+  if (nx) {
+    y = y.filter(res => !res.name.match(namenx));
+  }
+  if (blnx) {
+    y = y.filter(res => res.name.match(nameblnx));
+  }
+  if (key) {
+    y = y.filter(res => res.name.match(keya) && res.name.match(/2|4|6|7/i));
   }
   const delFgf = [];
   const newPr = [];
   y.forEach((res) => {
     let isFgf = false;
-    const ikey=[]
-    if (!nf) {ikey.push(jcname)}
+    const ikey = [];
+    if (!nf) {
+      ikey.push(jcname);
+    }
     for (const elem of Object.keys(ik)) {
       if (res.name.indexOf(elem) !== -1) {
         if (!isFgf) {
@@ -66,7 +73,7 @@ function operator(y) {
           ik[elem][1] += 1;
           let namekey = nf ? jcname + FGF : "";
           if (addflag) {
-            ikey.push(gF(us[Object.keys(ik).indexOf(elem)]) +FGF+ namekey + ik[elem][0]);
+            ikey.push(gF(us[Object.keys(ik).indexOf(elem)]) + FGF + namekey + ik[elem][0]);
           } else {
             ikey.push(ik[elem][0]);
           }
@@ -90,7 +97,7 @@ function operator(y) {
     }
     if (isFgf) {
       const kb = ikey.filter(item => item.trim() !== '');
-      newPr.push({...res, name: kb.join(FGF)});
+      newPr.push({ ...res, name: kb.join(FGF) });
     } else {
       delFgf.push(res);
     }
