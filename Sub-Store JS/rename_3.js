@@ -22,8 +22,8 @@ const namenx = /(高倍|(?!1)(0\.|\d)+(x|倍)|ˣ²|ˣ³|ˣ⁴|ˣ⁵|ˣ¹⁰)/i;
 const keya = /港|Hong|HK|新加坡|SG|Singapore|日本|Japan|JP|美国|United States|US|韩|土耳其|TR|Turkey|Korea|KR|🇸🇬|🇭🇰|🇯🇵|🇺🇸|🇰🇷|🇹🇷/i;
 const keyb = /(((1|2|3|4)\d)|(香港|Hong|HK) 0[5-9]|((新加坡|SG|Singapore|日本|Japan|JP|美国|United States|US|韩|土耳其|TR|Turkey|Korea|KR) 0[3-9]))/i
 function operator(y) {
-  if (inname !== "") { 
-    var inputList = gl(inname); 
+  if (inname !== "") {
+    var inputList = gl(inname);
   } else {
     const inn = y.slice(0, 10).map((proxy) => gReg(proxy.name)).reduce((counts, region) => {
       counts[region] = (counts[region] || 0) + 1;
@@ -35,12 +35,12 @@ function operator(y) {
     var inputList = gl(regss);
   }
   var outputList = gl($arguments["out"]);
-  
+
   var ik = inputList.reduce((acc, curr, index) => {
     acc[curr] = [outputList[index], 0];
     return acc;
   }, {});
-  
+
   y.forEach((e) => {
     Object.keys(rurekey).forEach((ikey) => {
       e.name = e.name.replace(rurekey[ikey], ikey);
@@ -110,15 +110,15 @@ function operator(y) {
     if (index !== -1) {
       y.splice(index, 1);
     }
-  }); 
+  });
 
   // 去除自动添加序号的部分
   y = newPr;
-  
+
   y = jxh(y);
   numone && (y = oneP(y));
   blpx && (y = fampx(y));
-  if (key) { 
+  if (key) {
     y = y.filter(res => !res.name.match(keyb));
   }
   return y;
