@@ -20,7 +20,7 @@ proxy-providers:
   A:
     type: http
     path: ./profiles/proxies/A.yaml
-    url: https://gist.githubusercontent.com/Saw1g88/a1505cf3f6183fae67fbed631136eb84/raw/Saw
+    url: 订阅链接
     interval: 600
     filter: 
     health-check:
