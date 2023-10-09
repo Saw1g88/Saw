@@ -48,39 +48,6 @@ DOMAIN,download.developer.apple.com
 DOMAIN,downloaddispatch.itunes.apple.com
 DOMAIN,app-site-association.cdn-apple.com
 
-# Apple List
-IP-CIDR,17.0.0.0/8,no-resolve
-IP-CIDR,63.92.224.0/19,no-resolve
-IP-CIDR,65.199.22.0/23,no-resolve
-IP-CIDR,139.178.128.0/18,no-resolve
-IP-CIDR,144.178.0.0/19,no-resolve
-IP-CIDR,144.178.36.0/22,no-resolve
-IP-CIDR,192.35.50.0/24,no-resolve
-IP-CIDR,198.183.17.0/24,no-resolve
-IP-CIDR,205.180.175.0/24,no-resolve
-DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,apple.co
-DOMAIN-SUFFIX,apple.com.cn
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,cdn.apple.com
-DOMAIN-SUFFIX,cdn-apple-mapkit.com
-DOMAIN-SUFFIX,cdn.apple-mapkit.com
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,gateway.icloud.com
-DOMAIN-SUFFIX,xp.apple.com
-DOMAIN-SUFFIX,icloud.com.cn
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,play.itunes.apple.com
-DOMAIN-SUFFIX,bag.itunes.apple.com
-DOMAIN-SUFFIX,inappcheck.itunes.apple.com
-DOMAIN-SUFFIX,mzstatic.com
-DOMAIN-SUFFIX,apple.com.akadns.net
-DOMAIN-SUFFIX,icloud.com.akadns.net
-DOMAIN-SUFFIX,ess.apple.com
-DOMAIN,guzzoni.apple.com
 # AppleMusic
 DOMAIN-SUFFIX,music.apple.com
 DOMAIN-SUFFIX,aod.itunes.apple.com
@@ -114,12 +81,7 @@ DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,apple
 DOMAIN,weather-analytics-events.apple.com
-# iCloud 上传和下载
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,apple-cloudkit.com
+
 # Apple 其他直连
 #
 # Spotlight
