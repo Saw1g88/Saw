@@ -12,7 +12,6 @@ DOMAIN,apps.apple.com
 DOMAIN,books.apple.com
 DOMAIN,books-analytics-events.apple.com
 DOMAIN,weather-analytics-events.apple.com
-DOMAIN,itunes.apple.com
 DOMAIN,tv.apple.com
 # > News
 DOMAIN,gateway.icloud.com
