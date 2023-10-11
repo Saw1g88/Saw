@@ -8,7 +8,6 @@ DOMAIN,lookup-api.apple.com // Look Up
 DOMAIN,radio.itunes.apple.com // Apple Music Radio
 DOMAIN,ocsp.digicert.com //证书验证
 # > Web Preview
-DOMAIN,apps.apple.com
 DOMAIN,books.apple.com
 DOMAIN,books-analytics-events.apple.com
 DOMAIN,weather-analytics-events.apple.com
