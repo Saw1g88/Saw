@@ -5,9 +5,7 @@ DOMAIN-SUFFIX, gc.apple.com //iCloud 服务
 DOMAIN-SUFFIX, icloud.com //iCloud 服务
 DOMAIN-SUFFIX, icloud.apple.com //iCloud 服务
 DOMAIN-SUFFIX, icloud-content.com //iCloud 服务
-DOMAIN-SUFFIX, iwork.apple.com //iWork 文稿
-DOMAIN-SUFFIX,ess.apple.com //iMessage
 DOMAIN, mask.icloud.com //iCloud 专用代理
 DOMAIN, mask-h2.icloud.com //iCloud 专用代理
 DOMAIN, mask-api.icloud.com //iCloud 专用代理
-DOMAIN,ocsp.digicert.com //证书验证
+
