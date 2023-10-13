@@ -7,7 +7,6 @@ DOMAIN, gsa.apple.com //Apple ID 认证
 DOMAIN-SUFFIX, itunes.apple.com //商店内容，如 App、图书和音乐
 DOMAIN-SUFFIX, apps.apple.com //商店内容，如 App、图书和音乐
 DOMAIN-SUFFIX, mzstatic.com //商店内容，如 App、图书和音乐
-DOMAIN, itunes.apple.com
 DOMAIN, ppq.apple.com //企业 App 验证
 # > DeviceSetup
 DOMAIN, albert.apple.com //设备激活
@@ -20,3 +19,32 @@ DOMAIN, tbsc.apple.com
 DOMAIN, time-ios.apple.com //供设备用来设置日期和时间
 DOMAIN, time.apple.com //供设备用来设置日期和时间
 DOMAIN, time-macos.apple.com //供设备用来设置日期和时间
+# > Other
+USER-AGENT,*com.apple.mobileme.fmip1
+USER-AGENT,*WeatherFoundation*
+USER-AGENT,%E5%9C%B0%E5%9B%BE*
+USER-AGENT,%E8%AE%BE%E7%BD%AE*
+USER-AGENT,com.apple.geod*
+USER-AGENT,com.apple.Maps
+USER-AGENT,FindMyFriends*
+USER-AGENT,FindMyiPhone*
+USER-AGENT,FMDClient*
+USER-AGENT,FMFD*
+USER-AGENT,fmflocatord*
+USER-AGENT,geod*
+USER-AGENT,locationd*
+USER-AGENT,Maps*
+DOMAIN,api.smoot.apple.com
+DOMAIN,captive.apple.com
+DOMAIN,configuration.apple.com
+DOMAIN,guzzoni.apple.com
+DOMAIN,smp-device-content.apple.com
+DOMAIN-SUFFIX,ess.apple.com
+DOMAIN,aod.itunes.apple.com
+DOMAIN,api.smoot.apple.cn
+DOMAIN,gs-loc.apple.com
+DOMAIN,mvod.itunes.apple.com
+DOMAIN,streamingaudio.itunes.apple.com
+DOMAIN-SUFFIX,lcdn-locator.apple.com
+DOMAIN-SUFFIX,lcdn-registration.apple.com
+DOMAIN-SUFFIX,ls.apple.com
