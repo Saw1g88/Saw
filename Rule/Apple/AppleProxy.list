@@ -24,7 +24,9 @@ DOMAIN, mask.icloud.com //iCloud 专用代理
 DOMAIN, mask-h2.icloud.com //iCloud 专用代理
 DOMAIN, mask-api.icloud.com //iCloud 专用代理
 # > other
+DOMAIN-SUFFIX,ess.apple.com //iMessage
 DOMAIN-SUFFIX,appsto.re // Apple URL Shortener
+DOMAIN-SUFFIX,smoot.apple.com // Spotlight
 DOMAIN,amp-api.podcasts.apple.com // Podcasts
 DOMAIN,beta.music.apple.com // Apple Music Web
 DOMAIN,books.itunes.apple.com // iBooks Store download
