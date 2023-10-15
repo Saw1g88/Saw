@@ -9,6 +9,15 @@ DOMAIN,radio.itunes.apple.com // Apple Music Radio
 DOMAIN,gateway.icloud.com // Find My
 DOMAIN,p115-fmfmobile.icloud.com // Find My
 DOMAIN,p115-fmip.icloud.com // Find My
+DOMAIN,cvws.icloud-content.com
+DOMAIN,developer.apple.com
+DOMAIN,hls.itunes.apple.com
+DOMAIN,sandbox.itunes.apple.com
+DOMAIN,testflight.apple.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,blobstore.apple.com
+DOMAIN-SUFFIX,digicert.com
+USER-AGENT,com.apple.trustd*
 # > Web Preview
 DOMAIN,apps.apple.com
 DOMAIN,books.apple.com
