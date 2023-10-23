@@ -47,7 +47,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点  
 
-  - name: 🤖 人工智能
+  - name: 💭 人工智能
     type: select
     filter:
     proxies:
@@ -347,7 +347,7 @@ rules:
 - RULE-SET,BanProgramAD,REJECT
 - RULE-SET,BanEasyListChina,REJECT
 - RULE-SET,Telegram,👥 社交通讯
-- RULE-SET,Ai,🇯🇵 🤖 人工智能
+- RULE-SET,Ai,💭 人工智能
 - RULE-SET,YouTubeMusic,🎥 影音媒体
 - RULE-SET,Spotify,🎥 影音媒体
 - RULE-SET,YouTube,🎥 影音媒体
