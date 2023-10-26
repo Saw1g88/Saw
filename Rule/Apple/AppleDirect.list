@@ -1,3 +1,5 @@
+#苹果直连
+
 # > ID
 DOMAIN, appleid.apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
 DOMAIN, appleid.cdn-apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
