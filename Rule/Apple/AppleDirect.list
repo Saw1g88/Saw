@@ -5,11 +5,13 @@ DOMAIN, appleid.apple.com //“设置”和“系统偏好设置”中的 Apple 
 DOMAIN, appleid.cdn-apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
 DOMAIN, idmsa.apple.com //Apple ID 认证
 DOMAIN, gsa.apple.com //Apple ID 认证
+
 # > AppStore
 DOMAIN-SUFFIX, itunes.apple.com //商店内容，如 App、图书和音乐
 DOMAIN-SUFFIX, apps.apple.com //商店内容，如 App、图书和音乐
 DOMAIN-SUFFIX, mzstatic.com //商店内容，如 App、图书和音乐
 DOMAIN, ppq.apple.com //企业 App 验证
+
 # > DeviceSetup
 DOMAIN, albert.apple.com //设备激活
 DOMAIN, captive.apple.com //针对使用强制门户的网络进行互联网连接验证
