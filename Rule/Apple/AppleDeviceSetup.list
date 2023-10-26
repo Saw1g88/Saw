@@ -1,3 +1,4 @@
+# > AppleDeviceSetup
 DOMAIN, albert.apple.com //设备激活
 DOMAIN, captive.apple.com //针对使用强制门户的网络进行互联网连接验证
 DOMAIN, gs.apple.com
