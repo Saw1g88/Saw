@@ -76,7 +76,7 @@ proxy-groups:
       
   - name: 🇭🇰 香港节点
     type: url-test
-    filter: '香港'
+    filter: '(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -86,7 +86,7 @@ proxy-groups:
 
   - name: 🇸🇬 狮城节点
     type: url-test
-    filter: '狮城'
+    filter: '(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美)).)*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -96,7 +96,7 @@ proxy-groups:
 
   - name: 🇯🇵 日本节点
     type: url-test
-    filter: '日本'
+    filter: '(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -106,7 +106,7 @@ proxy-groups:
 
   - name: 🇺🇸 美国节点
     type: url-test
-    filter: '美国'
+    filter: '(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -195,184 +195,63 @@ proxy-groups:
       - A
 
 rule-providers:
-  LocalAreaNetwork:
+  LAN:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml
-    path: ./ruleset/LocalAreaNetwork.yaml    
-  UnBan:
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml
+    path: ./ruleset/LAN.yaml    
+  Reject:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml    
-    path: ./ruleset/UnBan.yaml  
-  BanAD:
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml
+    path: ./ruleset/Reject.yaml 
+  Social:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml
-    path: ./ruleset/BanAD.yaml 
-  BanProgramAD:
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml
+    path: ./ruleset/Social.yaml 
+  Media:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
-    path: ./ruleset/BanProgramAD.yaml 
-  BanEasyListChina:
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Media.yaml
+    path: ./ruleset/Media.yaml
+  AI:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml
-    path: ./ruleset/BanEasyListChina.yaml 
-  Telegram:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml
-    path: ./ruleset/Telegram.yaml 
-  Whatsapp:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Whatsapp.yaml
-    path: ./ruleset/Whatsapp.yaml
-  OpenAi:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml
-    path: ./ruleset/OpenAi.yaml 
-  YouTubeMusic:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml
-    path: ./ruleset/YouTubeMusic.yaml 
-  Spotify:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Spotify.yaml
-    path: ./ruleset/Spotify.yaml 
-  YouTube:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml
-    path: ./ruleset/YouTube.yaml 
-  Porn:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Porn.yaml
-    path: ./ruleset/Porn.yaml 
-  GoogleDrive:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml
-    path: ./ruleset/GoogleDrive.yaml 
-  GoogleFCM:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml
-    path: ./ruleset/GoogleFCM.yaml 
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml
+    path: ./ruleset/AI.yaml 
   Google:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Google.yaml
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml
     path: ./ruleset/Google.yaml 
-  GoogleCNProxyIP:
+  Proxy:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCNProxyIP.yaml
-    path: ./ruleset/GoogleCNProxyIP.yaml 
-  GoogleCN:
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy.yaml
+    path: ./ruleset/Proxy.yaml 
+  Direct:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml
-    path: ./ruleset/GoogleCN.yaml 
-  Twitter:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Twitter.yaml
-    path: ./ruleset/Twitter.yaml 
-  Facebook:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Facebook.yaml
-    path: ./ruleset/Facebook.yaml 
-  Instagram:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Instagram.yaml
-    path: ./ruleset/Instagram.yaml 
-  OneDrive:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OneDrive.yaml
-    path: ./ruleset/OneDrive.yaml 
-  Microsoft:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml
-    path: ./ruleset/Microsoft.yaml 
-  ProxyLite:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyLite.yaml
-    path: ./ruleset/ProxyLite.yaml 
-  ChinaDomain:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml
-    path: ./ruleset/ChinaDomain.yaml 
-  ChinaIp:
-    type: http
-    behavior: ipcidr
-    interval: 86400
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml
-    path: ./ruleset/ChinaIp.yaml 
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct.yaml
+    path: ./ruleset/Direct.yaml 
 
 rules:
-- RULE-SET,LocalAreaNetwork,DIRECT
-- RULE-SET,UnBan,DIRECT
-- RULE-SET,BanAD,REJECT
-- RULE-SET,BanProgramAD,REJECT
-- RULE-SET,BanEasyListChina,REJECT
-- RULE-SET,Telegram,👥 社交通讯
-- RULE-SET,Whatsapp,👥 社交通讯
-- RULE-SET,OpenAi,💭 人工智能
-- DOMAIN-SUFFIX,bing.com,💭 人工智能
-- DOMAIN-SUFFIX,bard.google.com,💭 人工智能
-- RULE-SET,YouTubeMusic,🎥 影音媒体
-- RULE-SET,Spotify,🎥 影音媒体
-- RULE-SET,YouTube,🎥 影音媒体
-- RULE-SET,Porn,🎥 影音媒体
-- RULE-SET,GoogleDrive,🧩 谷歌服务
-- RULE-SET,GoogleFCM,🧩 谷歌服务
+- RULE-SET,LAN,DIRECT
+- RULE-SET,Reject,REJECT
+- RULE-SET,Social,👥 社交通讯
+- RULE-SET,Media,🎥 影音媒体
+- RULE-SET,AI,💭 人工智能
 - RULE-SET,Google,🧩 谷歌服务
-- RULE-SET,GoogleCN,🧩 谷歌服务
-- RULE-SET,GoogleCNProxyIP,🧩 谷歌服务
-- RULE-SET,Twitter,👥 社交通讯
-- RULE-SET,Facebook,👥 社交通讯
-- RULE-SET,Instagram,👥 社交通讯
-- RULE-SET,OneDrive,DIRECT
-- RULE-SET,Microsoft,DIRECT
-- RULE-SET,ProxyLite,💻 代理网站
-- RULE-SET,ChinaDomain,DIRECT
-- RULE-SET,ChinaIp,DIRECT
+- RULE-SET,Proxy,💻 代理网站
+- RULE-SET,Direct,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,💻 代理网站
