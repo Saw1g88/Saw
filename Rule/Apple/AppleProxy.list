@@ -1,8 +1,11 @@
+# 苹果代理列表
+
 # > Web Preview
 DOMAIN,books.apple.com
 DOMAIN,books-analytics-events.apple.com
 DOMAIN,weather-analytics-events.apple.com
 DOMAIN,tv.apple.com
+
 # > News
 DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,apple.news
@@ -12,6 +15,7 @@ DOMAIN,news-client-search.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
 DOMAIN,apple.comscoreresearch.com
+
 # > iCloud
 DOMAIN-SUFFIX, apple-cloudkit.com //iCloud 服务
 DOMAIN-SUFFIX, apple-livephotoskit.com //iCloud 服务
@@ -23,6 +27,7 @@ DOMAIN-SUFFIX, icloud-content.com //iCloud 服务
 DOMAIN, mask.icloud.com //iCloud 专用代理
 DOMAIN, mask-h2.icloud.com //iCloud 专用代理
 DOMAIN, mask-api.icloud.com //iCloud 专用代理
+
 # > other
 DOMAIN-SUFFIX,ess.apple.com //iMessage Facetime
 DOMAIN-SUFFIX,appsto.re // Apple URL Shortener
