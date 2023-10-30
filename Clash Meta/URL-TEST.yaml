@@ -73,40 +73,17 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点
+
+  - name: 🗺️ 全球节点
+    type: select
+    filter: '^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\d{0,2}\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$'
+    lazy: true
+    use:
+      - A
       
   - name: 🇭🇰 香港节点
     type: url-test
-    filter: '(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
-    lazy: true
-    use:
-      - A
-
-  - name: 🇸🇬 狮城节点
-    type: url-test
-    filter: '(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美)).)*$'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
-    lazy: true
-    use:
-      - A
-
-  - name: 🇯🇵 日本节点
-    type: url-test
-    filter: '(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
-    lazy: true
-    use:
-      - A
-
-  - name: 🇺🇸 美国节点
-    type: url-test
-    filter: '(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$'
+    filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -116,7 +93,7 @@ proxy-groups:
 
   - name: 🇹🇼 台湾节点
     type: url-test
-    filter: '台湾'
+    filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -124,9 +101,9 @@ proxy-groups:
     use:
       - A
 
-  - name: 🇰🇷 韩国节点
+  - name: 🇯🇵 日本节点
     type: url-test
-    filter: '韩国'
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -134,39 +111,9 @@ proxy-groups:
     use:
       - A
 
-  - name: 🇮🇳 印度节点
+  - name: 🇸🇬 狮城节点
     type: url-test
-    filter: '印度'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
-    lazy: true
-    use:
-      - A 
-
-  - name: 🇬🇧 英国节点
-    type: url-test
-    filter: '英国'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
-    lazy: true
-    use:
-      - A 
-
-  - name: 🇩🇪 德国节点
-    type: url-test
-    filter: '德国'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
-    lazy: true
-    use:
-      - A  
-
-  - name: 🇦🇺 澳洲节点
-    type: url-test
-    filter: '澳大利亚'
+    filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
@@ -174,19 +121,9 @@ proxy-groups:
     use:
       - A
 
-  - name: 🇹🇷 土耳其节点
+  - name: 🇺🇸 美国节点
     type: url-test
-    filter: '土耳其'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150
-    lazy: true
-    use:
-      - A
-
-  - name: 🇦🇷 阿根廷节点
-    type: url-test
-    filter: '阿根廷'
+    filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
