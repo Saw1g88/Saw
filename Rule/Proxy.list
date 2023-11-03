@@ -325,4 +325,4 @@ DOMAIN-SUFFIX,vikacg.com
 DOMAIN-SUFFIX,picjs.xyz
 
 # > SubStore
-DOMAIN-KEYWORD,sub-store.vercel.app
+#DOMAIN-KEYWORD,sub-store.vercel.app
