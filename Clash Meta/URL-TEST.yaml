@@ -59,7 +59,7 @@ proxy-groups:
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点               
       
-  - name: 🧩 谷歌服务
+  - name: 🗽 谷歌服务
     type: select
     filter:
     proxies:
@@ -78,16 +78,6 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇺🇸 美国节点
-
-  - name: 🇺🇳 其他节点
-    type: select
-    filter: '^(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))'
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 150    
-    lazy: true
-    use:
-      - A
       
   - name: 🇭🇰 香港节点
     type: url-test
@@ -135,6 +125,16 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
+    lazy: true
+    use:
+      - A
+
+  - name: 🇺🇳 其他节点
+    type: select
+    filter: '^(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150    
     lazy: true
     use:
       - A
@@ -195,7 +195,7 @@ rules:
 - RULE-SET,Social,👥 社交通讯
 - RULE-SET,Media,🎥 影音媒体
 - RULE-SET,AI,💭 人工智能
-- RULE-SET,Google,🧩 谷歌服务
+- RULE-SET,Google,🗽 谷歌服务
 - RULE-SET,Proxy,💻 代理网站
 - RULE-SET,Direct,DIRECT
 - GEOIP,CN,DIRECT
