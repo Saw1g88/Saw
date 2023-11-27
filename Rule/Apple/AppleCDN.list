@@ -7,8 +7,6 @@ DOMAIN-SUFFIX,a5.mzstatic.com
 DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
 DOMAIN-SUFFIX,adcdownload.apple.com
 DOMAIN-SUFFIX,app-site-association.cdn-apple.com
-DOMAIN-SUFFIX,appldnld.apple.com
-DOMAIN-SUFFIX,appldnld.g.aaplimg.com
 DOMAIN-SUFFIX,appleid.cdn-apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,apps.mzstatic.com
@@ -90,12 +88,8 @@ DOMAIN-SUFFIX,is5.mzstatic.com
 DOMAIN-SUFFIX,itunes-apple.com.akadns.net
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,itunesconnect.apple.com
-DOMAIN-SUFFIX,mesu-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,mesu-china.apple.com.akadns.net
-DOMAIN-SUFFIX,mesu.apple.com
 DOMAIN-SUFFIX,music.apple.com
-DOMAIN-SUFFIX,ocsp-lb.apple.com.akadns.net
-DOMAIN-SUFFIX,ocsp.apple.com
 DOMAIN-SUFFIX,ocsp2.apple.com
 DOMAIN-SUFFIX,oscdn.apple.com
 DOMAIN-SUFFIX,oscdn.origin-apple.com.akadns.net
@@ -127,8 +121,6 @@ DOMAIN-SUFFIX,swdist.apple.com
 DOMAIN-SUFFIX,swscan-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,swscan.apple.com
 DOMAIN-SUFFIX,updates-http.cdn-apple.com.akadns.net
-DOMAIN-SUFFIX,updates-http.cdn-apple.com
-DOMAIN-SUFFIX,updates.cdn-apple.com
 DOMAIN-SUFFIX,valid.apple.com
 DOMAIN-SUFFIX,valid.origin-apple.com.akadns.net
 DOMAIN-SUFFIX,weather-data.apple.com.akadns.net
@@ -138,4 +130,3 @@ DOMAIN-SUFFIX,weather-map2.apple.com
 DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
 DOMAIN-SUFFIX,www.apple.com.edgekey.net
 DOMAIN-SUFFIX,www.apple.com
-DOMAIN-SUFFIX,xp.apple.com
