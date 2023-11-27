@@ -1,3 +1,56 @@
+# 苹果直连列表
+
+# > Push
+DOMAIN-SUFFIX,push.apple.com
+DOMAIN,identity.apple.com
+IP-CIDR,17.249.0.0/16, no-resolve
+IP-CIDR,17.252.0.0/16, no-resolve
+IP-CIDR,17.57.144.0/22, no-resolve
+IP-CIDR,17.188.128.0/18, no-resolve
+IP-CIDR,17.188.20.0/23, no-resolve
+IP-CIDR6,2620:149:a44::/48, no-resolve
+IP-CIDR6,2403:300:a42::/48, no-resolve
+IP-CIDR6,2403:300:a51::/48, no-resolve
+IP-CIDR6,2a01:b740:a42::/48, no-resolve
+
+# > ID
+DOMAIN,appleid.apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
+DOMAIN,appleid.cdn-apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
+DOMAIN,idmsa.apple.com //Apple ID 认证
+DOMAIN,gsa.apple.com //Apple ID 认证
+
+# > AppStore
+DOMAIN-SUFFIX,itunes.apple.com //商店内容，如 App、图书和音乐
+DOMAIN-SUFFIX,apps.apple.com //商店内容，如 App、图书和音乐
+DOMAIN-SUFFIX,mzstatic.com //商店内容，如 App、图书和音乐
+DOMAIN,ppq.apple.com //企业 App 验证
+
+# > Weather
+DOMAIN,weather-data.apple.com
+DOMAIN,weather-map2.apple.com
+
+# > AppleDeviceSetup
+DOMAIN,albert.apple.com //设备激活
+DOMAIN,captive.apple.com //针对使用强制门户的网络进行互联网连接验证
+DOMAIN,gs.apple.com
+DOMAIN,humb.apple.com
+DOMAIN,static.ips.apple.com
+DOMAIN,sq-device.apple.com //eSIM 激活
+DOMAIN,tbsc.apple.com
+DOMAIN,time-ios.apple.com //供设备用来设置日期和时间
+DOMAIN,time.apple.com //供设备用来设置日期和时间
+DOMAIN,time-macos.apple.com //供设备用来设置日期和时间
+
+# > AppleDeviceManagement
+DOMAIN, deviceenrollment.apple.com //DEP 暂时注册
+DOMAIN, deviceservices-external.apple.com
+DOMAIN, gdmf.apple.com //供 MDM 服务器用来识别使用“被管理的软件更新”的设备有哪些可用的软件更新
+DOMAIN, identity.apple.com //APNs 证书请求门户
+DOMAIN, iprofiles.apple.com //托管当设备通过设备注册过程在 Apple 校园教务管理或 Apple 商务管理中注册时使用的注册描述文件
+DOMAIN, mdmenrollment.apple.com //当客户端通过设备注册过程在 Apple 校园教务管理或 Apple 商务管理中注册时，供 MDM 服务器用来上传客户端使用的注册描述文件，还可用来查找设备和帐户
+DOMAIN, setup.icloud.com //需要在共享 iPad 上使用管理式 Apple ID 登录
+DOMAIN, vpp.itunes.apple.com //供 MDM 服务器用来执行与“App 和图书”有关的操作，例如在设备上分配或撤销许可证
+
 # 国内域名
 
 # > MyList
