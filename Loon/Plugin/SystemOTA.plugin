@@ -1,7 +1,8 @@
 #!name = 屏蔽iOS更新
 #!desc = 屏蔽iOS系统更新
 #!author = Saw
-#!homepage = 
+#!openUrl = 
+#!homepage = https://github.com/Saw1g88/Saw/tree/main/Loon/Plugin
 #!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_Update.png
 
 [Rule]
