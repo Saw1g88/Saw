@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,app-site-association.cdn-apple.com
 DOMAIN-SUFFIX,appleid.cdn-apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,apps.mzstatic.com
+DOMAIN-SUFFIX,beta.apple.com
 DOMAIN-SUFFIX,cdn-cn1.apple-mapkit.com
 DOMAIN-SUFFIX,cdn-cn2.apple-mapkit.com
 DOMAIN-SUFFIX,cdn-cn3.apple-mapkit.com
@@ -121,6 +122,8 @@ DOMAIN-SUFFIX,swdist.apple.com.akadns.net
 DOMAIN-SUFFIX,swdist.apple.com
 DOMAIN-SUFFIX,swscan-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,swscan.apple.com
+DOMAIN-SUFFIX,testflight.apple.com
+DOMAIN-KEYWORD,testflight
 DOMAIN-SUFFIX,updates-http.cdn-apple.com.akadns.net
 DOMAIN-SUFFIX,valid.apple.com
 DOMAIN-SUFFIX,valid.origin-apple.com.akadns.net
