@@ -1,0 +1,209 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: Rule
+log-level: silent
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*'
+    - '+.lan'
+    - '+.local'
+  default-nameserver:
+     - 223.5.5.5
+     - 223.6.6.6
+     - 119.29.29.29
+  nameserver:
+     - https://223.5.5.5/dns-query
+     - https://223.6.6.6/dns-query
+     - https://1.12.12.12/dns-query
+     
+  fallback:
+     - https://120.53.53.53/dns-query
+
+tun:
+  enable: true
+  stack: gvisor
+  dns-hijack:
+  - any:53
+  auto-route: true
+  auto-detect-interface: true
+
+profile:
+  tracing: true
+
+proxy-providers:
+  A:
+    type: http
+    path: ./profiles/proxies/A.yaml
+    url: 订阅链接
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300      
+      
+proxy-groups:
+  - name: 影音媒体
+    type: select
+    filter:
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 其他节点
+          
+  - name: 社交媒体
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 其他节点
+
+  - name: 人工智能
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点   
+      - 其他节点
+      
+  - name: 谷歌服务
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点 
+      - 其他节点
+      
+  - name: 代理域名
+    type: select
+    proxies:
+      - 香港节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 其他节点
+      
+  - name: 香港节点
+    type: url-test
+    filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    lazy: true
+    use:
+      - A
+
+  - name: 日本节点
+    type: url-test
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    lazy: true
+    use:
+      - A
+
+  - name: 狮城节点
+    type: url-test
+    filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    lazy: true
+    use:
+      - A
+
+  - name: 美国节点
+    type: url-test
+    filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150
+    lazy: true
+    use:
+      - A
+
+  - name: 其他节点
+    type: select
+    filter: '^(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))'
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 150    
+    lazy: true
+    use:
+      - A
+
+rule-providers:
+  LAN:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml
+    path: ./ruleset/LAN.yaml    
+  Reject:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml
+    path: ./ruleset/Reject.yaml 
+  Social:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml
+    path: ./ruleset/Social.yaml 
+  Media:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Media.yaml
+    path: ./ruleset/Media.yaml
+  AI:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml
+    path: ./ruleset/AI.yaml 
+  Google:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml
+    path: ./ruleset/Google.yaml 
+  Proxy:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy.yaml
+    path: ./ruleset/Proxy.yaml 
+  Direct:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct.yaml
+    path: ./ruleset/Direct.yaml 
+
+rules:
+- RULE-SET,LAN,DIRECT
+- RULE-SET,Reject,REJECT
+- RULE-SET,Social,社交媒体
+- RULE-SET,Media,影音媒体
+- RULE-SET,AI,人工智能
+- RULE-SET,Google,谷歌服务
+- RULE-SET,Proxy,代理域名
+- RULE-SET,Direct,DIRECT
+- MATCH,香港节点
