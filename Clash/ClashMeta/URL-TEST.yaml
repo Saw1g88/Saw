@@ -27,6 +27,14 @@ dns:
   fallback:
      - https://120.53.53.53/dns-query
 
+tun:
+  enable: true
+  stack: gvisor
+  dns-hijack:
+  - any:53
+  auto-route: true
+  auto-detect-interface: true
+
 profile:
   tracing: true
 
@@ -45,7 +53,6 @@ proxy-providers:
 proxy-groups:
   - name: 🎥 影音媒体
     type: select
-    filter:
     proxies:
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
@@ -55,7 +62,6 @@ proxy-groups:
           
   - name: 👥 社交媒体
     type: select
-    filter:
     proxies:
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
@@ -65,7 +71,6 @@ proxy-groups:
 
   - name: 💭 人工智能
     type: select
-    filter:
     proxies:
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
@@ -75,7 +80,6 @@ proxy-groups:
       
   - name: 🗽 谷歌服务
     type: select
-    filter:
     proxies:
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
@@ -85,7 +89,6 @@ proxy-groups:
       
   - name: 🌎️ 代理域名
     type: select
-    filter:
     proxies:
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
