@@ -1,17 +1,3 @@
-#==========================================
-# @ConfigName        墨鱼自用Clash配置文件
-# @Author            @ddgksf2013
-# @TgChannel         𝐡𝐭𝐭𝐩𝐬://𝐭.𝐦𝐞/𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟐𝟏
-# @WechatID          公众号墨鱼手记
-# @Feedback          💡请通过邮件反馈问题[其它方式一概无视]：𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑@𝟏𝟔𝟑.𝐜𝐨𝐦 💡
-# @UpdateTime        2023/08/13 10:00 UTC/GMT +8
-# @Function          支持手动选择、自动测速、广告屏蔽、兜底分流、按国家分组节点、多机场订阅等等   
-# @ClashDownload     https://github.com/Fndroid/clash_for_windows_pkg/releases
-# @Thanks            @blackmatrix7, @Fndroid, @Anti
-# @Attention         𝐏𝐥𝐞𝐚𝐬𝐞 𝐮𝐬𝐞 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐨𝐟 𝐂𝐥𝐚𝐬𝐡𝐟𝐨𝐫𝐖𝐢𝐧𝐝𝐨𝐰𝐬
-# @ConfigVersion     1.0.20
-#==========================================
-
 port: 7890           # HTTP 代理端口
 socks-port: 7891     # Socks 端口
 redir-port: 7892     # Redir 端口
@@ -58,9 +44,9 @@ dns:
 #========= 建立锚点 =========#
 
 # 策略组引用
-pr:   &a3 {type: select,   proxies: [♻️ 自动选择, 🚀 手动切换, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, DIRECT] }
+pr:   &a3 {type: select,   proxies: [🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇺🇳 其他节点] }
 p:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
-auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Subscribe] }
+auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, tolerance: 150, use: [Subscribe] }
 use:  &a2 {type: select,   use: [Subscribe] }
 c:    &a6 {type: http,     behavior: classical, interval: 86400}
 d:    &a5 {type: http,     behavior: domain,    interval: 86400}
@@ -77,72 +63,38 @@ proxy-providers:
 proxies: null
 proxy-groups:
 #分流分组
-  - {name: 🚀 手动切换, <<: *a2}
-  - {name: 🌏 全球加速, <<: *a3}
-  - {name: 🍎 苹果服务, <<: *a3}
-  - {name: 📺 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点]}
-  - {name: 🤖 OpenAi,   type: select, proxies: [🇺🇲 美国节点]}
-  - {name: 🎬 国际媒体, <<: *a3}
+  - {name: 🎬️ 影音媒体, <<: *a3}
+  - {name: 👥 社交媒体, <<: *a3}
+  - {name: 💭 人工智能, <<: *a3}
   - {name: 🌌 谷歌服务, <<: *a3}
-  - {name: 📟 电报消息, <<: *a3}
-  - {name: 🐦 推特服务, <<: *a3}
-  - {name: 🎮 游戏平台, <<: *a3}
-  - {name: 🆎 AdBlock, type: select, proxies: [REJECT]}
-  - {name: 🐟 兜底分流, <<: *a3}
+  - {name: 🌎️ 代理域名, <<: *a3}
   
 #节点分组
-  - {name: ♻️ 自动选择, <<: *a4}
-  - {name: 🇭🇰 香港节点, <<: *a4, filter: "港|HK|(?i)Hong"           }             # a4更改为a2，即为手动选择
-  - {name: 🇯🇵 日本节点, <<:  *a4, filter: "日|东京|JP|(?i)Japan"     }             # a4更改为a2，即为手动选择     
-  - {name: 🇨🇳 台湾节点, <<: *a4, filter: "台|湾|TW|(?i)Taiwan"      }             # a4更改为a2，即为手动选择
-  - {name: 🇺🇲 美国节点, <<: *a4, filter: "美|US|(?i)States|American"}             # a4更改为a2，即为手动选择
-  - {name: 🇸🇬 狮城节点, <<: *a4, filter: "新|坡|SG|(?i)Singapore"    }            # a4更改为a2，即为手动选择
+  - {name: 🇭🇰 香港节点, <<: *a4, filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"           }                                                                                                                                                                                  # a4更改为a2，即为手动选择
+  - {name: 🇯🇵 日本节点, <<:  *a4, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"     }                                                                                                                                                                # a4更改为a2，即为手动选择
+  - {name: 🇸🇬 狮城节点, <<: *a4, filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"    }                                                                                                                                                                                # a4更改为a2，即为手动选择
+  - {name: 🇺🇲 美国节点, <<: *a4, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"}                                                                                                   # a4更改为a2，即为手动选择
+  - {name: 🇺🇳 其他节点, <<: *a2, filter: "^(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))"      }             # a4更改为a2，即为手动选择
 
 # 分流规则 
 rule-providers:
-  Direct:      {<<: *a5, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml,                      path: ./ruleset/Direct.yaml       }
-  Lan:         {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml,                            path: ./ruleset/Lan.yaml          }
-  Download:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml,                  path: ./ruleset/Download.yaml     }
-  Ad:          {<<: *a5, url: https://anti-ad.net/clash.yaml,                                                                                     path: ./ruleset/anti-ad-clash.yaml}
-  OpenAi:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml,                      path: ./ruleset/OpenAi.yaml       }
-  BiliBili:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml,                  path: ./ruleset/BiliBili.yaml     }
-  Bahamut:     {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml,                    path: ./ruleset/Bahamut.yaml      } 
-  GlobalMedia: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml,  path: ./ruleset/GlobalMedia.yaml  }
-  Apple:       {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml,              path: ./ruleset/Apple.yaml        }
-  Github:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml,                      path: ./ruleset/Github.yaml       }
-  Microsoft:   {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml,                path: ./ruleset/Microsoft.yaml    }
-  Google:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml,                      path: ./ruleset/Google.yaml       }
-  Telegram:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml,                  path: ./ruleset/Telegram.yaml     }
-  Twitter:     {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml,                    path: ./ruleset/Twitter.yaml      }
-  Game:        {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml,                          path: ./ruleset/Game.yaml         }
-  ChinaIP:     {<<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml,                                     path: ./ruleset/ChinaIP.yaml      }
-  ProxyLite:   {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ProxyLite/ProxyLite.yaml,                path: ./ruleset/ProxyLite.yaml    }
+  LAN:      {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml,     path: ./ruleset/LAN.yaml     }
+  Reject:   {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml,  path: ./ruleset/Reject.yaml  }
+  Social:   {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml,  path: ./ruleset/Social.yaml  }
+  Media:    {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Media.yaml,   path: ./ruleset/Media.yaml   }
+  AI:       {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml,      path: ./ruleset/AI.yaml      }
+  Google:   {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml,  path: ./ruleset/Google.yaml  }
+  Proxy:    {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy.yaml,   path: ./ruleset/Proxy.yaml   } 
+  Direct:   {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct.yaml,  path: ./ruleset/Direct.yaml  }
   
  # 分流Policy 
 rules:
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,Lan,DIRECT
-  - RULE-SET,Download,DIRECT
-  - RULE-SET,Ad,🆎 AdBlock
-  - RULE-SET,OpenAi,🤖 OpenAi
-  - RULE-SET,BiliBili,📺 哔哩哔哩
-  - RULE-SET,Bahamut,📺 哔哩哔哩
-  - RULE-SET,GlobalMedia,🎬 国际媒体
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Github,🌏 全球加速
-  - RULE-SET,Microsoft, 🌏 全球加速
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,Social,👥 社交媒体
+  - RULE-SET,Media,🎬️ 影音媒体
+  - RULE-SET,AI,💭 人工智能
   - RULE-SET,Google,🌌 谷歌服务
-  - RULE-SET,Telegram,📟 电报消息
-  - RULE-SET,Twitter,🌏 全球加速
-  - RULE-SET,Game,🎮 游戏平台
-  - RULE-SET,ProxyLite,🌏 全球加速
-  - RULE-SET,ChinaIP,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,🐟 兜底分流
-
-
-# TUN模式是通过在操作系统上安装一个虚拟网卡来实现的，它可以接管所有的网络流量，并将流量转发至Clash，然后由Clash发出请求
-# Windows 系统中如何启用TUN模式
-# 1、运行 Clash For Windows, 确保使用规则模式，并可以联网
-# 2、点击 General中的Service Mode右侧的Manage按钮，在弹出窗口中选择schtasks，安装服务模式。安装完成后，应用程序会自动重启，Service Mode右侧的地球图标变为绿色表示安装成功
-# 3、点击 General中的TUN Mode右侧的开关以启动TUN模式
+  - RULE-SET,Proxy,🌎️ 代理域名
+  - RULE-SET,Direct,DIRECT
+  - MATCH,🇭🇰 香港节点
