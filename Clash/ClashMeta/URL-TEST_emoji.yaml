@@ -51,7 +51,7 @@ proxy-providers:
       interval: 300      
       
 proxy-groups:
-  - name: 🎥 影音媒体
+  - name: 🎬️ 影音媒体
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -78,7 +78,7 @@ proxy-groups:
       - 🇺🇸 美国节点   
       - 🇺🇳 其他节点
       
-  - name: 🗽 谷歌服务
+  - name: 🌌 谷歌服务
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -200,9 +200,9 @@ rules:
 - RULE-SET,LAN,DIRECT
 - RULE-SET,Reject,REJECT
 - RULE-SET,Social,👥 社交媒体
-- RULE-SET,Media,🎥 影音媒体
+- RULE-SET,Media,🎬️ 影音媒体
 - RULE-SET,AI,💭 人工智能
-- RULE-SET,Google,🗽 谷歌服务
+- RULE-SET,Google,🌌 谷歌服务
 - RULE-SET,Proxy,🌎️ 代理域名
 - RULE-SET,Direct,DIRECT
 - MATCH,🇭🇰 香港节点
