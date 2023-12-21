@@ -28,6 +28,14 @@ dns:
   fallback:
      - https://120.53.53.53/dns-query
 
+tun:
+  enable: true
+  stack: gvisor
+  dns-hijack:
+  - any:53
+  auto-route: true
+  auto-detect-interface: true
+
 profile:
   tracing: true
 
@@ -71,6 +79,15 @@ proxy-groups:
       - 🇺🇳 其他节点
       
   - name: 🌌 谷歌服务
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇺🇲 美国节点 
+      - 🇺🇳 其他节点
+
+  - name: 🪟 微软服务
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -187,6 +204,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml
     path: ./ruleset/Google.yaml 
+  Microsoft:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Microsoft.yaml
+    path: ./ruleset/Microsoft.yaml 
   Proxy:
     type: http
     behavior: classical
@@ -203,12 +226,13 @@ rule-providers:
 rules:
 - RULE-SET,LAN,DIRECT
 - RULE-SET,Reject,REJECT
-- RULE-SET,Social,👥 社交媒体
-- RULE-SET,Media,🎬️ 影音媒体
-- RULE-SET,AI,🇺🇸 美国节点
 - RULE-SET,AppleCDN,DIRECT
 - RULE-SET,AppleService,🍎 苹果服务
+- RULE-SET,Social,👥 社交媒体
+- RULE-SET,Media,🎬️ 影音媒体
+- RULE-SET,AI,🇺🇲 美国节点
 - RULE-SET,Google,🌌 谷歌服务
+- RULE-SET,Microsoft,🪟 微软服务
 - RULE-SET,Proxy,🌎️ 代理域名
 - RULE-SET,Direct,DIRECT
 - MATCH,🇭🇰 香港节点
