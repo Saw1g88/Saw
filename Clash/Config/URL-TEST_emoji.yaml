@@ -28,6 +28,14 @@ dns:
   fallback:
      - https://120.53.53.53/dns-query
 
+tun:
+  enable: true
+  stack: gvisor
+  dns-hijack:
+  - any:53
+  auto-route: true
+  auto-detect-interface: true
+
 profile:
   tracing: true
 
@@ -178,18 +186,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml
     path: ./ruleset/AI.yaml 
-  AppleCDN:
+  Apple:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AppleCDN.yaml
-    path: ./ruleset/AppleCDN.yaml
-  AppleService:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AppleService.yaml
-    path: ./ruleset/AppleService.yaml
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Apple.yaml
+    path: ./ruleset/Apple.yaml
   Google:
     type: http
     behavior: classical
@@ -218,11 +220,10 @@ rule-providers:
 rules:
 - RULE-SET,LAN,DIRECT
 - RULE-SET,Reject,REJECT
-- RULE-SET,AppleCDN,DIRECT
-- RULE-SET,AppleService,🍎 苹果服务
 - RULE-SET,Social,👥 社交媒体
 - RULE-SET,Media,🎬️ 影音媒体
 - RULE-SET,AI,🇺🇲 美国节点
+- RULE-SET,Apple,🍎 苹果服务
 - RULE-SET,Google,🌌 谷歌服务
 - RULE-SET,Microsoft,🪟 微软服务
 - RULE-SET,Proxy,🌎️ 代理域名
