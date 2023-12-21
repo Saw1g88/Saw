@@ -28,14 +28,6 @@ dns:
   fallback:
      - https://120.53.53.53/dns-query
 
-tun:
-  enable: true
-  stack: gvisor
-  dns-hijack:
-  - any:53
-  auto-route: true
-  auto-detect-interface: true
-
 profile:
   tracing: true
 
