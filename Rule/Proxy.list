@@ -288,6 +288,9 @@ DOMAIN-KEYWORD,ttvnw
 DOMAIN-SUFFIX,terabox.com
 DOMAIN-SUFFIX,teraboxcdn.com
 
+# > TickTick
+DOMAIN-KEYWORD,ticktick
+
 # > Wikipedia 维基相关域名
 DOMAIN-SUFFIX,mediawiki.org
 DOMAIN-SUFFIX,wikibooks.org
