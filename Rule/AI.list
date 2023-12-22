@@ -1,43 +1,26 @@
-# 人工智能
-
-# > OpenAi
-DOMAIN-KEYWORD,openai
-DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,challenges.cloudflare.com
-DOMAIN-SUFFIX,client-api.arkoselabs.com
-DOMAIN-SUFFIX,events.statsigapi.net
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
+# > ChatGPT
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,stripe.com
 
-# > BingAi
+# > Chat GPT API & CDN
+DOMAIN-SUFFIX,cdn.oaistatic.com
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
+
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+
+# > New Bing
 DOMAIN-SUFFIX,bing.com
-DOMAIN-SUFFIX,bing.net
-DOMAIN-SUFFIX,bingads.com
-DOMAIN-SUFFIX,bingagencyawards.com
-DOMAIN-SUFFIX,bingapistatistics.com
-DOMAIN-SUFFIX,bingsandbox.com
-DOMAIN-SUFFIX,bingvisualsearch.com
-DOMAIN-SUFFIX,bingworld.com
-DOMAIN-SUFFIX,bluehatnights.com
-DOMAIN-SUFFIX,dictate.ms
-DOMAIN-SUFFIX,ditu.live.com
-DOMAIN-SUFFIX,flipwithsurface.com
-DOMAIN-SUFFIX,masalladeloslimites.com
-DOMAIN-SUFFIX,microsoft-give.com
-DOMAIN-SUFFIX,microsoftcloudsummit.com
-DOMAIN-SUFFIX,microsoftdiplomados.com
-DOMAIN-SUFFIX,microsoftlatamholiday.com
-DOMAIN-SUFFIX,microsoftmxfilantropia.com
-DOMAIN-SUFFIX,microsoftpartnersolutions.com
-DOMAIN-SUFFIX,msunlimitedcloudsummit.com
-DOMAIN-SUFFIX,renovacionoffice.com
-DOMAIN-SUFFIX,sprinklesapp.com
+DOMAIN-SUFFIX,bingapis.com
 
-# > GoogleAi
-DOMAIN-SUFFIX,bard.google.com
+# > Claude
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+
+# > Bard
+DOMAIN,bard.google.com
