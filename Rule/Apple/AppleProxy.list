@@ -1,12 +1,18 @@
-# 苹果代理列表
+# > 苹果代理列表
 
-# > Web Preview
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN,amp-api.podcasts.apple.com
+DOMAIN,beta.music.apple.com
+DOMAIN,books.itunes.apple.com
+DOMAIN,facetime.apple.com
+DOMAIN,lookup-api.apple.com
+DOMAIN,radio.itunes.apple.com
+DOMAIN,apps.apple.com
 DOMAIN,books.apple.com
-DOMAIN,books-analytics-events.apple.com
-DOMAIN,weather-analytics-events.apple.com
+DOMAIN,itunes.apple.com
 DOMAIN,tv.apple.com
-
-# > News
+DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,apple.news
 DOMAIN,news-assets.apple.com
 DOMAIN,news-client.apple.com
@@ -14,27 +20,4 @@ DOMAIN,news-client-search.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
 DOMAIN,apple.comscoreresearch.com
-
-# > iCloud
-DOMAIN-SUFFIX,apple-cloudkit.com //iCloud 服务
-DOMAIN-SUFFIX,apple-livephotoskit.com //iCloud 服务
-DOMAIN-SUFFIX,cdn-apple.com //iCloud 服务
-DOMAIN-SUFFIX,gc.apple.com //iCloud 服务
-DOMAIN-SUFFIX,icloud.com //iCloud 服务
-DOMAIN-SUFFIX,icloud.apple.com //iCloud 服务
-DOMAIN-SUFFIX,icloud-content.com //iCloud 服务
-DOMAIN,mask.icloud.com //iCloud 专用代理
-DOMAIN,mask-h2.icloud.com //iCloud 专用代理
-DOMAIN,mask-api.icloud.com //iCloud 专用代理
-
-# > other
-DOMAIN-SUFFIX,ess.apple.com //iMessage Facetime
-DOMAIN-SUFFIX,appsto.re // Apple URL Shortener
-DOMAIN-SUFFIX,smoot.apple.com // Spotlight
-DOMAIN-SUFFIX,ls.apple.com
-DOMAIN,amp-api.podcasts.apple.com // Podcasts
-DOMAIN,beta.music.apple.com // Apple Music Web
-DOMAIN,books.itunes.apple.com // iBooks Store download
-DOMAIN,lookup-api.apple.com // Look Up
-DOMAIN,radio.itunes.apple.com // Apple Music Radio
-DOMAIN,ocsp.digicert.com //证书验证
+DOMAIN,testflight.apple.com
