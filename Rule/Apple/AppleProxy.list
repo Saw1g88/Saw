@@ -4,7 +4,7 @@ DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,P115-fmfmobile.icloud.com
 DOMAIN,P115-fmipmobile.icloud.com
-DOMAIN-SUFFIX,statici.icloud.com
+DOMAIN,statici.icloud.com
 DOMAIN,amp-api.podcasts.apple.com
 DOMAIN,beta.music.apple.com
 DOMAIN,books.itunes.apple.com
