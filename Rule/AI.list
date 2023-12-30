@@ -18,6 +18,7 @@ DOMAIN-SUFFIX,stripe.com
 # > New Bing
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bingapis.com
+DOMAIN-SUFFIX,copilot.microsoft.com
 
 # > Claude
 DOMAIN-SUFFIX,anthropic.com
