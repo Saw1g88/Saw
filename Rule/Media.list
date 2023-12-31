@@ -1,5 +1,3 @@
-# 影音媒体
-
 # > Youtube Music
 USER-AGENT,*YouTubeMusic*
 USER-AGENT,*com.google.ios.youtubemusic*
@@ -21,23 +19,3 @@ DOMAIN-SUFFIX,youtube-ui.l.google.com
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,yt3.ggpht.com
 DOMAIN-SUFFIX,ytimg.com
-
-# > Pornhub
-DOMAIN-SUFFIX,phncdn.com
-DOMAIN-SUFFIX,phprcdn.com
-DOMAIN-SUFFIX,pornhub.com
-DOMAIN-SUFFIX,pornhubpremium.com
-
-# > NivodTV
-DOMAIN-KEYWORD,nivod
-DOMAIN-SUFFIX,biggggg.com
-DOMAIN-SUFFIX,mudvod.tv
-DOMAIN-SUFFIX,nbys.tv
-DOMAIN-SUFFIX,nbys1.tv
-DOMAIN-SUFFIX,nbyy.tv
-DOMAIN-SUFFIX,newpppp.com
-DOMAIN-SUFFIX,nivod.tv
-DOMAIN-SUFFIX,nivodi.tv
-DOMAIN-SUFFIX,nivodz.com
-DOMAIN-SUFFIX,vod360.net
-
