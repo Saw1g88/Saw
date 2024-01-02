@@ -7,26 +7,36 @@ external-controller: 127.0.0.1:9090
 
 dns:
   enable: true
-  prefer-h3: true
   listen: 0.0.0.0:53
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - '*'
-    - '+.lan'
-    - '+.local'
-  default-nameserver:
-     - 223.5.5.5
-     - 223.6.6.6
-     - 119.29.29.29
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
   nameserver:
-     - https://223.5.5.5/dns-query
-     - https://223.6.6.6/dns-query
-     - https://1.12.12.12/dns-query
-     
+     - 223.5.5.5
+     - 114.114.114.114
   fallback:
-     - https://120.53.53.53/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
 
 profile:
   tracing: true
@@ -35,7 +45,7 @@ proxy-providers:
   A:
     type: http
     path: ./profiles/proxies/A.yaml
-    url: 订阅链接
+    url: https://gist.githubusercontent.com/Saw1g88/a1505cf3f6183fae67fbed631136eb84/raw/Clash
     interval: 86400
     health-check:
       enable: true
@@ -43,7 +53,16 @@ proxy-providers:
       interval: 300      
       
 proxy-groups:
-  - name: 🎬️ 影音媒体
+  - name: 🎬️ 油管影音
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇺🇲 美国节点
+      - 🇺🇳 其他节点
+
+  - name: ✈️ 电报消息
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -52,7 +71,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 🇺🇳 其他节点
           
-  - name: 👥 社交媒体
+  - name: 👥 社交软件
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -61,25 +80,16 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 🇺🇳 其他节点
 
-  - name: 🍎 苹果服务
+  - name: 🤖 人工智能
     type: select
     proxies:
       - 🇭🇰 香港节点
       - 🇯🇵 日本节点
       - 🇸🇬 狮城节点
-      - 🇺🇲 美国节点   
+      - 🇺🇲 美国节点
       - 🇺🇳 其他节点
       
   - name: 🌌 谷歌服务
-    type: select
-    proxies:
-      - 🇭🇰 香港节点
-      - 🇯🇵 日本节点
-      - 🇸🇬 狮城节点
-      - 🇺🇲 美国节点 
-      - 🇺🇳 其他节点
-
-  - name: 🪟 微软服务
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -148,42 +158,42 @@ proxy-groups:
       - A
 
 rule-providers:
-  LAN:
+  Unbreak:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml
-    path: ./ruleset/LAN.yaml    
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Unbreak.yaml
+    path: ./ruleset/Unbreak.yaml   
   Reject:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml
     path: ./ruleset/Reject.yaml 
+  YouTube:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Media.yaml
+    path: ./ruleset/YouTube.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Telegram.yaml
+    path: ./ruleset/Telegram.yaml 
   Social:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml
     path: ./ruleset/Social.yaml 
-  Media:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Media.yaml
-    path: ./ruleset/Media.yaml
   AI:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml
     path: ./ruleset/AI.yaml 
-  Apple:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Apple.yaml
-    path: ./ruleset/Apple.yaml
   Google:
     type: http
     behavior: classical
@@ -200,24 +210,32 @@ rule-providers:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy.yaml
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy%2B.yaml
     path: ./ruleset/Proxy.yaml 
   Direct:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct.yaml
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct%2B.yaml
     path: ./ruleset/Direct.yaml 
+  LAN:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml
+    path: ./ruleset/LAN.yaml 
 
 rules:
 - RULE-SET,LAN,DIRECT
+- RULE-SET,Unbreak,DIRECT
 - RULE-SET,Reject,REJECT
-- RULE-SET,Social,👥 社交媒体
-- RULE-SET,Media,🎬️ 影音媒体
-- RULE-SET,AI,🇺🇲 美国节点
-- RULE-SET,Apple,🍎 苹果服务
+- RULE-SET,YouTube,🎬️ 油管影音
+- RULE-SET,Telegram,✈️ 电报消息
+- RULE-SET,Social,👥 社交软件
+- RULE-SET,AI,🤖 人工智能
 - RULE-SET,Google,🌌 谷歌服务
-- RULE-SET,Microsoft,🪟 微软服务
+- RULE-SET,Microsoft,DIRECT
 - RULE-SET,Proxy,🌎️ 代理域名
 - RULE-SET,Direct,DIRECT
-- MATCH,🇭🇰 香港节点
+- GEOIP,CN,DIRECT
+- MATCH,🌎️ 代理域名
