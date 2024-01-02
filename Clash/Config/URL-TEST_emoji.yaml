@@ -229,7 +229,6 @@ rule-providers:
     path: ./ruleset/LAN.yaml 
 
 rules:
-- RULE-SET,LAN,DIRECT
 - RULE-SET,Unbreak,DIRECT
 - RULE-SET,Reject,REJECT
 - RULE-SET,YouTube,🎬️ 油管影音
@@ -240,5 +239,6 @@ rules:
 - RULE-SET,Microsoft,DIRECT
 - RULE-SET,Proxy,🌎️ 代理域名
 - RULE-SET,Direct,DIRECT
+- RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,🌎️ 代理域名
