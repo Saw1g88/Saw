@@ -177,7 +177,7 @@ rule-providers:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Media.yaml
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/YouTube.yaml
     path: ./ruleset/YouTube.yaml
   Telegram:
     type: http
