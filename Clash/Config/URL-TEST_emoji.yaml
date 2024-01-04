@@ -91,6 +91,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
       - 🇺🇳 其他节点
+      - DIRECT
       
   - name: 🌌 谷歌服务
     type: select
@@ -100,8 +101,27 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点 
       - 🇺🇳 其他节点
+
+
+  - name: 🪟 微软服务
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇺🇲 美国节点
+      - 🇺🇳 其他节点
       
-  - name: 🌎️ 代理域名
+  - name: 🌎️ 代理网站
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇺🇲 美国节点
+      - 🇺🇳 其他节点
+
+  - name: ♾️ 黑白名单
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -160,13 +180,7 @@ proxy-groups:
     use:
       - A
 
-rule-providers:
-  Unbreak:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Unbreak.yaml
-    path: ./ruleset/Unbreak.yaml   
+rule-providers:  
   Reject:
     type: http
     behavior: classical
@@ -229,16 +243,15 @@ rule-providers:
     path: ./ruleset/LAN.yaml 
 
 rules:
-- RULE-SET,Unbreak,DIRECT
 - RULE-SET,Reject,REJECT
 - RULE-SET,YouTube,🎬️ 油管影音
 - RULE-SET,Telegram,✈️ 电报消息
 - RULE-SET,Social,👥 社交软件
 - RULE-SET,AI,🤖 人工智能
 - RULE-SET,Google,🌌 谷歌服务
-- RULE-SET,Microsoft,DIRECT
-- RULE-SET,Proxy,🌎️ 代理域名
+- RULE-SET,Microsoft,🪟 微软服务
+- RULE-SET,Proxy,🌎️ 代理网站
 - RULE-SET,Direct,DIRECT
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,🌎️ 代理域名
+- MATCH,♾️ 黑白名单
