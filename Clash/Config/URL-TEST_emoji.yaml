@@ -52,7 +52,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.google.com/generate_204
       interval: 300      
       
 proxy-groups:
@@ -113,7 +113,7 @@ proxy-groups:
   - name: 🇭🇰 香港节点
     type: url-test
     filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -123,7 +123,7 @@ proxy-groups:
   - name: 🇯🇵 日本节点
     type: url-test
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -133,7 +133,7 @@ proxy-groups:
   - name: 🇸🇬 狮城节点
     type: url-test
     filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -143,7 +143,7 @@ proxy-groups:
   - name: 🇺🇲 美国节点
     type: url-test
     filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -153,7 +153,7 @@ proxy-groups:
   - name: 🇺🇳 其他节点
     type: select
     filter: '^(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))'
-    url: http://www.gstatic.com/generate_204
+    url: http://www.google.com/generate_204
     interval: 300
     tolerance: 150    
     lazy: true
