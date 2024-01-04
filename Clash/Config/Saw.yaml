@@ -128,7 +128,7 @@ proxy-groups:
 
 # 规则提供商
 rule-providers:
-  广告拦截: {<<: *a6, https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml, path: ./Ruleset/Reject.yaml}
+  广告拦截: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml, path: ./Ruleset/Reject.yaml}
 
   油管影音: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/YouTube.yaml, path: ./YouTube.yaml}
 
@@ -151,7 +151,7 @@ rule-providers:
 # 规则 
 rules:
   - RULE-SET, 广告拦截, REJECT
-  - RULE-SET, 油管影音, REJECT
+  - RULE-SET, 油管影音, 🎬️ 油管影音
   - RULE-SET, 电报消息, ✈️ 电报消息
   - RULE-SET, 社交软件, 👥 社交软件
   - RULE-SET, 人工智能, 🤖 人工智能
