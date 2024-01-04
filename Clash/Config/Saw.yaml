@@ -128,25 +128,25 @@ proxy-groups:
 
 # 规则提供商
 rule-providers:
-  广告拦截: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml, path: ./Ruleset/Reject.yaml}
+  广告拦截: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml,    path: ./Ruleset/Reject.yaml}
 
-  油管影音: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/YouTube.yaml, path: ./Ruleset/YouTube.yaml}
+  油管影音: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/YouTube.yaml,   path: ./Ruleset/YouTube.yaml}
 
-  电报消息: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Telegram.yaml, path: ./Ruleset/Telegram.yaml}
+  电报消息: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Telegram.yaml,  path: ./Ruleset/Telegram.yaml}
 
-  社交软件: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml, path: ./Ruleset/Social.yaml}
+  社交软件: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml,    path: ./Ruleset/Social.yaml}
 
-  人工智能: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml, path: ./Ruleset/AI.yaml}
+  人工智能: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml,        path: ./Ruleset/AI.yaml}
 
-  谷歌服务: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml, path: ./Ruleset/Google.yaml}
+  谷歌服务: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml,    path: ./Ruleset/Google.yaml}
 
   微软服务: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Microsoft.yaml, path: ./Ruleset/Microsoft.yaml}
 
-  代理网站: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy%2B.yaml, path: ./Ruleset/Proxy.yaml}
+  代理网站: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy%2B.yaml,  path: ./Ruleset/Proxy.yaml}
 
   国内网站: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct%2B.yaml, path: ./Ruleset/Direct.yaml}
 
-  局域网络: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml, path: ./Ruleset/LAN.yaml}
+  局域网络: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml,       path: ./Ruleset/LAN.yaml}
 
 # 规则 
 rules:
