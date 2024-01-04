@@ -130,7 +130,7 @@ proxy-groups:
 rule-providers:
   广告拦截: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml, path: ./Ruleset/Reject.yaml}
 
-  油管影音: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/YouTube.yaml, path: ./YouTube.yaml}
+  油管影音: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/YouTube.yaml, path: ./Ruleset/YouTube.yaml}
 
   电报消息: {<<: *a6, url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Telegram.yaml, path: ./Ruleset/Telegram.yaml}
 
