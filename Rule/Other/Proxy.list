@@ -243,9 +243,28 @@ IP-CIDR,119.235.236.0/23,no-resolve
 IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,203.104.128.0/19,no-resolve
 
+# > NivodTV
+DOMAIN-KEYWORD,nivod
+DOMAIN-SUFFIX,biggggg.com
+DOMAIN-SUFFIX,mudvod.tv
+DOMAIN-SUFFIX,nbys.tv
+DOMAIN-SUFFIX,nbys1.tv
+DOMAIN-SUFFIX,nbyy.tv
+DOMAIN-SUFFIX,newpppp.com
+DOMAIN-SUFFIX,nivod.tv
+DOMAIN-SUFFIX,nivodi.tv
+DOMAIN-SUFFIX,nivodz.com
+DOMAIN-SUFFIX,vod360.net
+
 # > Pixiv
 DOMAIN-SUFFIX,pixiv.net
 DOMAIN-SUFFIX,pximg.net
+
+# > Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
 
 # > Spark
 DOMAIN-SUFFIX,amplitude.com
