@@ -6,7 +6,6 @@ DOMAIN-SUFFIX,acompli.com
 DOMAIN-SUFFIX,acompli.net
 DOMAIN-SUFFIX,aka.ms
 DOMAIN-SUFFIX,akadns.net
-DOMAIN-SUFFIX,appcenter.ms
 DOMAIN-SUFFIX,aspnetcdn.com
 DOMAIN-SUFFIX,assets-yammer.com
 DOMAIN-SUFFIX,azure.com
@@ -14,6 +13,9 @@ DOMAIN-SUFFIX,azure.net
 DOMAIN-SUFFIX,azureedge.net
 DOMAIN-SUFFIX,azureiotcentral.com
 DOMAIN-SUFFIX,azurerms.com
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,bing.net
+DOMAIN-SUFFIX,bingapis.com
 DOMAIN-SUFFIX,cloudapp.net
 DOMAIN-SUFFIX,cloudappsecurity.com
 DOMAIN-SUFFIX,edgesuite.net
