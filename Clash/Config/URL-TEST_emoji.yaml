@@ -5,6 +5,9 @@ mode: Rule
 log-level: silent
 external-controller: 127.0.0.1:9090
 
+geox-url: 
+  mmdb: "https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb"
+
 dns:
   enable: true
   listen: 0.0.0.0:53
@@ -91,7 +94,6 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
       - 🇺🇳 其他节点
-      - DIRECT
       
   - name: 🌌 谷歌服务
     type: select
@@ -187,6 +189,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml
     path: ./ruleset/Reject.yaml 
+  Wechat:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Wechat.yaml
+    path: ./ruleset/Wechat.yaml 
   YouTube:
     type: http
     behavior: classical
@@ -205,12 +213,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml
     path: ./ruleset/Social.yaml 
-  AI:
+  OpenAI:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml
-    path: ./ruleset/AI.yaml 
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/OpenAI.yaml
+    path: ./ruleset/OpenAI.yaml 
   Google:
     type: http
     behavior: classical
@@ -227,13 +235,13 @@ rule-providers:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy%2B.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical_No_Resolve.yaml
     path: ./ruleset/Proxy.yaml 
   Direct:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct%2B.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical_No_Resolve.yaml
     path: ./ruleset/Direct.yaml 
   LAN:
     type: http
@@ -244,10 +252,11 @@ rule-providers:
 
 rules:
 - RULE-SET,Reject,REJECT
+- RULE-SET,Wechat,DIRECT
 - RULE-SET,YouTube,🎬️ 油管影音
 - RULE-SET,Telegram,✈️ 电报消息
 - RULE-SET,Social,👥 社交软件
-- RULE-SET,AI,🤖 人工智能
+- RULE-SET,OpenAI,🤖 人工智能
 - RULE-SET,Google,🌌 谷歌服务
 - RULE-SET,Microsoft,🪟 微软服务
 - RULE-SET,Proxy,🌎️ 代理网站
@@ -255,3 +264,8 @@ rules:
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,♾️ 黑白名单
+
+
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
