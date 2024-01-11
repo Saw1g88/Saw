@@ -1,5 +1,5 @@
-# > Wechat
 payload:
+  # > Wechat
   - DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
   - DOMAIN,btrace.qq.com
   - DOMAIN,dldir1.qq.com
