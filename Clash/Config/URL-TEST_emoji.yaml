@@ -86,7 +86,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 🇺🇳 其他节点
 
-  - name: 🤖 人工智能
+  - name: 💭 人工智能
     type: select
     proxies:
       - 🇭🇰 香港节点
@@ -256,7 +256,7 @@ rules:
 - RULE-SET,YouTube,🎬️ 油管影音
 - RULE-SET,Telegram,✈️ 电报消息
 - RULE-SET,Social,👥 社交软件
-- RULE-SET,OpenAI,🤖 人工智能
+- RULE-SET,OpenAI,💭 人工智能
 - RULE-SET,Google,🌌 谷歌服务
 - RULE-SET,Microsoft,🪟 微软服务
 - RULE-SET,Proxy,🌎️ 代理网站
