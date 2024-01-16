@@ -59,7 +59,16 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.google.com/generate_204
-      interval: 300      
+      interval: 300  
+  B:
+    type: http
+    path: ./profiles/proxies/A.yaml
+    url: 订阅链接
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.google.com/generate_204
+      interval: 300
       
 proxy-groups:
   - name: ✈️ Telegram
@@ -92,7 +101,7 @@ proxy-groups:
     url: http://www.google.com/generate_204
     interval: 300
     use:
-      - A
+      - B
     proxies:
       - 🇭🇰 Hong Kong
       - 🇹🇼 Taiwan
