@@ -62,7 +62,7 @@ proxy-providers:
       interval: 300  
   B:
     type: http
-    path: ./profiles/proxies/A.yaml
+    path: ./profiles/proxies/B.yaml
     url: 订阅链接
     interval: 86400
     health-check:
