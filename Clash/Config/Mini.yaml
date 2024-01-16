@@ -88,9 +88,11 @@ proxy-groups:
       
   - name: 🌎️ Proxy
     type: select
-    filter: '(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))'
+    filter: '^(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))'
     url: http://www.google.com/generate_204
     interval: 300
+    use:
+      - A
     proxies:
       - 🇭🇰 Hong Kong
       - 🇹🇼 Taiwan
@@ -115,6 +117,7 @@ proxy-groups:
     interval: 300
     tolerance: 150
     lazy: true
+    hidden: true
     use:
       - A
 
@@ -125,6 +128,7 @@ proxy-groups:
     interval: 300
     tolerance: 150
     lazy: true
+    hidden: true
     use:
       - A
 
@@ -135,6 +139,7 @@ proxy-groups:
     interval: 300
     tolerance: 150
     lazy: true
+    hidden: true
     use:
       - A
 
@@ -145,6 +150,7 @@ proxy-groups:
     interval: 300
     tolerance: 150
     lazy: true
+    hidden: true
     use:
       - A
 
@@ -155,6 +161,7 @@ proxy-groups:
     interval: 300
     tolerance: 150
     lazy: true
+    hidden: true
     use:
       - A
 
@@ -212,7 +219,7 @@ rules:
 - RULE-SET,Reject,REJECT
 - RULE-SET,CN,DIRECT
 - RULE-SET,Telegram,✈️ Telegram
-- RULE-SET,OpenAI,💭 OpanAI
+- RULE-SET,OpenAI,💭 OpenAI
 - RULE-SET,US,🇺🇸 United States
 - RULE-SET,Proxy,🌎️ Proxy
 - RULE-SET,Direct,DIRECT
