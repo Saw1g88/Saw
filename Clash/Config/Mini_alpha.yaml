@@ -54,7 +54,7 @@ proxy-providers:
   A:
     type: http
     path: ./profiles/proxies/A.yaml
-    url: https://gist.githubusercontent.com/Saw1g88/a1505cf3f6183fae67fbed631136eb84/raw/Clash
+    url: 订阅链接
     interval: 86400
     health-check:
       enable: true
@@ -63,7 +63,7 @@ proxy-providers:
   B:
     type: http
     path: ./profiles/proxies/B.yaml
-    url: https://gist.githubusercontent.com/Saw1g88/a1505cf3f6183fae67fbed631136eb84/raw/Clash_CH
+    url: 订阅链接
     interval: 86400
     health-check:
       enable: true
@@ -115,6 +115,8 @@ proxy-groups:
   - name: Final
     type: select
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+    url: http://www.google.com/generate_204
+    interval: 300
     proxies:
       - Hong Kong
       - Taiwan
