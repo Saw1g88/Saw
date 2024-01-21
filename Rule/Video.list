@@ -1,8 +1,11 @@
 # > Xiaoxintv
+DOMAIN-SUFFIX,ac.bollenhurkle.com
+DOMAIN-SUFFIX,cdn.jsdelivr.net
+DOMAIN-SUFFIX,cdn.kin6c1.com
+DOMAIN-SUFFIX,haiwaikan.com
+DOMAIN-SUFFIX,onerousethelpictures.com
+DOMAIN-SUFFIX,xiaoxintv.net
+DOMAIN-SUFFIX,xiaobaotv.net
 
-DOMAIN-SUFFIX,ac.bollenhurkle.com,Proxy
-DOMAIN-SUFFIX,cdn.jsdelivr.net,Proxy
-DOMAIN-SUFFIX,cdn.kin6c1.com,Proxy
-DOMAIN-SUFFIX,haiwaikan.com,Proxy
-DOMAIN-SUFFIX,onerousethelpictures.com,Proxy
-DOMAIN-SUFFIX,xiaoxintv.net,Proxy
+# > Ticktick
+DOMAIN-SUFFIX,ticktick.com
