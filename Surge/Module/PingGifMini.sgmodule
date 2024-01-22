@@ -1,5 +1,5 @@
 #!name=Ping Gif Mini面板 
-#!desc=Mini机型 屏幕6.1寸以内 生成柱状图,持久化缓存数据,每次刷新自动叠加,感谢小一的点子
+#!desc=Mini机型 屏幕6.1寸以内 生成柱状图,持久化缓存数据,每次刷新自动叠加.
 #!system=ios
 
 [Script]
