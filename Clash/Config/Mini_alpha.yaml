@@ -118,12 +118,8 @@ proxy-groups:
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
       - Proxy
+      - Direct
       
   - name: Hong Kong
     type: url-test
@@ -184,6 +180,17 @@ proxy-groups:
     hidden: true
     use:
       - A
+
+  - name: Direct
+    type: url-test
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png
+    url: http://www.google.com/generate_204
+    interval: 300
+    tolerance: 150
+    lazy: true
+    hidden: true
+    proxies:
+      - DIRECT
 
 rule-providers:  
   Reject:
