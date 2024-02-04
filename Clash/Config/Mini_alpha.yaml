@@ -136,7 +136,7 @@ proxy-groups:
       
   - name: Hong Kong
     type: url-test
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png
     filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.google.com/generate_204
     interval: 300
@@ -148,7 +148,7 @@ proxy-groups:
 
   - name: Taiwan
     type: url-test
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
     filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.google.com/generate_204
     interval: 300
@@ -160,7 +160,7 @@ proxy-groups:
 
   - name: Japan
     type: url-test
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.google.com/generate_204
     interval: 300
@@ -172,7 +172,7 @@ proxy-groups:
 
   - name: Singapore
     type: url-test
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png
     filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.google.com/generate_204
     interval: 300
@@ -184,7 +184,7 @@ proxy-groups:
 
   - name: United States
     type: url-test
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png
     filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     url: http://www.google.com/generate_204
     interval: 300
@@ -196,7 +196,7 @@ proxy-groups:
 
   - name: Direct
     type: url-test
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png
     url: http://www.google.com/generate_204
     interval: 300
     tolerance: 150
