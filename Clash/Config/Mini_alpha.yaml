@@ -85,6 +85,15 @@ proxy-groups:
       - Japan
       - Singapore
       - United States
+
+  - name: Final
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    url: http://www.google.com/generate_204
+    interval: 300
+    proxies:
+      - Proxy
+      - Direct      
       
   - name: Telegram
     type: select
@@ -112,6 +121,19 @@ proxy-groups:
       - United States
       - Proxy
 
+  - name: Apple
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+    url: http://www.google.com/generate_204
+    interval: 300
+    proxies:
+      - Hong Kong
+      - Taiwan
+      - Japan
+      - Singapore
+      - United States
+      - Proxy
+
   - name: Meta
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
@@ -124,15 +146,6 @@ proxy-groups:
       - Singapore
       - United States
       - Proxy
-
-  - name: Final
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-    url: http://www.google.com/generate_204
-    interval: 300
-    proxies:
-      - Proxy
-      - Direct
       
   - name: Hong Kong
     type: url-test
@@ -235,7 +248,13 @@ rule-providers:
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/OpenAI.yaml
-    path: ./ruleset/OpenAI.yaml 
+    path: ./ruleset/OpenAI.yaml
+  Apple:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Apple.yaml
+    path: ./ruleset/Apple.yaml 
   Meta:
     type: http
     behavior: classical
@@ -273,6 +292,7 @@ rules:
 - RULE-SET,CN,DIRECT
 - RULE-SET,Telegram,Telegram
 - RULE-SET,OpenAI,OpenAI
+- RULE-SET,Apple,Apple
 - RULE-SET,Meta,Meta
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Proxy+,Proxy
