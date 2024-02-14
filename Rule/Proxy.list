@@ -1,3 +1,14 @@
+# > Emby
+DOMAIN-KEYWORD,emby
+DOMAIN-KEYWORD,jmsooo
+DOMAIN-SUFFIX,cristiamo.xyz
+DOMAIN-SUFFIX,jellyfin.xeton.dev
+DOMAIN-SUFFIX,mickeycloud.com
+DOMAIN-SUFFIX,movie.xeton.dev
+DOMAIN-SUFFIX,plusmedia.site
+DOMAIN-SUFFIX,pornemby.club
+DOMAIN-SUFFIX,servers.xeton.dev
+
 # > Telegram
 DOMAIN,api.swiftgram.app
 DOMAIN-SUFFIX,comments.app
@@ -224,3 +235,6 @@ DOMAIN-SUFFIX,xiaobaotv.net
 
 # Other
 DOMAIN-SUFFIX,ip-api.com
+DOMAIN-SUFFIX,emby.bangumi.ca
+DOMAIN-SUFFIX,789.123456.al
+IP-CIDR,103.177.137.228/32,no-resolve
