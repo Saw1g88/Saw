@@ -680,7 +680,7 @@ DOMAIN-SUFFIX,zhuihd.com
 
 # IP
 
-# > Alibaba
+# > Ali
 IP-CIDR,8.128.0.0/10,no-resolve
 IP-CIDR,8.208.0.0/12,no-resolve
 IP-CIDR,14.1.112.0/22,no-resolve
@@ -784,7 +784,7 @@ IP-CIDR,185.10.104.0/22,no-resolve
 IP-CIDR,202.46.48.0/20,no-resolve
 IP-CIDR,203.90.238.0/24,no-resolve
 
-# > Huawei
+# > HuaWei
 IP-CIDR,43.254.0.0/22,no-resolve
 IP-CIDR,45.249.212.0/22,no-resolve
 IP-CIDR,49.4.0.0/17,no-resolve
