@@ -22,7 +22,7 @@ DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,unsplash.com
 DOMAIN-SUFFIX,buzzsprout.com
 
-# > 国外域名
+# > Keyword
 DOMAIN-SUFFIX,eu
 DOMAIN-SUFFIX,hk
 DOMAIN-SUFFIX,jp
@@ -32,8 +32,6 @@ DOMAIN-SUFFIX,tw
 DOMAIN-SUFFIX,uk
 DOMAIN-SUFFIX,us
 DOMAIN-SUFFIX,ca
-
-# > 国外域名关键字
 DOMAIN-KEYWORD,1e100
 DOMAIN-KEYWORD,abema
 DOMAIN-KEYWORD,appledaily
@@ -5780,7 +5778,7 @@ DOMAIN-KEYWORD,uk-live
 DOMAIN-SUFFIX,bbc.co
 DOMAIN-SUFFIX,bbc.com
 
-# > Developer 开发者常用国外网站、镜像和论坛
+# > Developer
 DOMAIN-SUFFIX,apache.org
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,elastic.co
@@ -5840,15 +5838,13 @@ DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 IP-CIDR,74.125.0.0/16,no-resolve
-IP-CIDR,173.194.0.0/16,no-resolve
-
-# > GoogleCNProxyIP 谷歌中国服务 services.googleapis.cn
 IP-CIDR,120.232.181.162/32,no-resolve
 IP-CIDR,120.241.147.226/32,no-resolve
 IP-CIDR,120.253.253.226/32,no-resolve
 IP-CIDR,120.253.255.162/32,no-resolve
 IP-CIDR,120.253.255.34/32,no-resolve
 IP-CIDR,120.253.255.98/32,no-resolve
+IP-CIDR,173.194.0.0/16,no-resolve
 IP-CIDR,180.163.150.162/32,no-resolve
 IP-CIDR,180.163.150.34/32,no-resolve
 IP-CIDR,180.163.151.162/32,no-resolve
@@ -6066,7 +6062,7 @@ IP-CIDR6,2001:b28:f23f::/48,no-resolve
 DOMAIN-SUFFIX,terabox.com
 DOMAIN-SUFFIX,teraboxcdn.com
 
-# > Wikipedia 维基相关域名
+# > Wikipedia
 DOMAIN-SUFFIX,mediawiki.org
 DOMAIN-SUFFIX,wikibooks.org
 DOMAIN-SUFFIX,wikidata.org
@@ -6079,14 +6075,6 @@ DOMAIN-SUFFIX,wikisource.org
 DOMAIN-SUFFIX,wikiversity.org
 DOMAIN-SUFFIX,wikivoyage.org
 DOMAIN-SUFFIX,wiktionary.org
-
-# >飞流直播
-DOMAIN-SUFFIX,neulion.com
-DOMAIN-SUFFIX,icntv.xyz
-DOMAIN-SUFFIX,flzbcdn.xyz
-
-# >华文电视
-DOMAIN-SUFFIX,ocnttv.com
 
 # > VikACG
 DOMAIN-SUFFIX,vikacg.com
