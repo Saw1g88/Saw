@@ -384,10 +384,6 @@ DOMAIN-SUFFIX,appvipshop.com
 DOMAIN-SUFFIX,vip.com
 DOMAIN-SUFFIX,vipstatic.com
 
-# > Wechat
-USER-AGENT,MicroMessenger*
-USER-AGENT,WeChat*
-
 # > Ximalaya
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
