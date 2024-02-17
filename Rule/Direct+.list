@@ -7,3 +7,7 @@ DOMAIN-SUFFIX,emby.bangumi.ca
 DOMAIN-SUFFIX,789.123456.al
 DOMAIN-SUFFIX,fk.imetyou.top
 IP-CIDR,103.177.137.228/32,no-resolve
+
+# > Wechat
+USER-AGENT,MicroMessenger*
+USER-AGENT,WeChat*
