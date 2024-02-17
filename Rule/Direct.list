@@ -369,6 +369,8 @@ DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
 DOMAIN-SUFFIX,tencentmind.com
 DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,weiyun.com
 
 # > TeamViewer
@@ -733,6 +735,13 @@ IP-CIDR,45.40.192.0/19,no-resolve
 IP-CIDR,49.51.0.0/16,no-resolve
 IP-CIDR,62.234.0.0/16,no-resolve
 IP-CIDR,94.191.0.0/17,no-resolve
+IP-CIDR,101.32.104.4/32,no-resolve
+IP-CIDR,101.32.104.41/32,no-resolve
+IP-CIDR,101.32.104.56/32,no-resolve
+IP-CIDR,101.32.118.25/32,no-resolve
+IP-CIDR,101.32.133.16/32,no-resolve
+IP-CIDR,101.32.133.53/32,no-resolve
+IP-CIDR,101.32.133.209/32,no-resolve
 IP-CIDR,103.7.28.0/22,no-resolve
 IP-CIDR,103.116.50.0/23,no-resolve
 IP-CIDR,103.231.60.0/24,no-resolve
@@ -748,6 +757,8 @@ IP-CIDR,121.51.0.0/16,no-resolve
 IP-CIDR,129.28.0.0/16,no-resolve
 IP-CIDR,129.204.0.0/16,no-resolve
 IP-CIDR,129.211.0.0/16,no-resolve
+IP-CIDR,129.226.3.47/32,no-resolve
+IP-CIDR,129.226.107.244/32,no-resolve
 IP-CIDR,132.232.0.0/16,no-resolve
 IP-CIDR,134.175.0.0/16,no-resolve
 IP-CIDR,146.56.192.0/18,no-resolve
