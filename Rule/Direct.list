@@ -16,13 +16,11 @@ DOMAIN-SUFFIX,zhenguanyu.biz
 DOMAIN-SUFFIX,zhenguanyu.com
 DOMAIN-SUFFIX,snapdrop.net
 
-# > CN域名直连(中国|公司|网络)
+# > CN
 DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,xn--fiqs8s
 DOMAIN-SUFFIX,xn--55qx5d
 DOMAIN-SUFFIX,xn--io0a7i
-
-# > 中国国内常见域名关键词直连
 DOMAIN-KEYWORD,360buy
 DOMAIN-KEYWORD,alicdn
 DOMAIN-KEYWORD,alimama
@@ -382,7 +380,7 @@ IP-CIDR6,2a0b:b581::/48,no-resolve
 IP-CIDR6,2a0b:b582::/48,no-resolve
 IP-CIDR6,2a0b:b583::/48,no-resolve
 
-# > Vip 唯品会
+# > Vip
 DOMAIN-SUFFIX,appsimg.com
 DOMAIN-SUFFIX,appvipshop.com
 DOMAIN-SUFFIX,vip.com
@@ -419,7 +417,7 @@ DOMAIN-SUFFIX,zmzapi.com
 DOMAIN-SUFFIX,zmzapi.net
 DOMAIN-SUFFIX,zmzfile.com
 
-# > Public Direct CDN 公共直连
+# > Public Direct CDN
 #DOMAIN-SUFFIX,ajax.aspnetcdn.com
 #DOMAIN-SUFFIX,ajax.cloudflare.com
 #DOMAIN-SUFFIX,cdnjs.cloudflare.com
@@ -678,9 +676,9 @@ DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
 
-# 国内IP
+# IP
 
-# > 阿里
+# > Alibaba
 IP-CIDR,8.128.0.0/10,no-resolve
 IP-CIDR,8.208.0.0/12,no-resolve
 IP-CIDR,14.1.112.0/22,no-resolve
@@ -727,7 +725,7 @@ IP-CIDR,170.33.0.0/16,no-resolve
 IP-CIDR,198.11.128.0/18,no-resolve
 IP-CIDR,205.204.96.0/19,no-resolve
 
-# > 腾讯 qq
+# > Tencent
 IP-CIDR,19.28.0.0/23,no-resolve
 IP-CIDR,45.40.192.0/19,no-resolve
 IP-CIDR,49.51.0.0/16,no-resolve
@@ -784,7 +782,7 @@ IP-CIDR,185.10.104.0/22,no-resolve
 IP-CIDR,202.46.48.0/20,no-resolve
 IP-CIDR,203.90.238.0/24,no-resolve
 
-# > huwei
+# > Huawei
 IP-CIDR,43.254.0.0/22,no-resolve
 IP-CIDR,45.249.212.0/22,no-resolve
 IP-CIDR,49.4.0.0/17,no-resolve
