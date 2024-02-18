@@ -685,6 +685,6 @@ DOMAIN-SUFFIX,wowanalytics.co.uk
 DOMAIN-SUFFIX,zoomanalytics.co
 
 # > iOS Updates
-DOMAIN,mesu.apple.com
 DOMAIN,gdmf.apple.com
+DOMAIN,mesu.apple.com
 DOMAIN,updates-http.cdn-apple.com
