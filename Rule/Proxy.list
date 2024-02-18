@@ -244,15 +244,13 @@ DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 IP-CIDR,74.125.0.0/16,no-resolve
-IP-CIDR,173.194.0.0/16,no-resolve
-
-# >  GoogleCNProxyIP
 IP-CIDR,120.232.181.162/32,no-resolve
 IP-CIDR,120.241.147.226/32,no-resolve
 IP-CIDR,120.253.253.226/32,no-resolve
 IP-CIDR,120.253.255.162/32,no-resolve
 IP-CIDR,120.253.255.34/32,no-resolve
 IP-CIDR,120.253.255.98/32,no-resolve
+IP-CIDR,173.194.0.0/16,no-resolve
 IP-CIDR,180.163.150.162/32,no-resolve
 IP-CIDR,180.163.150.34/32,no-resolve
 IP-CIDR,180.163.151.162/32,no-resolve
@@ -304,6 +302,7 @@ DOMAIN-SUFFIX,aka.ms
 DOMAIN-SUFFIX,akadns.net
 DOMAIN-SUFFIX,aspnetcdn.com
 DOMAIN-SUFFIX,assets-yammer.com
+DOMAIN-SUFFIX,appcenter.ms
 DOMAIN-SUFFIX,azure.com
 DOMAIN-SUFFIX,azure.net
 DOMAIN-SUFFIX,azureedge.net
