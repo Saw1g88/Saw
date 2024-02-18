@@ -121,6 +121,10 @@ IP-CIDR,170.33.0.0/16,no-resolve
 IP-CIDR,198.11.128.0/18,no-resolve
 IP-CIDR,205.204.96.0/19,no-resolve
 
+# > Apple
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN-SUFFIX,store.apple.com
+
 # > Baidu
 DOMAIN-SUFFIX,baidu.com
 DOMAIN-SUFFIX,baidubcr.com
@@ -233,6 +237,10 @@ DOMAIN-SUFFIX,douyu.com
 DOMAIN-SUFFIX,douyu.tv
 DOMAIN-SUFFIX,douyuscdn.com
 DOMAIN-SUFFIX,douyutv.com
+
+# > Emby
+DOMAIN-SUFFIX,789.123456.al
+IP-CIDR,103.177.137.228/32,no-resolve
 
 # > Epic
 DOMAIN-SUFFIX,epicgames.com
