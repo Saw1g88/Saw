@@ -1,3 +1,6 @@
+# > Other
+DOMAIN-SUFFIX,ip-api.com
+
 # > NivodTV
 DOMAIN-KEYWORD,nivod
 DOMAIN-SUFFIX,biggggg.com
@@ -22,6 +25,3 @@ DOMAIN-SUFFIX,haiwaikan.com
 DOMAIN-SUFFIX,onerousethelpictures.com
 DOMAIN-SUFFIX,xiaoxintv.net
 DOMAIN-SUFFIX,xiaobaotv.net
-
-# Other
-DOMAIN-SUFFIX,ip-api.com
