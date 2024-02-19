@@ -1,4 +1,4 @@
-# DOMIAN
+# DOMAIN
 
 AND,((USER-AGENT,Frodo*), (DOMAIN,119.29.29.29))
 DOMAIN,118.89.204.198
@@ -165,6 +165,7 @@ DOMAIN,g.koowo.com
 DOMAIN,g.ousns.net
 DOMAIN,g1.163.com
 DOMAIN,galaxy.bjcathay.com
+DOMAIN,gdmf.apple.com
 DOMAIN,geo2.adobe.com
 DOMAIN,ggc.cmvideo.cn
 DOMAIN,ggic03.miguvideo.com
@@ -207,6 +208,7 @@ DOMAIN,ma-adx.ctrip.com
 DOMAIN,mads.suning.com
 DOMAIN,mc.51.la
 DOMAIN,mdrecv.app.cntvwb.cn
+DOMAIN,mesu.apple.com
 DOMAIN,miav-cse.avlyun.com
 DOMAIN,minfo.wps.cn
 DOMAIN,miui-fxcse.avlyun.com
@@ -273,6 +275,7 @@ DOMAIN,tracking.intl.miui.com
 DOMAIN,tracklog.58.com
 DOMAIN,tunion-api.m.taobao.com
 DOMAIN,u1.img.mobile.sina.cn
+DOMAIN,updates-http.cdn-apple.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,v1.log.moji.com
 DOMAIN,vcardsdkservice.vivo.com.cn
