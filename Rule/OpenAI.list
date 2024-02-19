@@ -1,5 +1,4 @@
-# Domain
-
+# > Domain
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,static.cloudflareinsights.com
 DOMAIN-SUFFIX,ai.com
@@ -27,8 +26,7 @@ DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-KEYWORD,openai
 
-# IP
-
+# > IP
 IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
 IP-ASN,20473,no-resolve
