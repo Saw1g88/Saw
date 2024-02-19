@@ -1,4 +1,6 @@
+# Hijacking
 
+# > Domain
 DOMAIN,geo2.adobe.com
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,186078.com
@@ -185,6 +187,7 @@ DOMAIN-SUFFIX,zmlled.cn
 DOMAIN-SUFFIX,zryydi.com
 DOMAIN-SUFFIX,zunmi.cn
 DOMAIN-SUFFIX,zzd6.com
+# > IP
 IP-CIDR,103.49.209.27/32,no-resolve
 IP-CIDR,106.75.231.48/32,no-resolve
 IP-CIDR,111.175.220.163/32,no-resolve
