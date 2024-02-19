@@ -1,4 +1,5 @@
-# > DOMAIN
+# DOMAIN
+
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,fb.com
@@ -11,7 +12,8 @@ DOMAIN-KEYWORD,facebook
 DOMAIN-KEYWORD,fbcdn
 DOMAIN-KEYWORD,instagram
 
-# > IP
+# IP
+
 IP-CIDR,18.194.0.0/15,no-resolve
 IP-CIDR,31.13.24.0/21,no-resolve
 IP-CIDR,31.13.64.0/18,no-resolve
