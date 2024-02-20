@@ -70,7 +70,7 @@ proxy-providers:
       url: http://www.google.com/generate_204
       interval: 300      
       
-proxy-groups:  
+proxy-groups:
   - name: Meta
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
@@ -130,13 +130,13 @@ proxy-groups:
     url: http://www.google.com/generate_204
     interval: 300
     use:
-      - B
+      - A
     proxies:
       - Hong Kong
       - Taiwan
       - Japan
       - Singapore
-      - United States  
+      - United States
       
   - name: Hong Kong
     type: url-test
@@ -221,25 +221,19 @@ rule-providers:
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml
-    path: ./ruleset/Reject.yaml  
+    path: ./ruleset/Reject.yaml 
+  Meta:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Meta.yaml
+    path: ./ruleset/Meta.yaml     
   OpenAI:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/OpenAI.yaml
     path: ./ruleset/OpenAI.yaml
-  Apple:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Apple.yaml
-    path: ./ruleset/Apple.yaml 
-  Meta:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Meta.yaml
-    path: ./ruleset/Meta.yaml 
   Proxy:
     type: http
     behavior: classical
@@ -252,6 +246,18 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct.yaml
     path: ./ruleset/Direct.yaml 
+  Apple:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Apple.yaml
+    path: ./ruleset/Apple.yaml  
+  Microsoft:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Microsoft.yaml
+    path: ./ruleset/Microsoft.yaml    
   LAN:
     type: http
     behavior: classical
@@ -264,9 +270,10 @@ rules:
 - RULE-SET,Reject,REJECT
 - RULE-SET,Meta,Meta
 - RULE-SET,OpenAI,OpenAI
-- RULE-SET,Apple,Apple
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Direct,DIRECT
+- RULE-SET,Apple,Apple
+- RULE-SET,Microsoft,Microsoft
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,Proxy
@@ -275,3 +282,4 @@ rules:
 script:
   shortcuts:
     quic: network == 'udp' and dst_port == 443
+
