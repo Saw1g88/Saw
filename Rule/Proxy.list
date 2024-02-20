@@ -148,6 +148,10 @@ DOMAIN-SUFFIX,bbc.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,anthropic.com
 
+# > Copilot
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,copilot.microsoft.com
+
 # > Developer
 DOMAIN-SUFFIX,apache.org
 DOMAIN-SUFFIX,docker.com
