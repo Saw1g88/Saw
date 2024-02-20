@@ -70,34 +70,10 @@ proxy-providers:
       url: http://www.google.com/generate_204
       interval: 300      
       
-proxy-groups:
-  - name: Proxy
+proxy-groups:  
+  - name: Meta
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-    filter: '^(?!.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)|(法国|法|巴黎|FR|France)|(英国|英|伦敦|UK|GB|GBR|England|United Kingdom)|(韩国|韩|韓|首尔|KR|KOR|Korea)|(马来西亚|马来|大马|MY|Malaysia)|(德国|法兰克福|DE|Germany)|(泰国|泰|曼谷|TH|Thailand)|(荷兰|荷|尼德兰|阿姆斯特丹|NL|Netherlands)))'
-    url: http://www.google.com/generate_204
-    interval: 300
-    use:
-      - B
-    proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
-
-  - name: Final
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-    url: http://www.google.com/generate_204
-    interval: 300
-    proxies:
-      - Proxy
-      - Direct      
-      
-  - name: Telegram
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
@@ -106,7 +82,7 @@ proxy-groups:
       - Japan
       - Singapore
       - United States
-      - Proxy
+      - Proxy         
 
   - name: OpenAI
     type: select
@@ -132,11 +108,11 @@ proxy-groups:
       - Japan
       - Singapore
       - United States
-      - Proxy
+      - Direct
 
-  - name: Meta
+  - name: Microsoft
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
@@ -145,7 +121,22 @@ proxy-groups:
       - Japan
       - Singapore
       - United States
-      - Proxy
+      - Direct
+
+  - name: Proxy
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+    filter: '印度|孟买|新德里|IN|IND|India|尼日利亚|NG|Nigeria|土耳其|伊斯坦布尔|TR|Turkey'
+    url: http://www.google.com/generate_204
+    interval: 300
+    use:
+      - B
+    proxies:
+      - Hong Kong
+      - Taiwan
+      - Japan
+      - Singapore
+      - United States  
       
   - name: Hong Kong
     type: url-test
@@ -230,19 +221,7 @@ rule-providers:
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml
-    path: ./ruleset/Reject.yaml 
-  CN:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/CN.yaml
-    path: ./ruleset/CN.yaml 
-  Telegram:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Telegram.yaml
-    path: ./ruleset/Telegram.yaml 
+    path: ./ruleset/Reject.yaml  
   OpenAI:
     type: http
     behavior: classical
@@ -267,18 +246,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy.yaml
     path: ./ruleset/Proxy.yaml 
-  Proxy+:
+  Direct:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical_No_Resolve.yaml
-    path: ./ruleset/Proxy+.yaml 
-  China:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical_No_Resolve.yaml
-    path: ./ruleset/China.yaml 
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct.yaml
+    path: ./ruleset/Direct.yaml 
   LAN:
     type: http
     behavior: classical
@@ -289,18 +262,14 @@ rule-providers:
 rules:
 - RULE-SET,Unbreak,DIRECT
 - RULE-SET,Reject,REJECT
-- RULE-SET,CN,DIRECT
-- RULE-SET,Telegram,Telegram
+- RULE-SET,Meta,Meta
 - RULE-SET,OpenAI,OpenAI
 - RULE-SET,Apple,Apple
-- RULE-SET,Meta,Meta
 - RULE-SET,Proxy,Proxy
-- RULE-SET,Proxy+,Proxy
-- RULE-SET,China,DIRECT
+- RULE-SET,Direct,DIRECT
 - RULE-SET,LAN,DIRECT
-- DOMAIN-SUFFIX,cn,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,Final
+- MATCH,Proxy
 
 
 script:
