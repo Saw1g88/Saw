@@ -71,6 +71,21 @@ proxy-providers:
       interval: 300      
       
 proxy-groups:
+  - name: Proxy
+    type: select
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Quest_Global.png
+    filter: '印度|孟买|新德里|IN|IND|India|尼日利亚|NG|Nigeria|土耳其|伊斯坦布尔|TR|Turkey'
+    url: http://www.google.com/generate_204
+    interval: 300
+    use:
+      - A
+    proxies:
+      - Hong Kong
+      - Taiwan
+      - Japan
+      - Singapore
+      - United States
+
   - name: Meta
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Meta.png
@@ -99,7 +114,7 @@ proxy-groups:
 
   - name: Apple
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Apple.png
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
@@ -112,7 +127,7 @@ proxy-groups:
 
   - name: Microsoft
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Windows.png
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
@@ -122,21 +137,6 @@ proxy-groups:
       - Singapore
       - United States
       - Direct
-
-  - name: Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-    filter: '印度|孟买|新德里|IN|IND|India|尼日利亚|NG|Nigeria|土耳其|伊斯坦布尔|TR|Turkey'
-    url: http://www.google.com/generate_204
-    interval: 300
-    use:
-      - A
-    proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
       
   - name: Hong Kong
     type: url-test
