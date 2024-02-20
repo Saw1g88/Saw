@@ -372,6 +372,7 @@ DOMAIN-KEYWORD,gmail
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,musical.ly
 DOMAIN-KEYWORD,nivod
+DOMAIN-KEYWORD,onedrive
 DOMAIN-KEYWORD,paypal
 DOMAIN-KEYWORD,porn
 DOMAIN-KEYWORD,sci-hub
@@ -465,6 +466,8 @@ USER-AGENT,battleroyalei*
 USER-AGENT,com.apple.trustd*
 USER-AGENT,hearthstone*
 USER-AGENT,Duolingo*
+USER-AGENT,OneDrive*
+USER-AGENT,OneDriveiOSApp*
 USER-AGENT,PayPal*
 USER-AGENT,Roam*
 USER-AGENT,TikTok*
