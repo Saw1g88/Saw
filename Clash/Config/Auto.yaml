@@ -73,7 +73,7 @@ proxy-providers:
 proxy-groups:
   - name: Meta
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Icon/Meta.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Meta.png
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
@@ -86,7 +86,7 @@ proxy-groups:
 
   - name: OpenAI
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Icon/ChatGPT.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/ChatGPT.png
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
