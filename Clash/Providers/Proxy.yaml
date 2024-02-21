@@ -50,9 +50,6 @@ payload:
   - DOMAIN-SUFFIX,blogcdn.com
   - DOMAIN-SUFFIX,blogger.com
   - DOMAIN-SUFFIX,blogsmithmedia.com
-  - DOMAIN-SUFFIX,blogspot.com
-  - DOMAIN-SUFFIX,blogspot.hk
-  - DOMAIN-SUFFIX,blogspot.jp
   - DOMAIN-SUFFIX,bloomberg.cn
   - DOMAIN-SUFFIX,bloomberg.com
   - DOMAIN-SUFFIX,box.com
@@ -97,7 +94,6 @@ payload:
   - DOMAIN-SUFFIX,medium.com
   - DOMAIN-SUFFIX,mega.nz
   - DOMAIN-SUFFIX,megaupload.com
-  - DOMAIN-SUFFIX,messenger.com
   - DOMAIN-SUFFIX,netdna-cdn.com
   - DOMAIN-SUFFIX,nintendo.net
   - DOMAIN-SUFFIX,nsstatic.net
@@ -190,28 +186,6 @@ payload:
   - DOMAIN-SUFFIX,githubapp.com
   - DOMAIN-SUFFIX,githubassets.com
   - DOMAIN-SUFFIX,githubusercontent.com
-
-# > Google
-  - DOMAIN-SUFFIX,1e100.net
-  - DOMAIN-SUFFIX,2mdn.net
-  - DOMAIN-SUFFIX,app-measurement.net
-  - DOMAIN-SUFFIX,g.co
-  - DOMAIN-SUFFIX,ggpht.com
-  - DOMAIN-SUFFIX,goo.gl
-  - DOMAIN-SUFFIX,googleapis.cn
-  - DOMAIN-SUFFIX,googleapis.com
-  - DOMAIN-SUFFIX,gstatic.cn
-  - DOMAIN-SUFFIX,gstatic.com
-  - DOMAIN-SUFFIX,gvt0.com
-  - DOMAIN-SUFFIX,gvt1.com
-  - DOMAIN-SUFFIX,gvt2.com
-  - DOMAIN-SUFFIX,gvt3.com
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-  - DOMAIN-SUFFIX,youtu.be
-  - DOMAIN-SUFFIX,youtube-nocookie.com
-  - DOMAIN-SUFFIX,youtube.com
-  - DOMAIN-SUFFIX,yt.be
-  - DOMAIN-SUFFIX,ytimg.com
 
 # > Kakao Talk
   - DOMAIN-SUFFIX,kakao.com
@@ -367,12 +341,9 @@ payload:
   - DOMAIN-KEYWORD,appledaily
   - DOMAIN-KEYWORD,avtb
   - DOMAIN-KEYWORD,beetalk
-  - DOMAIN-KEYWORD,blogspot
   - DOMAIN-KEYWORD,dlercloud
   - DOMAIN-KEYWORD,dropbox
   - DOMAIN-KEYWORD,github
-  - DOMAIN-KEYWORD,gmail
-  - DOMAIN-KEYWORD,google
   - DOMAIN-KEYWORD,musical.ly
   - DOMAIN-KEYWORD,nivod
   - DOMAIN-KEYWORD,onedrive
@@ -386,7 +357,6 @@ payload:
   - DOMAIN-KEYWORD,ttvnw
   - DOMAIN-KEYWORD,twitter
   - DOMAIN-KEYWORD,uk-live
-  - DOMAIN-KEYWORD,youtube
 
 # IP
 
@@ -406,28 +376,6 @@ payload:
   - IP-CIDR,54.156.0.0/14,no-resolve
   - IP-CIDR,54.226.0.0/15,no-resolve
   - IP-CIDR,54.230.156.0/22,no-resolve
-
-# > Google
-  - IP-CIDR,74.125.0.0/16,no-resolve
-  - IP-CIDR,120.232.181.162/32,no-resolve
-  - IP-CIDR,120.241.147.226/32,no-resolve
-  - IP-CIDR,120.253.253.226/32,no-resolve
-  - IP-CIDR,120.253.255.162/32,no-resolve
-  - IP-CIDR,120.253.255.34/32,no-resolve
-  - IP-CIDR,120.253.255.98/32,no-resolve
-  - IP-CIDR,173.194.0.0/16,no-resolve
-  - IP-CIDR,180.163.150.162/32,no-resolve
-  - IP-CIDR,180.163.150.34/32,no-resolve
-  - IP-CIDR,180.163.151.162/32,no-resolve
-  - IP-CIDR,180.163.151.34/32,no-resolve
-  - IP-CIDR,203.208.39.0/24,no-resolve
-  - IP-CIDR,203.208.40.0/24,no-resolve
-  - IP-CIDR,203.208.41.0/24,no-resolve
-  - IP-CIDR,203.208.43.0/24,no-resolve
-  - IP-CIDR,203.208.50.0/24,no-resolve
-  - IP-CIDR,220.181.174.162/32,no-resolve
-  - IP-CIDR,220.181.174.226/32,no-resolve
-  - IP-CIDR,220.181.174.34/32,no-resolve
 
 # > Kakao Talk
   - IP-CIDR,1.201.0.0/24,no-resolve
