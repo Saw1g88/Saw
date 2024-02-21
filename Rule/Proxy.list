@@ -92,7 +92,6 @@ DOMAIN-SUFFIX,macrumors.com
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,mega.nz
 DOMAIN-SUFFIX,megaupload.com
-DOMAIN-SUFFIX,messenger.com
 DOMAIN-SUFFIX,netdna-cdn.com
 DOMAIN-SUFFIX,nintendo.net
 DOMAIN-SUFFIX,nsstatic.net
@@ -120,7 +119,6 @@ DOMAIN-SUFFIX,symcb.com
 DOMAIN-SUFFIX,symcd.com
 DOMAIN-SUFFIX,textnow.com
 DOMAIN-SUFFIX,textnow.me
-DOMAIN-SUFFIX,thefacebook.com
 DOMAIN-SUFFIX,thepiratebay.org
 DOMAIN-SUFFIX,torproject.org
 DOMAIN-SUFFIX,trustasiassl.com
@@ -356,7 +354,6 @@ DOMAIN-KEYWORD,tiktok
 DOMAIN-KEYWORD,ttvnw
 DOMAIN-KEYWORD,twitter
 DOMAIN-KEYWORD,uk-live
-DOMAIN-KEYWORD,youtube
 
 # IP
 
