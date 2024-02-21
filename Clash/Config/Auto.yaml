@@ -73,7 +73,7 @@ proxy-providers:
 proxy-groups:
   - name: Proxy
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Quest_Global.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Internet.png
     filter: '印度|孟买|新德里|IN|IND|India|尼日利亚|NG|Nigeria|土耳其|伊斯坦布尔|TR|Turkey'
     url: http://www.google.com/generate_204
     interval: 300
@@ -102,6 +102,19 @@ proxy-groups:
   - name: OpenAI
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/ChatGPT.png
+    url: http://www.google.com/generate_204
+    interval: 300
+    proxies:
+      - Hong Kong
+      - Taiwan
+      - Japan
+      - Singapore
+      - United States
+      - Proxy
+
+  - name: Google
+    type: select
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Google.png
     url: http://www.google.com/generate_204
     interval: 300
     proxies:
@@ -201,7 +214,7 @@ proxy-groups:
   - name: Direct
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png
-    url: http://www.google.com/generate_204
+    url: http://bing.com
     interval: 300
     tolerance: 150
     lazy: true
@@ -234,6 +247,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/OpenAI.yaml
     path: ./ruleset/OpenAI.yaml
+  Google:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml
+    path: ./ruleset/Google.yaml    
   Proxy:
     type: http
     behavior: classical
@@ -270,6 +289,7 @@ rules:
 - RULE-SET,Reject,REJECT
 - RULE-SET,Meta,Meta
 - RULE-SET,OpenAI,OpenAI
+- RULE-SET,Google,Google
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Apple,Apple
@@ -282,4 +302,3 @@ rules:
 script:
   shortcuts:
     quic: network == 'udp' and dst_port == 443
-
