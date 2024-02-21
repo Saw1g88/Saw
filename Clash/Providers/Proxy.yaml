@@ -36,7 +36,6 @@ payload:
   - DOMAIN-SUFFIX,apkmirror.com
   - DOMAIN-SUFFIX,apkpure.com
   - DOMAIN-SUFFIX,appcenter.ms
-  - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,appspot.com
   - DOMAIN-SUFFIX,archive.org
   - DOMAIN-SUFFIX,armorgames.com
@@ -121,7 +120,6 @@ payload:
   - DOMAIN-SUFFIX,symcd.com
   - DOMAIN-SUFFIX,textnow.com
   - DOMAIN-SUFFIX,textnow.me
-  - DOMAIN-SUFFIX,thefacebook.com
   - DOMAIN-SUFFIX,thepiratebay.org
   - DOMAIN-SUFFIX,torproject.org
   - DOMAIN-SUFFIX,trustasiassl.com
