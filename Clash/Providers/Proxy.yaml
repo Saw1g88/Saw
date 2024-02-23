@@ -82,8 +82,6 @@ payload:
   - DOMAIN-SUFFIX,kobo.com
   - DOMAIN-SUFFIX,kobobooks.com
   - DOMAIN-SUFFIX,licdn.com
-  - DOMAIN-SUFFIX,live.net
-  - DOMAIN-SUFFIX,livefilestore.com
   - DOMAIN-SUFFIX,llnwd.net
   - DOMAIN-SUFFIX,macrumors.com
   - DOMAIN-SUFFIX,medium.com
