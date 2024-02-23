@@ -145,10 +145,6 @@ payload:
   - DOMAIN-SUFFIX,claude.ai
   - DOMAIN-SUFFIX,anthropic.com
 
-# > Copilot
-  - DOMAIN-SUFFIX,bing.com
-  - DOMAIN-SUFFIX,copilot.microsoft.com
-
 # > Developer
   - DOMAIN-SUFFIX,apache.org
   - DOMAIN-SUFFIX,docker.com
@@ -184,6 +180,7 @@ payload:
   - DOMAIN-SUFFIX,githubapp.com
   - DOMAIN-SUFFIX,githubassets.com
   - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN-KEYWORD,github  
 
 # > Kakao Talk
   - DOMAIN-SUFFIX,kakao.com
@@ -199,6 +196,28 @@ payload:
   - DOMAIN-SUFFIX,line.naver.jp
   - DOMAIN-SUFFIX,nhncorp.jp
 
+# > Microsoft
+  - DOMAIN-SUFFIX,appcenter.ms
+  - DOMAIN-SUFFIX,azure.com
+  - DOMAIN-SUFFIX,azureedge.net
+  - DOMAIN-SUFFIX,azurewebsites.net
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+  - DOMAIN-SUFFIX,live.net
+  - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,oneclient.sfx.ms
+  - DOMAIN-SUFFIX,onedrive.com
+  - DOMAIN-SUFFIX,onedrive.live.com
+  - DOMAIN-SUFFIX,onenote.com
+  - DOMAIN-SUFFIX,photos.live.com
+  - DOMAIN-SUFFIX,skydrive.wns.windows.com
+  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net
+  - DOMAIN-SUFFIX,storage.live.com
+  - DOMAIN-SUFFIX,storage.msn.com
+  - DOMAIN-KEYWORD,1drv
+  - DOMAIN-KEYWORD,onedrive
+  - DOMAIN-KEYWORD,skydrive  
+
 # > NivodTV
   - DOMAIN-SUFFIX,biggggg.com
   - DOMAIN-SUFFIX,mudvod.tv
@@ -210,6 +229,7 @@ payload:
   - DOMAIN-SUFFIX,nivodi.tv
   - DOMAIN-SUFFIX,nivodz.com
   - DOMAIN-SUFFIX,vod360.net
+  - DOMAIN-KEYWORD,nivod  
 
 # > Porn
   - DOMAIN-SUFFIX,8teenxxx.com
@@ -234,6 +254,7 @@ payload:
   - DOMAIN-SUFFIX,xvideos-cdn.com
   - DOMAIN-SUFFIX,xvideos.com
   - DOMAIN-SUFFIX,ypncdn.com
+  - DOMAIN-KEYWORD,porn  
 
 # > Pixiv
   - DOMAIN-SUFFIX,pixiv.net
@@ -288,6 +309,7 @@ payload:
   - DOMAIN-SUFFIX,twitter.com
   - DOMAIN-SUFFIX,twitter.jp
   - DOMAIN-SUFFIX,vine.co
+  - DOMAIN-KEYWORD,twitter  
 
 # > Telegram
   - DOMAIN-SUFFIX,t.me
@@ -296,6 +318,7 @@ payload:
   - DOMAIN-SUFFIX,telegram.me
   - DOMAIN-SUFFIX,telegram.org
   - DOMAIN-SUFFIX,telesco.pe
+  - DOMAIN-KEYWORD,telegram  
 
 # > TeraBox
   - DOMAIN-SUFFIX,terabox.com
@@ -333,7 +356,6 @@ payload:
   - DOMAIN-SUFFIX,zoomgov.com
 
 # > Keyword
-  - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
   - DOMAIN-KEYWORD,abema
   - DOMAIN-KEYWORD,appledaily
@@ -341,19 +363,12 @@ payload:
   - DOMAIN-KEYWORD,beetalk
   - DOMAIN-KEYWORD,dlercloud
   - DOMAIN-KEYWORD,dropbox
-  - DOMAIN-KEYWORD,github
   - DOMAIN-KEYWORD,musical.ly
-  - DOMAIN-KEYWORD,nivod
-  - DOMAIN-KEYWORD,onedrive
   - DOMAIN-KEYWORD,paypal
-  - DOMAIN-KEYWORD,porn
   - DOMAIN-KEYWORD,sci-hub
-  - DOMAIN-KEYWORD,skydrive
   - DOMAIN-KEYWORD,spotify
-  - DOMAIN-KEYWORD,telegram
   - DOMAIN-KEYWORD,tiktok
   - DOMAIN-KEYWORD,ttvnw
-  - DOMAIN-KEYWORD,twitter
   - DOMAIN-KEYWORD,uk-live
 
 # IP
