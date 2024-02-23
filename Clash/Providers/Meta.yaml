@@ -1,17 +1,32 @@
 payload:
 # DOMAIN
 
+  - DOMAIN-SUFFIX,accountkit.com
   - DOMAIN-SUFFIX,cdninstagram.com
-  - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,f8.com
+  - DOMAIN-SUFFIX,facebookmail.com
   - DOMAIN-SUFFIX,fb.com
   - DOMAIN-SUFFIX,fb.me
-  - DOMAIN-SUFFIX,fbcdn.com
+  - DOMAIN-SUFFIX,fb.watch
+  - DOMAIN-SUFFIX,fbaddins.com
   - DOMAIN-SUFFIX,fbcdn.net
-  - DOMAIN-SUFFIX,instagr.am
+  - DOMAIN-SUFFIX,fbsbx.com
+  - DOMAIN-SUFFIX,fbworkmail.com
   - DOMAIN-SUFFIX,instagram.com
+  - DOMAIN-SUFFIX,m.me
+  - DOMAIN-SUFFIX,messenger.com
+  - DOMAIN-SUFFIX,oculus.com
+  - DOMAIN-SUFFIX,oculuscdn.com
+  - DOMAIN-SUFFIX,readyatdawn.com
+  - DOMAIN-SUFFIX,rocksdb.org
+  - DOMAIN-SUFFIX,threads.net
+  - DOMAIN-SUFFIX,whatsapp.com
+  - DOMAIN-SUFFIX,whatsapp.net
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,fbcdn
+  - DOMAIN-KEYWORD,fbsbx
   - DOMAIN-KEYWORD,instagram
+  - DOMAIN-KEYWORD,messenger
   - DOMAIN-KEYWORD,whatsapp
 
 # IP
