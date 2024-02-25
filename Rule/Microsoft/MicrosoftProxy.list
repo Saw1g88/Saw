@@ -20,7 +20,7 @@ DOMAIN-SUFFIX,storage.msn.com
 DOMAIN-KEYWORD,1drv
 DOMAIN-KEYWORD,onedrive
 
-# IP
+# HTTP
 
 USER-AGENT,OneDrive*
 USER-AGENT,OneDriveiOSApp*
