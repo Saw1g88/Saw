@@ -68,7 +68,9 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.google.com/generate_204
-      interval: 300      
+      interval: 300
+
+proxies:      
       
 proxy-groups:
   - name: Proxy
