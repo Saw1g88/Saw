@@ -6,16 +6,25 @@ payload:
   - DOMAIN-SUFFIX,acompli.net
   - DOMAIN-SUFFIX,aka.ms
   - DOMAIN-SUFFIX,akadns.net
+  - DOMAIN-SUFFIX,appcenter.ms
   - DOMAIN-SUFFIX,aspnetcdn.com
   - DOMAIN-SUFFIX,assets-yammer.com
+  - DOMAIN-SUFFIX,azure.com
+  - DOMAIN-SUFFIX,azure.net
+  - DOMAIN-SUFFIX,azureedge.net
   - DOMAIN-SUFFIX,azureiotcentral.com
   - DOMAIN-SUFFIX,azurerms.com
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,bing.net
+  - DOMAIN-SUFFIX,bingapis.com
   - DOMAIN-SUFFIX,cloudapp.net
   - DOMAIN-SUFFIX,cloudappsecurity.com
+  - DOMAIN-SUFFIX,copilot.microsoft.com
   - DOMAIN-SUFFIX,edgesuite.net
   - DOMAIN-SUFFIX,gfx.ms
   - DOMAIN-SUFFIX,hotmail.com
   - DOMAIN-SUFFIX,live.com
+  - DOMAIN-SUFFIX,live.net
   - DOMAIN-SUFFIX,lync.com
   - DOMAIN-SUFFIX,msappproxy.net
   - DOMAIN-SUFFIX,msauth.net
@@ -39,6 +48,8 @@ payload:
   - DOMAIN-SUFFIX,office365.com
   - DOMAIN-SUFFIX,officeppe.net
   - DOMAIN-SUFFIX,omniroot.com
+  - DOMAIN-SUFFIX,onedrive.com
+  - DOMAIN-SUFFIX,onenote.com
   - DOMAIN-SUFFIX,onenote.net
   - DOMAIN-SUFFIX,onestore.ms
   - DOMAIN-SUFFIX,outlook.com
@@ -69,8 +80,13 @@ payload:
   - DOMAIN-SUFFIX,wunderlist.com
   - DOMAIN-SUFFIX,yammer.com
   - DOMAIN-SUFFIX,yammerusercontent.com
+  - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,microsoft
+  - DOMAIN-KEYWORD,onedrive
 
 # HTTP
 
   - USER-AGENT,Microsoft*
+  - USER-AGENT,OneDrive*
+  - USER-AGENT,OneDriveiOSApp*
+
