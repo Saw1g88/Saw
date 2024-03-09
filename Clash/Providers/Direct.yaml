@@ -11,8 +11,6 @@ payload:
   - DOMAIN-SUFFIX,kaikeba.com
   - DOMAIN-SUFFIX,laomo.me
   - DOMAIN-SUFFIX,mpyit.com
-  - DOMAIN-SUFFIX,msftconnecttest.com
-  - DOMAIN-SUFFIX,msftncsi.com
   - DOMAIN-SUFFIX,qupu123.com
   - DOMAIN-SUFFIX,pdfwifi.com
   - DOMAIN-SUFFIX,zhenguanyu.biz
@@ -332,6 +330,32 @@ payload:
   - DOMAIN-SUFFIX,netease.com
   - DOMAIN-SUFFIX,ydstatic.com
   - DOMAIN-SUFFIX,youdao.com
+
+# > Oracle
+  - DOMAIN,shop.oracle.com
+  - DOMAIN,shop.oraclecloud.com
+  - DOMAIN-SUFFIX,2o7.net
+  - DOMAIN-SUFFIX,assets.adobedtm.com
+  - DOMAIN-SUFFIX,atgsvcs.com
+  - DOMAIN-SUFFIX,bkrtx.com
+  - DOMAIN-SUFFIX,bluekai.com
+  - DOMAIN-SUFFIX,consensu.org
+  - DOMAIN-SUFFIX,custhelp.com
+  - DOMAIN-SUFFIX,cybersource.com
+  - DOMAIN-SUFFIX,en25.com
+  - DOMAIN-SUFFIX,online-metrix.net
+  - DOMAIN-SUFFIX,oracle.com
+  - DOMAIN-SUFFIX,oraclecloud.com
+  - DOMAIN-SUFFIX,oraclecorp.com
+  - DOMAIN-SUFFIX,oracleimg.com
+  - DOMAIN-SUFFIX,oracleinfinity.io
+  - DOMAIN-SUFFIX,rfihub.com
+  - DOMAIN-SUFFIX,rnengage.com
+  - DOMAIN-SUFFIX,trustarc.com
+  - DOMAIN-SUFFIX,trustarc.eu
+  - DOMAIN-SUFFIX,truste-svc.net
+  - DOMAIN-SUFFIX,truste.com
+  - DOMAIN-KEYWORD,oracle
 
 # > PPTV、PPLive
   - DOMAIN-SUFFIX,pplive.com
@@ -721,7 +745,6 @@ payload:
   - DOMAIN-KEYWORD,duobao
   - DOMAIN-KEYWORD,jdpay
   - DOMAIN-KEYWORD,moke
-  - DOMAIN-KEYWORD,oracle  
   - DOMAIN-KEYWORD,qhimg
   - DOMAIN-KEYWORD,vpimg
   - DOMAIN-KEYWORD,xiami
@@ -746,6 +769,7 @@ payload:
   - IP-CIDR,185.188.35.0/24,no-resolve
   - IP-CIDR,203.205.238.0/23,no-resolve
   - IP-CIDR,203.205.254.0/23,no-resolve
+  - IP-CIDR,224.0.0.251/32,no-resolve
   - IP-CIDR6,2a0b:b580::/48,no-resolve
   - IP-CIDR6,2a0b:b581::/48,no-resolve
   - IP-CIDR6,2a0b:b582::/48,no-resolve
