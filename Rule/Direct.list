@@ -768,6 +768,7 @@ IP-CIDR,185.188.34.0/24,no-resolve
 IP-CIDR,185.188.35.0/24,no-resolve
 IP-CIDR,203.205.238.0/23,no-resolve
 IP-CIDR,203.205.254.0/23,no-resolve
+IP-CIDR,224.0.0.251/32,no-resolve
 IP-CIDR6,2a0b:b580::/48,no-resolve
 IP-CIDR6,2a0b:b581::/48,no-resolve
 IP-CIDR6,2a0b:b582::/48,no-resolve
