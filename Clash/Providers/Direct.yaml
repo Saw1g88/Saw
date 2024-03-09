@@ -73,10 +73,10 @@ payload:
   - DOMAIN-SUFFIX,xiami.net
   - DOMAIN-SUFFIX,ykimg.com
   - DOMAIN-SUFFIX,youku.com
-
-# > Apple
-  - DOMAIN-SUFFIX,ls.apple.com
-  - DOMAIN-SUFFIX,store.apple.com
+  - DOMAIN-KEYWORD,alibaba
+  - DOMAIN-KEYWORD,alicdn
+  - DOMAIN-KEYWORD,alipay
+  - DOMAIN-KEYWORD,xiami
 
 # > Baidu
   - DOMAIN-SUFFIX,baidu.com
@@ -91,6 +91,7 @@ payload:
   - DOMAIN-SUFFIX,hao123img.com
   - DOMAIN-SUFFIX,jomodns.com
   - DOMAIN-SUFFIX,yunjiasu-cdn.net
+  - DOMAIN-KEYWORD,baidupcs
 
 # > Bilibili
   - DOMAIN,apiintl.biliapi.net
@@ -111,6 +112,7 @@ payload:
   - DOMAIN-SUFFIX,hdslb.com
   - DOMAIN-SUFFIX,im9.com
   - DOMAIN-SUFFIX,smtcdns.net
+  - DOMAIN-KEYWORD,bilibili
 
 # > ByteDance
   - DOMAIN-SUFFIX,amemv.com
@@ -220,6 +222,8 @@ payload:
   - DOMAIN-SUFFIX,jdcloud.com
   - DOMAIN-SUFFIX,jdpay.com
   - DOMAIN-SUFFIX,paipai.com
+  - DOMAIN-KEYWORD,360buy
+  - DOMAIN-KEYWORD,jdpay
 
 # > Kingsoft
   - DOMAIN-SUFFIX,iciba.com
@@ -258,6 +262,7 @@ payload:
   - DOMAIN-SUFFIX,xiaomi.com
   - DOMAIN-SUFFIX,xiaomi.net
   - DOMAIN-SUFFIX,xiaomicp.com
+  - DOMAIN-KEYWORD,xiaomi
 
 # > Microsoft
   - DOMAIN,res.cdn.office.net
@@ -734,21 +739,13 @@ payload:
   - DOMAIN-SUFFIX,zhuihd.com
 
 # > Keyword
-  - DOMAIN-KEYWORD,360buy
-  - DOMAIN-KEYWORD,alicdn
-  - DOMAIN-KEYWORD,alimama
-  - DOMAIN-KEYWORD,alipay
   - DOMAIN-KEYWORD,appzapp
-  - DOMAIN-KEYWORD,baidupcs
   - DOMAIN-KEYWORD,ccgslb
   - DOMAIN-KEYWORD,chinacache
   - DOMAIN-KEYWORD,duobao
-  - DOMAIN-KEYWORD,jdpay
   - DOMAIN-KEYWORD,moke
   - DOMAIN-KEYWORD,qhimg
   - DOMAIN-KEYWORD,vpimg
-  - DOMAIN-KEYWORD,xiami
-  - DOMAIN-KEYWORD,xiaomi
 
 # IP
 
