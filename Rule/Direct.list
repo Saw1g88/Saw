@@ -13,8 +13,6 @@ DOMAIN-SUFFIX,jiuzhoudaijiaapi.cn
 DOMAIN-SUFFIX,kaikeba.com
 DOMAIN-SUFFIX,laomo.me
 DOMAIN-SUFFIX,mpyit.com
-DOMAIN-SUFFIX,msftconnecttest.com
-DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,qupu123.com
 DOMAIN-SUFFIX,pdfwifi.com
 DOMAIN-SUFFIX,zhenguanyu.biz
@@ -300,6 +298,8 @@ DOMAIN-SUFFIX,mpnbenefitsrtl.download.prss.microsoft.com
 DOMAIN-SUFFIX,mpnbenefitsrtluat.download.prss.microsoft.com
 DOMAIN-SUFFIX,msdn.download.prss.microsoft.com
 DOMAIN-SUFFIX,msdprod-ad.download.prss.microsoft.com
+DOMAIN-SUFFIX,msftconnecttest.com
+DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msproduct.download.prss.microsoft.com
 DOMAIN-SUFFIX,msproductuat.download.prss.microsoft.com
 DOMAIN-SUFFIX,myvs.download.prss.microsoft.com
