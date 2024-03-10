@@ -17,25 +17,6 @@ payload:
   - DOMAIN-SUFFIX,zhenguanyu.com
   - DOMAIN-SUFFIX,snapdrop.net
 
-# > 360
-  - DOMAIN-SUFFIX,360.com
-  - DOMAIN-SUFFIX,360kuai.com
-  - DOMAIN-SUFFIX,360safe.com
-  - DOMAIN-SUFFIX,dhrest.com
-  - DOMAIN-SUFFIX,qhres.com
-  - DOMAIN-SUFFIX,qhstatic.com
-  - DOMAIN-SUFFIX,qhupdate.com
-  - DOMAIN-SUFFIX,so.com
-
-# > 4399
-  - DOMAIN-SUFFIX,4399.com
-  - DOMAIN-SUFFIX,4399pk.com
-  - DOMAIN-SUFFIX,5054399.com
-  - DOMAIN-SUFFIX,img4399.com
-
-# > 58
-  - DOMAIN-SUFFIX,58.com
-
 # > Ali
   - DOMAIN-SUFFIX,1688.com
   - DOMAIN-SUFFIX,aliapp.org
@@ -186,23 +167,6 @@ payload:
   - DOMAIN-SUFFIX,paragon.com
   - DOMAIN-SUFFIX,unrealengine.com
 
-# > HuaWei
-  - DOMAIN-SUFFIX,dbankcdn.com
-  - DOMAIN-SUFFIX,hc-cdn.com
-  - DOMAIN-SUFFIX,hicloud.com
-  - DOMAIN-SUFFIX,hihonor.com
-  - DOMAIN-SUFFIX,huawei.com
-  - DOMAIN-SUFFIX,huaweicloud.com
-  - DOMAIN-SUFFIX,huaweishop.net
-  - DOMAIN-SUFFIX,hwccpc.com
-  - DOMAIN-SUFFIX,vmall.com
-  - DOMAIN-SUFFIX,vmallres.com
-
-# > Iflytek
-  - DOMAIN-SUFFIX,iflyink.com
-  - DOMAIN-SUFFIX,iflyrec.com
-  - DOMAIN-SUFFIX,iflytek.com
-
 # > Iqiyi
   - DOMAIN-SUFFIX,71.am
   - DOMAIN-SUFFIX,71edge.com
@@ -225,23 +189,9 @@ payload:
   - DOMAIN-KEYWORD,360buy
   - DOMAIN-KEYWORD,jdpay
 
-# > Kingsoft
-  - DOMAIN-SUFFIX,iciba.com
-  - DOMAIN-SUFFIX,ksosoft.com
-  - DOMAIN-SUFFIX,ksyun.com
-
 # > Kuaishou
   - DOMAIN-SUFFIX,kuaishou.com
   - DOMAIN-SUFFIX,yximgs.com
-
-# > LeTV
-  - DOMAIN-SUFFIX,le.com
-  - DOMAIN-SUFFIX,lecloud.com
-  - DOMAIN-SUFFIX,letv.com
-  - DOMAIN-SUFFIX,letvcloud.com
-  - DOMAIN-SUFFIX,letvimg.com
-  - DOMAIN-SUFFIX,letvlive.com
-  - DOMAIN-SUFFIX,letvstore.com
 
 # > Meitu
   - DOMAIN-SUFFIX,meitu.com
@@ -266,63 +216,10 @@ payload:
 
 # > Microsoft
   - DOMAIN,res.cdn.office.net
-  - DOMAIN-SUFFIX,azuremigrate.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,azuremigratetest.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,azurestackhub.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,azurestackhubuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,cbdstest.download.prss.microsoft.com
   - DOMAIN-SUFFIX,cn.windowssearch.com
-  - DOMAIN-SUFFIX,collaborate.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,collaborateppe.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,devblogs.microsoft.com
-  - DOMAIN-SUFFIX,developer.microsoft.com
-  - DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
-  - DOMAIN-SUFFIX,docs.microsoft.com
-  - DOMAIN-SUFFIX,download.microsoft.com
-  - DOMAIN-SUFFIX,download.prss.microsoft.com
-  - DOMAIN-SUFFIX,download.visualstudio.microsoft.com
-  - DOMAIN-SUFFIX,dreamspark.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,dreamsparkuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,fs.microsoft.com
-  - DOMAIN-SUFFIX,itacademy.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,itacademyuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,learn.microsoft.com
-  - DOMAIN-SUFFIX,lex.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,lexuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,mbs.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,mbsuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,mpnbenefits.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,mpnbenefitsrtl.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,mpnbenefitsrtluat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,msdn.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,msdprod-ad.download.prss.microsoft.com
   - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,msftncsi.com
-  - DOMAIN-SUFFIX,msproduct.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,msproductuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,myvs.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,myvsuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,oemsoc.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,oemsocuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,officecdn.microsoft.com
-  - DOMAIN-SUFFIX,officemkt.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,officemktuat.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,osrelease.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,rsm.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,sdx.microsoft.com
-  - DOMAIN-SUFFIX,software.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,storecorefulfillment.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,storeedgefd.dsx.mp.microsoft.com
-  - DOMAIN-SUFFIX,surface.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,visualstudio.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,vlportal.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,volic.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,vscode.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,vz.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,windbg.download.prss.microsoft.com
-  - DOMAIN-SUFFIX,wscont1.apps.microsoft.com
-  - DOMAIN-SUFFIX,wscont2.apps.microsoft.com
-  - DOMAIN-SUFFIX,www.microsoft.com
+  - DOMAIN-SUFFIX,microsoft.com
   - DOMAIN-KEYWORD,microsoft
 
 # > NetEase
@@ -337,8 +234,6 @@ payload:
   - DOMAIN-SUFFIX,youdao.com
 
 # > Oracle
-  - DOMAIN,shop.oracle.com
-  - DOMAIN,shop.oraclecloud.com
   - DOMAIN-SUFFIX,2o7.net
   - DOMAIN-SUFFIX,assets.adobedtm.com
   - DOMAIN-SUFFIX,atgsvcs.com
@@ -349,11 +244,6 @@ payload:
   - DOMAIN-SUFFIX,cybersource.com
   - DOMAIN-SUFFIX,en25.com
   - DOMAIN-SUFFIX,online-metrix.net
-  - DOMAIN-SUFFIX,oracle.com
-  - DOMAIN-SUFFIX,oraclecloud.com
-  - DOMAIN-SUFFIX,oraclecorp.com
-  - DOMAIN-SUFFIX,oracleimg.com
-  - DOMAIN-SUFFIX,oracleinfinity.io
   - DOMAIN-SUFFIX,rfihub.com
   - DOMAIN-SUFFIX,rnengage.com
   - DOMAIN-SUFFIX,trustarc.com
@@ -369,34 +259,6 @@ payload:
 # > PDD
   - DOMAIN-SUFFIX,pinduoduo.com
   - DOMAIN-SUFFIX,yangkeduo.com
-
-# > Sina
-  - DOMAIN-SUFFIX,leju.com
-  - DOMAIN-SUFFIX,miaopai.com
-  - DOMAIN-SUFFIX,sina.com
-  - DOMAIN-SUFFIX,sina.com.cn
-  - DOMAIN-SUFFIX,sina.cn
-  - DOMAIN-SUFFIX,sinaapp.com
-  - DOMAIN-SUFFIX,sinaapp.cn
-  - DOMAIN-SUFFIX,sinaimg.com
-  - DOMAIN-SUFFIX,sinaimg.cn
-  - DOMAIN-SUFFIX,weibo.com
-  - DOMAIN-SUFFIX,weibo.cn
-  - DOMAIN-SUFFIX,weibocdn.com
-  - DOMAIN-SUFFIX,weibocdn.cn
-  - DOMAIN-SUFFIX,xiaoka.tv
-
-# > Sohu Sogo
-  - DOMAIN-SUFFIX,go2map.com
-  - DOMAIN-SUFFIX,sogo.com
-  - DOMAIN-SUFFIX,sogou.com
-  - DOMAIN-SUFFIX,sogoucdn.com
-  - DOMAIN-SUFFIX,sohu-inc.com
-  - DOMAIN-SUFFIX,sohu.com
-  - DOMAIN-SUFFIX,sohucs.com
-  - DOMAIN-SUFFIX,sohuno.com
-  - DOMAIN-SUFFIX,sohurdc.com
-  - DOMAIN-SUFFIX,v-56.com
 
 # > Sony
   - DOMAIN-SUFFIX,playstation.com
