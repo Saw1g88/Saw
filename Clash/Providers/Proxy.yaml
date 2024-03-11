@@ -373,16 +373,7 @@ payload:
   - DOMAIN-SUFFIX,twitter.com
   - DOMAIN-SUFFIX,twitter.jp
   - DOMAIN-SUFFIX,vine.co
-  - DOMAIN-KEYWORD,twitter  
-
-# > Telegram
-  - DOMAIN-SUFFIX,t.me
-  - DOMAIN-SUFFIX,tdesktop.com
-  - DOMAIN-SUFFIX,telegra.ph
-  - DOMAIN-SUFFIX,telegram.me
-  - DOMAIN-SUFFIX,telegram.org
-  - DOMAIN-SUFFIX,telesco.pe
-  - DOMAIN-KEYWORD,telegram  
+  - DOMAIN-KEYWORD,twitter    
 
 # > TeraBox
   - DOMAIN-SUFFIX,terabox.com
@@ -495,23 +486,6 @@ payload:
   - IP-CIDR,119.235.236.0/23,no-resolve
   - IP-CIDR,147.92.128.0/17,no-resolve
   - IP-CIDR,203.104.128.0/19,no-resolve
-
-# > Telegram
-  - IP-CIDR,5.28.195.80/32,no-resolve
-  - IP-CIDR,91.108.4.0/22,no-resolve
-  - IP-CIDR,91.108.8.0/22,no-resolve
-  - IP-CIDR,91.108.12.0/22,no-resolve
-  - IP-CIDR,91.108.16.0/22,no-resolve
-  - IP-CIDR,91.108.20.0/22,no-resolve
-  - IP-CIDR,91.108.56.0/22,no-resolve
-  - IP-CIDR,91.105.192.0/23,no-resolve
-  - IP-CIDR,149.154.160.0/20,no-resolve
-  - IP-CIDR,185.76.151.0/24,no-resolve
-  - IP-CIDR6,2001:b28:f23d::/48,no-resolve
-  - IP-CIDR6,2001:b28:f23f::/48,no-resolve
-  - IP-CIDR6,2001:67c:4e8::/48,no-resolve
-  - IP-CIDR6,2001:b28:f23c::/48,no-resolve
-  - IP-CIDR6,2a0a:f280::/32,no-resolve
 
 # HTTP
 
