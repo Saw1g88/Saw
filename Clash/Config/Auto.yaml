@@ -50,6 +50,15 @@ dns:
 profile:
   tracing: true
 
+proxies:
+  - name: Hyst•UK
+    type: hysteria2
+    server: your.domain.top # 你的域名
+    port: 443 # 端口
+    up: 20 # 若不写单位，默认为 Mbps
+    down: 100 # 若不写单位，默认为 Mbps
+    password: 123456      
+
 proxy-providers:
   A:
     type: http
@@ -68,63 +77,84 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.google.com/generate_204
-      interval: 300
-
-proxies:      
+      interval: 300      
       
 proxy-groups:
   - name: Proxy
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Internet.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Globe.png
     filter: '印度|孟买|新德里|IN|IND|India|尼日利亚|NG|Nigeria|土耳其|伊斯坦布尔|TR|Turkey'
     url: http://www.google.com/generate_204
     interval: 300
     use:
       - A
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
+      - Hyst•UK
+      - Hyst•HK
+      - Hyst•SG         
+      - APT•HK
+      - APT•JP
+      - APT•SG
+      - APT•US
 
-  - name: Meta
+  - name: Telegram
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Meta.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Telegram.png
     url: http://www.google.com/generate_204
     interval: 300
+    hidden: false
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
-      - Proxy         
+      - Hyst•HK
+      - Hyst•SG   
+      - APT•HK
+      - APT•JP
+      - APT•SG
+      - APT•US
+      - Proxy
 
   - name: OpenAI
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/ChatGPT.png
     url: http://www.google.com/generate_204
     interval: 300
+    hidden: false
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
-      - Proxy
+      - Hyst•HK
+      - Hyst•SG      
+      - APT•HK
+      - APT•JP
+      - APT•SG
+      - APT•US
+      - Proxy                  
+
+  - name: Meta
+    type: select
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Meta.png
+    url: http://www.google.com/generate_204
+    interval: 300
+    hidden: false
+    proxies:
+      - Hyst•HK
+      - Hyst•SG      
+      - APT•HK
+      - APT•JP
+      - APT•SG
+      - APT•US
+      - Proxy         
 
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Google.png
     url: http://www.google.com/generate_204
     interval: 300
+    hidden: false
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
+      - Hyst•HK
+      - Hyst•SG      
+      - APT•HK
+      - APT•JP
+      - APT•SG
+      - APT•US
       - Proxy
 
   - name: Apple
@@ -132,12 +162,12 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Apple.png
     url: http://www.google.com/generate_204
     interval: 300
+    hidden: true
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
+      - APT•HK
+      - APT•JP
+      - APT•SG
+      - APT•US
       - Direct
 
   - name: Microsoft
@@ -145,15 +175,15 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Windows.png
     url: http://www.google.com/generate_204
     interval: 300
+    hidden: true
     proxies:
-      - Hong Kong
-      - Taiwan
-      - Japan
-      - Singapore
-      - United States
+      - APT•HK
+      - APT•JP
+      - APT•SG
+      - APT•US
       - Direct
       
-  - name: Hong Kong
+  - name: APT•HK
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/HK.png
     filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -165,7 +195,7 @@ proxy-groups:
     use:
       - A
 
-  - name: Taiwan
+  - name: APT•TW
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/TW.png
     filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -177,7 +207,7 @@ proxy-groups:
     use:
       - A
 
-  - name: Japan
+  - name: APT•JP
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/JP.png
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -189,7 +219,7 @@ proxy-groups:
     use:
       - A
 
-  - name: Singapore
+  - name: APT•SG
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/SG.png
     filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -201,7 +231,7 @@ proxy-groups:
     use:
       - A
 
-  - name: United States
+  - name: APT•US
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/US.png
     filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -211,7 +241,7 @@ proxy-groups:
     lazy: true
     hidden: true
     use:
-      - A
+      - A    
 
   - name: Direct
     type: url-test
@@ -224,6 +254,15 @@ proxy-groups:
     proxies:
       - DIRECT
 
+#  - name: Chain•XXX
+#    type: relay
+#    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Chain.png
+#    url: http://www.google.com/generate_204
+#    hidden: true
+#    proxies:
+#      - XXX
+#      - XXX 
+
 rule-providers:  
   Unbreak:
     type: http
@@ -231,54 +270,63 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Unbreak.yaml
     path: ./ruleset/Unbreak.yaml 
+
   Reject:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Reject.yaml
     path: ./ruleset/Reject.yaml 
-  Meta:
+
+  Telegram:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Meta.yaml
-    path: ./ruleset/Meta.yaml     
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Telegram.yaml
+    path: ./ruleset/Telegram.yaml
+
   OpenAI:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/OpenAI.yaml
     path: ./ruleset/OpenAI.yaml
+
+  Meta:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Meta.yaml
+    path: ./ruleset/Meta.yaml  
+
   Google:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Google.yaml
-    path: ./ruleset/Google.yaml    
+    path: ./ruleset/Google.yaml  
+
   Proxy:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Proxy.yaml
     path: ./ruleset/Proxy.yaml 
+
   Direct:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Direct.yaml
     path: ./ruleset/Direct.yaml 
+
   Apple:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Apple.yaml
-    path: ./ruleset/Apple.yaml  
-  Microsoft:
-    type: http
-    behavior: classical
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Microsoft.yaml
-    path: ./ruleset/Microsoft.yaml    
+    path: ./ruleset/Apple.yaml   
+       
   LAN:
     type: http
     behavior: classical
@@ -289,13 +337,13 @@ rule-providers:
 rules:
 - RULE-SET,Unbreak,DIRECT
 - RULE-SET,Reject,REJECT
-- RULE-SET,Meta,Meta
+- RULE-SET,Telegram,Telegram
 - RULE-SET,OpenAI,OpenAI
+- RULE-SET,Meta,Meta
 - RULE-SET,Google,Google
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Direct,DIRECT
-- RULE-SET,Apple,Apple
-- RULE-SET,Microsoft,Microsoft
+- RULE-SET,Apple,DIRECT
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,Proxy
