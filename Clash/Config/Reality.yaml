@@ -1,0 +1,13 @@
+proxies:
+  - name: "Reality"
+    type: vless
+    server: 域名
+    port: 端口
+    uuid: 
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: xxx.xxx.xxx # 伪装域名
+    reality-opts: {public-key: xxxx-xxxx-xxxx-xxx}
+    client-fingerprint: chrome # cannot be empty
