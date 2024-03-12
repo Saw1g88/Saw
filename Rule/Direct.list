@@ -216,14 +216,6 @@ DOMAIN-SUFFIX,xiaomi.net
 DOMAIN-SUFFIX,xiaomicp.com
 DOMAIN-KEYWORD,xiaomi
 
-# > Microsoft
-DOMAIN,res.cdn.office.net
-DOMAIN-SUFFIX,cn.windowssearch.com
-DOMAIN-SUFFIX,msftconnecttest.com
-DOMAIN-SUFFIX,msftncsi.com
-DOMAIN-SUFFIX,microsoft.com
-DOMAIN-KEYWORD,microsoft
-
 # > NetEase
 DOMAIN-SUFFIX,126.com
 DOMAIN-SUFFIX,126.net
