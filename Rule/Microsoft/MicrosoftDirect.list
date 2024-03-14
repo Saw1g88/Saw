@@ -24,7 +24,9 @@ DOMAIN-SUFFIX,msedge.net
 DOMAIN-SUFFIX,msft.net
 DOMAIN-SUFFIX,msftauth.net
 DOMAIN-SUFFIX,msftauthimages.net
+DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,msftidentity.com
+DOMAIN-SUFFIX,msftncsi.com
 DOMAIN-SUFFIX,msidentity.com
 DOMAIN-SUFFIX,msn.cn
 DOMAIN-SUFFIX,msn.com
