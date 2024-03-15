@@ -446,6 +446,9 @@ payload:
   - IP-CIDR,147.92.128.0/17,no-resolve
   - IP-CIDR,203.104.128.0/19,no-resolve
 
+# > Oracle
+  - IP-CIDR,224.0.0.251/32,no-resolve
+
 # HTTP
 
   - USER-AGENT,battleroyalei*
