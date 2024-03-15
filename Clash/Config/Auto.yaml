@@ -50,14 +50,7 @@ dns:
 profile:
   tracing: true
 
-proxies:
-  - name: Hyst•UK
-    type: hysteria2
-    server: your.domain.top # 你的域名
-    port: 443 # 端口
-    up: 20 # 若不写单位，默认为 Mbps
-    down: 100 # 若不写单位，默认为 Mbps
-    password: 123456      
+proxies:      
 
 proxy-providers:
   A:
@@ -67,7 +60,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.google.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 300
   B:
     type: http
@@ -76,7 +69,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.google.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 300      
       
 proxy-groups:
@@ -84,14 +77,11 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Globe.png
     filter: '印度|孟买|新德里|IN|IND|India|尼日利亚|NG|Nigeria|土耳其|伊斯坦布尔|TR|Turkey'
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     use:
       - A
-    proxies:
-      - Hyst•UK
-      - Hyst•HK
-      - Hyst•SG         
+    proxies:        
       - APT•HK
       - APT•JP
       - APT•SG
@@ -100,12 +90,10 @@ proxy-groups:
   - name: Telegram
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Telegram.png
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false
     proxies:
-      - Hyst•HK
-      - Hyst•SG   
       - APT•HK
       - APT•JP
       - APT•SG
@@ -115,12 +103,10 @@ proxy-groups:
   - name: OpenAI
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/ChatGPT.png
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false
-    proxies:
-      - Hyst•HK
-      - Hyst•SG      
+    proxies:      
       - APT•HK
       - APT•JP
       - APT•SG
@@ -130,12 +116,10 @@ proxy-groups:
   - name: Meta
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Meta.png
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false
-    proxies:
-      - Hyst•HK
-      - Hyst•SG      
+    proxies:    
       - APT•HK
       - APT•JP
       - APT•SG
@@ -145,12 +129,10 @@ proxy-groups:
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Google.png
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
-    hidden: false
-    proxies:
-      - Hyst•HK
-      - Hyst•SG      
+    hidden: true
+    proxies:     
       - APT•HK
       - APT•JP
       - APT•SG
@@ -160,7 +142,7 @@ proxy-groups:
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Apple.png
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: true
     proxies:
@@ -173,7 +155,7 @@ proxy-groups:
   - name: Microsoft
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Windows.png
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: true
     proxies:
@@ -187,7 +169,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/HK.png
     filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -199,7 +181,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/TW.png
     filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -211,7 +193,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/JP.png
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -223,7 +205,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/SG.png
     filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -235,7 +217,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/US.png
     filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.google.com/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -246,7 +228,7 @@ proxy-groups:
   - name: Direct
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/CN.png
-    url: http://bing.com
+    url: http://captive.apple.com/generate_204
     interval: 300
     tolerance: 150
     lazy: true
@@ -257,7 +239,7 @@ proxy-groups:
 #  - name: Chain•XXX
 #    type: relay
 #    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Chain.png
-#    url: http://www.google.com/generate_204
+#    url: http://cp.cloudflare.com/generate_204
 #    hidden: true
 #    proxies:
 #      - XXX
@@ -340,7 +322,7 @@ rules:
 - RULE-SET,Telegram,Telegram
 - RULE-SET,OpenAI,OpenAI
 - RULE-SET,Meta,Meta
-- RULE-SET,Google,Google
+- RULE-SET,Google,Proxy
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Apple,DIRECT
