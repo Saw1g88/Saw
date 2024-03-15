@@ -9,5 +9,5 @@ proxies:
     udp: true
     flow: xtls-rprx-vision
     servername: xxx.xxx.xxx # 伪装域名
-    reality-opts: {public-key: xxxx-xxxx-xxxx-xxx}
+    reality-opts: {public-key: 公钥}
     client-fingerprint: chrome # cannot be empty
