@@ -237,25 +237,6 @@ DOMAIN-SUFFIX,nivodz.com
 DOMAIN-SUFFIX,vod360.net
 DOMAIN-KEYWORD,nivod
 
-# > Oracle
-DOMAIN-SUFFIX,2o7.net
-DOMAIN-SUFFIX,assets.adobedtm.com
-DOMAIN-SUFFIX,atgsvcs.com
-DOMAIN-SUFFIX,bkrtx.com
-DOMAIN-SUFFIX,bluekai.com
-DOMAIN-SUFFIX,consensu.org
-DOMAIN-SUFFIX,custhelp.com
-DOMAIN-SUFFIX,cybersource.com
-DOMAIN-SUFFIX,en25.com
-DOMAIN-SUFFIX,online-metrix.net
-DOMAIN-SUFFIX,rfihub.com
-DOMAIN-SUFFIX,rnengage.com
-DOMAIN-SUFFIX,trustarc.com
-DOMAIN-SUFFIX,trustarc.eu
-DOMAIN-SUFFIX,truste-svc.net
-DOMAIN-SUFFIX,truste.com
-DOMAIN-KEYWORD,oracle
-
 # > Porn
 DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,ahcdn.com
@@ -447,9 +428,6 @@ IP-CIDR,119.235.235.0/24,no-resolve
 IP-CIDR,119.235.236.0/23,no-resolve
 IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,203.104.128.0/19,no-resolve
-
-# > Oracle
-IP-CIDR,224.0.0.251/32,no-resolve
 
 # HTTP
 
