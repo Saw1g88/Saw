@@ -1,33 +1,10 @@
 安装依赖：
-
-Debian 命令：
 ```
-apt update -y
+apt update -y && apt install curl sudo -y && apt install vim -y
 ```
 
 ```
 apt install curl sudo -y
-```
-
-CentOS 命令：
-```
-yum update -y
-```
-
-```
-yum install curl sudo -y
-```
-
-安装VIM:
-
-Debian 命令：
-```
-apt install vim -y
-```
-
-CentOS命令：
-```
-yum install vim -y
 ```
 
 安装（更新）：
