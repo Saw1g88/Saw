@@ -1,11 +1,6 @@
 安装依赖:
 ```
-sudo apt update && apt upgrade -y && sudo apt install wget unzip
-```
-
-安装VIM:
-```
-apt install vim
+sudo apt update && apt upgrade -y && sudo apt install wget unzip && apt install vim
 ```
 
 AMD安装:
