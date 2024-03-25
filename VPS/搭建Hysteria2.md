@@ -3,10 +3,6 @@
 apt update -y && apt install curl sudo -y && apt install vim -y
 ```
 
-```
-apt install curl sudo -y
-```
-
 安装（更新）：
 ```
 bash <(curl -fsSL https://get.hy2.sh/)
