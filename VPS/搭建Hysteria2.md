@@ -3,7 +3,7 @@
 apt update -y && apt install curl sudo -y && apt install vim -y
 ```
 
-安装（更新）：
+安装（更新）Hysteria2：
 ```
 bash <(curl -fsSL https://get.hy2.sh/)
 ```
@@ -13,7 +13,7 @@ bash <(curl -fsSL https://get.hy2.sh/)
 openssl req -x509 -nodes -newkey ec:<(openssl ecparam -name prime256v1) -keyout /etc/hysteria/server.key -out /etc/hysteria/server.crt -subj "/CN=bing.com" -days 36500 && sudo chown hysteria /etc/hysteria/server.key && sudo chown hysteria /etc/hysteria/server.crt
 ```
 
-配置文件:
+写配置文件:
 ```
 cat << EOF > /etc/hysteria/config.yaml
 listen: :8443 
@@ -41,27 +41,27 @@ EOF
 sudo setcap cap_net_bind_service=+ep ./hysteria-linux-amd64-avx
 ```
 
-启动Hysteria2:
+启动:
 ```
 systemctl start hysteria-server.service
 ```
 
-重启Hysteria2:
+重启:
 ```
 systemctl restart hysteria-server.service
 ```
 
-查看Hysteria2状态:
+查看状态:
 ```
 systemctl status hysteria-server.service
 ```
 
-查看Hysteria2配置文件：
+查看配置文件：
 ```
 vim /etc/hysteria/config.yaml
 ```
 
-停止Hysteria2:
+停止:
 ```
 systemctl stop hysteria-server.service
 ```
