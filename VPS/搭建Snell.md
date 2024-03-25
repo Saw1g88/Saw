@@ -3,22 +3,26 @@
 sudo apt update && apt upgrade -y && sudo apt install wget unzip && apt install vim
 ```
 
-AMD安装:
+安装Snell:
+
+AMD
 ```
 wget https://dl.nssurge.com/snell/snell-server-v4.0.1-linux-amd64.zip
 ```
 
-ARM安装：
+ARM
 ```
 wget https://dl.nssurge.com/snell/snell-server-v4.0.1-linux-aarch64.zip
 ```
 
-AMD解压：
+解压：
+
+AMD
 ```
 sudo unzip snell-server-v4.0.1-linux-amd64.zip -d /usr/local/bin
 ```
 
-ARM解压：
+ARM
 ```
 sudo unzip snell-server-v4.0.1-linux-aarch64.zip -d /usr/local/bin
 ```
