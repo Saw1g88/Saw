@@ -26,6 +26,13 @@ tuned-adm profile balanced
 tuned-adm profile throughput-performance
 ```
 
+使用增加功耗降低延迟模式：
+
+```
+tuned-adm profile network-latency
+
+```
+
 使用低配置下网络优化模式：
 ```
 tuned-adm profile virtual-guest
