@@ -37,6 +37,7 @@ Type=simple
 ExecStart=/usr/local/bin/shadow-tls --fastopen --v3 server --listen 0.0.0.0:18880 --server 127.0.0.1:40660（原协议端口） --tls   douyin.com  --password xxxxxxxxxxxxx
 StandardOutput=syslog
 StandardError=syslog
+Environment=MONOIO_FORCE_LEGACY_DRIVER=1
 SyslogIdentifier=shadow-tls
 
 [Install]
