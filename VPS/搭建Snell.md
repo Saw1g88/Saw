@@ -3,7 +3,7 @@
 sudo apt update && apt upgrade -y && sudo apt install wget unzip && apt install vim
 ```
 
-安装Snell:
+安装 Snell:
 
 AMD
 ```
