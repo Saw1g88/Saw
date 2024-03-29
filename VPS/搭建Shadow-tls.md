@@ -53,6 +53,11 @@ systemctl daemon-reload
 systemctl start shadow-tls.service
 ```
 
+停止：
+```
+systemctl stop shadow-tls.service
+```
+
 重启：
 ```
 systemctl restart shadow-tls.service
