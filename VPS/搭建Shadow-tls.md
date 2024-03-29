@@ -43,7 +43,29 @@ SyslogIdentifier=shadow-tls
 WantedBy=multi-user.target
 ```
 
+重载服务：
+```
+systemctl daemon-reload
+```
+
+启动：
+```
+systemctl start shadow-tls.service
+```
+
+重启：
+```
+systemctl restart shadow-tls.service
+```
+
 开机自启：
 ```
 systemctl enable shadow-tls.service
 ```
+
+查看状态：
+```
+systemctl status shadow-tls.service
+```
+
+
