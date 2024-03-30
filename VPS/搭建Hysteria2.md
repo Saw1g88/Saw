@@ -39,16 +39,20 @@ quic:
   initConnReceiveWindow: 67108864 
   maxConnReceiveWindow: 67108864
 
-"outbounds": [
-{
-"name": "myOutbound",
-"type": "socks5",
-"socks5": {
-"addr": "127.0.0.1:40000",
-"auth": "no"
-}
-}
-]
+acl:  
+  inline: 
+    - warp(geosite:openai)
+    - warp(geosite:netflix)
+    - warp(suffix:ip.gs)
+    - direct(all)
+
+outbounds:
+  - name: direct
+    type: direct
+  - name: warp
+    type: socks5
+    socks5:
+      addr: 127.0.0.1:40000
 
 EOF
 ```
