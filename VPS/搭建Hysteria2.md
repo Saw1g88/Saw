@@ -33,6 +33,23 @@ masquerade:
     url: https://bing.com/
     rewriteHost: true
 
+quic:
+  initStreamReceiveWindow: 26843545 
+  maxStreamReceiveWindow: 26843545 
+  initConnReceiveWindow: 67108864 
+  maxConnReceiveWindow: 67108864
+
+"outbounds": [
+{
+"name": "myOutbound",
+"type": "socks5",
+"socks5": {
+"addr": "127.0.0.1:40000",
+"auth": "no"
+}
+}
+]
+
 EOF
 ```
 
