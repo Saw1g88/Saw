@@ -53,6 +53,12 @@ quic:
 EOF
 ```
 
+Linux 性能优化：
+```
+sysctl -w net.core.rmem_max=16777216
+sysctl -w net.core.wmem_max=16777216
+```
+
 授予可执行文件 cap_net_bind_service 权限：
 ```
 sudo setcap cap_net_bind_service=+ep ./hysteria-linux-amd64-avx
