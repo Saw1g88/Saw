@@ -74,4 +74,10 @@ systemctl enable shadow-tls.service
 systemctl status shadow-tls.service
 ```
 
+卸载：
+```
+rm -rf /usr/local/bin/shadow-tls
+rm -rf /etc/systemd/system/shadow-tls.service
+```
+
 
