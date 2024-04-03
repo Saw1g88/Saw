@@ -133,6 +133,11 @@ DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN-SUFFIX,amazon.com
 DOMAIN-SUFFIX,amazonaws.com
 
+# > Apple
+DOMAIN,beta.apple.com
+DOMAIN,testflight.apple.com
+DOMAIN-KEYWORD,testflight
+
 # > BBC
 DOMAIN-SUFFIX,bbc.co
 DOMAIN-SUFFIX,bbc.com
