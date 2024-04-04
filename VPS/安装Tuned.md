@@ -26,7 +26,7 @@ tuned-adm profile balanced
 tuned-adm profile throughput-performance
 ```
 
-使用增加功耗降低延迟模式：
+使用低延迟模式：
 
 ```
 tuned-adm profile network-latency
