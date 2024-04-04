@@ -13,21 +13,32 @@ sudo systemctl start tuned.service
 sudo systemctl enable tuned.service
 ```
 
-列出所有可用的tuned配置文件：
-```
-sudo tuned-adm list
-```
-
-使用低延迟模式：
-
+优化网络延迟模式：
 ```
 tuned-adm profile network-latency
 
 ```
 
-查看当前调用的优化配置：
+优化网络吞吐量模式：
+```
+tuned-adm profile network-throughput
+
+```
+
+同时优化网络延迟及吞吐量：
+```
+tuned-adm profile network-latency network-throughput
+
+```
+
+查看当前优化配置：
 ```
 tuned-adm active
+```
+
+列出所有可用配置：
+```
+sudo tuned-adm list
 ```
 
 停止：
