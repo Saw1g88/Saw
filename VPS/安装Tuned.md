@@ -18,27 +18,11 @@ sudo systemctl enable tuned.service
 sudo tuned-adm list
 ```
 
-使用标准模式：
-```
-tuned-adm profile balanced
-```
-```
-tuned-adm profile throughput-performance
-```
-
 使用低延迟模式：
 
 ```
 tuned-adm profile network-latency
 
-```
-
-使用低配置下网络优化模式：
-```
-tuned-adm profile virtual-guest
-```
-```
-tuned-adm profile network-throughput
 ```
 
 查看当前调用的优化配置：
