@@ -25,7 +25,7 @@
     },
     { 
       "type": "tun", 
-      "tag": "in\-tun", 
+      "tag": "snell", 
       "interface_name": "tun0", 
       "inet4_address": "172.19.0.1/30", 
       "inet6_address": "fdfe:dcba:9876::1/126", 
@@ -42,7 +42,7 @@
   ],
   "outbounds": [
     {
-      "type": "snell",
+      "type": "tun",
       "tag": "direct"
     },
     {
@@ -57,7 +57,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",  
-        "download_detour": "snell",
+        "download_detour": "tun",
         "update_interval": "1d"
       },
       {
@@ -65,7 +65,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "download_detour": "snell",
+        "download_detour": "tun",
         "update_interval": "1d"
       }
     ],
@@ -79,6 +79,6 @@
         "outbound": "warp" 
       }
     ],    
-    "final": "snell"
+    "final": "tun"
   }
 }
