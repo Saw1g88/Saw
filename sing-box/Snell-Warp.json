@@ -21,7 +21,7 @@
       "type": "socks",
       "tag": "warp", 
       "listen": "127.0.0.1", 
-      "listen_port": 40000, 
+      "listen_port": 40000
     },
     { 
       "type": "tun", 
@@ -36,18 +36,20 @@
       "stack": "mixed", 
       "include_uid": 1000, 
       "udp_disable_domain_unmapping": true, 
-      "sniff": true, 
+      "sniff": true
     }
     
   ],
   "outbounds": [
     {
-      "type": "snell",
-      "tag": "snell"
+      "type": "direct",
+      "tag": "snell",
+      "detour": "snell"
     },
     {
-      "type": "warp",
-      "tag": "warp"
+      "type": "direct",
+      "tag": "warp",
+      "detour": "warp"
     }
   ],
   "route": {
