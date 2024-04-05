@@ -23,6 +23,21 @@
       "listen": "127.0.0.1", 
       "listen_port": 40000, 
     },
+    { 
+      "type": "tun", 
+      "tag": "in\-tun", 
+      "interface_name": "tun0", 
+      "inet4_address": "172.19.0.1/30", 
+      "inet6_address": "fdfe:dcba:9876::1/126", 
+      "mtu": 9000, 
+      "auto_route": true, 
+      "strict_route": false, 
+      "endpoint_independent_nat": true, 
+      "stack": "mixed", 
+      "include_uid": 1000, 
+      "udp_disable_domain_unmapping": true, 
+      "sniff": true, 
+    }
     
   ],
   "outbounds": [
