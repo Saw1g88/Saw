@@ -42,11 +42,11 @@
   ],
   "outbounds": [
     {
-      "type": "tun",
-      "tag": "direct"
+      "type": "snell",
+      "tag": "snell"
     },
     {
-      "type": "socks",
+      "type": "warp",
       "tag": "warp"
     }
   ],
@@ -57,7 +57,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",  
-        "download_detour": "tun",
+        "download_detour": "snell",
         "update_interval": "1d"
       },
       {
@@ -65,7 +65,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "download_detour": "tun",
+        "download_detour": "snell",
         "update_interval": "1d"
       }
     ],
@@ -79,6 +79,6 @@
         "outbound": "warp" 
       }
     ],    
-    "final": "tun"
+    "final": "snell"
   }
 }
