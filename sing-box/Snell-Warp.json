@@ -1,0 +1,69 @@
+{
+  
+  "log": {
+    "disabled": true, 
+    "level": "info", 
+    "timestamp": true 
+  },
+  
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "udp://8.8.8.8" 
+      }
+    ]
+  },
+  
+  "inbounds": [
+    
+    {
+      "type": "socks",
+      "tag": "warp", 
+      "listen": "127.0.0.1", 
+      "listen_port": 40000, 
+    },
+    
+  ],
+  "outbounds": [
+    {
+      "type": "snell",
+      "tag": "direct"
+    },
+    {
+      "type": "socks",
+      "tag": "warp"
+    }
+  ],
+  "route": {
+    "rule_set": [
+      {
+        "tag": "geosite-netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",  
+        "download_detour": "snell",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-openai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+        "download_detour": "snell",
+        "update_interval": "1d"
+      }
+    ],
+    "rules": [
+      {
+        
+        "geosite": [
+          "geosite-netflix",
+          "geosite-openai"
+        ],
+        "outbound": "warp" 
+      }
+    ],    
+    "final": "snell"
+  }
+}
