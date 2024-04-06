@@ -2,7 +2,7 @@
 	"rules": [
 		{
 			"inbound": [
-				"Inbound_ShadowTLS"
+				"Inbound_TUN_SNELL"
 			],
 			"outbound": "Outbound_SNELL"
 		},
