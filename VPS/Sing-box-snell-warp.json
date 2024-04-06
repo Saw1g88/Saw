@@ -1,0 +1,101 @@
+"route": {
+	"rules": [
+		{
+			"inbound": [
+				"Inbound_ShadowTLS"
+			],
+			"outbound": "Outbound_SNELL"
+		},
+		#WARP分流规则自己写，这里只是示例
+		{
+			"rule_set": [
+				"GeoSiteCN"
+			],
+			"outbound": "Outbound_WARP"
+		}
+	],
+	"rule_set": [
+		#WARP分流规则来源自己写，这里只是示例
+		{
+			"tag": "GeoSiteCN",
+			"type": "remote",
+			"format": "binary",
+			"url": "https://example.com/GeoSiteCN.srs",
+			"download_detour": "Outbound_Direct",
+			"update_interval": "24h"
+		}
+	]
+	"final": "Outbound_Direct"
+},
+
+"inbounds": [
+	{
+		"tag": "Inbound_ShadowTLS",
+		"type": "shadowtls",
+		"listen": "127.0.0.1", #不用反代的话，监听地址自己改成0.0.0.0
+		"listen_port": 12345, #监听端口自己定
+		"tcp_fast_open": true,
+		"sniff": true,
+		"sniff_override_destination": true,
+		"udp_disable_domain_unmapping": true,
+		"version": 3,
+		"users": [
+			{
+				"name": "devices-name",
+				"password": "example-id"
+			}
+		],
+		"handshake": {
+			"server": "example.com",
+			"server_port": 443
+		},
+		"handshake_for_server_name": {
+			"example.com": {
+				"server": "127.0.0.1", #不用反代的话，监听地址自己改成0.0.0.0
+				"server_port": 1234 #不用反代的话，监听端口自己改成443
+			}
+		},
+		"strict_mode": false
+	},
+	{
+		"tag": "Inbound_TUN_SNELL",
+		"type": "tun",
+		"interface_name": "tunsnell", #TUN虚拟网卡名称自己定
+		"inet4_address": "172.19.0.1/30",
+		"inet6_address": "fdfe:dcba:9876::1/126",
+		"mtu": 9000,
+		"auto_route": true,
+		"strict_route": true,
+		"endpoint_independent_nat": true,
+		"stack": "gvisor", #一般是用gvisor，mixed/system可能会用不了
+		"include_uid": [
+			1005 #要跟自己VPS的UID对应，UID要自己创建
+		],
+		"sniff": true,
+		"sniff_override_destination": true,
+		"udp_disable_domain_unmapping": true
+	}
+],
+
+"outbounds": [
+	{
+		"tag": "Outbound_Direct",
+		"type": "direct",
+		"bind_interface": "eth0", #网卡名称要与自己的VPS出口网卡对应，用ifconfig查
+		"domain_strategy": "prefer_ipv4" #具体配置自己看着办
+	},
+	#SNELL的进程自己配置好开机自启动
+	{
+		"tag": "Outbound_SNELL",
+		"type": "direct",
+		"override_address": "127.0.0.1", #不用反代的话，监听地址自己改成0.0.0.0
+		"override_port": 6789 #监听端口自己定
+	},
+	{
+		"tag": "Outbound_WARP",
+		"type": "direct",
+		"bind_interface": "WARP", #自己创建好WARP的虚拟网卡，并且与网卡名称对应
+		"tcp_fast_open": true,
+		"domain_strategy": "prefer_ipv4" #具体配置自己看着办
+	}
+]
