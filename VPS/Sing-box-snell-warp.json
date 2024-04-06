@@ -9,7 +9,7 @@
 		
 		{
 			"rule_set": [
-				"netflix"
+				"netflix",
 				"openai"
 			],
 			"outbound": "Outbound_WARP"
@@ -32,7 +32,7 @@
                        "download_detour": "Outbound_Direct",
                        "update_interval": "24h"
                  }
-        ]
+        ],
 	"final": "Outbound_Direct"
 },
 
@@ -74,7 +74,7 @@
 	},
 	{
 		"tag": "Outbound_WARP",
-		"type": "socks",
+		"type": "socks5",
 		"override_address": "127.0.0.1", 
 		"override_port": 40000
 	}
