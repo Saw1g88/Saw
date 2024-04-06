@@ -62,15 +62,15 @@
 	{
 		"tag": "Outbound_Direct",
 		"type": "direct",
-		"bind_interface": "enp0s6", #网卡名称要与自己的VPS出口网卡对应，用ifconfig查
-		"domain_strategy": "prefer_ipv4" #具体配置自己看着办
+		"bind_interface": "enp0s6", 
+		"domain_strategy": "prefer_ipv4" 
 	},
-	#SNELL的进程自己配置好开机自启动
+	
 	{
 		"tag": "Outbound_SNELL",
 		"type": "direct",
-		"override_address": "127.0.0.1", #不用反代的话，监听地址自己改成0.0.0.0
-		"override_port": 6789 #监听端口自己定
+		"override_address": "0.0.0.0", 
+		"override_port": 11807 
 	},
 	{
 		"tag": "Outbound_WARP",
