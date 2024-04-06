@@ -62,7 +62,7 @@
 	{
 		"tag": "Outbound_Direct",
 		"type": "direct",
-		"bind_interface": "eth0", #网卡名称要与自己的VPS出口网卡对应，用ifconfig查
+		"bind_interface": "enp0s6", #网卡名称要与自己的VPS出口网卡对应，用ifconfig查
 		"domain_strategy": "prefer_ipv4" #具体配置自己看着办
 	},
 	#SNELL的进程自己配置好开机自启动
