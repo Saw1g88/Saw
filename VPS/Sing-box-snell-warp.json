@@ -31,9 +31,10 @@
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
         "download_detour": "Outbound_Direct",
         "update_interval": "24h"
-      },
+      }
+],
 	"final": "Outbound_Direct"
-},
+}
 
 "inbounds": [
 	{
