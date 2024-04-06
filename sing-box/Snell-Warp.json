@@ -34,7 +34,9 @@
       "strict_route": false,
       "endpoint_independent_nat": true,
       "stack": "mixed",
-      "include_uid": [1000], 
+      "include_uid": [
+        1000
+      ], 
       "udp_disable_domain_unmapping": true
       "sniff": true
     }    
@@ -42,7 +44,8 @@
   "outbounds": [
     {
       "type": "direct",
-      "tag": "direct",
+      "tag": "snell",
+      "detour": "snell"
     },
     {
       "type": "direct",
@@ -57,7 +60,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",  
-        "download_detour": "direct",
+        "download_detour": "snell",
         "update_interval": "1d"
       },
       {
@@ -65,7 +68,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "download_detour": "direct",
+        "download_detour": "snell",
         "update_interval": "1d"
       }
     ],
@@ -79,6 +82,6 @@
         "outbound": "warp" 
       }
     ],    
-    "final": "direct"
+    "final": "snell"
   }
 }
