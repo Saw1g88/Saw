@@ -16,22 +16,22 @@
 		}
 	],
       "rule_set": [
-      {
-        "tag": "netflix",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",  // 可自选来源
-        "download_detour": "Outbound_Direct",
-        "update_interval": "24h"
-      },
-      {
-        "tag": "openai",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "download_detour": "Outbound_Direct",
-        "update_interval": "24h"
-      }
+                 {
+                       "tag": "netflix",
+                       "type": "remote",
+                       "format": "binary",
+                       "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",  // 可自选来源
+                       "download_detour": "Outbound_Direct",
+                       "update_interval": "24h"
+                 },
+                 {
+                       "tag": "openai",
+                       "type": "remote",
+                       "format": "binary",
+                       "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+                       "download_detour": "Outbound_Direct",
+                       "update_interval": "24h"
+                 }
         ]
 	"final": "Outbound_Direct"
 },
@@ -74,9 +74,8 @@
 	},
 	{
 		"tag": "Outbound_WARP",
-		"type": "direct",
-		"bind_interface": "WARP", #自己创建好WARP的虚拟网卡，并且与网卡名称对应
-		"tcp_fast_open": true,
-		"domain_strategy": "prefer_ipv4" #具体配置自己看着办
+		"type": "socks",
+		"override_address": "127.0.0.1", 
+		"override_port": 40000
 	}
 ]
