@@ -32,9 +32,9 @@
         "download_detour": "Outbound_Direct",
         "update_interval": "24h"
       }
-        ],
+        ]
 	"final": "Outbound_Direct"
-}
+},
 
 "inbounds": [
 	{
