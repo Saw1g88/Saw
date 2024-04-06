@@ -37,7 +37,7 @@
       "include_uid": [
         1000
       ], 
-      "udp_disable_domain_unmapping": true
+      "udp_disable_domain_unmapping": true,
       "sniff": true
     }    
   ],
