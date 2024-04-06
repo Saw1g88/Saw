@@ -23,28 +23,26 @@
       "listen": "127.0.0.1", 
       "listen_port": 40000
     },
-    { 
-      "type": "tun", 
-      "tag": "snell", 
-      "interface_name": "tun0", 
-      "inet4_address": "172.19.0.1/30", 
-      "inet6_address": "fdfe:dcba:9876::1/126", 
-      "mtu": 9000, 
-      "auto_route": true, 
-      "strict_route": false, 
-      "endpoint_independent_nat": true, 
-      "stack": "mixed", 
-      "include_uid": 1000, 
-      "udp_disable_domain_unmapping": true, 
+    {
+      "type": "tun",
+      "tag": "in-tun",
+      "interface_name": "tun0",
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": false,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "include_uid": [1000], 
+      "udp_disable_domain_unmapping": true
       "sniff": true
-    }
-    
+    }    
   ],
   "outbounds": [
     {
       "type": "direct",
-      "tag": "snell",
-      "detour": "snell"
+      "tag": "direct",
     },
     {
       "type": "direct",
@@ -59,7 +57,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs",  
-        "download_detour": "snell",
+        "download_detour": "direct",
         "update_interval": "1d"
       },
       {
@@ -67,7 +65,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-        "download_detour": "snell",
+        "download_detour": "direct",
         "update_interval": "1d"
       }
     ],
@@ -81,6 +79,6 @@
         "outbound": "warp" 
       }
     ],    
-    "final": "snell"
+    "final": "direct"
   }
 }
