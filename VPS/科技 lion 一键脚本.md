@@ -3,9 +3,14 @@
 apt update -y  && apt install -y curl
 ```
 
-安装脚本：
+官网版：
 ```
 curl -sS -O https://kejilion.pro/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
+```
+
+Github 版：
+```
+curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh && chmod +x kejilion.sh && ./kejilion.sh
 ```
 
 备用：
