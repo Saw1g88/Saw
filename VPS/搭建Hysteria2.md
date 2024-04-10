@@ -39,6 +39,35 @@ quic:
   initConnReceiveWindow: 67108864 
   maxConnReceiveWindow: 67108864
 
+EOF
+```
+
+写配置文件（Warp分流）:
+```
+cat << EOF > /etc/hysteria/config.yaml
+listen: :8443 
+
+acme:
+  domains:
+    - xx.xx.xx
+  email: testa@sharklasers.com 
+
+auth:
+  type: password
+  password: xxxxxx
+
+masquerade: 
+  type: proxy
+  proxy:
+    url: https://bing.com/
+    rewriteHost: true
+
+quic:
+  initStreamReceiveWindow: 26843545 
+  maxStreamReceiveWindow: 26843545 
+  initConnReceiveWindow: 67108864 
+  maxConnReceiveWindow: 67108864
+
 acl:  
   inline: 
     - warp(geosite:openai)
