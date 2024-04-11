@@ -137,4 +137,7 @@ journalctl -u hysteria-server.service
 bash <(curl -fsSL https://get.hy2.sh/) --remove
 ```
 
-
+一键脚本：
+```
+curl -sS -o Hysteria.sh https://raw.githubusercontent.com/passeway/Hysteria/main/Hysteria.sh  && chmod +x Hysteria.sh && ./Hysteria.sh
+```
