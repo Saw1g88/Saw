@@ -71,7 +71,6 @@ DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,weiyun.com
 
-
 # > Public Direct CDN
 DOMAIN-SUFFIX,baomitu.com
 DOMAIN-SUFFIX,bootcss.com
@@ -118,7 +117,7 @@ IP-CIDR6,2a0b:b581::/48,no-resolve
 IP-CIDR6,2a0b:b582::/48,no-resolve
 IP-CIDR6,2a0b:b583::/48,no-resolve
 
-# HTTP
+# UA
 
 USER-AGENT,Bilibili*
 USER-AGENT,bili*
