@@ -18,3 +18,9 @@ DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-KEYWORD,youtube
+
+# UA
+
+# > Youtube
+USER-AGENT,com.google.ios.youtube*
+USER-AGENT,YouTube*
