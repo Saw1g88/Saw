@@ -52,7 +52,7 @@ payload:
   - IP-CIDR,220.181.174.226/32,no-resolve
   - IP-CIDR,220.181.174.34/32,no-resolve
 
-# HTTP
+# UA
 
   - USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
   - USER-AGENT,*com.google.Drive*
