@@ -267,6 +267,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Telegram.yaml
     path: ./ruleset/Telegram.yaml
 
+  Streaming:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Streaming.yaml
+    path: ./ruleset/Streaming.yaml    
+
   OpenAI:
     type: http
     behavior: classical
@@ -307,7 +314,14 @@ rule-providers:
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Apple.yaml
-    path: ./ruleset/Apple.yaml   
+    path: ./ruleset/Apple.yaml 
+
+  Oracle:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Oracle.yaml
+    path: ./ruleset/Oracle.yaml    
        
   LAN:
     type: http
