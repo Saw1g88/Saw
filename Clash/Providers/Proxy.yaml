@@ -12,6 +12,7 @@ payload:
   - DOMAIN-SUFFIX,gameloft.com
   - DOMAIN-SUFFIX,garena.com
   - DOMAIN-SUFFIX,hoyolab.com
+  - DOMAIN-SUFFIX,icons8.com
   - DOMAIN-SUFFIX,inoreader.com
   - DOMAIN-SUFFIX,ip138.com
   - DOMAIN-SUFFIX,ip-api.com
@@ -33,9 +34,9 @@ payload:
   - DOMAIN-SUFFIX,ampproject.org
   - DOMAIN-SUFFIX,android.com
   - DOMAIN-SUFFIX,aolcdn.com
+  - DOMAIN-SUFFIX,api.smoot.apple.cn
   - DOMAIN-SUFFIX,apkmirror.com
   - DOMAIN-SUFFIX,apkpure.com
-  - DOMAIN-SUFFIX,appspot.com
   - DOMAIN-SUFFIX,archive.org
   - DOMAIN-SUFFIX,armorgames.com
   - DOMAIN-SUFFIX,aspnetcdn.com
@@ -70,6 +71,7 @@ payload:
   - DOMAIN-SUFFIX,flickr.com
   - DOMAIN-SUFFIX,flipboard.com
   - DOMAIN-SUFFIX,gfx.ms
+  - DOMAIN-SUFFIX,gitbook.com
   - DOMAIN-SUFFIX,gongm.in
   - DOMAIN-SUFFIX,hulu.com
   - DOMAIN-SUFFIX,id.heroku.com
@@ -87,6 +89,7 @@ payload:
   - DOMAIN-SUFFIX,medium.com
   - DOMAIN-SUFFIX,mega.nz
   - DOMAIN-SUFFIX,megaupload.com
+  - DOMAIN-SUFFIX,namesilo.com
   - DOMAIN-SUFFIX,netdna-cdn.com
   - DOMAIN-SUFFIX,nintendo.net
   - DOMAIN-SUFFIX,nsstatic.net
@@ -130,6 +133,11 @@ payload:
   - DOMAIN-SUFFIX,amazon.co.jp
   - DOMAIN-SUFFIX,amazon.com
   - DOMAIN-SUFFIX,amazonaws.com
+
+# > Apple
+  - DOMAIN,beta.apple.com
+  - DOMAIN,testflight.apple.com
+  - DOMAIN-KEYWORD,testflight
 
 # > BBC
   - DOMAIN-SUFFIX,bbc.co
@@ -184,7 +192,7 @@ payload:
   - DOMAIN-SUFFIX,githubapp.com
   - DOMAIN-SUFFIX,githubassets.com
   - DOMAIN-SUFFIX,githubusercontent.com
-  - DOMAIN-KEYWORD,github  
+  - DOMAIN-KEYWORD,github
 
 # > Kakao Talk
   - DOMAIN-SUFFIX,kakao.com
@@ -200,7 +208,7 @@ payload:
   - DOMAIN-SUFFIX,line.naver.jp
   - DOMAIN-SUFFIX,nhncorp.jp
 
-# > Microsoft
+# > Microsoft 
   - DOMAIN-SUFFIX,appcenter.ms
   - DOMAIN-SUFFIX,azure.com
   - DOMAIN-SUFFIX,azureedge.net
@@ -212,72 +220,12 @@ payload:
   - DOMAIN-SUFFIX,oneclient.sfx.ms
   - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,onedrive.live.com
-  - DOMAIN-SUFFIX,onenote.com
-  - DOMAIN-SUFFIX,onenote.net
-  - DOMAIN-SUFFIX,photos.live.com
-  - DOMAIN-SUFFIX,skydrive.wns.windows.com
-  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net
-  - DOMAIN-SUFFIX,storage.live.com
-  - DOMAIN-SUFFIX,storage.msn.com
+  - DOMAIN-SUFFIX,linkedin.com
+  - DOMAIN-SUFFIX,licdn.com
+  - DOMAIN-SUFFIX,msn.com
+  - DOMAIN-SUFFIX,skype.com
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,onedrive
-
-# > NivodTV
-  - DOMAIN-SUFFIX,biggggg.com
-  - DOMAIN-SUFFIX,mudvod.tv
-  - DOMAIN-SUFFIX,nbys.tv
-  - DOMAIN-SUFFIX,nbys1.tv
-  - DOMAIN-SUFFIX,nbyy.tv
-  - DOMAIN-SUFFIX,newpppp.com
-  - DOMAIN-SUFFIX,nivod.tv
-  - DOMAIN-SUFFIX,nivodi.tv
-  - DOMAIN-SUFFIX,nivodz.com
-  - DOMAIN-SUFFIX,vod360.net
-  - DOMAIN-KEYWORD,nivod  
-
-# > Oracle
-  - DOMAIN-SUFFIX,2o7.net
-  - DOMAIN-SUFFIX,assets.adobedtm.com
-  - DOMAIN-SUFFIX,atgsvcs.com
-  - DOMAIN-SUFFIX,bkrtx.com
-  - DOMAIN-SUFFIX,bluekai.com
-  - DOMAIN-SUFFIX,consensu.org
-  - DOMAIN-SUFFIX,custhelp.com
-  - DOMAIN-SUFFIX,cybersource.com
-  - DOMAIN-SUFFIX,en25.com
-  - DOMAIN-SUFFIX,online-metrix.net
-  - DOMAIN-SUFFIX,rfihub.com
-  - DOMAIN-SUFFIX,rnengage.com
-  - DOMAIN-SUFFIX,trustarc.com
-  - DOMAIN-SUFFIX,trustarc.eu
-  - DOMAIN-SUFFIX,truste-svc.net
-  - DOMAIN-SUFFIX,truste.com
-  - DOMAIN-KEYWORD,oracle  
-
-# > Porn
-  - DOMAIN-SUFFIX,8teenxxx.com
-  - DOMAIN-SUFFIX,ahcdn.com
-  - DOMAIN-SUFFIX,bcvcdn.com
-  - DOMAIN-SUFFIX,bongacams.com
-  - DOMAIN-SUFFIX,chaturbate.com
-  - DOMAIN-SUFFIX,dditscdn.com
-  - DOMAIN-SUFFIX,livejasmin.com
-  - DOMAIN-SUFFIX,phncdn.com
-  - DOMAIN-SUFFIX,phprcdn.com
-  - DOMAIN-SUFFIX,pornhub.com
-  - DOMAIN-SUFFIX,pornhubpremium.com
-  - DOMAIN-SUFFIX,rdtcdn.com
-  - DOMAIN-SUFFIX,redtube.com
-  - DOMAIN-SUFFIX,sb-cd.com
-  - DOMAIN-SUFFIX,spankbang.com
-  - DOMAIN-SUFFIX,t66y.com
-  - DOMAIN-SUFFIX,xhamster.com
-  - DOMAIN-SUFFIX,xnxx-cdn.com
-  - DOMAIN-SUFFIX,xnxx.com
-  - DOMAIN-SUFFIX,xvideos-cdn.com
-  - DOMAIN-SUFFIX,xvideos.com
-  - DOMAIN-SUFFIX,ypncdn.com
-  - DOMAIN-KEYWORD,porn  
 
 # > Pixiv
   - DOMAIN-SUFFIX,pixiv.net
@@ -290,26 +238,6 @@ payload:
   - DOMAIN-SUFFIX,hockeyapp.net
   - DOMAIN-SUFFIX,readdle.com
   - DOMAIN-SUFFIX,smartmailcloud.com
-
-# > Steam
-  - DOMAIN-SUFFIX,fanatical.com
-  - DOMAIN-SUFFIX,humblebundle.com
-  - DOMAIN-SUFFIX,underlords.com
-  - DOMAIN-SUFFIX,valvesoftware.com
-  - DOMAIN-SUFFIX,playartifact.com
-  - DOMAIN-SUFFIX,steam-chat.com
-  - DOMAIN-SUFFIX,steamcommunity.com
-  - DOMAIN-SUFFIX,steamgames.com
-  - DOMAIN-SUFFIX,steampowered.com
-  - DOMAIN-SUFFIX,steamserver.net
-  - DOMAIN-SUFFIX,steamstatic.com
-  - DOMAIN-SUFFIX,steamstat.us
-  - DOMAIN,steambroadcast.akamaized.net
-  - DOMAIN,steamcommunity-a.akamaihd.net
-  - DOMAIN,steamstore-a.akamaihd.net
-  - DOMAIN,steamusercontent-a.akamaihd.net
-  - DOMAIN,steamuserimages-a.akamaihd.net
-  - DOMAIN,steampipe.akamaized.net
 
 # > TapTap
   - DOMAIN-SUFFIX,tap.io
@@ -332,7 +260,7 @@ payload:
   - DOMAIN-SUFFIX,twitter.com
   - DOMAIN-SUFFIX,twitter.jp
   - DOMAIN-SUFFIX,vine.co
-  - DOMAIN-KEYWORD,twitter    
+  - DOMAIN-KEYWORD,twitter
 
 # > TeraBox
   - DOMAIN-SUFFIX,terabox.com
@@ -355,15 +283,6 @@ payload:
   - DOMAIN-SUFFIX,wikiversity.org
   - DOMAIN-SUFFIX,wikivoyage.org
   - DOMAIN-SUFFIX,wiktionary.org
-
-# > Xiaoxintv
-  - DOMAIN-SUFFIX,ac.bollenhurkle.com
-  - DOMAIN-SUFFIX,cdn.jsdelivr.net
-  - DOMAIN-SUFFIX,cdn.kin6c1.com
-  - DOMAIN-SUFFIX,haiwaikan.com
-  - DOMAIN-SUFFIX,onerousethelpictures.com
-  - DOMAIN-SUFFIX,xiaoxintv.net
-  - DOMAIN-SUFFIX,xiaobaotv.net
 
 # > Zoom
   - DOMAIN-SUFFIX,zoom.us
@@ -446,10 +365,7 @@ payload:
   - IP-CIDR,147.92.128.0/17,no-resolve
   - IP-CIDR,203.104.128.0/19,no-resolve
 
-# > Oracle
-  - IP-CIDR,224.0.0.251/32,no-resolve
-
-# HTTP
+# UA
 
   - USER-AGENT,battleroyalei*
   - USER-AGENT,com.apple.trustd*
