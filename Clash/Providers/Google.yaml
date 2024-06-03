@@ -3,7 +3,7 @@ payload:
 
   - DOMAIN-SUFFIX,1e100.net
   - DOMAIN-SUFFIX,2mdn.net
-  - DOMAIN-SUFFIX,app-measurement.com  
+  - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,app-measurement.net
   - DOMAIN-SUFFIX,g.co
   - DOMAIN-SUFFIX,ggpht.com
@@ -17,17 +17,11 @@ payload:
   - DOMAIN-SUFFIX,gvt2.com
   - DOMAIN-SUFFIX,gvt3.com
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-  - DOMAIN-SUFFIX,youtu.be
-  - DOMAIN-SUFFIX,youtube-nocookie.com
-  - DOMAIN-SUFFIX,youtube.com
-  - DOMAIN-SUFFIX,yt.be
-  - DOMAIN-SUFFIX,ytimg.com
   - DOMAIN-KEYWORD,appspot
   - DOMAIN-KEYWORD,blogspot
   - DOMAIN-KEYWORD,gmail
   - DOMAIN-KEYWORD,google
   - DOMAIN-KEYWORD,recaptcha
-  - DOMAIN-KEYWORD,youtube  
 
 # IP
 
@@ -57,3 +51,4 @@ payload:
   - USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
   - USER-AGENT,*com.google.Drive*
   - USER-AGENT,Google.Drive*
+
