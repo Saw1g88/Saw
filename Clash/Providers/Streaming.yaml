@@ -1,0 +1,26 @@
+# DOMAIN
+
+# > Pornhub
+  - DOMAIN-SUFFIX,phncdn.com
+  - DOMAIN-SUFFIX,phprcdn.com
+  - DOMAIN-SUFFIX,pornhub.com
+  - DOMAIN-SUFFIX,pornhubpremium.com
+
+# > XVIDEOS
+  - DOMAIN-SUFFIX,xvideos.com
+  - DOMAIN-SUFFIX,xvideos-cdn.com
+
+# > Youtube
+  - DOMAIN,yt3.ggpht.com
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,withyoutube.com
+  - DOMAIN-SUFFIX,youtu.be
+  - DOMAIN-SUFFIX,yt.be
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-KEYWORD,youtube
+
+# UA
+
+# > Youtube
+  - USER-AGENT,com.google.ios.youtube*
+  - USER-AGENT,YouTube*
