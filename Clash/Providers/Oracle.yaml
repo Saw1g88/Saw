@@ -1,0 +1,24 @@
+payload:
+# DOMAIN
+
+  - DOMAIN-SUFFIX,2o7.net
+  - DOMAIN-SUFFIX,assets.adobedtm.com
+  - DOMAIN-SUFFIX,atgsvcs.com
+  - DOMAIN-SUFFIX,bkrtx.com
+  - DOMAIN-SUFFIX,bluekai.com
+  - DOMAIN-SUFFIX,consensu.org
+  - DOMAIN-SUFFIX,custhelp.com
+  - DOMAIN-SUFFIX,cybersource.com
+  - DOMAIN-SUFFIX,en25.com
+  - DOMAIN-SUFFIX,online-metrix.net
+  - DOMAIN-SUFFIX,rfihub.com
+  - DOMAIN-SUFFIX,rnengage.com
+  - DOMAIN-SUFFIX,trustarc.com
+  - DOMAIN-SUFFIX,trustarc.eu
+  - DOMAIN-SUFFIX,truste-svc.net
+  - DOMAIN-SUFFIX,truste.com
+  - DOMAIN-KEYWORD,oracle
+
+# IP
+
+  - IP-CIDR,224.0.0.251/32,no-resolve
