@@ -87,19 +87,6 @@ proxy-groups:
       - Singapore
       - United States
 
-  - name: Telegram
-    type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Telegram.png
-    url: http://cp.cloudflare.com/generate_204
-    interval: 300
-    hidden: false
-    proxies:
-      - Hong Kong
-      - Japan
-      - Singapore
-      - United States
-      - Proxy
-
   - name: Streaming
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Streaming.png
@@ -111,20 +98,20 @@ proxy-groups:
       - Japan
       - Singapore
       - United States
-      - Proxy      
+      - Proxy       
 
-  - name: OpenAI
+  - name: Telegram
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/ChatGPT.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Telegram.png
     url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false
-    proxies:      
+    proxies:
       - Hong Kong
       - Japan
       - Singapore
       - United States
-      - Proxy                  
+      - Proxy  
 
   - name: Meta
     type: select
@@ -137,7 +124,20 @@ proxy-groups:
       - Japan
       - Singapore
       - United States
-      - Proxy         
+      - Proxy       
+
+  - name: OpenAI
+    type: select
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/ChatGPT.png
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    hidden: false
+    proxies:      
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
+      - Proxy                          
 
   - name: Google
     type: select
