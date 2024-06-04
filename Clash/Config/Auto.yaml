@@ -82,10 +82,10 @@ proxy-groups:
     use:
       - A
     proxies:        
-      - APT•HK
-      - APT•JP
-      - APT•SG
-      - APT•US
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
 
   - name: Telegram
     type: select
@@ -94,11 +94,24 @@ proxy-groups:
     interval: 300
     hidden: false
     proxies:
-      - APT•HK
-      - APT•JP
-      - APT•SG
-      - APT•US
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
       - Proxy
+
+  - name: Streaming
+    type: select
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Streaming.png
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    hidden: false
+    proxies:
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
+      - Proxy      
 
   - name: OpenAI
     type: select
@@ -107,10 +120,10 @@ proxy-groups:
     interval: 300
     hidden: false
     proxies:      
-      - APT•HK
-      - APT•JP
-      - APT•SG
-      - APT•US
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
       - Proxy                  
 
   - name: Meta
@@ -120,10 +133,10 @@ proxy-groups:
     interval: 300
     hidden: false
     proxies:    
-      - APT•HK
-      - APT•JP
-      - APT•SG
-      - APT•US
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
       - Proxy         
 
   - name: Google
@@ -133,10 +146,10 @@ proxy-groups:
     interval: 300
     hidden: true
     proxies:     
-      - APT•HK
-      - APT•JP
-      - APT•SG
-      - APT•US
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
       - Proxy
 
   - name: Apple
@@ -146,10 +159,10 @@ proxy-groups:
     interval: 300
     hidden: true
     proxies:
-      - APT•HK
-      - APT•JP
-      - APT•SG
-      - APT•US
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
       - Direct
 
   - name: Microsoft
@@ -159,13 +172,13 @@ proxy-groups:
     interval: 300
     hidden: true
     proxies:
-      - APT•HK
-      - APT•JP
-      - APT•SG
-      - APT•US
+      - Hong Kong
+      - Japan
+      - Singapore
+      - United States
       - Direct
       
-  - name: APT•HK
+  - name: Hong Kong
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/HK.png
     filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -177,7 +190,7 @@ proxy-groups:
     use:
       - A
 
-  - name: APT•TW
+  - name: Taiwan
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/TW.png
     filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -189,7 +202,7 @@ proxy-groups:
     use:
       - A
 
-  - name: APT•JP
+  - name: Japan
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/JP.png
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -201,7 +214,7 @@ proxy-groups:
     use:
       - A
 
-  - name: APT•SG
+  - name: Singapore
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/SG.png
     filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -213,7 +226,7 @@ proxy-groups:
     use:
       - A
 
-  - name: APT•US
+  - name: United States
     type: url-test
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/US.png
     filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -334,11 +347,13 @@ rules:
 - RULE-SET,Unbreak,DIRECT
 - RULE-SET,Reject,REJECT
 - RULE-SET,Telegram,Telegram
+- RULE-SET,Streaming,Streaming
 - RULE-SET,OpenAI,OpenAI
 - RULE-SET,Meta,Meta
 - RULE-SET,Google,Proxy
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Direct,DIRECT
+- RULE-SET,Oracle,DIRECT
 - RULE-SET,Apple,DIRECT
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
