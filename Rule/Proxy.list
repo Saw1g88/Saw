@@ -248,19 +248,6 @@ DOMAIN-SUFFIX,ttvnw.net
 DOMAIN-SUFFIX,jtvnw.net
 DOMAIN-KEYWORD,ttvnw
 
-# > Twitter
-DOMAIN-SUFFIX,periscope.tv
-DOMAIN-SUFFIX,pscp.tv
-DOMAIN-SUFFIX,t.co
-DOMAIN-SUFFIX,twimg.co
-DOMAIN-SUFFIX,twimg.com
-DOMAIN-SUFFIX,twimg.org
-DOMAIN-SUFFIX,twitpic.com
-DOMAIN-SUFFIX,twitter.com
-DOMAIN-SUFFIX,twitter.jp
-DOMAIN-SUFFIX,vine.co
-DOMAIN-KEYWORD,twitter
-
 # > TeraBox
 DOMAIN-SUFFIX,terabox.com
 DOMAIN-SUFFIX,teraboxcdn.com
