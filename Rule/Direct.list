@@ -50,6 +50,12 @@ DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,ydstatic.com
 DOMAIN-SUFFIX,youdao.com
 
+# > PayPal
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.me
+DOMAIN-SUFFIX,paypal-mktg.com
+DOMAIN-SUFFIX,paypalobjects.com
+
 # > Tencent
 DOMAIN-SUFFIX,foxmail.com
 DOMAIN-SUFFIX,gtimg.com
@@ -126,6 +132,7 @@ USER-AGENT,MicroMessenger%20Client
 USER-AGENT,MicroMessenger*
 USER-AGENT,MicroMessengerClient*
 USER-AGENT,NeteaseMusic*
+USER-AGENT,PayPal*
 USER-AGENT,QQ*
 USER-AGENT,RemotePlay*
 USER-AGENT,TIM*
