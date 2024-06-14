@@ -226,12 +226,6 @@ DOMAIN-SUFFIX,skype.com
 DOMAIN-KEYWORD,1drv
 DOMAIN-KEYWORD,onedrive
 
-# > PayPal
-DOMAIN-SUFFIX,paypal.com
-DOMAIN-SUFFIX,paypal.me
-DOMAIN-SUFFIX,paypal-mktg.com
-DOMAIN-SUFFIX,paypalobjects.com
-
 # > Pixiv
 DOMAIN-SUFFIX,pixiv.net
 DOMAIN-SUFFIX,pximg.net
