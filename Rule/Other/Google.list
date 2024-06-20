@@ -1,16 +1,25 @@
-# DOMAIN
+## DOMAIN
 
-DOMAIN,lens.l.google.com
-DOMAIN,www.googleapis.com
+DOMAIN-SUFFIX,apigee.com
+DOMAIN-SUFFIX,appspot.com
+DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,docs.google.com
 DOMAIN-SUFFIX,drive.google.com
 DOMAIN-SUFFIX,googledrive.com
 DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,gvt0.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt3.com
+DOMAIN-SUFFIX,tenor.com
+DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+DOMAIN,lens.l.google.com
+DOMAIN,www.googleapis.com
+DOMAIN-KEYWORD,.blogspot.
 DOMAIN-KEYWORD,pa.google
 DOMAIN-KEYWORD,www.google.
 DOMAIN-KEYWORD,google
 
-# UA
+## UA
 
 USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
 USER-AGENT,*com.google.Drive*
