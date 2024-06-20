@@ -1,4 +1,4 @@
-# DOMAIN
+## DOMAIN
 
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tdesktop.com
@@ -8,7 +8,7 @@ DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-KEYWORD,telegram
 
-# IP
+## IP
 
 IP-ASN,211157,no-resolve
 IP-ASN,44907,no-resolve
