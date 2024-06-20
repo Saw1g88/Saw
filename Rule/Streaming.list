@@ -1,4 +1,4 @@
-# DOMAIN
+## DOMAIN
 
 # > Pornhub
 DOMAIN-SUFFIX,phncdn.com
@@ -19,7 +19,7 @@ DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-KEYWORD,youtube
 
-# UA
+## UA
 
 # > Youtube
 USER-AGENT,com.google.ios.youtube*
