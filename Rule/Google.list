@@ -1,49 +1,13 @@
 # DOMAIN
 
-DOMAIN-SUFFIX,1e100.net
-DOMAIN-SUFFIX,2mdn.net
-DOMAIN-SUFFIX,app-measurement.com
-DOMAIN-SUFFIX,app-measurement.net
-DOMAIN-SUFFIX,g.co
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,goo.gl
-DOMAIN-SUFFIX,googleapis.cn
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,gstatic.cn
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,gvt0.com
-DOMAIN-SUFFIX,gvt1.com
-DOMAIN-SUFFIX,gvt2.com
-DOMAIN-SUFFIX,gvt3.com
-DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-DOMAIN-KEYWORD,appspot
-DOMAIN-KEYWORD,blogspot
-DOMAIN-KEYWORD,gmail
-DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,recaptcha
-
-# IP
-
-IP-CIDR,74.125.0.0/16,no-resolve
-IP-CIDR,120.232.181.162/32,no-resolve
-IP-CIDR,120.241.147.226/32,no-resolve
-IP-CIDR,120.253.253.226/32,no-resolve
-IP-CIDR,120.253.255.162/32,no-resolve
-IP-CIDR,120.253.255.34/32,no-resolve
-IP-CIDR,120.253.255.98/32,no-resolve
-IP-CIDR,173.194.0.0/16,no-resolve
-IP-CIDR,180.163.150.162/32,no-resolve
-IP-CIDR,180.163.150.34/32,no-resolve
-IP-CIDR,180.163.151.162/32,no-resolve
-IP-CIDR,180.163.151.34/32,no-resolve
-IP-CIDR,203.208.39.0/24,no-resolve
-IP-CIDR,203.208.40.0/24,no-resolve
-IP-CIDR,203.208.41.0/24,no-resolve
-IP-CIDR,203.208.43.0/24,no-resolve
-IP-CIDR,203.208.50.0/24,no-resolve
-IP-CIDR,220.181.174.162/32,no-resolve
-IP-CIDR,220.181.174.226/32,no-resolve
-IP-CIDR,220.181.174.34/32,no-resolve
+DOMAIN,lens.l.google.com
+DOMAIN,www.googleapis.com
+DOMAIN-SUFFIX,docs.google.com
+DOMAIN-SUFFIX,drive.google.com
+DOMAIN-SUFFIX,googledrive.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-KEYWORD,pa.google
+DOMAIN-KEYWORD,www.google.
 
 # UA
 
