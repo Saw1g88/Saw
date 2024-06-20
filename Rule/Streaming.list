@@ -1,5 +1,11 @@
 ## DOMAIN
 
+# > Emby
+DOMAIN-SUFFIX,789.123456.al
+DOMAIN,cdn.lyrebirdemby.com
+DOMAIN,emby.bangumi.ca
+DOMAIN,embyplus.org
+
 # > Pornhub
 DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
