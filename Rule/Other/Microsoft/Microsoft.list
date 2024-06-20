@@ -1,4 +1,4 @@
-# DOMAIN
+## DOMAIN
 
 DOMAIN-SUFFIX,aadrm.com
 DOMAIN-SUFFIX,acompli.com
@@ -83,7 +83,7 @@ DOMAIN-KEYWORD,1drv
 DOMAIN-KEYWORD,microsoft
 DOMAIN-KEYWORD,onedrive
 
-# HTTP
+## UA
 
 USER-AGENT,Microsoft*
 USER-AGENT,OneDrive*
