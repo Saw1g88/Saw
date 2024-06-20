@@ -1,4 +1,4 @@
-# DOMAIN
+## DOMAIN
 
 DOMAIN-SUFFIX,appcenter.ms
 DOMAIN-SUFFIX,azure.com
@@ -21,7 +21,7 @@ DOMAIN-SUFFIX,storage.msn.com
 DOMAIN-KEYWORD,1drv
 DOMAIN-KEYWORD,onedrive
 
-# HTTP
+## UA
 
 USER-AGENT,OneDrive*
 USER-AGENT,OneDriveiOSApp*
