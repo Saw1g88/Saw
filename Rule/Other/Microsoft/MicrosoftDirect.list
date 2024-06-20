@@ -1,4 +1,4 @@
-# DOMAIN
+## DOMAIN
 
 DOMAIN-SUFFIX,aadrm.com
 DOMAIN-SUFFIX,acompli.com
@@ -71,6 +71,6 @@ DOMAIN-SUFFIX,yammer.com
 DOMAIN-SUFFIX,yammerusercontent.com
 DOMAIN-KEYWORD,microsoft
 
-# HTTP
+## UA
 
 USER-AGENT,Microsoft*
