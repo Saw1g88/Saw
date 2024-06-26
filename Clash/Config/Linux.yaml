@@ -1,0 +1,54 @@
+mixed-port: 7890
+allow-lan: true
+external-controller: 127.0.0.1:28001
+secret: smalealex1988.
+
+mode: rule
+
+proxies:
+  - name: warp1
+    type: socks5
+    server: 127.0.0.1
+    port: 40000
+
+proxy-groups:
+  - name: Warp
+    type: url-test
+    proxies:
+      - warp1
+
+dns:
+  enable: true
+  ipv6: true
+  nameserver:
+    - system
+  fake-ip-filter:
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - "*.n.n.srv.nintendo.net"
+    - +.stun.playstation.net
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+    - WORKGROUP
+
+rule-providers: 
+  OpenAI:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/OpenAI.yaml
+    path: ./ruleset/OpenAI.yaml
+
+rules:
+  - RULE-SET,OpenAI,Warp
+  - MATCH,Direct
+
+tun:
+  enable: false
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
