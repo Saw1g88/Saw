@@ -1,125 +1,134 @@
 payload:
-# DOMAIN
+## DOMAIN
 
-# > Other
-  - DOMAIN-SUFFIX,13th.tech
-  - DOMAIN-SUFFIX,423down.com
-  - DOMAIN-SUFFIX,auth.icons8.com
-  - DOMAIN-SUFFIX,bokecc.com
-  - DOMAIN-SUFFIX,chaipip.com
-  - DOMAIN-SUFFIX,chinaplay.store
-  - DOMAIN-SUFFIX,hrtsea.com
-  - DOMAIN-SUFFIX,iloveimg.com
-  - DOMAIN-SUFFIX,kaikeba.com
-  - DOMAIN-SUFFIX,laomo.me
-  - DOMAIN-SUFFIX,mpyit.com
-  - DOMAIN-SUFFIX,qupu123.com
-  - DOMAIN-SUFFIX,pdfwifi.com
-  - DOMAIN-SUFFIX,zhenguanyu.biz
-  - DOMAIN-SUFFIX,zhenguanyu.com
+# > Others
+  - DOMAIN-SUFFIX,flyert.com
+  - DOMAIN-SUFFIX,gandi.net
   - DOMAIN-SUFFIX,snapdrop.net
+  - DOMAIN,download.jetbrains.com
+  - DOMAIN,origin-a.akamaihd.net
 
-# > Bilibili
-  - DOMAIN,apiintl.biliapi.net
-  - DOMAIN,upos-hz-mirrorakam.akamaized.net
-  - DOMAIN-SUFFIX,acg.tv
-  - DOMAIN-SUFFIX,acgvideo.com
-  - DOMAIN-SUFFIX,b23.tv
-  - DOMAIN-SUFFIX,bigfun.cn
-  - DOMAIN-SUFFIX,bigfunapp.cn
-  - DOMAIN-SUFFIX,biliapi.com
-  - DOMAIN-SUFFIX,biliapi.net
-  - DOMAIN-SUFFIX,bilibili.com
-  - DOMAIN-SUFFIX,bilibili.tv
-  - DOMAIN-SUFFIX,biligame.com
-  - DOMAIN-SUFFIX,biligame.net
-  - DOMAIN-SUFFIX,bilivideo.cn
-  - DOMAIN-SUFFIX,bilivideo.com
-  - DOMAIN-SUFFIX,hdslb.com
-  - DOMAIN-SUFFIX,im9.com
-  - DOMAIN-SUFFIX,smtcdns.net
-  - DOMAIN-KEYWORD,bilibili
+# > Apple
+  - DOMAIN-SUFFIX,aaplimg.com
+  - DOMAIN-SUFFIX,apple
+  - DOMAIN-SUFFIX,apple-cloudkit.com
+  - DOMAIN-SUFFIX,apple-dns.net
+  - DOMAIN-SUFFIX,apple-livephotoskit.com
+  - DOMAIN-SUFFIX,apple-mapkit.com
+  - DOMAIN-SUFFIX,apple-support.akadns.net
+  - DOMAIN-SUFFIX,apple.cn
+  - DOMAIN-SUFFIX,apple.co
+  - DOMAIN-SUFFIX,apple.com
+  - DOMAIN-SUFFIX,apple.com.cdn20.com
+  - DOMAIN-SUFFIX,apple.com.cn
+  - DOMAIN-SUFFIX,apple.com.edgekey.net
+  - DOMAIN-SUFFIX,apple.com.edgekey.net.globalredir.akadns.net
+  - DOMAIN-SUFFIX,apple.com.mwcloudcdn.com
+  - DOMAIN-SUFFIX,apple.com.mwcname.com
+  - DOMAIN-SUFFIX,apple.news
+  - DOMAIN-SUFFIX,appsto.re
+  - DOMAIN-SUFFIX,appstore.com
+  - DOMAIN-SUFFIX,cdn-apple.com
+  - DOMAIN-SUFFIX,crashlytics.com
+  - DOMAIN-SUFFIX,digicert.com
+  - DOMAIN-SUFFIX,itunes.com
+  - DOMAIN-SUFFIX,itunes.com.edgekey.net
+  - DOMAIN-SUFFIX,me.com
+  - DOMAIN-SUFFIX,mzstatic.com
+  - DOMAIN,apple.comscoreresearch.com
+  - DOMAIN-KEYWORD,apple.com.akadns.net
+  - DOMAIN-KEYWORD,icloud
+  - DOMAIN-KEYWORD,testflight
 
-# > NetEase
-  - DOMAIN-SUFFIX,126.com
-  - DOMAIN-SUFFIX,126.net
-  - DOMAIN-SUFFIX,127.net
-  - DOMAIN-SUFFIX,163.com
-  - DOMAIN-SUFFIX,163yun.com
-  - DOMAIN-SUFFIX,lofter.com
-  - DOMAIN-SUFFIX,netease.com
-  - DOMAIN-SUFFIX,ydstatic.com
-  - DOMAIN-SUFFIX,youdao.com
+# > Microsoft
+  - DOMAIN,outlook.office365.com
+  - DOMAIN,smtp-mail.outlook.com
+  - DOMAIN,smtp.office365.com
+
+# > My Domain
+  - DOMAIN-SUFFIX,20160706.xyz
+  - DOMAIN-SUFFIX,saw1g88.top
+
+#> Oracle
+  - DOMAIN-SUFFIX,2o7.net
+  - DOMAIN-SUFFIX,assets.adobedtm.com
+  - DOMAIN-SUFFIX,atgsvcs.com
+  - DOMAIN-SUFFIX,bkrtx.com
+  - DOMAIN-SUFFIX,bluekai.com
+  - DOMAIN-SUFFIX,consensu.org
+  - DOMAIN-SUFFIX,custhelp.com
+  - DOMAIN-SUFFIX,cybersource.com
+  - DOMAIN-SUFFIX,en25.com
+  - DOMAIN-SUFFIX,online-metrix.net
+  - DOMAIN-SUFFIX,rfihub.com
+  - DOMAIN-SUFFIX,rnengage.com
+  - DOMAIN-SUFFIX,trustarc.com
+  - DOMAIN-SUFFIX,trustarc.eu
+  - DOMAIN-SUFFIX,truste-svc.net
+  - DOMAIN-SUFFIX,truste.com
+  - DOMAIN-KEYWORD,oracle
+
+# > PayPal
+  - DOMAIN-SUFFIX,paypal.com
+  - DOMAIN-SUFFIX,paypal.me
+  - DOMAIN-SUFFIX,paypal-mktg.com
+  - DOMAIN-SUFFIX,paypalobjects.com
+
+# > Steam
+  - DOMAIN-SUFFIX,cm.steampowered.com
+  - DOMAIN-SUFFIX,steamserver.net
+
+# > IP Query
+  - DOMAIN,ip.istatmenus.app
+  - DOMAIN,sms.imagetasks.com
+
+# > Speed Test
+  - DOMAIN-SUFFIX,netspeedtestmaster.com
+  - DOMAIN,speedtest.macpaw.com
+
+# > WeChat
+  - DOMAIN-SUFFIX,wechat.com,extended-matching
+
+## IP
+
+# > Apple
+  - IP-CIDR,139.178.128.0/18,no-resolve
+  - IP-CIDR,144.178.0.0/19,no-resolve
+  - IP-CIDR,144.178.36.0/22,no-resolve
+  - IP-CIDR,144.178.48.0/20,no-resolve
+  - IP-CIDR,17.0.0.0/8,no-resolve
+  - IP-CIDR,192.35.50.0/24,no-resolve
+  - IP-CIDR,198.183.17.0/24,no-resolve
+  - IP-CIDR,205.180.175.0/24,no-resolve
+  - IP-CIDR,63.92.224.0/19,no-resolve
+  - IP-CIDR,65.199.22.0/23,no-resolve
+  - IP-CIDR6,2403:300::/32,no-resolve
+  - IP-CIDR6,2620:149::/32,no-resolve
+  - IP-CIDR6,2a01:b740::/32,no-resolve
+  - IP-CIDR6,2a01:b747::/32,no-resolve
+
+# > Oracle
+  - IP-CIDR,224.0.0.251/32,no-resolve
 
 # > Tencent
-  - DOMAIN-SUFFIX,foxmail.com
-  - DOMAIN-SUFFIX,gtimg.com
-  - DOMAIN-SUFFIX,idqqimg.com
-  - DOMAIN-SUFFIX,igamecj.com
-  - DOMAIN-SUFFIX,myapp.com
-  - DOMAIN-SUFFIX,myqcloud.com
-  - DOMAIN-SUFFIX,qq.com
-  - DOMAIN-SUFFIX,qqmail.com
-  - DOMAIN-SUFFIX,qqurl.com
-  - DOMAIN-SUFFIX,smtcdns.com
-  - DOMAIN-SUFFIX,smtcdns.net
-  - DOMAIN-SUFFIX,soso.com
-  - DOMAIN-SUFFIX,tencent-cloud.net
-  - DOMAIN-SUFFIX,tencent.com
-  - DOMAIN-SUFFIX,tencentmind.com
-  - DOMAIN-SUFFIX,tenpay.com
-  - DOMAIN-SUFFIX,wechat.com
-  - DOMAIN-SUFFIX,weixin.com
-  - DOMAIN-SUFFIX,weiyun.com
-
-# > Public Direct CDN
-  - DOMAIN-SUFFIX,baomitu.com
-  - DOMAIN-SUFFIX,bootcss.com
-  - DOMAIN-SUFFIX,jiasule.com
-  - DOMAIN-SUFFIX,staticfile.org
-  - DOMAIN-SUFFIX,upaiyun.com
-
-# > China DNS
-  - DOMAIN-SUFFIX,doh.pub
-  - DOMAIN-SUFFIX,dns.alidns.com
-  - DOMAIN-SUFFIX,doh.360.cn
-
-# > Keyword
-  - DOMAIN-KEYWORD,appzapp
-  - DOMAIN-KEYWORD,ccgslb
-  - DOMAIN-KEYWORD,chinacache
-  - DOMAIN-KEYWORD,duobao
-  - DOMAIN-KEYWORD,jiuzhoudaijiaapi
-  - DOMAIN-KEYWORD,moke
-  - DOMAIN-KEYWORD,qhimg
-  - DOMAIN-KEYWORD,vpimg
-
-# IP
-
-  - IP-CIDR,1.255.62.0/24,no-resolve
-  - IP-CIDR,101.32.104.0/21,no-resolve
-  - IP-CIDR,101.32.118.0/23,no-resolve
-  - IP-CIDR,101.32.96.0/20,no-resolve
-  - IP-CIDR,119.28.28.28/32,no-resolve
-  - IP-CIDR,120.195.181.180/32,no-resolve
-  - IP-CIDR,129.226.0.0/16,no-resolve
   - IP-CIDR,182.254.116.0/24,no-resolve
-  - IP-CIDR,183.128.0.0/11,no-resolve
-  - IP-CIDR,183.131.48.0/20,no-resolve
-  - IP-CIDR,185.188.32.0/22,no-resolve
-  - IP-CIDR,185.188.32.0/24,no-resolve
-  - IP-CIDR,185.188.33.0/24,no-resolve
-  - IP-CIDR,185.188.34.0/24,no-resolve
-  - IP-CIDR,185.188.35.0/24,no-resolve
   - IP-CIDR,203.205.238.0/23,no-resolve
   - IP-CIDR,203.205.254.0/23,no-resolve
-  - IP-CIDR6,2a0b:b580::/48,no-resolve
-  - IP-CIDR6,2a0b:b581::/48,no-resolve
-  - IP-CIDR6,2a0b:b582::/48,no-resolve
-  - IP-CIDR6,2a0b:b583::/48,no-resolve
 
-# UA
+# > WeChat
+  - IP-CIDR,101.32.104.4/32,no-resolve
+  - IP-CIDR,101.32.104.41/32,no-resolve
+  - IP-CIDR,101.32.104.56/32,no-resolve
+  - IP-CIDR,101.32.118.25/32,no-resolve
+  - IP-CIDR,101.32.133.16/32,no-resolve
+  - IP-CIDR,101.32.133.53/32,no-resolve
+  - IP-CIDR,101.32.133.209/32,no-resolve
+  - IP-CIDR,129.226.3.47/32,no-resolve
+  - IP-CIDR,129.226.107.244/32,no-resolve
 
+## UA
+
+# > Others
   - USER-AGENT,Bilibili*
   - USER-AGENT,bili*
   - USER-AGENT,bili-inter*
@@ -127,11 +136,38 @@ payload:
   - USER-AGENT,MicroMessenger*
   - USER-AGENT,MicroMessengerClient*
   - USER-AGENT,NeteaseMusic*
+  - USER-AGENT,PayPal*
   - USER-AGENT,QQ*
   - USER-AGENT,RemotePlay*
   - USER-AGENT,TIM*
   - USER-AGENT,TeamViewer*
   - USER-AGENT,WeChat*
 
-# China
+# > Apple
+  - USER-AGENT,%E5%9C%B0%E5%9B%BE*
+  - USER-AGENT,%E6%9F%A5%E6%89%BE*
+  - USER-AGENT,%E8%AE%BE%E7%BD%AE*
+  - USER-AGENT,*WeatherFoundation*
+  - USER-AGENT,*com.apple.mobileme.fmip1*
+  - USER-AGENT,AppStore*
+  - USER-AGENT,AppleNews*
+  - USER-AGENT,AppleTV*
+  - USER-AGENT,FMDClient*
+  - USER-AGENT,FMFD*
+  - USER-AGENT,FindMy*
+  - USER-AGENT,Maps*
+  - USER-AGENT,Music*
+  - USER-AGENT,TestFlight*
+  - USER-AGENT,com.apple.Maps*
+  - USER-AGENT,com.apple.appstored*
+  - USER-AGENT,com.apple.geod*
+  - USER-AGENT,com.apple.news*
+  - USER-AGENT,com.apple.trustd*
+  - USER-AGENT,com.apple.tv*
+  - USER-AGENT,fmflocatord*
+  - USER-AGENT,geod*
+  - USER-AGENT,locationd*
+
+## Direct
   - DOMAIN-SUFFIX,cn
+
