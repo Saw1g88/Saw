@@ -78,6 +78,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Globe.png
     url: http://www.apple.com/library/test/success.html
     interval: 300
+    hidden: false    
     use:
       - B
     proxies:                    
@@ -162,26 +163,6 @@ proxy-groups:
     use:
       - A    
 
-  - name: Direct
-    type: url-test
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/CN.png
-    url: http://www.apple.com/library/test/success.html
-    interval: 300
-    tolerance: 150
-    lazy: true
-    hidden: true
-    proxies:
-      - DIRECT
-
-#  - name: Chain•XXX
-#    type: relay
-#    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Chain.png
-#    url: http://www.apple.com/library/test/success.html
-#    hidden: true
-#    proxies:
-#      - XXX
-#      - XXX 
-
 rule-providers:  
    Reject:
     type: http
@@ -236,7 +217,7 @@ rules:
 - RULE-SET,Reject,REJECT
 - RULE-SET,Social,Social
 - RULE-SET,Streaming,Streaming
-- RULE-SET,AI,AI
+- RULE-SET,AI,Proxy
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Direct,DIRECT
 - RULE-SET,LAN,DIRECT
