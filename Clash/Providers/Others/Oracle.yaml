@@ -1,5 +1,5 @@
 payload:
-# DOMAIN
+## DOMAIN
 
   - DOMAIN-SUFFIX,2o7.net
   - DOMAIN-SUFFIX,assets.adobedtm.com
@@ -19,6 +19,6 @@ payload:
   - DOMAIN-SUFFIX,truste.com
   - DOMAIN-KEYWORD,oracle
 
-# IP
+## IP
 
   - IP-CIDR,224.0.0.251/32,no-resolve
