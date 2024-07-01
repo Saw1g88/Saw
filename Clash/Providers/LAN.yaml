@@ -1,5 +1,5 @@
 payload:
-# DOMAIN
+## DOMAIN
 
   - DOMAIN-SUFFIX,ip6-localhost
   - DOMAIN-SUFFIX,ip6-loopback
@@ -7,7 +7,7 @@ payload:
   - DOMAIN-SUFFIX,local
   - DOMAIN-SUFFIX,localhost
 
-# IP
+## IP
 
   - IP-CIDR,0.0.0.0/8,no-resolve
   - IP-CIDR,10.0.0.0/8,no-resolve
