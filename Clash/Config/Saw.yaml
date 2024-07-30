@@ -14,7 +14,7 @@ geox-url:
 dns:
   enable: true
   listen: 0.0.0.0:53
-  ipv6: false
+  ipv6: true
   default-nameserver:
     - 223.5.5.5
     - 114.114.114.114
@@ -37,15 +37,12 @@ dns:
   nameserver:
     - 223.5.5.5
     - 114.114.114.114
-  fallback:
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-    - https://dns.alidns.com/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
 
 profile:
   tracing: true
@@ -75,93 +72,35 @@ proxy-providers:
 proxy-groups:
   - name: Proxy
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Globe.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Earth.png
     url: http://www.apple.com/library/test/success.html
     interval: 300
     hidden: false    
     use:
       - B
-    proxies:                    
+    proxies:
 
   - name: Social
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Unread_Messages.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Search.png
+    filter: '🇬🇧|🇺🇸'
     url: http://www.apple.com/library/test/success.html
     interval: 300
     hidden: false
     use:
       - B    
-    proxies:
+    proxies:                           
 
-  - name: Streaming
+  - name: USA
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Streaming.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/USA.png
+    filter: '🇺🇸'
     url: http://www.apple.com/library/test/success.html
     interval: 300
     hidden: false
     use:
       - B    
-    proxies:         
-
-  - name: Hong Kong
-    type: url-test
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/HK.png
-    filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.apple.com/library/test/success.html
-    interval: 300
-    tolerance: 150
-    lazy: true
-    hidden: true
-    use:
-      - A
-
-  - name: Taiwan
-    type: url-test
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/TW.png
-    filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.apple.com/library/test/success.html
-    interval: 300
-    tolerance: 150
-    lazy: true
-    hidden: true
-    use:
-      - A
-
-  - name: Japan
-    type: url-test
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/JP.png
-    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.apple.com/library/test/success.html
-    interval: 300
-    tolerance: 150
-    lazy: true
-    hidden: true
-    use:
-      - A
-
-  - name: Singapore
-    type: url-test
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/SG.png
-    filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.apple.com/library/test/success.html
-    interval: 300
-    tolerance: 150
-    lazy: true
-    hidden: true
-    use:
-      - A
-
-  - name: United States
-    type: url-test
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/US.png
-    filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-    url: http://www.apple.com/library/test/success.html
-    interval: 300
-    tolerance: 150
-    lazy: true
-    hidden: true
-    use:
-      - A    
+    proxies:               
 
 rule-providers:  
    Reject:
@@ -178,19 +117,26 @@ rule-providers:
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Social.yaml
     path: ./ruleset/Social.yaml
 
-   Streaming:
+   PayPal:
     type: http
     behavior: classical
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Streaming.yaml
-    path: ./ruleset/Streaming.yaml    
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/PayPal.yaml
+    path: ./ruleset/PayPal.yaml    
 
    AI:
     type: http
     behavior: classical
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/AI.yaml
-    path: ./ruleset/AI.yaml  
+    path: ./ruleset/AI.yaml     
+
+   Streaming:
+    type: http
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/Streaming.yaml
+    path: ./ruleset/Streaming.yaml      
 
    Proxy:
     type: http
@@ -216,8 +162,9 @@ rule-providers:
 rules:
 - RULE-SET,Reject,REJECT
 - RULE-SET,Social,Social
-- RULE-SET,Streaming,Streaming
-- RULE-SET,AI,Proxy
+- RULE-SET,AI,USA
+- RULE-SET,PayPal,USA
+- RULE-SET,Streaming,Proxy
 - RULE-SET,Proxy,Proxy
 - RULE-SET,Direct,DIRECT
 - RULE-SET,LAN,DIRECT
