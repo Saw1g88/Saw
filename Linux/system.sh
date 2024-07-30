@@ -31,7 +31,7 @@ sysctl --system
 
 # 内核调优
 echo "进行内核调优..."
-wget https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Other/kernel_optimization.sh
+wget https://raw.githubusercontent.com/Saw1g88/Saw/main/Linux/kernel_optimization.sh
 chmod +x kernel_optimization.sh
 bash kernel_optimization.sh
 
