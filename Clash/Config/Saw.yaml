@@ -72,7 +72,7 @@ proxy-providers:
 proxy-groups:
   - name: Proxy
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Earth.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Globe.png
     url: http://www.apple.com/library/test/success.html
     interval: 300
     hidden: false    
