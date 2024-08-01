@@ -103,8 +103,16 @@
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Twitter.png"
         },
         {
-            "name": "USA",
-            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/USA.png"
+            "name": "USA_1",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/USA_1.png"
+        },
+        {
+            "name": "USA_2",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/USA_2.png"
+        },
+        {
+            "name": "USA_3",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/USA_3.png"
         },
         {
             "name": "VPS",
