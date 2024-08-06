@@ -46,14 +46,4 @@ systemctl enable tuned.service
 systemctl start tuned.service
 tuned-adm profile network-throughput
 
-# 修改 SSH 端口为 2233
-echo "修改 SSH 端口为 2233..."
-sed -i 's/#Port 22/Port 2233/' /etc/ssh/sshd_config
-systemctl restart sshd
-
-# 安装 Node.js 19.x
-echo "安装 Node.js 19.x..."
-curl -fsSL https://deb.nodesource.com/setup_19.x | bash -
-apt-get install -y nodejs
-
 echo "所有步骤完成！"
