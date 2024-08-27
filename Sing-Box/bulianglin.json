@@ -1,0 +1,200 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "output": "/var/run/homeproxy/sing-box-c.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "default-dns",
+        "address": "223.5.5.5",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "system-dns",
+        "address": "local",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://name_error"
+      },
+      {
+        "tag": "google",
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "default-dns",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
+        "client_subnet": "1.0.1.0"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "default-dns"
+      },
+      {
+        "query_type": "HTTPS",
+        "server": "block-dns"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "default-dns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "google"
+      },
+      {
+        "rule_set": "cnsite",
+        "server": "default-dns"
+      }
+    ],
+    "strategy": "ipv4_only",
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": false,
+    "final": "google"
+  },
+  "inbounds": [
+    {
+   "type": "tun",
+   "tag": "tun-in",
+   "inet4_address": "172.19.0.1/30",
+   "mtu": 9000,
+   "gso": true,
+   "auto_route": true,
+   "stack": "system",
+   "sniff": true,
+   "sniff_override_destination": false
+}
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct-out"
+    },
+    {
+      "type": "block",
+      "tag": "block-out"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "urltest",
+      "tag": "自动选择",
+      "outbounds": [
+        "香港",
+        "日本",
+        "美国"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "手动选择",
+      "outbounds": [
+        "direct-out",
+        "block-out",
+        "自动选择",
+        "香港",
+        "日本",
+        "美国"
+      ],
+      "default": "自动选择"
+    },
+    {
+      "type": "selector",
+      "tag": "GLOBAL",
+      "outbounds": [
+        "direct-out",
+        "香港",
+        "日本",
+        "美国"
+      ],
+      "default": "手动选择"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "香港",
+      "server": "abc.com",
+      "server_port": 10001,
+      "password": "fdc43e321a",
+      "method": "aes-128-gcm"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "日本",
+      "server": "abc.com",
+      "server_port": 10002,
+      "password": "fdc43e321a",
+      "method": "aes-128-gcm"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国",
+      "server": "abc.com",
+      "server_port": 10003,
+      "password": "fdc43e321a",
+      "method": "aes-128-gcm"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "protocol": "quic",
+        "outbound": "block-out"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct-out"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "rule_set": [
+          "cnip",
+          "cnsite"
+        ],
+        "outbound": "direct-out"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "cnip",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/cn.srs",
+        "download_detour": "自动选择"
+      },
+      {
+        "type": "remote",
+        "tag": "cnsite",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/cn.srs",
+        "download_detour": "自动选择"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "手动选择"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui_download_detour": "自动选择",
+      "default_mode": "rule"
+    }
+  }
+}
