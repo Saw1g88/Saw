@@ -69,7 +69,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.apple.com/library/test/success.html
+      url: http://1.0.0.1/generate_204
       interval: 300
   B:
     type: http
@@ -78,14 +78,14 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.apple.com/library/test/success.html
+      url: http://1.0.0.1/generate_204
       interval: 300      
       
 proxy-groups:
   - name: SERVERS
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Server_7.png
-    url: http://www.apple.com/library/test/success.html
+    url: http://1.0.0.1/generate_204
     interval: 300
     hidden: false    
     use:
@@ -96,7 +96,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Dollar.png
     filter: '🇺🇸'
-    url: http://www.apple.com/library/test/success.html
+    url: http://1.0.0.1/generate_204
     interval: 300
     hidden: false
     use:
