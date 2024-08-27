@@ -3,10 +3,12 @@ ipv6: true
 log-level: info
 allow-lan: true
 mixed-port: 7890
+socks-port: 7891
 unified-delay: true
 tcp-concurrent: true
 external-controller: :9090
 global-client-fingerprint: random
+keep-alive-interval: 30
 
 profile:
   store-selected: true
