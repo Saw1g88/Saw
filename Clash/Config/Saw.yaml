@@ -82,7 +82,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://1.0.0.1/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 300
   B:
     type: http
@@ -91,14 +91,14 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://1.0.0.1/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 300      
       
 proxy-groups:
-  - name: SERVERS
+  - name: PROXY
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Server_7.png
-    url: http://1.0.0.1/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false    
     use:
@@ -109,7 +109,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Dollar.png
     filter: '🇺🇸'
-    url: http://1.0.0.1/generate_204
+    url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false
     use:
@@ -179,12 +179,12 @@ rules:
 - RULE-SET,Social,USA
 - RULE-SET,AI,USA
 - RULE-SET,PayPal,USA
-- RULE-SET,Streaming,SERVERS
-- RULE-SET,Proxy,SERVERS
+- RULE-SET,Streaming,PROXY
+- RULE-SET,Proxy,PROXY
 - RULE-SET,Direct,DIRECT
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,SERVERS
+- MATCH,PROXY
 
 
 script:
