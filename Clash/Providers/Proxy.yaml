@@ -434,6 +434,11 @@ payload:
   - DOMAIN,az668014.vo.msecnd.net
   - DOMAIN,github.global.ssl.fastly.net
 
+# > My Domain
+  - DOMAIN-SUFFIX,saw1g88.top
+  - DOMAIN-SUFFIX,20160706.xyz
+  - DOMAIN-SUFFIX,160603.xyz  
+
 # > OKX
   - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
