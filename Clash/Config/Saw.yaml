@@ -3,12 +3,11 @@ ipv6: true
 log-level: info
 allow-lan: true
 mixed-port: 7890
-socks-port: 7891
 unified-delay: true
 tcp-concurrent: true
+keep-alive-interval: 30
 external-controller: :9090
 global-client-fingerprint: random
-keep-alive-interval: 30
 
 profile:
   store-selected: true
@@ -95,26 +94,26 @@ proxy-providers:
       interval: 300      
       
 proxy-groups:
-  - name: PROXY
+  - name: SERVER
     type: select
     icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Server_7.png
     url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false    
     use:
-#      - A      
-      - B                      
+      - A      
+#      - B                      
 
-  - name: USA
+  - name: STABLE
     type: select
-    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Dollar.png
+    icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Lock.png
     filter: '🇺🇸'
     url: http://cp.cloudflare.com/generate_204
     interval: 300
     hidden: false
     use:
-#      - A     
-      - B    
+      - A     
+#      - B    
     proxies:               
 
 rule-providers:  
@@ -174,17 +173,17 @@ rule-providers:
     url: https://raw.githubusercontent.com/Saw1g88/Saw/main/Clash/Providers/LAN.yaml
     path: ./ruleset/LAN.yaml 
 
-rules:
+rules: 
 - RULE-SET,Reject,REJECT
-- RULE-SET,Social,USA
-- RULE-SET,AI,USA
-- RULE-SET,PayPal,USA
-- RULE-SET,Streaming,PROXY
-- RULE-SET,Proxy,PROXY
+- RULE-SET,Social,STABLE
+- RULE-SET,AI,STABLE
+- RULE-SET,PayPal,STABLE
+- RULE-SET,Streaming,SERVER
+- RULE-SET,Proxy,SERVER
 - RULE-SET,Direct,DIRECT
 - RULE-SET,LAN,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,PROXY
+- MATCH,SERVER
 
 
 script:
