@@ -39,11 +39,4 @@ bash kernel_optimization.sh
 echo "设置时区为 Asia/Shanghai..."
 sudo timedatectl set-timezone Asia/Shanghai
 
-# 开启 tuned 并设置网络性能优化
-echo "开启 tuned 并设置网络性能优化配置..."
-check_and_install tuned
-systemctl enable tuned.service
-systemctl start tuned.service
-tuned-adm profile network-throughput
-
 echo "所有步骤完成！"
