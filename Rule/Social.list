@@ -1,5 +1,13 @@
 ## DOMAIN
 
+# > Talkatone
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,mobilefuse.com
+DOMAIN-SUFFIX,talkatone.com
+DOMAIN-SUFFIX,tenor.com
+DOMAIN-SUFFIX,tktn.at
+DOMAIN-SUFFIX,tktn.be
+
 # > Telegram
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tdesktop.com
@@ -46,6 +54,13 @@ DOMAIN-SUFFIX,vine.co
 DOMAIN-SUFFIX,x.com
 
 ## IP
+
+# > Talkatone
+IP-CIDR,50.117.27.0/24,no-resolve
+IP-CIDR,63.251.124.0/24,no-resolve
+IP-CIDR,69.46.75.0/24,no-resolve
+IP-CIDR,205.164.56.0/24,no-resolve
+IP-CIDR,205.164.56.29/24,no-resolve
 
 # > Telegram
 IP-ASN,211157,no-resolve
