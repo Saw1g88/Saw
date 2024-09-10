@@ -1,10 +1,14 @@
 ## DOMAIN
 
 # > Talkatone
+DOMAIN-SUFFIX,agkn.com
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,ip-api.com
+DOMAIN-SUFFIX,kochava.com
 DOMAIN-SUFFIX,mobilefuse.com
 DOMAIN-SUFFIX,talkatone.com
-DOMAIN-SUFFIX,tenor.com
 DOMAIN-SUFFIX,tktn.at
 DOMAIN-SUFFIX,tktn.be
 
