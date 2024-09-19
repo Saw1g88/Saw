@@ -54,6 +54,16 @@ if [ -z "$onedrive_dir" ]; then
   exit 1
 fi
 
+# 提示输入自动备份的时间
+echo "请输入自动备份时间 (格式为: 分钟 小时)。例如: 30 2 表示每天凌晨2:30。"
+read -p "请输入自动备份的分钟和小时 (如 30 2): " minute hour
+
+# 检查输入的分钟和小时是否有效
+if [[ ! "$minute" =~ ^[0-9]+$ ]] || [[ ! "$hour" =~ ^[0-9]+$ ]] || [ "$minute" -lt 0 ] || [ "$minute" -ge 60 ] || [ "$hour" -lt 0 ] || [ "$hour" -ge 24 ]; then
+  echo "无效的时间格式，备份中止。"
+  exit 1
+fi
+
 # 设置备份文件名，包含日期
 backup_file="docker-backup-$(date +%Y-%m-%d).tar.gz"
 # 设置备份日志文件名，包含日期
@@ -104,3 +114,8 @@ else
   # 在备份日志文件中记录备份失败信息
   echo "$(date +%Y-%m-%d_%H:%M:%S) - Backup failed." >> "$backup_log_file"
 fi
+
+# 设置自动备份的cron任务
+(crontab -l ; echo "$minute $hour * * * /bin/bash $(realpath $0)") | crontab -
+
+echo "自动备份任务已设置为每天 $hour:$minute 运行。"
