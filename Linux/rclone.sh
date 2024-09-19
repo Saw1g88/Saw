@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 设置时区为中国上海
+export TZ="Asia/Shanghai"
+
 # 设置备份目录
 backup_dir="/root/backup"
 # 设置日志目录
