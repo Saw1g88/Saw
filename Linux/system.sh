@@ -29,11 +29,10 @@ echo "3" > /proc/sys/net/ipv4/tcp_fastopen
 echo "net.ipv4.tcp_fastopen=3" > /etc/sysctl.d/30-tcp_fastopen.conf
 sysctl --system
 
-# 内核调优
-echo "进行内核调优..."
-wget https://raw.githubusercontent.com/Saw1g88/Saw/main/Linux/kernel_optimization.sh
-chmod +x kernel_optimization.sh
-bash kernel_optimization.sh
+# 配置 BBR 和 FQ
+echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
+sysctl -p
 
 # 设置时区
 echo "设置时区为 Asia/Shanghai..."
