@@ -44,13 +44,6 @@ fi
 check_and_install jq
 check_and_install wget
 
-# 安装 DNS 工具，根据系统类型选择
-if [[ "$os" == "debian" || "$os" == "ubuntu" ]]; then
-    check_and_install bind9-utils # 在 Debian/Ubuntu 上使用 bind9-utils
-elif [[ "$os" == "centos" || "$os" == "rhel" ]]; then
-    check_and_install bind-utils # 在 CentOS/RHEL 上使用 bind-utils
-fi
-
 # 安装 Docker
 if ! command -v docker &> /dev/null; then
     echo "安装 Docker..."
@@ -82,8 +75,51 @@ else
     sysctl -p
 fi
 
+# 调整 DNS
+adjust_dns() {
+
+    if [ -f /etc/resolv.conf ]; then
+        echo "备份当前的 /etc/resolv.conf 文件到 /etc/resolv.conf /etc/resolv.conf.bak..."
+        cp /etc/resolv.conf /etc/resolv.conf.bak
+    fi
+
+    cat > /etc/resolv.conf <<EOF
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+EOF
+    echo "DNS 设置已更新为 (8.8.8.8, 1.1.1.1)。"
+}
+
+# 检查是否调整过 DNS
+dns_check() {
+
+    if grep -q 'nameserver 8.8.8.8' /etc/resolv.conf && grep -q 'nameserver 1.1.1.1' /etc/resolv.conf; then
+        echo "DNS 已设置为 (8.8.8.8, 1.1.1.1)，跳过设置。"
+    else
+        adjust_dns
+    fi
+}
+
+# 执行 DNS 检查和调整
+dns_check
+
 # 设置时区
-echo "设置时区为 Asia/Shanghai..."
-timedatectl set-timezone Asia/Shanghai
+set_timezone() {
+    echo "设置时区为 Asia/Shanghai..."
+    timedatectl set-timezone Asia/Shanghai
+}
+
+# 检查时区是否已经是 Asia/Shanghai
+timezone_check() {
+    current_timezone=$(timedatectl | grep "Time zone" | awk '{print $3}')
+    if [ "$current_timezone" == "Asia/Shanghai" ]; then
+        echo "时区已设置为 Asia/Shanghai，跳过设置。"
+    else
+        set_timezone
+    fi
+}
+
+# 执行时区检查和设置
+timezone_check
 
 echo "所有步骤完成！"
