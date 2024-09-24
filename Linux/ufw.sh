@@ -13,7 +13,7 @@ fi
 
 # 检查 UFW 是否已启用 SSH 端口
 if sudo ufw status | grep -q "$SSH_PORT"; then
-    echo "SSH 端口 $SSH_PORT 已放行"
+    echo "SSH 端口 $SSH_PORT 已放行。"
 else
     echo "放行 SSH 端口 $SSH_PORT..."
     sudo ufw allow "$SSH_PORT"
@@ -21,7 +21,7 @@ fi
 
 # 检查 UFW 是否已启用
 if sudo ufw status | grep -q "Status: active"; then
-    echo "UFW 已启用"
+    echo "UFW 已启用。"
 else
     echo "启用 UFW 并设置开机自启..."
     sudo ufw enable
