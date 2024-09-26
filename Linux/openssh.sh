@@ -95,7 +95,6 @@ set_path_priority() {
 verify_installation() {
     echo "SSH版本信息："
     ssh -V
-    sshd -V
 }
 
 # 清理下载的文件
