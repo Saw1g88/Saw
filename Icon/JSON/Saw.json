@@ -3,6 +3,10 @@
     "description": "by Saw1g88",
     "icons": [
         {
+            "name": "AI",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/AI.png"
+        },
+        {
             "name": "Apple",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Apple.png"
         },
