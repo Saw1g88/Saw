@@ -301,12 +301,6 @@ payload:
   - DOMAIN-SUFFIX,truste.com
   - DOMAIN-KEYWORD,oracle
 
-# > PayPal
-  - DOMAIN-SUFFIX,paypal.com
-  - DOMAIN-SUFFIX,paypal.me
-  - DOMAIN-SUFFIX,paypal-mktg.com
-  - DOMAIN-SUFFIX,paypalobjects.com
-
 # > Steam
   - DOMAIN-SUFFIX,cm.steampowered.com
   - DOMAIN-SUFFIX,steamserver.net
@@ -369,7 +363,6 @@ payload:
   - USER-AGENT,MicroMessenger*
   - USER-AGENT,MicroMessengerClient*
   - USER-AGENT,NeteaseMusic*
-  - USER-AGENT,PayPal*
   - USER-AGENT,QQ*
   - USER-AGENT,RemotePlay*
   - USER-AGENT,TIM*
