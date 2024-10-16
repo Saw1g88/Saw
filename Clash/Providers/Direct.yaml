@@ -3,10 +3,10 @@ payload:
 
 # > Others
   - DOMAIN,download.jetbrains.com
+  - DOMAIN,origin-a.akamaihd.net  
   - DOMAIN-SUFFIX,flyert.com
   - DOMAIN-SUFFIX,gandi.net
   - DOMAIN-SUFFIX,snapdrop.net
-  - DOMAIN,origin-a.akamaihd.net
 
 # > Storage
   - DOMAIN,03e1181bba1cf.cdn.sohucs.com
