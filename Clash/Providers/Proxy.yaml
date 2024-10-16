@@ -2,6 +2,11 @@ payload:
 ## DOMAIN
 
 # > Others
+  - DOMAIN,cdn.jsdelivr.net
+  - DOMAIN,cdn.statically.io
+  - DOMAIN,lab.skk.moe
+  - DOMAIN,ocsp.int-x3.letsencrypt.org
+  - DOMAIN,search.arc.net
   - DOMAIN-SUFFIX,9cache.com
   - DOMAIN-SUFFIX,9gag.com
   - DOMAIN-SUFFIX,abc.com
@@ -216,11 +221,6 @@ payload:
   - DOMAIN-SUFFIX,z-lib.org
   - DOMAIN-SUFFIX,zophar.net
   - DOMAIN-SUFFIX,zyxel.com
-  - DOMAIN,cdn.jsdelivr.net
-  - DOMAIN,cdn.statically.io
-  - DOMAIN,lab.skk.moe
-  - DOMAIN,ocsp.int-x3.letsencrypt.org
-  - DOMAIN,search.arc.net
 
 # > Storage
   - DOMAIN-SUFFIX,2fas.com
