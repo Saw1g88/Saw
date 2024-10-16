@@ -223,98 +223,429 @@ payload:
   - DOMAIN-SUFFIX,zyxel.com
 
 # > Storage
+  - DOMAIN,1024.day
+  - DOMAIN,1password.com
+  - DOMAIN,204.io
+  - DOMAIN,91unicorn.cloud
+  - DOMAIN,accdn.lpsnmedia.net
+  - DOMAIN,acctcdn.msauth.net
+  - DOMAIN,acctcdn.msftauth.net
+  - DOMAIN,adrta.com
+  - DOMAIN,amcdn.msftauth.net
+  - DOMAIN,apps.sascdn.com
+  - DOMAIN,areal.me
+  - DOMAIN,avatars.discourse-cdn.com
+  - DOMAIN,boxjs.com
+  - DOMAIN,browser-intake-datadoghq.com
+  - DOMAIN,bwh81.net
+  - DOMAIN,c.disquscdn.com
+  - DOMAIN,cdn-eu.oyunfor.com
+  - DOMAIN,cdn.amzayo.top
+  - DOMAIN,cdn.auth0.com
+  - DOMAIN,cdn.bifiv.com
+  - DOMAIN,cdn.cookielaw.org
+  - DOMAIN,cdn.doubleverify.com
+  - DOMAIN,cdn.img2ipfs.com
+  - DOMAIN,cdn.jampp.com
+  - DOMAIN,cdn.serveteck.com
+  - DOMAIN,cdn.staticfile.org
+  - DOMAIN,cdn.us.document360.io
+  - DOMAIN,cdn.userway.org
+  - DOMAIN,cdn.vox-cdn.com
+  - DOMAIN,cdna.smartborad.com
+  - DOMAIN,ced-ns.sascdn.com
+  - DOMAIN,censys.com
+  - DOMAIN,chenhaotian.top
+  - DOMAIN,d1vi3mu7ljhkg.cloudfront.net
+  - DOMAIN,d36jcksde1wxzq.cloudfront.net
+  - DOMAIN,deliver.ptgncdn.com
+  - DOMAIN,djeqr6to3dedg.cloudfront.net
+  - DOMAIN,dlr1.fcdn.sk
+  - DOMAIN,dmitio.com
+  - DOMAIN,dt2sdf0db8zob.cloudfront.net
+  - DOMAIN,extend.vimeocdn.com
+  - DOMAIN,facebook.com
+  - DOMAIN,featureassets.org
+  - DOMAIN,fluffychat.im
+  - DOMAIN,gao.ee
+  - DOMAIN,ghbtns.com
+  - DOMAIN,ghcr.io
+  - DOMAIN,gitlab.com
+  - DOMAIN,global.discourse-cdn.com
+  - DOMAIN,hostloc.com
+  - DOMAIN,http-inputs-notion.splunkcloud.com
+  - DOMAIN,hyliu.me
+  - DOMAIN,i.l-dsp.inmobicdn.net
+  - DOMAIN,i.l.inmobicdn.net
+  - DOMAIN,idev.dev
+  - DOMAIN,img-prod-cms-rt-microsoft-com.akamaized.net
+  - DOMAIN,img.pub
+  - DOMAIN,impression.link
+  - DOMAIN,instant.page
+  - DOMAIN,ip-api.com
+  - DOMAIN,ipfs.io
+  - DOMAIN,ipinfo.io
+  - DOMAIN,ipv4dns.com
+  - DOMAIN,kkb.lol
+  - DOMAIN,lamhosting.com
+  - DOMAIN,laz-g-cdn.alicdn.com
+  - DOMAIN,linux.do
+  - DOMAIN,logincdn.msftauth.net
+  - DOMAIN,loll.cc
+  - DOMAIN,lpcdn.lpsnmedia.net
+  - DOMAIN,maxcdn.bootstrapcdn.com
+  - DOMAIN,misaka.ee
+  - DOMAIN,netnewswire.com
+  - DOMAIN,nezha.cyou
+  - DOMAIN,nezha.wiki
+  - DOMAIN,nginx.org
+  - DOMAIN,p3terx.com
+  - DOMAIN,perf-cdn.b-cdn.net
+  - DOMAIN,pix.pub
+  - DOMAIN,postapps.com
+  - DOMAIN,prodregistryv2.org
+  - DOMAIN,racknerd.com
+  - DOMAIN,ranchero.com
+  - DOMAIN,rclone.org
+  - DOMAIN,reederapp.net
+  - DOMAIN,res.cloudinary.com
+  - DOMAIN,rss.app
+  - DOMAIN,rumcdn.geoedge.be
+  - DOMAIN,s.swiftypecdn.com
+  - DOMAIN,s3proxy.cdn-zlib.se
+  - DOMAIN,scamalytics.com
+  - DOMAIN,scarsong.com
+  - DOMAIN,sea2.discourse-cdn.com
+  - DOMAIN,seccdn.libravatar.org
+  - DOMAIN,sentry.io
+  - DOMAIN,sg.cloudhost.asia
+  - DOMAIN,simiyy.com
+  - DOMAIN,snapcraft.io
+  - DOMAIN,spaceship-cdn.com
+  - DOMAIN,speedtest.hk212.hkg.cn.nerocloud.io
+  - DOMAIN,suntechspeedtest.com
+  - DOMAIN,supply.inmobicdn.net
+  - DOMAIN,surge.tel
+  - DOMAIN,tags.tiqcdn.com
+  - DOMAIN,thisav.com
+  - DOMAIN,unpkg.com
+  - DOMAIN,utteranc.es
+  - DOMAIN,uuzi.net
+  - DOMAIN,vector.im
+  - DOMAIN,vps.ga
+  - DOMAIN,wawo.wiki
+  - DOMAIN,www.oyunfor.com
+  - DOMAIN,www.santiyun.xyz
+  - DOMAIN,www.yunieebk.com
+  - DOMAIN,xiaobaotv.net
+  - DOMAIN,xiaoji.de
+  - DOMAIN,xiaoxintv.com
+  - DOMAIN,xn--9kqq37frnz.com
+  - DOMAIN,yuyan.lol
+  - DOMAIN,z-lib.do
+  - DOMAIN,z-library.do
+  - DOMAIN,zonahu.tech
+  - DOMAIN-SUFFIX,111666.best
+  - DOMAIN-SUFFIX,151314.xyz
+  - DOMAIN-SUFFIX,1drv.com
+  - DOMAIN-SUFFIX,201321.xyz
+  - DOMAIN-SUFFIX,2020111.xyz
   - DOMAIN-SUFFIX,2fas.com
+  - DOMAIN-SUFFIX,321210.xyz
+  - DOMAIN-SUFFIX,335.pp.ua
+  - DOMAIN-SUFFIX,540808.xyz
+  - DOMAIN-SUFFIX,592.la
+  - DOMAIN-SUFFIX,5x5tele.com
+  - DOMAIN-SUFFIX,740199.xyz
+  - DOMAIN-SUFFIX,aberythmic.com
+  - DOMAIN-SUFFIX,adjust.net.in
+  - DOMAIN-SUFFIX,adrta.com
+  - DOMAIN-SUFFIX,adsappier.com
+  - DOMAIN-SUFFIX,adsrvr.org
+  - DOMAIN-SUFFIX,adswizz.com
+  - DOMAIN-SUFFIX,advinservers.com
   - DOMAIN-SUFFIX,akile.io
+  - DOMAIN-SUFFIX,algolia.net
+  - DOMAIN-SUFFIX,android.com
   - DOMAIN-SUFFIX,apfutura.net
+  - DOMAIN-SUFFIX,appcenter.ms
   - DOMAIN-SUFFIX,appsflyer.com
+  - DOMAIN-SUFFIX,arealme.com
+  - DOMAIN-SUFFIX,ax1x.com
+  - DOMAIN-SUFFIX,azure.net
+  - DOMAIN-SUFFIX,baiconnect.com
   - DOMAIN-SUFFIX,bdustatic.com
+  - DOMAIN-SUFFIX,bingapis.com
+  - DOMAIN-SUFFIX,boy.al
+  - DOMAIN-SUFFIX,bpay.top
+  - DOMAIN-SUFFIX,braveglobal.tv
   - DOMAIN-SUFFIX,bugsnag.com
+  - DOMAIN-SUFFIX,cellrebel.com
+  - DOMAIN-SUFFIX,censys.com
+  - DOMAIN-SUFFIX,censys.io
   - DOMAIN-SUFFIX,chatway.app
+  - DOMAIN-SUFFIX,chenchen.de
   - DOMAIN-SUFFIX,chienwen.net
+  - DOMAIN-SUFFIX,clouvider.net
+  - DOMAIN-SUFFIX,cluep.com
   - DOMAIN-SUFFIX,cnmmb.com
+  - DOMAIN-SUFFIX,comcsoft.com
+  - DOMAIN-SUFFIX,composerize.com
   - DOMAIN-SUFFIX,connectwithusa.com
   - DOMAIN-SUFFIX,contabo.net
   - DOMAIN-SUFFIX,cox.net
+  - DOMAIN-SUFFIX,crisp.chat
+  - DOMAIN-SUFFIX,criteo.com
+  - DOMAIN-SUFFIX,crossbell.io
+  - DOMAIN-SUFFIX,ctcsci.com
+  - DOMAIN-SUFFIX,ctfassets.net
+  - DOMAIN-SUFFIX,dalao.pro
+  - DOMAIN-SUFFIX,dataseat.com
+  - DOMAIN-SUFFIX,disq.us
+  - DOMAIN-SUFFIX,diuu.de
+  - DOMAIN-SUFFIX,diygod.dev
+  - DOMAIN-SUFFIX,dmit.io
+  - DOMAIN-SUFFIX,dmoe.cc
+  - DOMAIN-SUFFIX,document360.io
+  - DOMAIN-SUFFIX,domaintools.com
+  - DOMAIN-SUFFIX,dongvps.com
+  - DOMAIN-SUFFIX,dooo.ng
+  - DOMAIN-SUFFIX,doubleverify.com
+  - DOMAIN-SUFFIX,drift.com
+  - DOMAIN-SUFFIX,driftapi.com
+  - DOMAIN-SUFFIX,driftt.com
   - DOMAIN-SUFFIX,ellsworth.from-ks.com
   - DOMAIN-SUFFIX,eloqua.com
+  - DOMAIN-SUFFIX,enzu.com
+  - DOMAIN-SUFFIX,evan888.top
   - DOMAIN-SUFFIX,fast.net.id
   - DOMAIN-SUFFIX,fdcservers.net
   - DOMAIN-SUFFIX,fibrenest.net
   - DOMAIN-SUFFIX,fileball.app
+  - DOMAIN-SUFFIX,finovy.com
+  - DOMAIN-SUFFIX,firefox.com
+  - DOMAIN-SUFFIX,follow.is
+  - DOMAIN-SUFFIX,fontawesome.com
+  - DOMAIN-SUFFIX,fr1eren.de
+  - DOMAIN-SUFFIX,frontier.com
+  - DOMAIN-SUFFIX,frostsky.com
+  - DOMAIN-SUFFIX,fzxx.xyz
+  - DOMAIN-SUFFIX,gc.onl
+  - DOMAIN-SUFFIX,gcore.com
+  - DOMAIN-SUFFIX,getonward.com
+  - DOMAIN-SUFFIX,gfx.ms
+  - DOMAIN-SUFFIX,ggbond.de
   - DOMAIN-SUFFIX,giantcomm.net
+  - DOMAIN-SUFFIX,gigabitnow.com
+  - DOMAIN-SUFFIX,gitbook.com
+  - DOMAIN-SUFFIX,gitlab.net
+  - DOMAIN-SUFFIX,glitch.com
+  - DOMAIN-SUFFIX,gnome.org
   - DOMAIN-SUFFIX,gravatar.com
+  - DOMAIN-SUFFIX,gslnetworks.com
   - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,hash070.top
+  - DOMAIN-SUFFIX,hcaptcha.com
+  - DOMAIN-SUFFIX,heimuer.tv
+  - DOMAIN-SUFFIX,helps.live
+  - DOMAIN-SUFFIX,hivelocity.net
   - DOMAIN-SUFFIX,hkbn.net
   - DOMAIN-SUFFIX,hkix.net
+  - DOMAIN-SUFFIX,hkspeedtest.com
   - DOMAIN-SUFFIX,homecomminc.com
+  - DOMAIN-SUFFIX,hostloc.com
+  - DOMAIN-SUFFIX,hostmonit.com
+  - DOMAIN-SUFFIX,hsforms.com
+  - DOMAIN-SUFFIX,hsforms.net
   - DOMAIN-SUFFIX,hsp.net.id
+  - DOMAIN-SUFFIX,hxm.today
   - DOMAIN-SUFFIX,hyperoptic.com
   - DOMAIN-SUFFIX,hysteria.network
   - DOMAIN-SUFFIX,hytron.io
+  - DOMAIN-SUFFIX,i-meto.com
   - DOMAIN-SUFFIX,i3d.net
   - DOMAIN-SUFFIX,ibruce.info
+  - DOMAIN-SUFFIX,ibytedtos.com
+  - DOMAIN-SUFFIX,iconify.design
   - DOMAIN-SUFFIX,ideatek.com
+  - DOMAIN-SUFFIX,igeekbb.com
+  - DOMAIN-SUFFIX,ihaoge.net
+  - DOMAIN-SUFFIX,ikun123.com
+  - DOMAIN-SUFFIX,iloveimg.com
+  - DOMAIN-SUFFIX,imagekit.io
+  - DOMAIN-SUFFIX,imbhj.com
+  - DOMAIN-SUFFIX,imgdd.com
+  - DOMAIN-SUFFIX,imgix.net
+  - DOMAIN-SUFFIX,inhousedsp.com
+  - DOMAIN-SUFFIX,inner-active.mobi
+  - DOMAIN-SUFFIX,instreamatic.com
+  - DOMAIN-SUFFIX,ip-api.com
   - DOMAIN-SUFFIX,ip.sb
   - DOMAIN-SUFFIX,iteait.com
+  - DOMAIN-SUFFIX,iteleserve.com
   - DOMAIN-SUFFIX,ixtelecom.net
+  - DOMAIN-SUFFIX,jampp.com
+  - DOMAIN-SUFFIX,jiasu.in
+  - DOMAIN-SUFFIX,jntm.link
+  - DOMAIN-SUFFIX,jquery.com
+  - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,k-vm.com
   - DOMAIN-SUFFIX,kamatera.com
   - DOMAIN-SUFFIX,kanren.net
+  - DOMAIN-SUFFIX,kde.org
+  - DOMAIN-SUFFIX,kejilion.pro
+  - DOMAIN-SUFFIX,ko-fi.com
   - DOMAIN-SUFFIX,lalalayyds.top
+  - DOMAIN-SUFFIX,laoda.de
+  - DOMAIN-SUFFIX,launchdarkly.com
+  - DOMAIN-SUFFIX,lho.cc
+  - DOMAIN-SUFFIX,lightsource1.com
+  - DOMAIN-SUFFIX,linveo.com
+  - DOMAIN-SUFFIX,live.com
+  - DOMAIN-SUFFIX,live.net
+  - DOMAIN-SUFFIX,liveperson.com
+  - DOMAIN-SUFFIX,locimg.com
+  - DOMAIN-SUFFIX,loli.net
+  - DOMAIN-SUFFIX,longans.de
   - DOMAIN-SUFFIX,lq010.com
   - DOMAIN-SUFFIX,lunavi.com
+  - DOMAIN-SUFFIX,macarne.com
+  - DOMAIN-SUFFIX,maxmind.com
   - DOMAIN-SUFFIX,melbicom.net
   - DOMAIN-SUFFIX,metacubex.one
+  - DOMAIN-SUFFIX,microsoft-falcon.io
+  - DOMAIN-SUFFIX,mij.rip
+  - DOMAIN-SUFFIX,milaone.com
   - DOMAIN-SUFFIX,misaka.one
   - DOMAIN-SUFFIX,mixpanel.com
+  - DOMAIN-SUFFIX,mmapiws.com
+  - DOMAIN-SUFFIX,moatads.com
   - DOMAIN-SUFFIX,mtc4me.com
+  - DOMAIN-SUFFIX,myip.com
+  - DOMAIN-SUFFIX,myservps.work
+  - DOMAIN-SUFFIX,naaa.top
+  - DOMAIN-SUFFIX,namesilo.com
+  - DOMAIN-SUFFIX,narwh.dev
+  - DOMAIN-SUFFIX,nezha.pp.ua
+  - DOMAIN-SUFFIX,nitelusa.net
   - DOMAIN-SUFFIX,nodeseek.com
   - DOMAIN-SUFFIX,notion.so
+  - DOMAIN-SUFFIX,notionusercontent.com
+  - DOMAIN-SUFFIX,nssurge.com
+  - DOMAIN-SUFFIX,oanda.com
+  - DOMAIN-SUFFIX,omtrdc.net
+  - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,onetrust.com
   - DOMAIN-SUFFIX,onetrust.io
+  - DOMAIN-SUFFIX,ooklaserver.net
+  - DOMAIN-SUFFIX,opennet.top
+  - DOMAIN-SUFFIX,outlook.com
+  - DOMAIN-SUFFIX,p3terx.com
+  - DOMAIN-SUFFIX,page.link
+  - DOMAIN-SUFFIX,perfectip.net
+  - DOMAIN-SUFFIX,performaized.com
   - DOMAIN-SUFFIX,phoenixnap.com
   - DOMAIN-SUFFIX,piliapp.com
+  - DOMAIN-SUFFIX,ping.pe
   - DOMAIN-SUFFIX,pixlr.com
+  - DOMAIN-SUFFIX,poj.ac
+  - DOMAIN-SUFFIX,pubmatic.com
   - DOMAIN-SUFFIX,pubnative.net
   - DOMAIN-SUFFIX,quad9.net
+  - DOMAIN-SUFFIX,race.com
+  - DOMAIN-SUFFIX,rapidbidding.com
   - DOMAIN-SUFFIX,rapidswitch.com
+  - DOMAIN-SUFFIX,rclone.org
+  - DOMAIN-SUFFIX,reederapp.com
+  - DOMAIN-SUFFIX,reliablesite.net
+  - DOMAIN-SUFFIX,researchnow.com
   - DOMAIN-SUFFIX,revenuecat.com
+  - DOMAIN-SUFFIX,rnaan.com
+  - DOMAIN-SUFFIX,ro.sd
+  - DOMAIN-SUFFIX,rocket.chat
+  - DOMAIN-SUFFIX,royli.dev
+  - DOMAIN-SUFFIX,rr.com
+  - DOMAIN-SUFFIX,s-microsoft.com
   - DOMAIN-SUFFIX,sagernet.org
+  - DOMAIN-SUFFIX,scarsong.com
+  - DOMAIN-SUFFIX,sctelcom.com
+  - DOMAIN-SUFFIX,sda1.dev
+  - DOMAIN-SUFFIX,securevid.co
+  - DOMAIN-SUFFIX,sendgrid.net
   - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,serverforge.org
+  - DOMAIN-SUFFIX,serveteck.com
+  - DOMAIN-SUFFIX,sfx.ms
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,sharepointonline.com
   - DOMAIN-SUFFIX,sharethis.com
+  - DOMAIN-SUFFIX,sharktech.net
+  - DOMAIN-SUFFIX,shields.io
+  - DOMAIN-SUFFIX,shopify.com
+  - DOMAIN-SUFFIX,sift.co
+  - DOMAIN-SUFFIX,skk.moe
+  - DOMAIN-SUFFIX,smaato.net
+  - DOMAIN-SUFFIX,smadex.com
+  - DOMAIN-SUFFIX,smartborad.com
+  - DOMAIN-SUFFIX,sng.link
   - DOMAIN-SUFFIX,speedtest.net
+  - DOMAIN-SUFFIX,split.io
+  - DOMAIN-SUFFIX,spmailtechno.com
+  - DOMAIN-SUFFIX,ssr.rs
   - DOMAIN-SUFFIX,starhub.com
+  - DOMAIN-SUFFIX,starry.com
   - DOMAIN-SUFFIX,stbuttons.click
+  - DOMAIN-SUFFIX,streamtheworld.com
   - DOMAIN-SUFFIX,stripe.com
   - DOMAIN-SUFFIX,stripe.network
+  - DOMAIN-SUFFIX,studiostaticassetsprod.azureedge.net
   - DOMAIN-SUFFIX,surge-activation.com
+  - DOMAIN-SUFFIX,surge.community
+  - DOMAIN-SUFFIX,svc.ms
+  - DOMAIN-SUFFIX,syh666.tk
+  - DOMAIN-SUFFIX,t0t.org
+  - DOMAIN-SUFFIX,tappx.com
+  - DOMAIN-SUFFIX,techet.net
   - DOMAIN-SUFFIX,termius.com
+  - DOMAIN-SUFFIX,thoughtco.com
   - DOMAIN-SUFFIX,ticktick.com
+  - DOMAIN-SUFFIX,tofzl.com
+  - DOMAIN-SUFFIX,tpbid.com
   - DOMAIN-SUFFIX,trooli.com
+  - DOMAIN-SUFFIX,troyqi.com
+  - DOMAIN-SUFFIX,typekit.net
+  - DOMAIN-SUFFIX,ubuntu.com
+  - DOMAIN-SUFFIX,uhsea.com
+  - DOMAIN-SUFFIX,uia.net
   - DOMAIN-SUFFIX,unsplash.com
   - DOMAIN-SUFFIX,upp.com
+  - DOMAIN-SUFFIX,userway.org
+  - DOMAIN-SUFFIX,v2ex.co
+  - DOMAIN-SUFFIX,vector.im
+  - DOMAIN-SUFFIX,vidyard.com
+  - DOMAIN-SUFFIX,vpslog.org
   - DOMAIN-SUFFIX,vqbn.com
+  - DOMAIN-SUFFIX,webnx.com
+  - DOMAIN-SUFFIX,weglot.com
+  - DOMAIN-SUFFIX,wiline.com
+  - DOMAIN-SUFFIX,windstream.net
   - DOMAIN-SUFFIX,wlvpn.com
+  - DOMAIN-SUFFIX,worker-cn.cf
+  - DOMAIN-SUFFIX,wp.com
+  - DOMAIN-SUFFIX,wpxx.de
+  - DOMAIN-SUFFIX,wqwqwq.sbs
+  - DOMAIN-SUFFIX,x1hub.com
+  - DOMAIN-SUFFIX,xfernet.net
+  - DOMAIN-SUFFIX,xhamster.com
   - DOMAIN-SUFFIX,xl.co.id
   - DOMAIN-SUFFIX,xream.notion.site
+  - DOMAIN-SUFFIX,xxqq.de
+  - DOMAIN-SUFFIX,yswtrue.com
+  - DOMAIN-SUFFIX,z-lib.gd
+  - DOMAIN-SUFFIX,zdassets.com
+  - DOMAIN-SUFFIX,zendesk.com
+  - DOMAIN-SUFFIX,zi-scripts.com
   - DOMAIN-SUFFIX,zzoomm.com
-  - DOMAIN,browser-intake-datadoghq.com
-  - DOMAIN,cdn.cookielaw.org
-  - DOMAIN,d36jcksde1wxzq.cloudfront.net
-  - DOMAIN,hostloc.com
-  - DOMAIN,http-inputs-notion.splunkcloud.com
-  - DOMAIN,idev.dev
-  - DOMAIN,ip-api.com
-  - DOMAIN,ipinfo.io
-  - DOMAIN,lamhosting.com
-  - DOMAIN,scamalytics.com
-  - DOMAIN,sentry.io
-  - DOMAIN,sg.cloudhost.asia
-  - DOMAIN,speedtest.hk212.hkg.cn.nerocloud.io
-  - DOMAIN,suntechspeedtest.com
-  - DOMAIN,surge.tel
-  - DOMAIN,tags.tiqcdn.com
-  - DOMAIN,unpkg.com
-  - DOMAIN,uuzi.net
 
 # > Akamai
   - DOMAIN,a248.e.akamai.net
