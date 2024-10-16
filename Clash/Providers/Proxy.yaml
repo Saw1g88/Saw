@@ -321,13 +321,13 @@ payload:
   - DOMAIN,a771.dscq.akamai.net
 
 # > Amazon
-  - DOMAIN-SUFFIX,amazon.co.jp
-  - DOMAIN-SUFFIX,amazon-adsystem.com
-  - DOMAIN-SUFFIX,amazonaws.com
   - DOMAIN,d3c33hcgiwev3.cloudfront.net
   - DOMAIN,payments-jp.amazon.com
   - DOMAIN,s3-ap-northeast-1.amazonaws.com
   - DOMAIN,s3-ap-southeast-2.amazonaws.com
+  - DOMAIN-SUFFIX,amazon.co.jp
+  - DOMAIN-SUFFIX,amazon-adsystem.com
+  - DOMAIN-SUFFIX,amazonaws.com
 
 # > Binane
   - DOMAIN-SUFFIX,binance.com
@@ -385,6 +385,8 @@ payload:
   - DOMAIN-SUFFIX,dropboxusercontent.com
 
 # > Google
+  - DOMAIN,lens.l.google.com
+  - DOMAIN,www.googleapis.com
   - DOMAIN-SUFFIX,apigee.com
   - DOMAIN-SUFFIX,appspot.com
   - DOMAIN-SUFFIX,blogger.com
@@ -397,8 +399,6 @@ payload:
   - DOMAIN-SUFFIX,gvt3.com
   - DOMAIN-SUFFIX,tenor.com
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-  - DOMAIN,lens.l.google.com
-  - DOMAIN,www.googleapis.com
   - DOMAIN-KEYWORD,.blogspot.
   - DOMAIN-KEYWORD,pa.google
   - DOMAIN-KEYWORD,www.google.
@@ -411,6 +411,11 @@ payload:
   - DOMAIN-SUFFIX,naver.jp
 
 # > Microsoft
+  - DOMAIN,assets1.xboxlive.com
+  - DOMAIN,assets2.xboxlive.com
+  - DOMAIN,az416426.vo.msecnd.net
+  - DOMAIN,az668014.vo.msecnd.net
+  - DOMAIN,github.global.ssl.fastly.net
   - DOMAIN-SUFFIX,aka.ms
   - DOMAIN-SUFFIX,hotmail.com
   - DOMAIN-SUFFIX,github.blog
@@ -428,11 +433,6 @@ payload:
   - DOMAIN-SUFFIX,onedrive.live.com
   - DOMAIN-SUFFIX,skype.com
   - DOMAIN-SUFFIX,streaming.mediaservices.windows.net
-  - DOMAIN,assets1.xboxlive.com
-  - DOMAIN,assets2.xboxlive.com
-  - DOMAIN,az416426.vo.msecnd.net
-  - DOMAIN,az668014.vo.msecnd.net
-  - DOMAIN,github.global.ssl.fastly.net
 
 # > My Domain
   - DOMAIN-SUFFIX,saw1g88.top
@@ -453,6 +453,9 @@ payload:
   - DOMAIN-SUFFIX,pximg.net
 
 # > Region-Restricted Access Denied
+  - DOMAIN,addons.mozilla.org
+  - DOMAIN,c.mi.com
+  - DOMAIN,wego.here.com
   - DOMAIN-SUFFIX,engadget.com
   - DOMAIN-SUFFIX,ifixit.com
   - DOMAIN-SUFFIX,terabox.com
@@ -460,9 +463,6 @@ payload:
   - DOMAIN-SUFFIX,xiaomi.eu
   - DOMAIN-SUFFIX,zaobao.com.sg
   - DOMAIN-SUFFIX,zoom.us
-  - DOMAIN,addons.mozilla.org
-  - DOMAIN,c.mi.com
-  - DOMAIN,wego.here.com
 
 # > Wikimedia Foundation
   - DOMAIN-SUFFIX,mediawiki.org
@@ -480,9 +480,9 @@ payload:
   - DOMAIN-SUFFIX,wiktionary.org
 
 # > Yahoo
+  - DOMAIN,search.yahoo.co.jp
   - DOMAIN-SUFFIX,yahoo.com
   - DOMAIN-SUFFIX,yimg.com
-  - DOMAIN,search.yahoo.co.jp
 
 # > Yandex
   - DOMAIN-SUFFIX,yadi.sk
