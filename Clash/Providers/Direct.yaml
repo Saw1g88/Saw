@@ -242,6 +242,7 @@ payload:
   - DOMAIN-SUFFIX,zyh1.cc
 
 # > Apple
+  - DOMAIN,apple.comscoreresearch.com
   - DOMAIN-SUFFIX,aaplimg.com
   - DOMAIN-SUFFIX,apple
   - DOMAIN-SUFFIX,apple-cloudkit.com
@@ -268,7 +269,6 @@ payload:
   - DOMAIN-SUFFIX,itunes.com.edgekey.net
   - DOMAIN-SUFFIX,me.com
   - DOMAIN-SUFFIX,mzstatic.com
-  - DOMAIN,apple.comscoreresearch.com
   - DOMAIN-KEYWORD,apple.com.akadns.net
   - DOMAIN-KEYWORD,icloud
   - DOMAIN-KEYWORD,testflight
@@ -316,8 +316,8 @@ payload:
   - DOMAIN,sms.imagetasks.com
 
 # > Speed Test
-  - DOMAIN-SUFFIX,netspeedtestmaster.com
   - DOMAIN,speedtest.macpaw.com
+  - DOMAIN-SUFFIX,netspeedtestmaster.com
 
 # > WeChat
   - DOMAIN-SUFFIX,wechat.com,extended-matching
