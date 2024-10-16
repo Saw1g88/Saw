@@ -816,9 +816,9 @@ payload:
   - DOMAIN-SUFFIX,yimg.com
 
 # > Yandex
+  - DOMAIN,disk.yandex.com
   - DOMAIN-SUFFIX,yadi.sk
   - DOMAIN-SUFFIX,yandex.ru
-  - DOMAIN,disk.yandex.com
 
 # > Z-Library
   - DOMAIN-SUFFIX,articles.sk
