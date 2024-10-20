@@ -49,6 +49,8 @@ fi
 # 安装必要的工具
 check_and_install jq
 check_and_install wget
+check_and_install ntp
+check_and_install unzip
 
 # 安装 Docker
 if ! command -v docker &> /dev/null; then
