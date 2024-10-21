@@ -94,7 +94,7 @@ echo -e "${green}开始修改nezha-agent服务"
 if [[ "${release}" == "alpine" ]]; then
     if [ -f /etc/init.d/nezha-agent ]; then
         echo -e "${green}/etc/init.d/nezha-agent服务存在,开始尝试禁用自动更新 ${plain}"
-        sed -i '/command_args=/ s/"$/ --disable-auto-update --disable-force-update"/' /etc/init.d/nezha-agent
+        sed -i '/command_args=/ s/"$/ --disable-auto-update --disable-force-update --skip-procs --disable-command-execute --report-delay 3"/' /etc/init.d/nezha-agent
         echo -e "${green}=========================================== ${plain}"
         cat /etc/init.d/nezha-agent  
     else
@@ -103,7 +103,7 @@ if [[ "${release}" == "alpine" ]]; then
 else
     if [ -f /etc/systemd/system/nezha-agent.service ]; then
         echo -e "${green}/etc/systemd/system/nezha-agent.service服务存在,开始尝试禁用自动更新${plain}"
-        sudo sed -i '/^ExecStart=/ s/$/ --disable-auto-update --disable-force-update/' /etc/systemd/system/nezha-agent.service
+        sudo sed -i '/^ExecStart=/ s/$/ --disable-auto-update --disable-force-update --skip-procs --disable-command-execute --report-delay 3/' /etc/systemd/system/nezha-agent.service
         echo -e "${green}=========================================== ${plain}"   
         cat /etc/systemd/system/nezha-agent.service
     else
