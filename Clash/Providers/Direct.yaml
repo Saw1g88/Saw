@@ -273,15 +273,6 @@ payload:
   - DOMAIN-KEYWORD,icloud
   - DOMAIN-KEYWORD,testflight
 
-# > Microsoft
-  - DOMAIN,outlook.office365.com
-  - DOMAIN,smtp-mail.outlook.com
-  - DOMAIN,smtp.office365.com
-
-# > My Domain
-  - DOMAIN-SUFFIX,20160706.xyz
-  - DOMAIN-SUFFIX,saw1g88.top
-
 #> Oracle
   - DOMAIN-SUFFIX,2o7.net
   - DOMAIN-SUFFIX,assets.adobedtm.com
