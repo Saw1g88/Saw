@@ -55,7 +55,7 @@ payload:
   - IP-CIDR,129.226.3.47/32,no-resolve
   - IP-CIDR,129.226.107.244/32,no-resolve
 
-## UA
+## HTTP
 
 # > Others
   - USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
