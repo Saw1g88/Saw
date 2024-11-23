@@ -1,6 +1,12 @@
 payload:
 ## DOMAIN
 
+# > Others
+  - DOMAIN-SUFFIX,nodeseek.com
+  - DOMAIN-SUFFIX,hub.docker.com
+  - DOMAIN-SUFFIX,v2ex.com
+  - DOMAIN-SUFFIX,fluffychat.im
+
 # > Amazon
   - DOMAIN,d3c33hcgiwev3.cloudfront.net
   - DOMAIN,payments-jp.amazon.com
