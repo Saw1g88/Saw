@@ -86,6 +86,7 @@ payload:
   - USER-AGENT,TeamViewer*
 
 # > Bili
+  - USER-AGENT,*bili*
   - USER-AGENT,Bilibili*
   - USER-AGENT,bili*
   - USER-AGENT,bili-inter*
