@@ -97,8 +97,8 @@ payload:
   - USER-AGENT,MicroMessengerClient*
   - USER-AGENT,WeChat*  
 
-## Direct
+## China
 
   - DOMAIN-SUFFIX,cn
-  - DOMAIN-SUFFIX,baidu
+  - DOMAIN-KEYWORD,baidu
 
