@@ -1,28 +1,29 @@
 payload:
-## DOMAIN
 
-# > Emby
+  ## DOMAIN
+
+  # > Emby
   - DOMAIN,cdn.lyrebirdemby.com
   - DOMAIN,emby.bangumi.ca
   - DOMAIN,embyplus.org
   - DOMAIN-SUFFIX,789.123456.al
 
-# > Pornhub
+  # > Pornhub
   - DOMAIN-SUFFIX,phncdn.com
   - DOMAIN-SUFFIX,phprcdn.com
   - DOMAIN-SUFFIX,pornhub.com
   - DOMAIN-SUFFIX,pornhubpremium.com
 
-# > spankbang
+  # > spankbang
   - DOMAIN-SUFFIX,spankbang.com
   - DOMAIN-SUFFIX,ptgncdn.com
   - DOMAIN-SUFFIX,sb-cd.com
 
-# > XVIDEOS
+  # > XVIDEOS
   - DOMAIN-SUFFIX,xvideos.com
   - DOMAIN-SUFFIX,xvideos-cdn.com
 
-# > Youtube
+  # > Youtube
   - DOMAIN,youtubei.googleapis.com
   - DOMAIN,yt3.ggpht.com
   - DOMAIN-SUFFIX,googlevideo.com
@@ -36,9 +37,9 @@ payload:
   - DOMAIN-SUFFIX,yt.be
   - DOMAIN-SUFFIX,ytimg.com
 
-## UA
+  ## UA
 
-# > Youtube
+  # > Youtube
   - USER-AGENT,com.google.ios.youtube*
   - USER-AGENT,YouTube*
 
