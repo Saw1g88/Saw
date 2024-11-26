@@ -1,7 +1,7 @@
 payload:
-## DOMAIN
+  ## DOMAIN
 
-# > Talkatone
+  # > Talkatone
   - DOMAIN-SUFFIX,agkn.com
   - DOMAIN-SUFFIX,cohere.com
   - DOMAIN-SUFFIX,crashlytics.com
@@ -12,7 +12,7 @@ payload:
   - DOMAIN-SUFFIX,tktn.at
   - DOMAIN-SUFFIX,tktn.be
 
-# > Telegram
+  # > Telegram
   - DOMAIN-SUFFIX,t.me
   - DOMAIN-SUFFIX,tdesktop.com
   - DOMAIN-SUFFIX,telegra.ph
@@ -21,7 +21,7 @@ payload:
   - DOMAIN-SUFFIX,telesco.pe
   - DOMAIN-KEYWORD,telegram
 
-# > Meta
+  # > Meta
   - DOMAIN-SUFFIX,accountkit.com
   - DOMAIN-SUFFIX,cdninstagram.com
   - DOMAIN-SUFFIX,f8.com
@@ -46,7 +46,7 @@ payload:
   - DOMAIN-SUFFIX,whatsapp.net
   - DOMAIN-KEYWORD,.facebook.
 
-# > X
+  # > X
   - DOMAIN-SUFFIX,pscp.tv
   - DOMAIN-SUFFIX,periscope.tv
   - DOMAIN-SUFFIX,t.co
@@ -58,15 +58,15 @@ payload:
   - DOMAIN-SUFFIX,vine.co
   - DOMAIN-SUFFIX,x.com
 
-## IP
+  ## IP
 
-# > Talkatone
+  # > Talkatone
   - IP-CIDR,50.117.27.0/24,no-resolve
   - IP-CIDR,63.251.124.0/24,no-resolve
   - IP-CIDR,69.46.75.0/24,no-resolve
   - IP-CIDR,205.164.56.0/24,no-resolve
 
-# > Telegram
+  # > Telegram
   - IP-ASN,211157,no-resolve
   - IP-ASN,44907,no-resolve
   - IP-ASN,59930,no-resolve
