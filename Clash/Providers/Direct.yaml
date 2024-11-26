@@ -1,14 +1,14 @@
 payload:
-## DOMAIN
+  ## DOMAIN
 
-# > Ali
+  # > Ali
   - DOMAIN-KEYWORD,.tmall.
   - DOMAIN-KEYWORD,alicdn
   - DOMAIN-KEYWORD,alipay
   - DOMAIN-KEYWORD,aliyun
   - DOMAIN-KEYWORD,taobao
 
-# > Bili
+  # > Bili
   - DOMAIN-SUFFIX,acg.tv
   - DOMAIN-SUFFIX,acgvideo.com
   - DOMAIN-SUFFIX,b23.tv
@@ -28,7 +28,7 @@ payload:
   - DOMAIN-SUFFIX,im9.com
   - DOMAIN-SUFFIX,smtcdns.net
 
-#> Oracle
+  #> Oracle
   - DOMAIN-SUFFIX,2o7.net
   - DOMAIN-SUFFIX,assets.adobedtm.com
   - DOMAIN-SUFFIX,atgsvcs.com
@@ -47,24 +47,24 @@ payload:
   - DOMAIN-SUFFIX,truste.com
   - DOMAIN-KEYWORD,oracle
 
-# > WeChat
+  # > WeChat
   - DOMAIN-SUFFIX,wechat.com
 
-## IP
+  ## IP
 
-# > Ali
+  # > Ali
   - IP-CIDR,198.11.136.0/24,no-resolve
   - IP-CIDR,198.11.188.0/25,no-resolve
 
-# > Oracle
+  # > Oracle
   - IP-CIDR,224.0.0.251/32,no-resolve
 
-# > Tencent
+  # > Tencent
   - IP-CIDR,182.254.116.0/24,no-resolve
   - IP-CIDR,203.205.238.0/23,no-resolve
   - IP-CIDR,203.205.254.0/23,no-resolve
 
-# > WeChat
+  # > WeChat
   - IP-CIDR,101.32.104.4/32,no-resolve
   - IP-CIDR,101.32.104.41/32,no-resolve
   - IP-CIDR,101.32.104.56/32,no-resolve
@@ -75,9 +75,9 @@ payload:
   - IP-CIDR,129.226.3.47/32,no-resolve
   - IP-CIDR,129.226.107.244/32,no-resolve
 
-## UA
+  ## UA
 
-# > Others
+  # > Others
   - USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
   - USER-AGENT,NeteaseMusic*
   - USER-AGENT,QQ*
@@ -85,19 +85,19 @@ payload:
   - USER-AGENT,TIM*
   - USER-AGENT,TeamViewer*
 
-# > Bili
+  # > Bili
   - USER-AGENT,*bili*
   - USER-AGENT,Bilibili*
   - USER-AGENT,bili*
   - USER-AGENT,bili-inter*
 
-# > WeChat
+  # > WeChat
   - USER-AGENT,MicroMessenger%20Client
   - USER-AGENT,MicroMessenger*
   - USER-AGENT,MicroMessengerClient*
   - USER-AGENT,WeChat*  
 
-## China
+  ## China
 
   - DOMAIN-SUFFIX,cn
   - DOMAIN-KEYWORD,baidu
