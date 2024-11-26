@@ -1,5 +1,5 @@
 payload:
-## DOMAIN
+  ## DOMAIN
 
   - DOMAIN,api.statsig.com
   - DOMAIN,api-iam.intercom.io
