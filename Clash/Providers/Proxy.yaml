@@ -1,14 +1,14 @@
 payload:
-## DOMAIN
+  ## DOMAIN
 
-# > Others
+  # > Others
   - DOMAIN-SUFFIX,nodeseek.com
   - DOMAIN-SUFFIX,hub.docker.com
   - DOMAIN-SUFFIX,v2ex.com
   - DOMAIN-SUFFIX,fluffychat.im
   - DOMAIN-SUFFIX,ticktick.com
 
-# > Amazon
+  # > Amazon
   - DOMAIN,d3c33hcgiwev3.cloudfront.net
   - DOMAIN,payments-jp.amazon.com
   - DOMAIN,s3-ap-northeast-1.amazonaws.com
@@ -17,7 +17,7 @@ payload:
   - DOMAIN-SUFFIX,amazon-adsystem.com
   - DOMAIN-SUFFIX,amazonaws.com
 
-# > Apple
+  # > Apple
   - DOMAIN-SUFFIX,aaplimg.com
   - DOMAIN-SUFFIX,apple.co
   - DOMAIN-SUFFIX,apple.com
@@ -37,19 +37,19 @@ payload:
   - DOMAIN-KEYWORD,apple-support.akadns.net
   - DOMAIN-KEYWORD,icloud.com.akadns.net  
 
-# > Binane
+  # > Binane
   - DOMAIN-SUFFIX,binance.com
   - DOMAIN-SUFFIX,binance.info
   - DOMAIN-SUFFIX,bnbstatic.com
 
-# > Bybit
+  # > Bybit
   - DOMAIN-SUFFIX,byabcde.com
   - DOMAIN-SUFFIX,bybdc6.com
   - DOMAIN-SUFFIX,bybit.com
   - DOMAIN-SUFFIX,bybitglobal.com
   - DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com
 
-# > Cloudflare
+  # > Cloudflare
   - DOMAIN-SUFFIX,cf-ipfs.com
   - DOMAIN-SUFFIX,every1dns.net
   - DOMAIN-SUFFIX,one.one.one
@@ -59,7 +59,7 @@ payload:
   - DOMAIN-SUFFIX,workers.dev
   - DOMAIN-KEYWORD,cloudflare
 
-# > Crypto
+  # > Crypto
   - DOMAIN-SUFFIX,bitcointalk.org
   - DOMAIN-SUFFIX,bitfinex.com
   - DOMAIN-SUFFIX,bitflyer.com
@@ -81,18 +81,18 @@ payload:
   - DOMAIN-SUFFIX,uniswap.org
   - DOMAIN-SUFFIX,upbit.com
 
-# > Discord
+  # > Discord
   - DOMAIN-SUFFIX,discord.com
   - DOMAIN-SUFFIX,discordapp.com
   - DOMAIN-SUFFIX,discord.gg
   - DOMAIN-SUFFIX,discordapp.net
 
-# > Dropbox
+  # > Dropbox
   - DOMAIN-SUFFIX,dropbox.com
   - DOMAIN-SUFFIX,dropboxapi.com
   - DOMAIN-SUFFIX,dropboxusercontent.com
 
-# > Github
+  # > Github
   - DOMAIN-SUFFIX,github.com
   - DOMAIN-SUFFIX,github.io
   - DOMAIN-SUFFIX,githubapp.com
@@ -100,7 +100,7 @@ payload:
   - DOMAIN-SUFFIX,githubusercontent.com
   - DOMAIN-KEYWORD,github  
 
-# > Google
+  # > Google
   - DOMAIN,lens.l.google.com
   - DOMAIN,www.googleapis.com
   - DOMAIN-SUFFIX,apigee.com
@@ -120,13 +120,13 @@ payload:
   - DOMAIN-KEYWORD,www.google.
   - DOMAIN-KEYWORD,google
 
-# > Line
+  # > Line
   - DOMAIN-SUFFIX,line.me
   - DOMAIN-SUFFIX,line-apps.com
   - DOMAIN-SUFFIX,line-scdn.net
   - DOMAIN-SUFFIX,naver.jp
 
-# > Microsoft
+  # > Microsoft
   - DOMAIN,officecdn-microsoft-com.akamaized.net
   - DOMAIN-SUFFIX,1drv.com
   - DOMAIN-SUFFIX,aadrm.com
@@ -215,25 +215,25 @@ payload:
   - DOMAIN-KEYWORD,hotmail
   - DOMAIN-KEYWORD,microsoft
 
-# > My Domain
+  # > My Domain
   - DOMAIN-SUFFIX,saw1g88.top
   - DOMAIN-SUFFIX,20160706.xyz
   - DOMAIN-SUFFIX,160603.xyz  
 
-# > OKX
+  # > OKX
   - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
 
-# > Pinterest
+  # > Pinterest
   - DOMAIN-SUFFIX,pinimg.com
   - DOMAIN-KEYWORD,.pinterest.
 
-# > Pixiv
+  # > Pixiv
   - DOMAIN-SUFFIX,pixiv.net
   - DOMAIN-SUFFIX,pixiv.org
   - DOMAIN-SUFFIX,pximg.net
 
-# > Region-Restricted Access Denied
+  # > Region-Restricted Access Denied
   - DOMAIN,addons.mozilla.org
   - DOMAIN,c.mi.com
   - DOMAIN,wego.here.com
@@ -245,7 +245,7 @@ payload:
   - DOMAIN-SUFFIX,zaobao.com.sg
   - DOMAIN-SUFFIX,zoom.us
 
-# > Wikimedia Foundation
+  # > Wikimedia Foundation
   - DOMAIN-SUFFIX,mediawiki.org
   - DOMAIN-SUFFIX,wikibooks.org
   - DOMAIN-SUFFIX,wikidata.org
@@ -260,17 +260,17 @@ payload:
   - DOMAIN-SUFFIX,wikivoyage.org
   - DOMAIN-SUFFIX,wiktionary.org
 
-# > Yahoo
+  # > Yahoo
   - DOMAIN,search.yahoo.co.jp
   - DOMAIN-SUFFIX,yahoo.com
   - DOMAIN-SUFFIX,yimg.com
 
-# > Yandex
+  # > Yandex
   - DOMAIN,disk.yandex.com
   - DOMAIN-SUFFIX,yadi.sk
   - DOMAIN-SUFFIX,yandex.ru
 
-# > Z-Library
+  # > Z-Library
   - DOMAIN-SUFFIX,articles.sk
   - DOMAIN-SUFFIX,go-to-library.sk
   - DOMAIN-SUFFIX,singlelogin.re
@@ -278,9 +278,9 @@ payload:
   - DOMAIN-SUFFIX,z-lib.gs
   - DOMAIN-SUFFIX,z-library.rs
 
-## IP
+  ## IP
 
-# > Amazon
+  # > Amazon
   - IP-CIDR,13.32.0.0/15,no-resolve
   - IP-CIDR,13.35.0.0/17,no-resolve
   - IP-CIDR,18.184.0.0/15,no-resolve
@@ -297,7 +297,7 @@ payload:
   - IP-CIDR,54.226.0.0/15,no-resolve
   - IP-CIDR,54.230.156.0/22,no-resolve
 
-# > Apple
+  # > Apple
   - IP-CIDR,17.0.0.0/8,no-resolve
   - IP-CIDR,63.92.224.0/19,no-resolve
   - IP-CIDR,65.199.22.0/23,no-resolve
@@ -309,7 +309,7 @@ payload:
   - IP-CIDR,198.183.17.0/24,no-resolve
   - IP-CIDR,205.180.175.0/24,no-resolve  
 
-# > Cloudflare
+  # > Cloudflare
   - IP-CIDR,103.21.244.0/22,no-resolve
   - IP-CIDR,103.22.200.0/22,no-resolve
   - IP-CIDR,103.31.4.0/22,no-resolve
@@ -333,22 +333,22 @@ payload:
   - IP-CIDR6,2a06:98c0::/29,no-resolve
   - IP-CIDR6,2c0f:f248::/32,no-resolve
 
-# > Line
+  # > Line
   - IP-CIDR,103.2.30.0/23,no-resolve
   - IP-CIDR,125.209.208.0/20,no-resolve
   - IP-CIDR,147.92.128.0/17,no-resolve
   - IP-CIDR,203.104.144.0/21,no-resolve
 
-## UA
+  ## UA
 
-# > Others
+  # > Others
   - USER-AGENT,battleroyalei*
   - USER-AGENT,hearthstone*
   - USER-AGENT,Duolingo*
   - USER-AGENT,Roam*
   - USER-AGENT,TikTok*
 
-# > Apple
+  # > Apple
   - USER-AGENT,%E5%9C%B0%E5%9B%BE*
   - USER-AGENT,%E6%9F%A5%E6%89%BE*
   - USER-AGENT,%E8%AE%BE%E7%BD%AE*
@@ -373,17 +373,17 @@ payload:
   - USER-AGENT,geod*
   - USER-AGENT,locationd*  
 
-# > Google
+  # > Google
   - USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
   - USER-AGENT,*com.google.Drive*
   - USER-AGENT,Google.Drive*
 
-# > Microsoft 
+  # > Microsoft 
   - USER-AGENT,OneDrive*
   - USER-AGENT,OneDriveiOSApp*
 
 
-## Foregn
+  ## Foregn
 
   - DOMAIN-SUFFIX,eu
   - DOMAIN-SUFFIX,hk
