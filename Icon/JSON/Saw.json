@@ -143,8 +143,16 @@
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/VPS.png"
         },
         {
-            "name": "WIFI",
-            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/WIFI.png"
+            "name": "WIFI_1",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/WIFI_1.png"
+        },
+         {
+            "name": "WIFI_2",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/WIFI_2.png"
+        },
+         {
+            "name": "WIFI_3",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/WIFI_3.png"
         },
         {
             "name": "Windows",
