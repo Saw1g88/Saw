@@ -51,7 +51,7 @@ payload:
   - USER-AGENT,Music*
   - USER-AGENT,TestFlight*
   - USER-AGENT,com.apple.Maps*
-#  - USER-AGENT,com.apple.appstored*
+  - USER-AGENT,com.apple.appstored*
   - USER-AGENT,com.apple.geod*
   - USER-AGENT,com.apple.news*
   - USER-AGENT,com.apple.trustd*
