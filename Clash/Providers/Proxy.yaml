@@ -4,7 +4,6 @@ payload:
 
   # > Others
   - DOMAIN-SUFFIX,nodeseek.com
-  - DOMAIN-SUFFIX,hub.docker.com
   - DOMAIN-SUFFIX,v2ex.com
   - DOMAIN-SUFFIX,fluffychat.im
   - DOMAIN-SUFFIX,ticktick.com
@@ -38,18 +37,6 @@ payload:
   - DOMAIN-KEYWORD,apple-support.akadns.net
   - DOMAIN-KEYWORD,icloud.com.akadns.net  
 
-  # > Binane
-  - DOMAIN-SUFFIX,binance.com
-  - DOMAIN-SUFFIX,binance.info
-  - DOMAIN-SUFFIX,bnbstatic.com
-
-  # > Bybit
-  - DOMAIN-SUFFIX,byabcde.com
-  - DOMAIN-SUFFIX,bybdc6.com
-  - DOMAIN-SUFFIX,bybit.com
-  - DOMAIN-SUFFIX,bybitglobal.com
-  - DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com
-
   # > Claude
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,claude.ai
@@ -65,33 +52,20 @@ payload:
   - DOMAIN-SUFFIX,workers.dev
   - DOMAIN-KEYWORD,cloudflare
 
-  # > Crypto
-  - DOMAIN-SUFFIX,bitcointalk.org
-  - DOMAIN-SUFFIX,bitfinex.com
-  - DOMAIN-SUFFIX,bitflyer.com
-  - DOMAIN-SUFFIX,bitget.com
-  - DOMAIN-SUFFIX,bithumb.com
-  - DOMAIN-SUFFIX,bitstamp.net
-  - DOMAIN-SUFFIX,coinbase.com
-  - DOMAIN-SUFFIX,coingecko.com
-  - DOMAIN-SUFFIX,coinmarketcap.com
-  - DOMAIN-SUFFIX,crypto.com
-  - DOMAIN-SUFFIX,dydx.exchange
-  - DOMAIN-SUFFIX,etherscan.io
-  - DOMAIN-SUFFIX,gate.io
-  - DOMAIN-SUFFIX,gemini.com
-  - DOMAIN-SUFFIX,kraken.com
-  - DOMAIN-SUFFIX,kucoin.com
-  - DOMAIN-SUFFIX,mexc.com
-  - DOMAIN-SUFFIX,probit.com
-  - DOMAIN-SUFFIX,uniswap.org
-  - DOMAIN-SUFFIX,upbit.com
-
   # > Discord
   - DOMAIN-SUFFIX,discord.com
   - DOMAIN-SUFFIX,discordapp.com
   - DOMAIN-SUFFIX,discord.gg
   - DOMAIN-SUFFIX,discordapp.net
+
+  # > Docker
+  - DOMAIN,d1q6f0aelx0por.cloudfront.net
+  - DOMAIN,d2wy8f7a9ursnm.cloudfront.net
+  - DOMAIN,d36jcksde1wxzq.cloudfront.net
+  - DOMAIN-SUFFIX,compose-spec.io
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,docker.io
+  - DOMAIN-SUFFIX,dockerhub.com
 
   # > Dropbox
   - DOMAIN-SUFFIX,dropbox.com
@@ -107,8 +81,6 @@ payload:
   - DOMAIN-KEYWORD,github  
 
   # > Google
-  - DOMAIN,lens.l.google.com
-  - DOMAIN,www.googleapis.com
   - DOMAIN-SUFFIX,apigee.com
   - DOMAIN-SUFFIX,appspot.com
   - DOMAIN-SUFFIX,blogger.com
@@ -122,8 +94,6 @@ payload:
   - DOMAIN-SUFFIX,tenor.com
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
   - DOMAIN-KEYWORD,.blogspot.
-  - DOMAIN-KEYWORD,pa.google
-  - DOMAIN-KEYWORD,www.google.
   - DOMAIN-KEYWORD,google
 
   # > Line
@@ -133,7 +103,6 @@ payload:
   - DOMAIN-SUFFIX,naver.jp
 
   # > Microsoft
-  - DOMAIN,officecdn-microsoft-com.akamaized.net
   - DOMAIN-SUFFIX,1drv.com
   - DOMAIN-SUFFIX,aadrm.com
   - DOMAIN-SUFFIX,acompli.com
@@ -225,10 +194,6 @@ payload:
   - DOMAIN-SUFFIX,saw1g88.top
   - DOMAIN-SUFFIX,20160706.xyz
   - DOMAIN-SUFFIX,160603.xyz  
-
-  # > OKX
-  - DOMAIN-SUFFIX,okx.com
-  - DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
 
   # > Pinterest
   - DOMAIN-SUFFIX,pinimg.com
