@@ -1,0 +1,30 @@
+payload:
+
+  ## DOMAIN
+  
+  # > Apple CDN
+  - DOMAIN,aod.itunes.apple.com
+  - DOMAIN,api.smoot.apple.cn
+  - DOMAIN,appldnld.apple.com
+  - DOMAIN,apptrailers.itunes.apple.com
+  - DOMAIN,gs-loc-cn.apple.com
+  - DOMAIN,iosapps.itunes.apple.com
+  - DOMAIN,music.apple.com
+  - DOMAIN,mvod.itunes.apple.com
+  - DOMAIN,osxapps.itunes.apple.com
+  - DOMAIN,supportdownload.apple.com
+  - DOMAIN,swcdn.apple.com
+  - DOMAIN,updates-http.cdn-apple.com
+  - DOMAIN-SUFFIX,ls.apple.com  
+
+  # > Microsoft
+  - DOMAIN,download.microsoft.com
+  - DOMAIN,ntservicepack.microsoft.com
+  - DOMAIN,outlook.office365.com
+  - DOMAIN,smtp-mail.outlook.com
+  - DOMAIN,smtp.office365.com
+  - DOMAIN,wustat.windows.com
+  - DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
+  - DOMAIN-SUFFIX,update.microsoft.com
+  - DOMAIN-SUFFIX,windowsupdate.com
+  - DOMAIN-SUFFIX,windowsupdate.microsoft.com
