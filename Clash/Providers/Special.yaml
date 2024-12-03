@@ -25,6 +25,15 @@ payload:
   - DOMAIN,smtp.office365.com
   - DOMAIN,wustat.windows.com
   - DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
+  - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,update.microsoft.com
   - DOMAIN-SUFFIX,windowsupdate.com
   - DOMAIN-SUFFIX,windowsupdate.microsoft.com
+
+  ## UA
+  
+  # > Apple CDN
+  - USER-AGENT,com.apple.appstored*
+
+  # > Microsoft
+  - USER-AGENT,Microsoft%20Remote%20Desktop*
