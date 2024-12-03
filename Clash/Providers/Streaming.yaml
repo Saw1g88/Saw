@@ -40,6 +40,6 @@ payload:
   ## UA
 
   # > Youtube
-  - USER-AGENT,com.google.ios.youtube*
-  - USER-AGENT,YouTube*
+#  - USER-AGENT,com.google.ios.youtube*
+#  - USER-AGENT,YouTube*
 
