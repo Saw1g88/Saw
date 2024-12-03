@@ -9,4 +9,4 @@ payload:
 
   ## UA
 
-  - USER-AGENT,PayPal*
+#  - USER-AGENT,PayPal*
