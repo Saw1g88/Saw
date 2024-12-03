@@ -3,10 +3,11 @@ payload:
   ## DOMAIN
 
   # > Emby
+  - DOMAIN,789.123456.al  
   - DOMAIN,cdn.lyrebirdemby.com
   - DOMAIN,emby.bangumi.ca
   - DOMAIN,embyplus.org
-  - DOMAIN-SUFFIX,789.123456.al
+  - DOMAIN,tanhuatv.site
 
   # > Pornhub
   - DOMAIN-SUFFIX,phncdn.com
