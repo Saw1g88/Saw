@@ -281,20 +281,20 @@ payload:
   ## UA
 
   # > Others
-  - USER-AGENT,battleroyalei*
-  - USER-AGENT,hearthstone*
-  - USER-AGENT,Duolingo*
-  - USER-AGENT,Roam*
-  - USER-AGENT,TikTok*
+#  - USER-AGENT,battleroyalei*
+#  - USER-AGENT,hearthstone*
+#  - USER-AGENT,Duolingo*
+#  - USER-AGENT,Roam*
+#  - USER-AGENT,TikTok*
 
   # > Google
-  - USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
-  - USER-AGENT,*com.google.Drive*
-  - USER-AGENT,Google.Drive*
+#  - USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
+#  - USER-AGENT,*com.google.Drive*
+#  - USER-AGENT,Google.Drive*
 
   # > Microsoft 
-  - USER-AGENT,OneDrive*
-  - USER-AGENT,OneDriveiOSApp*
+#  - USER-AGENT,OneDrive*
+#  - USER-AGENT,OneDriveiOSApp*
 
 
   ## Foregn
