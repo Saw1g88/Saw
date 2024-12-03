@@ -33,7 +33,7 @@ payload:
   ## UA
   
   # > Apple CDN
-  - USER-AGENT,com.apple.appstored*
+#  - USER-AGENT,com.apple.appstored*
 
   # > Microsoft
-  - USER-AGENT,Microsoft%20Remote%20Desktop*
+#  - USER-AGENT,Microsoft%20Remote%20Desktop*
