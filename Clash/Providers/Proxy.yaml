@@ -229,6 +229,71 @@ payload:
   - DOMAIN-SUFFIX,z-lib.gs
   - DOMAIN-SUFFIX,z-library.rs
 
+  # > Storage
+  - DOMAIN,aj1987.online
+  - DOMAIN,browser-intake-datadoghq.com
+  - DOMAIN,cdn.cookielaw.org
+  - DOMAIN,cdn.jsdelivr.net
+  - DOMAIN,cdn2.inner-active.mobi
+  - DOMAIN,cherrytv.media
+  - DOMAIN,i.l.inmobicdn.net
+  - DOMAIN,itunes.com
+  - DOMAIN,linux.do
+  - DOMAIN,nezha.wiki
+  - DOMAIN,railway.app
+  - DOMAIN,supply.inmobicdn.net
+  - DOMAIN,unpkg.com
+  - DOMAIN,wawo.wiki
+  - DOMAIN-SUFFIX,111666.best
+  - DOMAIN-SUFFIX,2fas.com
+  - DOMAIN-SUFFIX,5x5tele.com
+  - DOMAIN-SUFFIX,acg.lol
+  - DOMAIN-SUFFIX,alice.ws
+  - DOMAIN-SUFFIX,appsflyer.com
+  - DOMAIN-SUFFIX,bugsnag.com
+  - DOMAIN-SUFFIX,buycoffee.top
+  - DOMAIN-SUFFIX,cellrebel.com
+  - DOMAIN-SUFFIX,clouvider.net
+  - DOMAIN-SUFFIX,criteo.com
+  - DOMAIN-SUFFIX,ctvcrnt.com
+  - DOMAIN-SUFFIX,fileball.app
+  - DOMAIN-SUFFIX,frontier.com
+  - DOMAIN-SUFFIX,gravatar.com
+  - DOMAIN-SUFFIX,gslnetworks.com
+  - DOMAIN-SUFFIX,hivelocity.net
+  - DOMAIN-SUFFIX,i3d.net
+  - DOMAIN-SUFFIX,ibruce.info
+  - DOMAIN-SUFFIX,inner-active.mobi
+  - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,mixpanel.com
+  - DOMAIN-SUFFIX,nitelusa.net
+  - DOMAIN-SUFFIX,onelink.me
+  - DOMAIN-SUFFIX,onetrust.com
+  - DOMAIN-SUFFIX,onetrust.io
+  - DOMAIN-SUFFIX,pubmatic.com
+  - DOMAIN-SUFFIX,pubnative.net
+  - DOMAIN-SUFFIX,quad9.net
+  - DOMAIN-SUFFIX,race.com
+  - DOMAIN-SUFFIX,reliablesite.net
+  - DOMAIN-SUFFIX,revenuecat.com
+  - DOMAIN-SUFFIX,sharktech.net
+  - DOMAIN-SUFFIX,sift.co
+  - DOMAIN-SUFFIX,smaato.net
+  - DOMAIN-SUFFIX,smadex.com
+  - DOMAIN-SUFFIX,speedtest.net
+  - DOMAIN-SUFFIX,split.io
+  - DOMAIN-SUFFIX,spmailtechno.com
+  - DOMAIN-SUFFIX,ssr.rs
+  - DOMAIN-SUFFIX,stripe.network
+  - DOMAIN-SUFFIX,sub-store.vercel.app
+  - DOMAIN-SUFFIX,surge-activation.com
+  - DOMAIN-SUFFIX,tappx.com
+  - DOMAIN-SUFFIX,termius.com
+  - DOMAIN-SUFFIX,tpbid.com
+  - DOMAIN-SUFFIX,ttbfp5.com
+  - DOMAIN-SUFFIX,wlvpn.com
+  - DOMAIN-SUFFIX,wp.com  
+
   ## IP
 
   # > Amazon
