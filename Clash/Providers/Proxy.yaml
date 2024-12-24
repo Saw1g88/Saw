@@ -250,6 +250,8 @@ payload:
   - DOMAIN-SUFFIX,acg.lol
   - DOMAIN-SUFFIX,alice.ws
   - DOMAIN-SUFFIX,appsflyer.com
+  - DOMAIN-SUFFIX,browserleaks.com
+  - DOMAIN-SUFFIX,browserleaks.org
   - DOMAIN-SUFFIX,bugsnag.com
   - DOMAIN-SUFFIX,buycoffee.top
   - DOMAIN-SUFFIX,cellrebel.com
