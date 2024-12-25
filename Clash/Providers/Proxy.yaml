@@ -61,20 +61,29 @@ payload:
   - DOMAIN-KEYWORD,github  
 
   # > Google
+  - DOMAIN-SUFFIX,1e100.net
+  - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,apigee.com
+  - DOMAIN-SUFFIX,app-measurement.net
   - DOMAIN-SUFFIX,appspot.com
   - DOMAIN-SUFFIX,blogger.com
-  - DOMAIN-SUFFIX,docs.google.com
-  - DOMAIN-SUFFIX,drive.google.com
+  - DOMAIN-SUFFIX,g.co
+  - DOMAIN-SUFFIX,ggpht.com
+  - DOMAIN-SUFFIX,goo.gl
+  - DOMAIN-SUFFIX,google.com
+  - DOMAIN-SUFFIX,googleapis.cn
   - DOMAIN-SUFFIX,googleapis.com
   - DOMAIN-SUFFIX,googledrive.com
   - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,gstatic.cn
+  - DOMAIN-SUFFIX,gstatic.com
   - DOMAIN-SUFFIX,gvt0.com
   - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,gvt3.com
   - DOMAIN-SUFFIX,tenor.com
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-  - DOMAIN-KEYWORD,.blogspot.
+  - DOMAIN-KEYWORD,blogspot
+  - DOMAIN-KEYWORD,gmail
   - DOMAIN-KEYWORD,google
 
   # > Line
