@@ -64,7 +64,6 @@ DOMAIN-SUFFIX,wechat.com,extended-matching
 
 # > Storage
 DOMAIN,abadongtu.duoduocdn.com
-DOMAIN,app-measurement.com
 DOMAIN,baikebcs.cdn.bcebos.com
 DOMAIN,bbsimg.duoduocdn.com
 DOMAIN,bkimg.cdn.bcebos.com
