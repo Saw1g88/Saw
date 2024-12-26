@@ -61,6 +61,10 @@ payload:
   - DOMAIN-KEYWORD,github  
 
   # > Google
+  - DOMAIN,app-analytics-services.com
+  - DOMAIN,app-measurement-cn.com
+  - DOMAIN,app-measurement.com
+  - DOMAIN,app-measurement.net
   - DOMAIN-SUFFIX,1e100.net
   - DOMAIN-SUFFIX,2mdn.net
   - DOMAIN-SUFFIX,apigee.com
