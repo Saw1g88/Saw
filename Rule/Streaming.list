@@ -1,10 +1,11 @@
 ## DOMAIN
 
 # > Emby
-DOMAIN-SUFFIX,789.123456.al
+DOMAIN,789.123456.al
 DOMAIN,cdn.lyrebirdemby.com
 DOMAIN,emby.bangumi.ca
 DOMAIN,embyplus.org
+DOMAIN,tanhuatv.site
 
 # > Pornhub
 DOMAIN-SUFFIX,phncdn.com
@@ -12,18 +13,28 @@ DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,pornhubpremium.com
 
+# > spankbang
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,ptgncdn.com
+DOMAIN-SUFFIX,sb-cd.com
+
 # > XVIDEOS
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xvideos-cdn.com
 
 # > Youtube
+DOMAIN,youtubei.googleapis.com
 DOMAIN,yt3.ggpht.com
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,withyoutube.com
 DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtubeeducation.com
+DOMAIN-SUFFIX,youtubegaming.com
+DOMAIN-SUFFIX,youtubekids.com
+DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
-DOMAIN-KEYWORD,youtube
 
 ## UA
 
