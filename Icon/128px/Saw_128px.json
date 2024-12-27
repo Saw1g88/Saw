@@ -3,8 +3,16 @@
     "description": "by Saw",
     "icons": [
         {
+            "name": "Saw",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/Saw_y.png"
+        },
+        {
             "name": "AI",
-            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/AI.png"
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/ai.png"
+        },
+        {
+            "name": "Anchor",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/ai.png"
         },
         {
             "name": "Apple",
@@ -21,6 +29,10 @@
         {
             "name": "Liberty",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/liberty.png"
+        },
+        {
+            "name": "Microsoft",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/microsoft.png"
         },
         {
             "name": "Safe",
@@ -45,6 +57,10 @@
         {
             "name": "YouTube",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/youtube.png"
+        },
+        {
+            "name": "CN",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/CN.png"
         },
         {
             "name": "HK",
@@ -81,10 +97,6 @@
         {
             "name": "TR",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/TR.png"
-        },
-        {
-            "name": "CN",
-            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/CN.png"
         }
     ]
 }
