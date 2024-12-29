@@ -35,6 +35,10 @@
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/microsoft.png"
         },
         {
+            "name": "PayPal",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/paypal.png"
+        },
+        {
             "name": "Safe",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/safe.png"
         },
@@ -52,7 +56,7 @@
         },
         {
             "name": "Unlock",
-            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/unlocked.png"
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/unlock.png"
         },
         {
             "name": "USA",
