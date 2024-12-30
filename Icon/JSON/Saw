@@ -1,0 +1,110 @@
+{
+    "name": "Saw_128px",
+    "description": "by Saw",
+    "icons": [
+        {
+            "name": "Saw",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/Saw.png"
+        },
+        {
+            "name": "AI",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/ai.png"
+        },
+        {
+            "name": "Anchor",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/anchor.png"
+        },
+        {
+            "name": "Apple",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/apple.png"
+        },
+        {
+            "name": "Earth",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/earth.png"
+        },
+        {
+            "name": "Google",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/google.png"
+        },
+        {
+            "name": "Liberty",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/liberty.png"
+        },
+        {
+            "name": "Microsoft",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/microsoft.png"
+        },
+        {
+            "name": "PayPal",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/paypal.png"
+        },
+        {
+            "name": "Safe",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/shield.png"
+        },
+        {
+            "name": "Social",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/social-media.png"
+        },
+        {
+            "name": "Streaming",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/streaming.png"
+        },
+        {
+            "name": "Telegram",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/telegram.png"
+        },
+        {
+            "name": "Unlock",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/unlock.png"
+        },
+        {
+            "name": "USA",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/usa.png"
+        },
+        {
+            "name": "YouTube",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/youtube.png"
+        },
+        {
+            "name": "CN",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/CN.png"
+        },
+        {
+            "name": "HK",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/HK.png"
+        },
+        {
+            "name": "TW",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/TW.png"
+        },
+        {
+            "name": "JP",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/JP.png"
+        },
+        {
+            "name": "SG",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/SG.png"
+        },
+        {
+            "name": "US",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/US.png"
+        },
+        {
+            "name": "UK",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/UK.png"
+        },
+        {
+            "name": "IN",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/IN.png"
+        },
+        {
+            "name": "NG",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/NG.png"
+        },
+        {
+            "name": "TR",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/TR.png"
+        }
+    ]
+}
