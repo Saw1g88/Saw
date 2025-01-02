@@ -67,6 +67,9 @@ payload:
   - DOMAIN,app-measurement.net
   - DOMAIN-SUFFIX,1e100.net
   - DOMAIN-SUFFIX,2mdn.net
+  - DOMAIN-SUFFIX,ampproject.com
+  - DOMAIN-SUFFIX,ampproject.net
+  - DOMAIN-SUFFIX,ampproject.org
   - DOMAIN-SUFFIX,apigee.com
   - DOMAIN-SUFFIX,app-measurement.net
   - DOMAIN-SUFFIX,appspot.com
