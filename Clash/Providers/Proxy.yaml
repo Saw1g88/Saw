@@ -48,7 +48,7 @@ payload:
   # > Dropbox
   - DOMAIN-SUFFIX,db.tt
   - DOMAIN-SUFFIX,paper-attachments.s3.amazonaws.com
-  - DOMAIN-SUFFIX,dropbox
+  - DOMAIN-KEYWORD,dropbox
 
   # > Github
   - DOMAIN-SUFFIX,atom.io
