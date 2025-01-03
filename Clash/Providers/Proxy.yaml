@@ -17,11 +17,6 @@ payload:
   - DOMAIN-SUFFIX,amazon-adsystem.com
   - DOMAIN-SUFFIX,amazonaws.com  
 
-  # > Claude
-  - DOMAIN-SUFFIX,anthropic.com
-  - DOMAIN-SUFFIX,claude.ai
-  - DOMAIN-SUFFIX,claudeusercontent.com
-
   # > Cloudflare
   - DOMAIN-SUFFIX,cf-ipfs.com
   - DOMAIN-SUFFIX,every1dns.net
@@ -33,10 +28,13 @@ payload:
   - DOMAIN-KEYWORD,cloudflare
 
   # > Discord
-  - DOMAIN-SUFFIX,discord.com
-  - DOMAIN-SUFFIX,discordapp.com
-  - DOMAIN-SUFFIX,discord.gg
-  - DOMAIN-SUFFIX,discordapp.net
+  - DOMAIN-SUFFIX,airhorn.solutions
+  - DOMAIN-SUFFIX,airhornbot.com
+  - DOMAIN-SUFFIX,bigbeans.solutions
+  - DOMAIN-SUFFIX,dis.gd
+  - DOMAIN-SUFFIX,hammerandchisel.ssl.zendesk.com
+  - DOMAIN-SUFFIX,watchanimeattheoffice.com
+  - DOMAIN-KEYWORD,discord
 
   # > Docker
   - DOMAIN,d1q6f0aelx0por.cloudfront.net
@@ -48,17 +46,31 @@ payload:
   - DOMAIN-SUFFIX,dockerhub.com
 
   # > Dropbox
-  - DOMAIN-SUFFIX,dropbox.com
-  - DOMAIN-SUFFIX,dropboxapi.com
-  - DOMAIN-SUFFIX,dropboxusercontent.com
+  - DOMAIN-SUFFIX,db.tt
+  - DOMAIN-SUFFIX,paper-attachments.s3.amazonaws.com
+  - DOMAIN-SUFFIX,dropbox
 
   # > Github
-  - DOMAIN-SUFFIX,github.com
-  - DOMAIN-SUFFIX,github.io
-  - DOMAIN-SUFFIX,githubapp.com
-  - DOMAIN-SUFFIX,githubassets.com
-  - DOMAIN-SUFFIX,githubusercontent.com
-  - DOMAIN-KEYWORD,github  
+  - DOMAIN-SUFFIX,atom.io
+  - DOMAIN-SUFFIX,dependabot.com
+  - DOMAIN-SUFFIX,ghcr.io
+  - DOMAIN-SUFFIX,git.io
+  - DOMAIN-SUFFIX,myoctocat.com
+  - DOMAIN-SUFFIX,npm.community
+  - DOMAIN-SUFFIX,npmjs.com
+  - DOMAIN-SUFFIX,npmjs.org
+  - DOMAIN-SUFFIX,opensource.guide
+  - DOMAIN-SUFFIX,rawgit.com
+  - DOMAIN-SUFFIX,repo.new
+  - DOMAIN-KEYWORD,github 
+
+  # > GitLab
+  - DOMAIN-SUFFIX,gitlab-assets.oss-cn-hongkong.aliyuncs.com
+  - DOMAIN-SUFFIX,gitlab-static.net
+  - DOMAIN-SUFFIX,gitlab.com
+  - DOMAIN-SUFFIX,gitlab.net
+  - DOMAIN-SUFFIX,gitter-static.net
+  - DOMAIN-SUFFIX,gitter.im
 
   # > Google
   - DOMAIN,app-analytics-services.com
@@ -454,10 +466,14 @@ payload:
   - DOMAIN-KEYWORD,recaptcha
 
   # > Line
-  - DOMAIN-SUFFIX,line.me
+  - DOMAIN-SUFFIX,lin.ee
   - DOMAIN-SUFFIX,line-apps.com
+  - DOMAIN-SUFFIX,line-cdn.net
   - DOMAIN-SUFFIX,line-scdn.net
+  - DOMAIN-SUFFIX,line.me
+  - DOMAIN-SUFFIX,linecorp.com
   - DOMAIN-SUFFIX,naver.jp
+  - DOMAIN-SUFFIX,nhncorp.jp
 
   # > Microsoft
   - DOMAIN,vsmarketplacebadge.apphb.com
@@ -951,6 +967,11 @@ payload:
   - DOMAIN-KEYWORD,.pinterest.
 
   # > Pixiv
+  - DOMAIN-SUFFIX,booth.pm
+  - DOMAIN-SUFFIX,fanbox.cc
+  - DOMAIN-SUFFIX,pixiv.cat
+  - DOMAIN-SUFFIX,pixiv.co.jp
+  - DOMAIN-SUFFIX,pixiv.me
   - DOMAIN-SUFFIX,pixiv.net
   - DOMAIN-SUFFIX,pixiv.org
   - DOMAIN-SUFFIX,pximg.net
@@ -967,20 +988,27 @@ payload:
   - DOMAIN-SUFFIX,zaobao.com.sg
   - DOMAIN-SUFFIX,zoom.us
 
-  # > Wikimedia Foundation
+  # > Wikimedia
   - DOMAIN-SUFFIX,mediawiki.org
+  - DOMAIN-SUFFIX,toolforge.org
+  - DOMAIN-SUFFIX,w.wiki
   - DOMAIN-SUFFIX,wikibooks.org
   - DOMAIN-SUFFIX,wikidata.org
   - DOMAIN-SUFFIX,wikileaks.org
   - DOMAIN-SUFFIX,wikimedia.org
+  - DOMAIN-SUFFIX,wikimediacloud.org
   - DOMAIN-SUFFIX,wikimediafoundation.org
   - DOMAIN-SUFFIX,wikinews.org
+  - DOMAIN-SUFFIX,wikipedia.com
   - DOMAIN-SUFFIX,wikipedia.org
   - DOMAIN-SUFFIX,wikiquote.org
   - DOMAIN-SUFFIX,wikisource.org
   - DOMAIN-SUFFIX,wikiversity.org
   - DOMAIN-SUFFIX,wikivoyage.org
   - DOMAIN-SUFFIX,wiktionary.org
+  - DOMAIN-SUFFIX,wmcloud.org
+  - DOMAIN-SUFFIX,wmflabs.org
+  - DOMAIN-SUFFIX,wmfusercontent.org
 
   # > Yahoo
   - DOMAIN,search.yahoo.co.jp
@@ -1120,10 +1148,22 @@ payload:
   - IP-CIDR6,2620:120:e000::/40,no-resolve  
 
   # > Line
-  - IP-CIDR,103.2.30.0/23,no-resolve
+  - IP-CIDR,103.2.28.0/22,no-resolve
+  - IP-CIDR,119.235.224.0/21,no-resolve
+  - IP-CIDR,119.235.232.0/23,no-resolve
+  - IP-CIDR,119.235.235.0/24,no-resolve
+  - IP-CIDR,119.235.236.0/23,no-resolve
   - IP-CIDR,125.209.208.0/20,no-resolve
+  - IP-CIDR,125.209.252.103/32,no-resolve
+  - IP-CIDR,125.209.252.208/32,no-resolve
+  - IP-CIDR,125.6.146.0/24,no-resolve
+  - IP-CIDR,125.6.149.0/24,no-resolve
+  - IP-CIDR,125.6.190.0/24,no-resolve
   - IP-CIDR,147.92.128.0/17,no-resolve
-  - IP-CIDR,203.104.144.0/21,no-resolve
+  - IP-CIDR,203.104.103.0/24,no-resolve
+  - IP-CIDR,203.104.128.0/19,no-resolve
+  - IP-CIDR,203.174.66.64/26,no-resolve
+  - IP-CIDR,203.174.77.0/24,no-resolve
 
   ## UA
 
