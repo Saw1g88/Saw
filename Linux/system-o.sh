@@ -33,10 +33,16 @@ fi
 check_disk_space() {
     log "${YELLOW}检查磁盘空间...${NC}"
     available_space=$(df -BG / | awk 'NR==2 {print $4}' | sed 's/G//')
+    
     if [ "$available_space" -lt 5 ]; then
-        handle_error "磁盘空间不足 5GB" "exit"
+        log "${RED}警告：磁盘空间不足 5GB${NC}"
+        read -p "磁盘空间可能不足，是否继续？(y/n) " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            handle_error "用户取消安装" "exit"
+        fi
     fi
-    log "${GREEN}磁盘空间充足${NC}"
+    log "${GREEN}磁盘空间检查完成${NC}"
 }
 
 # 检测并安装所需的指令
@@ -236,25 +242,47 @@ EOF
 configure_swap() {
     log "${YELLOW}检查虚拟内存设置...${NC}"
     
+    # 如果已存在 swap，询问是否重新配置
     if swapon --show | grep -q "/swapfile"; then
-        log "${CYAN}Swap 已设置，跳过设置。${NC}"
+        log "${CYAN}检测到已存在 Swap 配置${NC}"
+        read -p "是否要重新配置 Swap？(y/n) " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            log "${CYAN}保留现有 Swap 配置${NC}"
+            return
+        fi
+        # 如果选择重新配置，先关闭并移除现有的 swap
+        swapoff /swapfile || handle_error "关闭现有 swap 失败"
+        rm -f /swapfile || handle_error "删除现有 swap 文件失败"
+        sed -i '/\/swapfile/d' /etc/fstab || handle_error "从 fstab 移除 swap 配置失败"
+    fi
+
+    # 检查系统内存
+    total_mem=$(free -m | awk '/^Mem:/{print $2}')
+    suggested_swap=$((total_mem / 2))
+    
+    # 询问用户想要设置的 swap 大小
+    while true; do
+        read -p "请输入要设置的 Swap 大小(MB)[建议值: ${suggested_swap}MB, 输入0取消设置]: " swap_size
+        if [[ "$swap_size" =~ ^[0-9]+$ ]]; then
+            break
+        else
+            log "${RED}请输入有效的数字${NC}"
+        fi
+    done
+
+    # 如果输入0，取消设置
+    if [ "$swap_size" -eq 0 ]; then
+        log "${YELLOW}取消 Swap 设置${NC}"
         return
     fi
 
-    # 检查系统内存并决定 swap 大小
-    total_mem=$(free -m | awk '/^Mem:/{print $2}')
-    if [ "$total_mem" -lt 1024 ]; then
-        swap_size="1G"
-    else
-        swap_size="2G"
-    fi
-
-    log "${YELLOW}创建 ${swap_size} 的 swap 文件...${NC}"
+    log "${YELLOW}开始创建 ${swap_size}MB 的 swap 文件...${NC}"
     
     # 创建 swap 文件
-    if ! fallocate -l ${swap_size} /swapfile; then
-        log "${YELLOW}fallocate 失败，尝试使用 dd...${NC}"
-        dd if=/dev/zero of=/swapfile bs=1G count="${swap_size%G}" || handle_error "创建 swap 文件失败"
+    if ! dd if=/dev/zero of=/swapfile bs=1M count="$swap_size" status=progress; then
+        handle_error "创建 swap 文件失败"
+        return
     fi
 
     chmod 600 /swapfile || handle_error "设置 swap 文件权限失败"
@@ -266,7 +294,13 @@ configure_swap() {
         echo '/swapfile none swap sw 0 0' >> /etc/fstab || handle_error "更新 fstab 失败"
     fi
 
-    log "${GREEN}Swap 设置完成${NC}"
+    # 验证 swap 是否成功启用
+    if swapon --show | grep -q "/swapfile"; then
+        actual_swap_size=$(free -m | awk '/^Swap:/{print $2}')
+        log "${GREEN}Swap 设置完成！当前 Swap 大小: ${actual_swap_size}MB${NC}"
+    else
+        handle_error "Swap 设置失败"
+    fi
 }
 
 # 设置时区
