@@ -97,14 +97,16 @@ adjust_dns() {
     cat > /etc/resolv.conf <<EOF
 nameserver 8.8.8.8
 nameserver 1.1.1.1
+nameserver 2001:4860:4860::8888
+nameserver 2606:4700:4700::1111
 EOF
-    echo -e "${CYAN}DNS 设置已更新为 (8.8.8.8, 1.1.1.1)。${NC}"
+    echo -e "${CYAN}DNS 设置已更新为 (Google, Cloudflare)。${NC}"
 }
 
 # 检查是否调整过 DNS
 dns_check() {
-    if grep -q 'nameserver 8.8.8.8' /etc/resolv.conf && grep -q 'nameserver 1.1.1.1' /etc/resolv.conf; then
-        echo -e "${CYAN}DNS 已设置为 (8.8.8.8, 1.1.1.1)，跳过设置。${NC}"
+    if grep -q 'nameserver 8.8.8.8' /etc/resolv.conf && grep -q 'nameserver 1.1.1.1' /etc/resolv.conf && grep -q 'nameserver 2001:4860:4860::8888' /etc/resolv.conf && grep -q 'nameserver 2606:4700:4700::1111' /etc/resolv.conf; then
+        echo -e "${CYAN}DNS 已设置为 (Google, Cloudflare)，跳过设置。${NC}"
     else
         adjust_dns
     fi
