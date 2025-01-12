@@ -40,6 +40,7 @@ echo -e "${YELLOW}配置 fail2ban 以保护 SSH 端口 ${ssh_port}...${NC}"
 cat > /etc/fail2ban/jail.local <<EOF
 [sshd]
 enabled = true
+backend = systemd
 port = ${ssh_port}
 filter = sshd
 logpath = /var/log/auth.log
