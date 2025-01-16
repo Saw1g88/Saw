@@ -422,6 +422,17 @@ upgrade_openssh() {
 # ================ 主函数 ================
 main() {
     echo -e "${GREEN}===== 开始系统安全加固 =====${NC}"
+
+    # 询问是否配置SSH端口
+    read -p "是否配置SSH端口？(Y/N): " configure_ssh_port_choice
+    case "$configure_ssh_port_choice" in
+        [Yy])
+            configure_ssh_port
+        ;;
+    *)
+        echo -e "${CYAN}跳过SSH端口配置${NC}"
+        ;;
+    esac
     
     # 询问是否配置UFW
     read -p "是否配置UFW防火墙？(Y/N): " configure_ufw_choice
