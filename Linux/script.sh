@@ -213,6 +213,9 @@ configure_fail2ban() {
     echo -e "\n${CYAN}配置 fail2ban 参数：${NC}"
     
     # 询问基本配置
+    read -p "请输入 SSH 端口 (默认: 2233): " SSH_PORT
+    SSH_PORT=${SSH_PORT:-2233}
+    
     read -p "请输入最大尝试次数 (默认: 5): " maxretry
     maxretry=${maxretry:-5}
     
