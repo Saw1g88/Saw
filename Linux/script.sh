@@ -9,8 +9,6 @@ NC='\033[0m' # 无颜色
 
 # 设置OpenSSH的版本号
 OPENSSH_VERSION="9.8p1"
-# 需要放行的 SSH 端口号，默认2233
-SSH_PORT=2233
 
 # 确保以 root 权限运行
 if [[ $EUID -ne 0 ]]; then
@@ -27,9 +25,43 @@ else
     exit 1
 fi
 
+# 配置SSH端口
+configure_ssh_port() {
+    echo -e "\n${YELLOW}====== 配置 SSH 端口 ======${NC}"
+    # 获取当前SSH端口
+    current_port=$(grep "^Port" /etc/ssh/sshd_config 2>/dev/null | awk '{print $2}')
+    [ -z "$current_port" ] && current_port=22
+    
+    echo -e "${YELLOW}当前SSH端口: ${current_port}${NC}"
+    read -p "请输入新的SSH端口 (默认: 2233): " SSH_PORT
+    SSH_PORT=${SSH_PORT:-2233}
+
+    # 验证端口号是否合法
+    if ! [[ "$SSH_PORT" =~ ^[0-9]+$ ]] || [ "$SSH_PORT" -lt 1 ] || [ "$SSH_PORT" -gt 65535 ]; then
+        echo -e "${RED}无效的端口号，使用默认端口 2233${NC}"
+        SSH_PORT=2233
+    fi
+
+    # 更新SSH配置文件
+    if [ -f /etc/ssh/sshd_config ]; then
+        # 备份原配置
+        cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+        # 更新端口配置
+        sed -i "s/^#*Port [0-9]*/Port $SSH_PORT/" /etc/ssh/sshd_config
+        if ! grep -q "^Port" /etc/ssh/sshd_config; then
+            echo "Port $SSH_PORT" >> /etc/ssh/sshd_config
+        fi
+        echo -e "${GREEN}SSH端口已设置为: $SSH_PORT${NC}"
+    else
+        echo -e "${RED}未找到 SSH 配置文件${NC}"
+        return 1
+    fi
+}
+
 # ================ UFW 配置功能 ================
 configure_ufw() {
     echo -e "\n${YELLOW}====== 配置 UFW 防火墙 ======${NC}"
+    
     # 检查是否已安装 UFW
     if ! command -v ufw &> /dev/null; then
         echo -e "${YELLOW}UFW 未安装，正在安装...${NC}"
@@ -43,49 +75,133 @@ configure_ufw() {
         echo -e "${YELLOW}UFW 已安装，跳过安装。${NC}"
     fi
 
-    # 检查 UFW 是否已放行 SSH 端口
+    # 配置UFW规则
+    echo -e "\n${YELLOW}配置UFW规则：${NC}"
+    
+    # SSH端口
+    echo -e "${CYAN}SSH端口配置：${NC}"
     if sudo ufw status | grep -q "$SSH_PORT"; then
         echo -e "${YELLOW}SSH 端口 $SSH_PORT 已放行。${NC}"
     else
-        echo -e "${YELLOW}放行 SSH 端口 $SSH_PORT...${NC}"
-        sudo ufw allow "$SSH_PORT"
+        read -p "是否放行SSH端口 $SSH_PORT？(Y/N): " allow_ssh
+        case "$allow_ssh" in
+            [Yy])
+                sudo ufw allow "$SSH_PORT"
+                echo -e "${GREEN}已放行SSH端口 $SSH_PORT${NC}"
+                ;;
+            *)
+                echo -e "${YELLOW}未放行SSH端口${NC}"
+                ;;
+        esac
     fi
+
+    # HTTP/HTTPS端口
+    echo -e "\n${CYAN}Web服务端口配置：${NC}"
+    read -p "是否放行HTTP端口(80)？(Y/N): " allow_http
+    case "$allow_http" in
+        [Yy])
+            sudo ufw allow 80
+            echo -e "${GREEN}已放行HTTP端口${NC}"
+            ;;
+        *)
+            echo -e "${YELLOW}未放行HTTP端口${NC}"
+            ;;
+    esac
+
+    read -p "是否放行HTTPS端口(443)？(Y/N): " allow_https
+    case "$allow_https" in
+        [Yy])
+            sudo ufw allow 443
+            echo -e "${GREEN}已放行HTTPS端口${NC}"
+            ;;
+        *)
+            echo -e "${YELLOW}未放行HTTPS端口${NC}"
+            ;;
+    esac
+
+    # 自定义端口
+    echo -e "\n${CYAN}自定义端口配置：${NC}"
+    read -p "是否需要放行其他端口？(Y/N): " custom_ports
+    case "$custom_ports" in
+        [Yy])
+            while true; do
+                read -p "请输入要放行的端口号（输入q退出）: " port
+                if [ "$port" = "q" ]; then
+                    break
+                fi
+                if [[ "$port" =~ ^[0-9]+$ ]] && [ "$port" -ge 1 ] && [ "$port" -le 65535 ]; then
+                    read -p "请选择协议（1:TCP 2:UDP 3:TCP+UDP）: " protocol
+                    case "$protocol" in
+                        1)
+                            sudo ufw allow "$port"/tcp
+                            echo -e "${GREEN}已放行TCP端口 $port${NC}"
+                            ;;
+                        2)
+                            sudo ufw allow "$port"/udp
+                            echo -e "${GREEN}已放行UDP端口 $port${NC}"
+                            ;;
+                        3)
+                            sudo ufw allow "$port"
+                            echo -e "${GREEN}已放行TCP/UDP端口 $port${NC}"
+                            ;;
+                        *)
+                            echo -e "${RED}无效的协议选择${NC}"
+                            ;;
+                    esac
+                else
+                    echo -e "${RED}无效的端口号${NC}"
+                fi
+            done
+            ;;
+    esac
 
     # 检查 UFW 是否已启用
     if sudo ufw status | grep -q "Status: active"; then
         echo -e "${YELLOW}UFW 已启用。${NC}"
     else
         echo -e "${YELLOW}启用 UFW 并设置开机自启...${NC}"
-        sudo ufw enable
-        sudo systemctl enable ufw
+        read -p "确认启用UFW防火墙？(Y/N): " enable_ufw
+        case "$enable_ufw" in
+            [Yy])
+                sudo ufw enable
+                sudo systemctl enable ufw
+                ;;
+            *)
+                echo -e "${YELLOW}UFW未启用${NC}"
+                ;;
+        esac
     fi
 
     # 查看 UFW 状态
-    echo -e "${YELLOW}当前 UFW 状态：${NC}"
-    sudo ufw status
+    echo -e "\n${YELLOW}当前 UFW 状态：${NC}"
+    sudo ufw status verbose
 }
 
 # ================ Fail2ban 配置功能 ================
 configure_fail2ban() {
     echo -e "\n${YELLOW}====== 配置 Fail2ban ======${NC}"
+    
     # 检查 fail2ban 是否已安装且正在运行
     if command -v fail2ban-client &> /dev/null; then
         if systemctl is-active --quiet fail2ban; then
             echo -e "${YELLOW}fail2ban 已安装且正在运行。${NC}"
-            return 0
+            read -p "是否要重新配置fail2ban？(Y/N): " reconfigure
+            case "$reconfigure" in
+                [Nn])
+                    return 0
+                    ;;
+            esac
         fi
     fi
 
-    # 更新系统并安装 fail2ban
+    # 安装 fail2ban
     echo -e "${YELLOW}正在安装 fail2ban...${NC}"
     case $OS in
         ubuntu|debian)
-            apt update
-            apt install fail2ban -y
+            apt update && apt install fail2ban -y
             ;;
         centos|rhel|almalinux|rocky|fedora)
-            yum install -y epel-release
-            yum install -y fail2ban
+            yum install -y epel-release && yum install -y fail2ban
             ;;
         *)
             echo -e "${RED}不支持的操作系统：$OS${NC}"
@@ -93,25 +209,62 @@ configure_fail2ban() {
             ;;
     esac
 
-    # 备份原始配置文件（仅在不存在 jail.local 时执行）
+    # 配置 fail2ban
+    echo -e "\n${CYAN}配置 fail2ban 参数：${NC}"
+    
+    # 询问基本配置
+    read -p "请输入最大尝试次数 (默认: 5): " maxretry
+    maxretry=${maxretry:-5}
+    
+    read -p "请输入封禁时间（秒）(默认: 3600): " bantime
+    bantime=${bantime:-3600}
+    
+    read -p "请输入检测时间窗口（秒）(默认: 600): " findtime
+    findtime=${findtime:-600}
+
+    # 备份原始配置文件
     if [ ! -f /etc/fail2ban/jail.local ]; then
         echo -e "${YELLOW}备份原始 fail2ban 配置...${NC}"
         cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
     fi
 
     # 写入 fail2ban 配置文件
-    echo -e "${YELLOW}配置 fail2ban 以保护 SSH 端口 ${SSH_PORT}...${NC}"
+    echo -e "${YELLOW}写入 fail2ban 配置...${NC}"
     cat > /etc/fail2ban/jail.local <<EOF
+[DEFAULT]
+bantime = ${bantime}
+findtime = ${findtime}
+maxretry = ${maxretry}
+
 [sshd]
 enabled = true
 backend = systemd
 port = ${SSH_PORT}
 filter = sshd
 logpath = /var/log/auth.log
-maxretry = 5
-bantime = 3600
-findtime = 600
+maxretry = ${maxretry}
+bantime = ${bantime}
+findtime = ${findtime}
 EOF
+
+    # 询问是否配置邮件通知
+    read -p "是否配置邮件通知？(Y/N): " configure_email
+    case "$configure_email" in
+        [Yy])
+            read -p "请输入发送通知的邮箱地址: " destemail
+            if [ ! -z "$destemail" ]; then
+                cat >> /etc/fail2ban/jail.local <<EOF
+
+# 邮件通知配置
+destemail = ${destemail}
+sendername = Fail2Ban
+mta = sendmail
+action = %(action_mwl)s
+EOF
+                echo -e "${GREEN}已配置邮件通知${NC}"
+            fi
+            ;;
+    esac
 
     # 重新启动并启用 fail2ban 服务
     echo -e "${YELLOW}重启并启用 fail2ban 服务...${NC}"
@@ -123,8 +276,15 @@ EOF
     systemctl status fail2ban --no-pager
 
     # 验证 fail2ban 是否已生效
-    echo -e "${YELLOW}fail2ban 规则检查：${NC}"
+    echo -e "\n${YELLOW}fail2ban 规则检查：${NC}"
     fail2ban-client status sshd
+    
+    echo -e "\n${GREEN}fail2ban 配置完成！${NC}"
+    echo -e "配置信息：
+- 最大尝试次数：${maxretry}次
+- 封禁时间：${bantime}秒
+- 检测时间窗口：${findtime}秒
+- 保护的SSH端口：${SSH_PORT}"
 }
 
 # ================ OpenSSH 升级功能 ================
