@@ -38,7 +38,7 @@ chmod +x "$BACKUP_SCRIPT"
 # 配置定时任务
 CRON_JOB="0 1 * * 1 /bin/bash $BACKUP_SCRIPT"
 if ! crontab -l 2>/dev/null | grep -q "$CRON_JOB"; then
-    (crontab -l 2>/dev/null; echo "$CRON_JOB") | crontab -
+    (crontab -l 2>/dev/null; echo "$CRON_JOB") | crontab -u root -
     echo -e "${GREEN}定时任务添加成功：${CRON_JOB}${NC}"
 else
     echo -e "${RED}定时任务已存在：${CRON_JOB}${NC}"
