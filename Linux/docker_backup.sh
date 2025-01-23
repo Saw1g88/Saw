@@ -1,20 +1,14 @@
 #!/bin/bash
 
-# 定义颜色变量
-GREEN='\033[0;36m'
-RED='\033[0;31m'
-NC='\033[0m'
-
 # 交互式获取服务器标识
 read -p "请输入服务器标识(例如: oracle): " SERVER_ID
 
 # 备份脚本路径
 BACKUP_SCRIPT="/root/docker_backup.sh"
 
-# 创建备份脚本
+# 创建备份脚本内容
 cat > "$BACKUP_SCRIPT" << EOF
 #!/bin/bash
-# 定义变量
 backup_src="/opt/docker"
 backup_dest="onedrive:vps/${SERVER_ID}/docker"
 timestamp=\$(date +%Y%m%d_%H%M%S)
@@ -24,20 +18,12 @@ docker exec rclone /bin/sh -c "\
     tar czvf /tmp/backup_\${timestamp}.tar.gz \$backup_src && \
     rclone copy /tmp/backup_\${timestamp}.tar.gz \$backup_dest && \
     rm /tmp/backup_\${timestamp}.tar.gz"
-
-if [ \$? -eq 0 ]; then
-    echo -e "\${GREEN}备份成功！备份文件：backup_\${timestamp}.tar.gz\${NC}"
-else
-    echo -e "\${RED}备份失败！请检查错误信息。\${NC}"
-fi
 EOF
 
 # 赋予脚本执行权限
 chmod +x "$BACKUP_SCRIPT"
 
-# 配置定时任务
-(crontab -l 2>/dev/null; echo "0 1 * * 1 /bin/bash $BACKUP_SCRIPT") | crontab -
+# 直接使用 sudo 添加定时任务
+sudo bash -c "crontab -l 2>/dev/null | { cat; echo '0 1 * * 1 /bin/bash $BACKUP_SCRIPT'; } | crontab -"
 
-echo -e "${GREEN}备份脚本已安装完成！${NC}"
-echo -e "备份目标路径：onedrive:vps/${SERVER_ID}/docker"
-echo -e "定时任务：每周一凌晨1点自动备份"
+echo "备份脚本安装完成"
