@@ -11,6 +11,9 @@ read -p "请输入服务器标识(例如: oracle): " SERVER_ID
 # 备份脚本路径
 BACKUP_SCRIPT="/root/docker_backup.sh"
 
+# 输出调试信息
+echo "开始创建备份脚本..."
+
 # 创建备份脚本
 cat > "$BACKUP_SCRIPT" << EOF
 #!/bin/bash
@@ -32,7 +35,11 @@ else
 fi
 EOF
 
+# 输出调试信息
+echo "备份脚本已创建：$BACKUP_SCRIPT"
+
 # 赋予脚本执行权限
 chmod +x "$BACKUP_SCRIPT"
 
+# 输出调试信息
 echo "备份脚本安装完成"
