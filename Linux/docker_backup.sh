@@ -36,10 +36,8 @@ EOF
 chmod +x "$BACKUP_SCRIPT"
 
 # 配置定时任务
-CRON_JOB="0 1 * * 1 /bin/bash $BACKUP_SCRIPT"
-if ! crontab -l 2>/dev/null | grep -q "$CRON_JOB"; then
-    (crontab -l 2>/dev/null; echo "$CRON_JOB") | crontab -u root -
-    echo -e "${GREEN}定时任务添加成功：${CRON_JOB}${NC}"
-else
-    echo -e "${RED}定时任务已存在：${CRON_JOB}${NC}"
-fi
+(crontab -l 2>/dev/null; echo "0 1 * * 1 /bin/bash $BACKUP_SCRIPT") | crontab -
+
+echo -e "${GREEN}备份脚本已安装完成！${NC}"
+echo -e "备份目标路径：onedrive:vps/${SERVER_ID}/docker"
+echo -e "定时任务：每周一凌晨1点自动备份"
