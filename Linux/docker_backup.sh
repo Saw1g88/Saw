@@ -42,10 +42,3 @@ EOF
 
 # 赋予脚本执行权限
 chmod +x "$BACKUP_SCRIPT"
-
-# 添加快捷方式(d)
-if ! grep -q "alias d='$0'" ~/.bashrc; then
-    echo "alias d='$0'" >> ~/.bashrc
-    source ~/.bashrc
-fi
-
