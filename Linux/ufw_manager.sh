@@ -46,8 +46,8 @@ check_status() {
 }
 
 # 检查并添加别名
-if ! grep -q "alias ufw='$0'" ~/.bashrc; then
-    echo "alias ufw='$0'" >> ~/.bashrc
+if ! grep -q "alias u='$0'" ~/.bashrc; then
+    echo "alias u='$0'" >> ~/.bashrc
     source ~/.bashrc
 fi
 
