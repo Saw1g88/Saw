@@ -42,3 +42,6 @@ EOF
 
 # 赋予脚本执行权限
 chmod +x "$BACKUP_SCRIPT"
+
+# 输出安装完成消息
+echo -e "${GREEN}Docker备份脚本安装完成！${NC}"
