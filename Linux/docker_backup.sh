@@ -8,6 +8,11 @@ NC='\033[0m'
 
 # 交互式获取服务器标识
 read -p "请输入服务器标识(例如: oracle): " SERVER_ID
+echo "输入的服务器标识是：$SERVER_ID"  # 添加这行
+if [ -z "$SERVER_ID" ]; then
+    echo "服务器标识不能为空"
+    exit 1
+fi
 
 # 备份脚本路径
 BACKUP_SCRIPT="/root/docker_backup.sh"
