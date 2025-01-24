@@ -89,11 +89,19 @@ add_alias() {
     fi
 
     SCRIPT_PATH=$(readlink -f "$0")
-    if ! grep -q "alias $alias_name='$SCRIPT_PATH'" ~/.bashrc; then
-        echo "alias $alias_name='$SCRIPT_PATH'" >> ~/.bashrc
-        echo -e "${GREEN}快捷启动方式 '$alias_name' 已添加，请重新加载终端或运行 'source ~/.bashrc' 应用更改。${NC}"
-    else
+    
+    # 如果 alias 已经存在，跳过添加
+    if grep -q "alias $alias_name='$SCRIPT_PATH'" ~/.bashrc; then
         echo -e "${YELLOW}快捷启动方式 '$alias_name' 已存在，无需重复添加。${NC}"
+    else
+        echo "alias $alias_name='$SCRIPT_PATH'" >> ~/.bashrc
+        if [ $? -eq 0 ]; then
+            echo -e "${GREEN}快捷启动方式 '$alias_name' 已添加。${NC}"
+            # 强制刷新 .bashrc 文件使更改生效
+            source ~/.bashrc
+        else
+            echo -e "${RED}添加快捷启动方式失败！${NC}"
+        fi
     fi
     read -n 1 -s -r -p "按任意键返回主菜单..."
     main_menu
@@ -110,7 +118,13 @@ remove_alias() {
 
     if grep -q "alias $alias_name=" ~/.bashrc; then
         sed -i "/alias $alias_name=/d" ~/.bashrc
-        echo -e "${YELLOW}快捷启动方式 '$alias_name' 已移除，请重新加载终端或运行 'source ~/.bashrc' 应用更改。${NC}"
+        if [ $? -eq 0 ]; then
+            echo -e "${YELLOW}快捷启动方式 '$alias_name' 已移除。${NC}"
+            # 强制刷新 .bashrc 文件使更改生效
+            source ~/.bashrc
+        else
+            echo -e "${RED}移除快捷启动方式失败！${NC}"
+        fi
     else
         echo -e "${YELLOW}未找到快捷启动方式 '$alias_name'，跳过移除操作。${NC}"
     fi
