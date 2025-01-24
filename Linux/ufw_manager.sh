@@ -25,7 +25,7 @@ main_menu() {
 
 allow_port() {
     read -p "请输入要放行的端口号: " port
-    sudo ufw allow $port/tcp
+    sudo ufw allow $port
     echo -e "${GREEN}已放行 $port 端口${NC}"
     read -n 1 -s -r -p "按任意键返回主菜单..."
     main_menu
@@ -33,7 +33,7 @@ allow_port() {
 
 delete_port() {
     read -p "请输入要删除的端口号: " port
-    sudo ufw delete allow $port/tcp
+    sudo ufw delete allow $port
     echo -e "${RED}已删除 $port 端口${NC}"
     read -n 1 -s -r -p "按任意键返回主菜单..."
     main_menu
