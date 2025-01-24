@@ -46,6 +46,7 @@ chmod +x "$BACKUP_SCRIPT"
 # 添加快捷方式
 if ! grep -q "alias d='/root/docker_backup.sh'" ~/.bashrc; then
     echo "alias d='/root/docker_backup.sh'" >> ~/.bashrc
-    source ~/.bashrc
 fi
+# 强制立即生效
+exec bash
 
