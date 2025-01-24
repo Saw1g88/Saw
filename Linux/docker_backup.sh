@@ -43,10 +43,9 @@ EOF
 # 赋予脚本执行权限
 chmod +x "$BACKUP_SCRIPT"
 
-# 添加快捷方式
-if ! grep -q "alias d='/root/docker_backup.sh'" ~/.bashrc; then
-    echo "alias d='/root/docker_backup.sh'" >> ~/.bashrc
+# 添加快捷方式(d)
+if ! grep -q "alias d='$0'" ~/.bashrc; then
+    echo "alias d='$0'" >> ~/.bashrc
+    source ~/.bashrc
 fi
-# 强制立即生效
-exec bash
 
