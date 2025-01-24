@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 # 定义颜色变量
 GREEN='\033[0;36m'
