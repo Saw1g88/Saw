@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 # 定义颜色变量
 GREEN='\033[0;36m'
@@ -49,5 +48,3 @@ EOF
 # 赋予脚本执行权限
 chmod +x "$BACKUP_SCRIPT"
 
-# 输出安装完成消息
-bash "$BACKUP_SCRIPT" && echo -e "${GREEN}Docker备份脚本安装并测试成功！${NC}"
