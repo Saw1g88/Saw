@@ -45,9 +45,12 @@ check_status() {
     main_menu
 }
 
+# 获取脚本的绝对路径
+SCRIPT_PATH=$(readlink -f "$0")
+
 # 检查并添加别名
-if ! grep -q "alias u='$0'" ~/.bashrc; then
-    echo "alias u='$0'" >> ~/.bashrc
+if ! grep -q "alias u='$SCRIPT_PATH'" ~/.bashrc; then
+    echo "alias u='$SCRIPT_PATH'" >> ~/.bashrc
     source ~/.bashrc
 fi
 
