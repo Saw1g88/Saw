@@ -16,6 +16,7 @@ check_ufw_enabled() {
 
 # 主菜单
 main_menu() {
+    clear
     echo -e "${YELLOW}UFW 防火墙管理脚本${NC}"
     echo "1. 放行端口"
     echo "2. 删除端口"
@@ -92,6 +93,7 @@ installation_complete() {
     echo -e "${GREEN}安装和配置已完成！${NC}"
     echo -e "${YELLOW}您可以通过运行脚本来管理 UFW 防火墙。${NC}"
     echo -e "${YELLOW}感谢使用！${NC}"
+    read -n 1 -s -r -p "按任意键进入主菜单..."
 }
 
 # 调试信息：显示是否进入安装完成提示
