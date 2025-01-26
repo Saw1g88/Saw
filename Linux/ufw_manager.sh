@@ -4,7 +4,6 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 YELLOW='\033[0;33m'
 NC='\033[0m'
-
 # 检查 UFW 是否已启用
 check_ufw_enabled() {
     if ! sudo ufw status | grep -q "Status: active"; then
@@ -13,7 +12,6 @@ check_ufw_enabled() {
         main_menu
     fi
 }
-
 # 主菜单
 main_menu() {
     clear
@@ -31,7 +29,6 @@ main_menu() {
         *) echo "无效选项！"; sleep 2; main_menu ;;
     esac
 }
-
 # 放行端口
 allow_port() {
     check_ufw_enabled
@@ -55,7 +52,6 @@ allow_port() {
         fi
     done
 }
-
 # 删除端口
 delete_port() {
     check_ufw_enabled
@@ -79,7 +75,6 @@ delete_port() {
         fi
     done
 }
-
 # 查看 UFW 状态
 check_status() {
     check_ufw_enabled
@@ -87,25 +82,5 @@ check_status() {
     read -n 1 -s -r -p "按任意键返回主菜单..."
     main_menu
 }
-
-# 安装完成提示
-installation_complete() {
-    # 清屏并显示提示
-    clear
-    echo -e "${GREEN}安装和配置已完成！${NC}"
-    echo -e "${YELLOW}您可以通过运行脚本来管理 UFW 防火墙。${NC}"
-    echo -e "${YELLOW}感谢使用！${NC}"
-    # 等待用户输入
-    read -n 1 -s -r -p "按任意键进入主菜单..."
-    echo "进入主菜单"
-}
-
-# 调试信息：显示是否进入安装完成提示
-echo "脚本开始执行"
-
-# 执行安装完成提示
-installation_complete
-
-# 调试信息：确认提示是否结束，开始主菜单
-echo "提示结束，进入主菜单"
+# 初始化
 main_menu
