@@ -57,7 +57,7 @@ else
 fi
 EOF
 then
-    echo -e "${GREEN}备份脚本创建完成！（快捷启动 d ）${NC}"
+    echo -e "${GREEN}备份脚本创建完成！（快捷键 d ）${NC}"
 else
     echo -e "${RED}错误：备份脚本创建失败！${NC}"
     exit 1
