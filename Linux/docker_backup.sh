@@ -4,19 +4,26 @@ GREEN='\033[0;36m'
 RED='\033[0;31m'
 NC='\033[0m'
 
+# 开启调试模式，便于排查问题
+set -x  # 输出所有执行的命令
+
 # 交互式获取服务器标识
 read -p "请输入服务器标识(例如: oracle): " SERVER_ID
-echo "输入的服务器标识是：$SERVER_ID"
+
+# 检查输入是否为空
 if [ -z "$SERVER_ID" ]; then
-    echo "服务器标识不能为空"
+    echo -e "${RED}错误：服务器标识不能为空！${NC}"
     exit 1
 fi
+
+# 显示输入的服务器标识
+echo -e "${GREEN}输入的服务器标识是：$SERVER_ID${NC}"
 
 # 备份脚本路径
 BACKUP_SCRIPT="/root/docker_backup.sh"
 
 # 创建备份脚本
-cat > "$BACKUP_SCRIPT" << EOF
+if cat > "$BACKUP_SCRIPT" << EOF
 #!/bin/bash
 # 定义颜色变量
 GREEN='\033[0;36m'
@@ -42,8 +49,18 @@ else
     echo -e "\${RED}备份失败！请检查错误信息。\${NC}"
 fi
 EOF
+then
+    echo -e "${GREEN}备份脚本创建完成：$BACKUP_SCRIPT${NC}"
+else
+    echo -e "${RED}错误：备份脚本创建失败！${NC}"
+    exit 1
+fi
 
 # 为备份脚本添加可执行权限
-chmod +x "$BACKUP_SCRIPT"
+chmod +x "$BACKUP_SCRIPT" && echo -e "${GREEN}已添加可执行权限：$BACKUP_SCRIPT${NC}" || {
+    echo -e "${RED}错误：无法添加可执行权限！${NC}"
+    exit 1
+}
 
-echo -e "${GREEN}备份脚本创建完成：$BACKUP_SCRIPT${NC}"
+# 关闭调试模式
+set +x
