@@ -1,6 +1,5 @@
 #!/bin/bash
 # 定义颜色变量
-YELLOW='\033[1;33m'
 GREEN='\033[0;36m'
 RED='\033[0;31m'
 NC='\033[0m'
@@ -17,13 +16,13 @@ confirm_server_id() {
         fi
         
         # 确认服务器标识
-        printf "您输入的服务器标识是 ${YELLOW}%s${NC}，是否确认？(1: 确认，2: 重新输入): " "$SERVER_ID"
+        printf "您输入的服务器标识是 ${GREEN}%s${NC}，是否确认？(1: 确认，2: 重新输入): " "$SERVER_ID"
         read confirm
         
         case $confirm in
             1)
                 echo -e "${GREEN}服务器标识已确认。${NC}"
-                return  # 使用return而不是break，确保可以传递SERVER_ID
+                break  # 修改为break，确保可以继续执行后续脚本
                 ;;
             2)
                 echo "请重新输入服务器标识。"
