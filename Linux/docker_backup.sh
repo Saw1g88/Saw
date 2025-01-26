@@ -1,12 +1,12 @@
 #!/bin/bash
 # 定义颜色变量
-YELLOW='\033[1;33m'
 GREEN='\033[0;36m'
 RED='\033[0;31m'
 NC='\033[0m'
 
 # 服务器标识确认函数
 confirm_server_id() {
+    local SERVER_ID=""
     while true; do
         # 交互式获取服务器标识
         read -p "请输入服务器标识(例如: oracle): " SERVER_ID
@@ -17,13 +17,15 @@ confirm_server_id() {
         fi
         
         # 确认服务器标识
-        printf "您输入的服务器标识是 ${YELLOW}%s${NC}，是否确认？(1: 确认，2: 重新输入): " "$SERVER_ID"
+        printf "您输入的服务器标识是 ${GREEN}%s${NC}，是否确认？(1: 确认，2: 重新输入): " "$SERVER_ID"
         read confirm
         
         case $confirm in
             1)
                 echo -e "${GREEN}服务器标识已确认。${NC}"
-                break  # 修改为break，确保可以继续执行后续脚本
+                # 直接输出服务器标识，供后续脚本使用
+                echo "$SERVER_ID"
+                return 0
                 ;;
             2)
                 echo "请重新输入服务器标识。"
@@ -36,8 +38,14 @@ confirm_server_id() {
     done
 }
 
-# 调用服务器标识确认函数
-confirm_server_id
+# 捕获服务器标识
+SERVER_ID=$(confirm_server_id)
+
+# 检查是否成功获取服务器标识
+if [ -z "$SERVER_ID" ]; then
+    echo -e "${RED}未成功获取服务器标识，脚本退出。${NC}"
+    exit 1
+fi
 
 # 备份脚本路径
 BACKUP_SCRIPT="/root/docker_backup.sh"
