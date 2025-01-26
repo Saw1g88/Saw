@@ -70,9 +70,6 @@ else
 fi
 EOF
 
-# 赋予脚本执行权限
-chmod +x "$BACKUP_SCRIPT"
-
 # 安装完成提示
 echo -e "${GREEN}
 ---------------------------------------
