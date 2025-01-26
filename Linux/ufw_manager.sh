@@ -87,5 +87,5 @@ installation_complete() {
     echo -e "${GREEN}安装和配置已完成！（快捷键 u）${NC}"
 }
 # 初始化
-main_menu
 installation_complete
+main_menu
