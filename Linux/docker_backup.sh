@@ -23,7 +23,7 @@ confirm_server_id() {
         case $confirm in
             1)
                 echo -e "${GREEN}服务器标识已确认。${NC}"
-                break
+                return  # 使用return而不是break，确保可以传递SERVER_ID
                 ;;
             2)
                 echo "请重新输入服务器标识。"
@@ -69,6 +69,9 @@ else
     echo -e "\${RED}备份失败！请检查错误信息。\${NC}"
 fi
 EOF
+
+# 赋予脚本执行权限
+chmod +x "$BACKUP_SCRIPT"
 
 # 安装完成提示
 echo -e "${GREEN}
