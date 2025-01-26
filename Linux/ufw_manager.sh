@@ -90,18 +90,22 @@ check_status() {
 
 # 安装完成提示
 installation_complete() {
+    # 清屏并显示提示
+    clear
     echo -e "${GREEN}安装和配置已完成！${NC}"
     echo -e "${YELLOW}您可以通过运行脚本来管理 UFW 防火墙。${NC}"
     echo -e "${YELLOW}感谢使用！${NC}"
+    # 等待用户输入
     read -n 1 -s -r -p "按任意键进入主菜单..."
+    echo "进入主菜单"
 }
 
 # 调试信息：显示是否进入安装完成提示
 echo "脚本开始执行"
 
-# 安装完成提示
+# 执行安装完成提示
 installation_complete
 
-# 调试信息：确认是否进入了主菜单
-clear
+# 调试信息：确认提示是否结束，开始主菜单
+echo "提示结束，进入主菜单"
 main_menu
