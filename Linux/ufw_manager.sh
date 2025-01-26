@@ -103,5 +103,5 @@ echo "脚本开始执行"
 installation_complete
 
 # 调试信息：确认是否进入了主菜单
-echo "进入主菜单"
+clear
 main_menu
