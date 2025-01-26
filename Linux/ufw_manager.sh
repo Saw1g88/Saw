@@ -82,5 +82,10 @@ check_status() {
     read -n 1 -s -r -p "按任意键返回主菜单..."
     main_menu
 }
+# 安装完成提示
+installation_complete() {
+    echo -e "${GREEN}安装和配置已完成！（快捷键 u）${NC}"
+}
 # 初始化
 main_menu
+installation_complete
