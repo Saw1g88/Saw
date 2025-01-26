@@ -17,7 +17,7 @@ confirm_server_id() {
         fi
         
         # 确认服务器标识
-        printf "您输入的服务器标识是 ${YELLOW}%s${NC}，是否确认？(1: 确认，2: 重新输入): "$SERVER_ID"
+        printf "您输入的服务器标识是 ${YELLOW}%s${NC}，是否确认？(1: 确认，2: 重新输入): " "$SERVER_ID"
         read confirm
         
         case $confirm in
