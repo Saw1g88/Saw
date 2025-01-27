@@ -56,16 +56,3 @@ else
     echo -e "\${RED}备份失败！请检查错误信息。\${NC}"
 fi
 EOF
-then
-    echo -e "${GREEN}备份脚本创建完成！${NC}"
-else
-    echo -e "${RED}错误：备份脚本创建失败！${NC}"
-    exit 1
-fi
-
-# 为备份脚本添加可执行权限
-chmod +x "$BACKUP_SCRIPT" && echo -e "${GREEN}已添加可执行权限：$BACKUP_SCRIPT${NC}" || {
-    echo -e "${RED}错误：无法添加可执行权限！${NC}"
-    exit 1
-}
-
