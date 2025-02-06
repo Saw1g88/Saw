@@ -1,3 +1,4 @@
+proxies:
   - name: "Reality"
     type: vless
     server: server
