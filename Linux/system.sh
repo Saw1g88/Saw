@@ -325,31 +325,39 @@ configure_timezone() {
 configure_locale() {
     log "${YELLOW}检查语言环境配置...${NC}"
     
-    # 检查是否已安装 locales
+    # 1. 安装 locales 包
     if ! dpkg -l | grep -q "^ii.*locales"; then
         log "${YELLOW}安装 locales 包...${NC}"
-        sudo apt install -y locales || handle_error "安装 locales 失败"
+        apt-get install -y locales || handle_error "安装 locales 失败"
     else
         log "${CYAN}locales 已安装，跳过安装步骤${NC}"
     fi
 
-    # 检查中文语言环境是否已配置
-    if ! grep -q "zh_CN.UTF-8 UTF-8" /etc/locale.gen; then
-        log "${YELLOW}添加简体中文支持...${NC}"
-        echo "zh_CN.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
-        echo "zh_TW.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
-        sudo locale-gen || handle_error "生成语言环境失败"
+    # 2. 检查并修改 locale.gen
+    if ! grep -q "^zh_CN.UTF-8 UTF-8" /etc/locale.gen; then
+        log "${YELLOW}添加中文语言支持...${NC}"
+        # 先备份原文件
+        cp /etc/locale.gen /etc/locale.gen.bak
+        # 添加中文支持
+        echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
+        echo "zh_TW.UTF-8 UTF-8" >> /etc/locale.gen
     else
-        log "${CYAN}中文语言环境已配置，跳过配置步骤${NC}"
+        log "${CYAN}中文语言环境已在配置文件中，跳过添加步骤${NC}"
     fi
 
-    # 检查当前默认语言
-    current_lang=$(locale | grep LANG= | cut -d= -f2)
-    if [ "$current_lang" != "zh_CN.UTF-8" ]; then
-        log "${YELLOW}设置默认语言为中文...${NC}"
-        sudo update-locale LANG=zh_CN.UTF-8 || handle_error "设置默认语言失败"
+    # 3. 生成语言文件
+    log "${YELLOW}生成语言文件...${NC}"
+    locale-gen zh_CN.UTF-8 || handle_error "生成中文语言环境失败"
+    locale-gen zh_TW.UTF-8 || handle_error "生成繁体中文语言环境失败"
+
+    # 4. 验证语言环境是否已生成
+    if locale -a | grep -q "zh_CN.utf8"; then
+        log "${CYAN}中文语言环境已成功生成${NC}"
+        # 5. 设置系统默认语言
+        update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8 || handle_error "设置默认语言失败"
+        log "${GREEN}语言环境配置完成${NC}"
     else
-        log "${CYAN}默认语言已是中文，跳过设置${NC}"
+        handle_error "中文语言环境生成失败"
     fi
 }
 
