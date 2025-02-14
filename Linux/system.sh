@@ -47,17 +47,21 @@ check_disk_space() {
 
 # 检测并安装所需的指令
 check_and_install() {
-    if ! command -v $1 &> /dev/null; then
-        log "${YELLOW}$1 未安装，正在安装...${NC}"
-        if [[ "$os" == "debian" || "$os" == "ubuntu" ]]; then
-            apt-get install -y $1 || handle_error "安装 $1 失败"
-        elif [[ "$os" == "centos" || "$os" == "rhel" ]]; then
-            yum install -y $1 || handle_error "安装 $1 失败"
+    local package_name=$1
+    if [[ "$os" == "debian" || "$os" == "ubuntu" ]]; then
+        if ! dpkg -l | grep -q "^ii.*$package_name "; then
+            log "${YELLOW}$package_name 未安装，正在安装...${NC}"
+            apt-get install -y $package_name || handle_error "安装 $package_name 失败"
         else
-            handle_error "不支持的操作系统，无法安装 $1" "exit"
+            log "${CYAN}$package_name 已安装，跳过安装。${NC}"
         fi
-    else
-        log "${CYAN}$1 已安装，跳过安装。${NC}"
+    elif [[ "$os" == "centos" || "$os" == "rhel" ]]; then
+        if ! rpm -q $package_name &> /dev/null; then
+            log "${YELLOW}$package_name 未安装，正在安装...${NC}"
+            yum install -y $package_name || handle_error "安装 $package_name 失败"
+        else
+            log "${CYAN}$package_name 已安装，跳过安装。${NC}"
+        fi
     fi
 }
 
@@ -317,6 +321,50 @@ configure_timezone() {
     fi
 }
 
+# 检查并配置语言环境
+configure_locale() {
+    log "${YELLOW}检查语言环境配置...${NC}"
+    
+    # 检查是否已安装 locales
+    if ! dpkg -l | grep -q "^ii.*locales"; then
+        log "${YELLOW}安装 locales 包...${NC}"
+        sudo apt install -y locales || handle_error "安装 locales 失败"
+    else
+        log "${CYAN}locales 已安装，跳过安装步骤${NC}"
+    fi
+
+    # 检查中文语言环境是否已配置
+    if ! grep -q "zh_CN.UTF-8 UTF-8" /etc/locale.gen; then
+        log "${YELLOW}添加简体中文支持...${NC}"
+        echo "zh_CN.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
+        echo "zh_TW.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
+        sudo locale-gen || handle_error "生成语言环境失败"
+    else
+        log "${CYAN}中文语言环境已配置，跳过配置步骤${NC}"
+    fi
+
+    # 检查当前默认语言
+    current_lang=$(locale | grep LANG= | cut -d= -f2)
+    if [ "$current_lang" != "zh_CN.UTF-8" ]; then
+        log "${YELLOW}设置默认语言为中文...${NC}"
+        sudo update-locale LANG=zh_CN.UTF-8 || handle_error "设置默认语言失败"
+    else
+        log "${CYAN}默认语言已是中文，跳过设置${NC}"
+    fi
+}
+
+# 检查并安装中文字体
+configure_fonts() {
+    log "${YELLOW}检查中文字体...${NC}"
+    
+    if ! dpkg -l | grep -q "^ii.*fonts-noto-cjk"; then
+        log "${YELLOW}安装中文字体...${NC}"
+        sudo apt install -y fonts-noto-cjk || handle_error "安装字体失败"
+    else
+        log "${CYAN}中文字体已安装，跳过安装步骤${NC}"
+    fi
+}
+
 # 主函数
 main() {
     log "${GREEN}开始系统初始化配置...${NC}"
@@ -329,6 +377,7 @@ main() {
     # 安装必要工具
     check_and_install jq
     check_and_install wget
+    check_and_install curl
     check_and_install ntp
     check_and_install unzip
     
@@ -338,6 +387,8 @@ main() {
     configure_dns
     configure_swap
     configure_timezone
+    configure_locale
+    configure_fonts
     
     log "${GREEN}所有配置完成！${NC}"
 }
