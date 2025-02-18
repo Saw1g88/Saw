@@ -190,7 +190,7 @@ payload:
   - DOMAIN-KEYWORD,xxshuyuan
   - DOMAIN-KEYWORD,ynuf.alipay.com
   - DOMAIN-KEYWORD,zjtoolbar
-  - AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
+#  - AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
 
   # > Hijacking
   - DOMAIN,geo2.adobe.com
