@@ -1,8 +1,0 @@
-proxies:
-  - name: Hysteria2  #节点名称
-    type: hysteria2
-    server: xx.xx.xx.xx  #服务器地址
-    port: 443  #端口号
-    up: 20 # 上行速度，默认为 Mbps
-    down: 100 # 下载速度，默认为 Mbps
-    password: xxxxx  #密码 
