@@ -372,7 +372,7 @@ DOMAIN-SUFFIX,zmzfile.com
 # > TeamViewer
 DOMAIN-SUFFIX,teamviewer.com
 
-# > Public Direct CDN 公共直连
+# > Public Direct CDN
 DOMAIN-SUFFIX,baomitu.com
 DOMAIN-SUFFIX,bootcss.com
 DOMAIN-SUFFIX,jiasule.com
