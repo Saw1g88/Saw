@@ -1043,7 +1043,6 @@ DOMAIN,cdn2.inner-active.mobi
 DOMAIN,cherrytv.media
 DOMAIN,i.l.inmobicdn.net
 DOMAIN,itunes.com
-DOMAIN,linux.do
 DOMAIN,nezha.wiki
 DOMAIN,railway.app
 DOMAIN,supply.inmobicdn.net
@@ -1078,6 +1077,7 @@ DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,ipleak.net
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,jsdelivr.net
+DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,mixpanel.com
 DOMAIN-SUFFIX,nitelusa.net
 DOMAIN-SUFFIX,onelink.me
