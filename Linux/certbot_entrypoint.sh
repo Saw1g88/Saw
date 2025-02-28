@@ -1,13 +1,37 @@
-#!/bin/sh
+#!/bin/bash
 
+# 定义目标目录
+TARGET_DIR="/opt/docker/nginx/certbot"
+SCRIPT_NAME="certbot_entrypoint.sh"
+SCRIPT_PATH="$TARGET_DIR/$SCRIPT_NAME"
+
+# 创建目标目录（如果不存在）
+if [ ! -d "$TARGET_DIR" ]; then
+  echo "创建目录: $TARGET_DIR"
+  mkdir -p "$TARGET_DIR"
+fi
+
+# 检查脚本是否已存在
+if [ -f "$SCRIPT_PATH" ]; then
+  echo "检测到脚本已存在: $SCRIPT_PATH"
+  echo "是否覆盖现有脚本? (y/n)"
+  read -r response
+  if [[ ! "$response" =~ ^[Yy]$ ]]; then
+    echo "安装已取消。"
+    exit 0
+  fi
+  echo "将覆盖现有脚本。"
+fi
+
+# 创建证书管理脚本
+cat > "$SCRIPT_PATH" << 'EOF'
+#!/bin/sh
 # 安装 docker-cli
 apk add --no-cache docker-cli
-
 # 定义证书路径
 CERT_DIR="/etc/letsencrypt/live/ssl"
 FULLCHAIN="$CERT_DIR/fullchain.pem"
 PRIVKEY="$CERT_DIR/privkey.pem"
-
 # 从参数获取域名（例如 "160706.xyz" -> "160706.xyz *.160706.xyz"）
 if [ $# -eq 0 ]; then
   echo "$(date): 未提供域名参数，默认使用 160603.xyz 和 20160706.xyz" >> /var/log/letsencrypt/certbot.log
@@ -23,7 +47,6 @@ else
   # 去除首尾多余空格
   EXPECTED_DOMAINS=$(echo "$EXPECTED_DOMAINS" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
 fi
-
 # 函数：申请新证书（备份旧证书）
 request_new_cert() {
   echo "$(date): 证书不存在或域名不匹配，尝试申请新证书..." >> /var/log/letsencrypt/certbot.log
@@ -48,7 +71,6 @@ request_new_cert() {
     echo "$(date): Nginx 已重载以应用新证书" >> /var/log/letsencrypt/certbot.log
   fi
 }
-
 # 函数：检查证书是否包含所有预期域名
 check_cert_domains() {
   if [ -f "$FULLCHAIN" ]; then
@@ -64,7 +86,6 @@ check_cert_domains() {
   fi
   return 1
 }
-
 # 函数：检查证书是否即将过期（剩余时间少于30天）
 check_cert_expiry() {
   if [ -f "$FULLCHAIN" ]; then
@@ -76,14 +97,12 @@ check_cert_expiry() {
     fi
   fi
 }
-
 # 初始检查
 if [ ! -f "$FULLCHAIN" ] || [ ! -f "$PRIVKEY" ] || ! check_cert_domains; then
   request_new_cert
 else
   check_cert_expiry
 fi
-
 # 设置定时续签
 trap exit TERM
 while :; do 
@@ -96,3 +115,18 @@ while :; do
   echo "$(date): 检查和续签尝试完成" >> /var/log/letsencrypt/renew.log
   sleep 12h & wait ${!}
 done
+EOF
+
+# 添加执行权限
+chmod +x "$SCRIPT_PATH"
+
+# 确保日志目录存在
+mkdir -p /var/log/letsencrypt
+
+echo "脚本已成功安装到: $SCRIPT_PATH"
+echo ""
+echo "使用方法："
+echo "1. 使用默认域名: $SCRIPT_PATH"
+echo "2. 指定自定义域名: $SCRIPT_PATH domain1.com domain2.org domain3.net"
+echo ""
+echo "脚本将自动为每个域名及其通配符版本申请和管理SSL证书。"
