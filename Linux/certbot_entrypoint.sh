@@ -1,30 +1,3 @@
-#!/bin/bash
-
-# 定义目标目录
-TARGET_DIR="/opt/docker/nginx/certbot"
-SCRIPT_NAME="certbot_entrypoint.sh"
-SCRIPT_PATH="$TARGET_DIR/$SCRIPT_NAME"
-
-# 创建目标目录（如果不存在）
-if [ ! -d "$TARGET_DIR" ]; then
-  echo "创建目录: $TARGET_DIR"
-  mkdir -p "$TARGET_DIR"
-fi
-
-# 检查脚本是否已存在
-if [ -f "$SCRIPT_PATH" ]; then
-  echo "检测到脚本已存在: $SCRIPT_PATH"
-  echo "是否覆盖现有脚本? (y/n)"
-  read -r response
-  if [[ ! "$response" =~ ^[Yy]$ ]]; then
-    echo "安装已取消。"
-    exit 0
-  fi
-  echo "将覆盖现有脚本。"
-fi
-
-# 创建证书管理脚本
-cat > "$SCRIPT_PATH" << 'EOF'
 #!/bin/sh
 echo "脚本开始执行..."
 apk add --no-cache docker-cli openssl
@@ -33,7 +6,8 @@ echo "docker-cli 和 openssl 安装完成..."
 CERT_DIR="/etc/letsencrypt/live/ssl"
 FULLCHAIN="$CERT_DIR/fullchain.pem"
 PRIVKEY="$CERT_DIR/privkey.pem"
-echo "证书路径：FULLCHAIN=$FULLCHAIN, PRIVKEY=$PRIVKEY"
+DHPARAMS="/etc/letsencrypt/ssl-dhparams.pem"
+echo "证书路径：FULLCHAIN=$FULLCHAIN, PRIVKEY=$PRIVKEY, DHPARAMS=$DHPARAMS"
 
 if [ $# -eq 0 ]; then
   echo "$(date): 未提供域名参数，默认使用 160603.xyz 和 20160706.xyz" | tee -a /var/log/letsencrypt/certbot.log
@@ -80,6 +54,7 @@ request_new_cert() {
   elif [ $? -ne 0 ]; then
     echo "$(date): 证书申请失败" | tee -a /var/log/letsencrypt/certbot.log
   fi
+  fix_symlinks
   if [ -f "$FULLCHAIN" ]; then
     docker exec nginx nginx -s reload
     echo "$(date): Nginx 已重载以应用新证书" | tee -a /var/log/letsencrypt/certbot.log
@@ -127,27 +102,47 @@ check_cert_expiry() {
 }
 
 fix_symlinks() {
-  if [ -f "$FULLCHAIN" ]; then
-    echo "$(date): 修复证书符号链接..." | tee -a /var/log/letsencrypt/certbot.log
-    cd "$CERT_DIR"
-    ARCHIVE_DIR="/etc/letsencrypt/archive/ssl"
-    if [ -d "$ARCHIVE_DIR" ]; then
-      LATEST_CERT=$(ls -t "$ARCHIVE_DIR/cert"*.pem | head -n1)
-      LATEST_CHAIN=$(ls -t "$ARCHIVE_DIR/chain"*.pem | head -n1)
-      LATEST_FULLCHAIN=$(ls -t "$ARCHIVE_DIR/fullchain"*.pem | head -n1)
-      LATEST_PRIVKEY=$(ls -t "$ARCHIVE_DIR/privkey"*.pem | head -n1)
-      if [ -f "$LATEST_CERT" ] && [ -f "$LATEST_CHAIN" ]; then
-        ln -sf "$LATEST_CERT" cert.pem
-        ln -sf "$LATEST_CHAIN" chain.pem
-        ln -sf "$LATEST_FULLCHAIN" fullchain.pem
-        ln -sf "$LATEST_PRIVKEY" privkey.pem
-        echo "$(date): 符号链接修复完成" | tee -a /var/log/letsencrypt/certbot.log
-      else
-        echo "$(date): 存档目录中缺少必要证书文件" | tee -a /var/log/letsencrypt/certbot.log
-      fi
+  echo "$(date): 修复证书符号链接..." | tee -a /var/log/letsencrypt/certbot.log
+  mkdir -p "$CERT_DIR"  # 确保目录存在
+  cd "$CERT_DIR"
+  # 动态检测最新的存档目录
+  ARCHIVE_BASE="/etc/letsencrypt/archive"
+  ARCHIVE_DIR=$(ls -d "$ARCHIVE_BASE"/ssl* 2>/dev/null | sort -r | head -n1)
+  if [ -n "$ARCHIVE_DIR" ] && [ -d "$ARCHIVE_DIR" ]; then
+    LATEST_CERT=$(ls -t "$ARCHIVE_DIR/cert"*.pem | head -n1)
+    LATEST_CHAIN=$(ls -t "$ARCHIVE_DIR/chain"*.pem | head -n1)
+    LATEST_FULLCHAIN=$(ls -t "$ARCHIVE_DIR/fullchain"*.pem | head -n1)
+    LATEST_PRIVKEY=$(ls -t "$ARCHIVE_DIR/privkey"*.pem | head -n1)
+    if [ -f "$LATEST_CERT" ] && [ -f "$LATEST_CHAIN" ]; then
+      ln -sf "../../archive/$(basename "$ARCHIVE_DIR")/$(basename "$LATEST_CERT")" cert.pem
+      ln -sf "../../archive/$(basename "$ARCHIVE_DIR")/$(basename "$LATEST_CHAIN")" chain.pem
+      ln -sf "../../archive/$(basename "$ARCHIVE_DIR")/$(basename "$LATEST_FULLCHAIN")" fullchain.pem
+      ln -sf "../../archive/$(basename "$ARCHIVE_DIR")/$(basename "$LATEST_PRIVKEY")" privkey.pem
+      echo "$(date): 符号链接修复完成，存档目录：$ARCHIVE_DIR" | tee -a /var/log/letsencrypt/certbot.log
     else
-      echo "$(date): 存档目录 $ARCHIVE_DIR 不存在" | tee -a /var/log/letsencrypt/certbot.log
+      echo "$(date): 存档目录中缺少必要证书文件" | tee -a /var/log/letsencrypt/certbot.log
     fi
+  else
+    echo "$(date): 未找到存档目录" | tee -a /var/log/letsencrypt/certbot.log
+  fi
+}
+
+generate_dhparams() {
+  echo "$(date): 检查 DH 参数文件..." | tee -a /var/log/letsencrypt/certbot.log
+  if [ -f "$FULLCHAIN" ] && [ ! -f "$DHPARAMS" ]; then
+    echo "$(date): 证书存在但 DH 参数文件不存在，生成 DH 参数文件..." | tee -a /var/log/letsencrypt/certbot.log
+    openssl dhparam -out "$DHPARAMS" 2048 2>&1 | tee -a /var/log/letsencrypt/certbot.log
+    if [ $? -eq 0 ]; then
+      echo "$(date): DH 参数文件已生成：$DHPARAMS" | tee -a /var/log/letsencrypt/certbot.log
+      docker exec nginx nginx -s reload
+      echo "$(date): Nginx 已重载以应用 DH 参数" | tee -a /var/log/letsencrypt/certbot.log
+    else
+      echo "$(date): DH 参数文件生成失败" | tee -a /var/log/letsencrypt/certbot.log
+    fi
+  elif [ -f "$FULLCHAIN" ] && [ -f "$DHPARAMS" ]; then
+    echo "$(date): 证书和 DH 参数文件均已存在，跳过生成" | tee -a /var/log/letsencrypt/certbot.log
+  else
+    echo "$(date): 证书不存在，跳过 DH 参数生成" | tee -a /var/log/letsencrypt/certbot.log
   fi
 }
 
@@ -160,6 +155,7 @@ else
   echo "$(date): 条件不满足，调用 check_cert_expiry" | tee -a /var/log/letsencrypt/certbot.log
   check_cert_expiry
 fi
+generate_dhparams
 
 echo "$(date): 初始检查完成，进入续签循环..." | tee -a /var/log/letsencrypt/certbot.log
 trap exit TERM
@@ -179,18 +175,3 @@ while :; do
   echo "$(date): 检查和续签尝试完成" | tee -a /var/log/letsencrypt/renew.log
   sleep 12h & wait ${!}
 done
-EOF
-
-# 添加执行权限
-chmod +x "$SCRIPT_PATH"
-
-# 确保日志目录存在
-mkdir -p /var/log/letsencrypt
-
-echo "脚本已成功安装到: $SCRIPT_PATH"
-echo ""
-echo "使用方法："
-echo "1. 使用默认域名: $SCRIPT_PATH"
-echo "2. 指定自定义域名: $SCRIPT_PATH domain1.com domain2.org domain3.net"
-echo ""
-echo "脚本将自动为每个域名及其通配符版本申请和管理SSL证书。"
