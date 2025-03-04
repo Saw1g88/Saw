@@ -1063,6 +1063,7 @@ DOMAIN-SUFFIX,cellrebel.com
 DOMAIN-SUFFIX,clouvider.net
 DOMAIN-SUFFIX,criteo.com
 DOMAIN-SUFFIX,ctvcrnt.com
+DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,fileball.app
 DOMAIN-SUFFIX,flaticon.com
 DOMAIN-SUFFIX,freepik.com
