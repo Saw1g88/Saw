@@ -68,7 +68,7 @@ confirm_chat_id
 BACKUP_SCRIPT="/root/docker_backup.sh"
 
 # 创建备份脚本
-if cat > "$BACKUP_SCRIPT" << EOF
+if cat > "$BACKUP_SCRIPT" << 'EOF'
 #!/bin/bash
 # 定义颜色变量
 GREEN='\033[0;36m'
