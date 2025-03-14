@@ -67,8 +67,14 @@ confirm_chat_id
 # 备份脚本路径
 BACKUP_SCRIPT="/root/docker_backup.sh"
 
+# 检查目标目录是否可写
+if [ ! -w "$(dirname "$BACKUP_SCRIPT")" ]; then
+    echo -e "${RED}错误：无法写入目录 $(dirname "$BACKUP_SCRIPT")，请检查权限或以 root 身份运行脚本。${NC}"
+    exit 1
+fi
+
 # 创建备份脚本
-if cat > "$BACKUP_SCRIPT" << 'EOF'
+if ! cat > "$BACKUP_SCRIPT" << EOF
 #!/bin/bash
 # 定义颜色变量
 GREEN='\033[0;36m'
@@ -83,37 +89,45 @@ BACKUP_NAME="${BACKUP_NAME}"
 BOT_TOKEN="${BOT_TOKEN}"
 CHAT_ID="${CHAT_ID}"
 
+# 获取中文格式时间
+current_time=\$(date "+%Y年%m月%d日 %H:%M:%S")
+
 # 在容器内执行备份操作
-docker exec rclone /bin/sh -c "\
-    cd / && \
-    tar czvf /tmp/backup_\${timestamp}.tar.gz \${backup_src} && \
-    rclone copy /tmp/backup_\${timestamp}.tar.gz \${backup_dest} && \
-    rm /tmp/backup_\${timestamp}.tar.gz"
+docker exec rclone /bin/sh -c "
+    cd / &&
+    tar czf /tmp/backup_\${timestamp}.tar.gz \${backup_src} &&
+    rclone copy /tmp/backup_\${timestamp}.tar.gz \${backup_dest}/ &&
+    rm /tmp/backup_\${timestamp}.tar.gz
+"
 
 # 检查执行结果并发送 Telegram 通知
 if [ \$? -eq 0 ]; then
     echo -e "\${GREEN}备份成功！备份文件：backup_\${timestamp}.tar.gz\${NC}"
-    MESSAGE="\${BACKUP_NAME} 备份成功！备份文件：backup_\${timestamp}.tar.gz 时间: \$(date)"
+    MESSAGE="✅ *\${BACKUP_NAME}* 备份成功！\n📂 备份文件：\`backup_\${timestamp}.tar.gz\`\n🕒 时间：\${current_time}"
     curl -s -X POST "https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage" \\
         -d chat_id="\${CHAT_ID}" \\
+        -d parse_mode="MarkdownV2" \\
         -d text="\${MESSAGE}"
 else
     echo -e "\${RED}备份失败！请检查错误信息。\${NC}"
-    MESSAGE="\${BACKUP_NAME} 备份失败！请检查错误信息。时间: \$(date)"
+    MESSAGE="❌ *\${BACKUP_NAME}* 备份失败！请检查错误信息。\n🕒 时间：\${current_time}"
     curl -s -X POST "https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage" \\
         -d chat_id="\${CHAT_ID}" \\
+        -d parse_mode="MarkdownV2" \\
         -d text="\${MESSAGE}"
 fi
 EOF
 then
-    echo -e "${GREEN}备份脚本创建完成！${NC}"
-else
-    echo -e "${RED}错误：备份脚本创建失败！${NC}"
+    echo -e "${RED}错误：备份脚本创建失败，请检查磁盘空间或权限！${NC}"
     exit 1
 fi
 
+echo -e "${GREEN}备份脚本创建完成！${NC}"
+
 # 为备份脚本添加可执行权限
-chmod +x "$BACKUP_SCRIPT" && echo -e "${GREEN}已添加可执行权限：$BACKUP_SCRIPT${NC}" || {
-    echo -e "${RED}错误：无法添加可执行权限！${NC}"
+if chmod +x "$BACKUP_SCRIPT"; then
+    echo -e "${GREEN}已添加可执行权限：$BACKUP_SCRIPT${NC}"
+else
+    echo -e "${RED}错误：无法添加可执行权限，请检查文件 $BACKUP_SCRIPT 是否存在！${NC}"
     exit 1
-}
+fi
