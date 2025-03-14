@@ -94,10 +94,10 @@ current_time=\$(date "+%Y年%m月%d日 %H:%M:%S")
 
 # 在容器内执行备份操作
 docker exec rclone /bin/sh -c "
-    cd / &&
-    tar czf /tmp/backup_\${timestamp}.tar.gz \${backup_src} &&
-    rclone copy /tmp/backup_\${timestamp}.tar.gz \${backup_dest}/ &&
-    rm /tmp/backup_\${timestamp}.tar.gz
+    cd /opt/docker &&
+    tar czf /tmp/backup_${timestamp}.tar.gz --exclude=rclone/tmp/backup_*.tar.gz . &&
+    rclone copy /tmp/backup_${timestamp}.tar.gz ${backup_dest}/ &&
+    rm /tmp/backup_${timestamp}.tar.gz
 "
 
 # 检查执行结果并发送 Telegram 通知
