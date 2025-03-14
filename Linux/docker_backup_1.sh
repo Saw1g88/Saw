@@ -101,20 +101,23 @@ docker exec rclone /bin/sh -c "
 "
 
 # 检查执行结果并发送 Telegram 通知
-if [ \$? -eq 0 ]; then
-    echo -e "\${GREEN}备份成功！备份文件：backup_\${timestamp}.tar.gz\${NC}"
-    MESSAGE="✅ *\${BACKUP_NAME}* 备份成功！\n📂 备份文件：\`backup_\${timestamp}.tar.gz\`\n🕒 时间：\${current_time}"
-    curl -s -X POST "https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage" \\
-        -d chat_id="\${CHAT_ID}" \\
-        -d parse_mode="MarkdownV2" \\
-        -d text="\${MESSAGE}"
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}备份成功！备份文件：backup_${timestamp}.tar.gz${NC}"
+    MESSAGE="✅ *${BACKUP_NAME}* 备份成功！
+📂 备份文件：\`backup_${timestamp}.tar.gz\`
+🕒 时间：${current_time}"
+    curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+        -d chat_id="${CHAT_ID}" \
+        -d parse_mode="Markdown" \
+        -d text="${MESSAGE}"
 else
-    echo -e "\${RED}备份失败！请检查错误信息。\${NC}"
-    MESSAGE="❌ *\${BACKUP_NAME}* 备份失败！请检查错误信息。\n🕒 时间：\${current_time}"
-    curl -s -X POST "https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage" \\
-        -d chat_id="\${CHAT_ID}" \\
-        -d parse_mode="MarkdownV2" \\
-        -d text="\${MESSAGE}"
+    echo -e "${RED}备份失败！请检查错误信息。${NC}"
+    MESSAGE="❌ *${BACKUP_NAME}* 备份失败！请检查错误信息。
+🕒 时间：${current_time}"
+    curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+        -d chat_id="${CHAT_ID}" \
+        -d parse_mode="Markdown" \
+        -d text="${MESSAGE}"
 fi
 EOF
 then
