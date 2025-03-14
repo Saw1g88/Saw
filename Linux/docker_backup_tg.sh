@@ -5,7 +5,7 @@ GREEN='\033[0;36m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-# 备份名称确认函数（兼作服务器标识）
+# 备份名称确认函数
 confirm_backup_name() {
     while true; do
         read -p "请输入备份实例名称(例如: oracle, aws, vultr): " BACKUP_NAME
@@ -74,7 +74,7 @@ if [ ! -w "$(dirname "$BACKUP_SCRIPT")" ]; then
 fi
 
 # 创建备份脚本
-if ! cat > "$BACKUP_SCRIPT" << EOF
+cat > "$BACKUP_SCRIPT" << EOF
 #!/bin/bash
 # 定义颜色变量
 GREEN='\033[0;36m'
@@ -83,11 +83,11 @@ NC='\033[0m'
 
 # 定义变量
 backup_src="/opt/docker"
-backup_dest="onedrive:vps/${BACKUP_NAME}/docker"
+backup_dest="onedrive:vps/$BACKUP_NAME/docker"
 timestamp=\$(date +%Y%m%d%H%M%S)
-BACKUP_NAME="${BACKUP_NAME}"
-BOT_TOKEN="${BOT_TOKEN}"
-CHAT_ID="${CHAT_ID}"
+BACKUP_NAME="$BACKUP_NAME"
+BOT_TOKEN="$BOT_TOKEN"
+CHAT_ID="$CHAT_ID"
 
 # 获取中文格式时间
 current_time=\$(date "+%Y年%m月%d日 %H:%M:%S")
@@ -101,23 +101,22 @@ docker exec rclone /bin/sh -c "
 "
 
 # 检查执行结果并发送 Telegram 通知
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}备份成功！备份文件：backup_${timestamp}.tar.gz${NC}"
-    # 使用 printf 确保换行和变量替换正确
-    printf -v MESSAGE "✅ %s 备份成功！\n📂 备份文件：backup_%s.tar.gz\n🕒 时间：%s" "$BACKUP_NAME" "$timestamp" "$current_time"
-    curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
-        -d chat_id="${CHAT_ID}" \
-        -d text="${MESSAGE}"
+if [ \$? -eq 0 ]; then
+    echo -e "\${GREEN}备份成功！备份文件：backup_\${timestamp}.tar.gz\${NC}"
+    printf -v MESSAGE "✅ %s 备份成功！\n📂 备份文件：backup_%s.tar.gz\n🕒 时间：%s" "\$BACKUP_NAME" "\$timestamp" "\$current_time"
+    curl -s -X POST "https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage" \
+        -d chat_id="\$CHAT_ID" \
+        -d text="\$MESSAGE"
 else
-    echo -e "${RED}备份失败！请检查错误信息。${NC}"
-    # 使用 printf 处理失败消息
-    printf -v MESSAGE "❌ %s 备份失败！请检查错误信息。\n🕒 时间：%s" "$BACKUP_NAME" "$current_time"
-    curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
-        -d chat_id="${CHAT_ID}" \
-        -d text="${MESSAGE}"
+    echo -e "\${RED}备份失败！请检查错误信息。\${NC}"
+    printf -v MESSAGE "❌ %s 备份失败！请检查错误信息。\n🕒 时间：%s" "\$BACKUP_NAME" "\$current_time"
+    curl -s -X POST "https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage" \
+        -d chat_id="\$CHAT_ID" \
+        -d text="\$MESSAGE"
 fi
 EOF
-then
+
+if [ $? -ne 0 ]; then
     echo -e "${RED}错误：备份脚本创建失败，请检查磁盘空间或权限！${NC}"
     exit 1
 fi
