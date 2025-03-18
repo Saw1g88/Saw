@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,fluffychat.im
 DOMAIN-SUFFIX,ticktick.com
 DOMAIN-SUFFIX,rsshub.app
+DOMAIN-SUFFIX,featureassets.org
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
