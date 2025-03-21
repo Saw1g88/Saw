@@ -43,7 +43,7 @@ DOMAIN-SUFFIX,rocksdb.org
 DOMAIN-SUFFIX,threads.net
 DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
-DOMAIN-KEYWORD,.facebook.
+DOMAIN-KEYWORD,facebook
 
 # > X
 DOMAIN-SUFFIX,pscp.tv
