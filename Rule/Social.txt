@@ -30,6 +30,10 @@ DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-KEYWORD,telegram
 
+# > Matrix
+DOMAIN,matrix.160603.xyz
+DOMAIN,matrix.org
+
 # > Meta
 DOMAIN-SUFFIX,accountkit.com
 DOMAIN-SUFFIX,cdninstagram.com
