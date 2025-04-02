@@ -3,7 +3,6 @@
 # > Others
 DOMAIN-SUFFIX,nodeseek.com
 DOMAIN-SUFFIX,v2ex.com
-DOMAIN-SUFFIX,fluffychat.im
 DOMAIN-SUFFIX,ticktick.com
 DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,featureassets.org
