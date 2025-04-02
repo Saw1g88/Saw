@@ -1025,6 +1025,8 @@ DOMAIN-SUFFIX,singlelogin.re
 DOMAIN-SUFFIX,singlelogin.rs
 DOMAIN-SUFFIX,z-lib.gs
 DOMAIN-SUFFIX,z-library.rs
+DOMAIN-KEYWORD,z-lib
+DOMAIN-KEYWORD,z-library
 
 # > Storage
 DOMAIN,aj1987.online
