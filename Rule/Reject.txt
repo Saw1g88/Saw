@@ -3,6 +3,7 @@
 DOMAIN,118.89.204.198
 DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
+DOMAIN,app-analytics-services.com
 DOMAIN,appcloud2.in.zhihu.com
 DOMAIN,duclick.baidu.com
 DOMAIN,hm.baidu.com
