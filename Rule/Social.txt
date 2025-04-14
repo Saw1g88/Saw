@@ -11,14 +11,6 @@ DOMAIN-SUFFIX,naver.jp
 DOMAIN-SUFFIX,nhncorp.jp
 
 # > Talkatone
-DOMAIN-SUFFIX,agkn.com
-DOMAIN-SUFFIX,cohere.com
-DOMAIN-SUFFIX,crashlytics.com
-DOMAIN-SUFFIX,inmobi.com
-DOMAIN-SUFFIX,kochava.com
-DOMAIN-SUFFIX,mobilefuse.com
-DOMAIN-SUFFIX,talkatone.com
-DOMAIN-SUFFIX,tktn.at
 DOMAIN-SUFFIX,tktn.be
 
 # > Telegram
@@ -91,12 +83,6 @@ IP-CIDR,203.104.103.0/24,no-resolve
 IP-CIDR,203.104.128.0/19,no-resolve
 IP-CIDR,203.174.66.64/26,no-resolve
 IP-CIDR,203.174.77.0/24,no-resolve
-
-# > Talkatone
-IP-CIDR,50.117.27.0/24,no-resolve
-IP-CIDR,63.251.124.0/24,no-resolve
-IP-CIDR,69.46.75.0/24,no-resolve
-IP-CIDR,205.164.56.0/24,no-resolve
 
 # > Telegram
 IP-ASN,211157,no-resolve
