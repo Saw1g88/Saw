@@ -27,6 +27,9 @@ DOMAIN,dns.jd.com
 # > Kuaishou
 DOMAIN,kuaishou.httpdns.pro
 
+# > Keep
+DOMAIN,httpdns.calorietech.com
+
 # > Meituan
 DOMAIN,httpdns.meituan.com
 
@@ -39,6 +42,9 @@ DOMAIN,lofter.httpdns.c.163.com
 
 # > Oppo
 DOMAIN,httpdns.push.oppomobile.com
+
+# > Tencent Cloud
+DOMAIN-SUFFIX,httpdns.pro
 
 # > Volcengine
 DOMAIN,httpdns.volcengineapi.com
