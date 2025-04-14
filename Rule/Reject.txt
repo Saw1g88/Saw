@@ -8183,6 +8183,18 @@ DOMAIN-SUFFIX,zzy.mipujia.com
 DOMAIN-SUFFIX,zzz7.52896368.com
 DOMAIN-SUFFIX,zzzzz4.52896368.com
 
+# > Talkatone
+DOMAIN-SUFFIX,ads.inmobi.com
+DOMAIN-SUFFIX,adsappier.com
+DOMAIN-SUFFIX,amazon-adsystem.com
+DOMAIN-SUFFIX,appier.net
+DOMAIN-SUFFIX,appiersig.com
+DOMAIN-SUFFIX,criteo.com
+DOMAIN-SUFFIX,googleads.g.doubleclick.net
+DOMAIN-SUFFIX,pubmatic.com
+DOMAIN-SUFFIX,smaato.net
+DOMAIN-SUFFIX,tappx.com
+
 ## IP
 
 IP-CIDR,10.72.25.0/24,no-resolve
@@ -8286,18 +8298,6 @@ URL-REGEX,https?:\/\/sax\w?\.sina\.cn
 URL-REGEX,https?:\/\/sax\w?\.sina\.com\.cn
 URL-REGEX,https?:\/\/server-\w+\.imrworldwide\.com
 URL-REGEX,https?:\/\/www\.bldimg\.com\/(background|splash)\/\.+\.png
-
-# > Talkatone
-DOMAIN-SUFFIX,ads.inmobi.com
-DOMAIN-SUFFIX,adsappier.com
-DOMAIN-SUFFIX,amazon-adsystem.com
-DOMAIN-SUFFIX,appier.net
-DOMAIN-SUFFIX,appiersig.com
-DOMAIN-SUFFIX,criteo.com
-DOMAIN-SUFFIX,googleads.g.doubleclick.net
-DOMAIN-SUFFIX,pubmatic.com
-DOMAIN-SUFFIX,smaato.net
-DOMAIN-SUFFIX,tappx.com
 
 ## UA
 
