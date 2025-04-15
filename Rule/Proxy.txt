@@ -7,6 +7,7 @@ DOMAIN-SUFFIX,ticktick.com
 DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,bitwarden.com
+DOMAIN-SUFFIX,camscanner.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
