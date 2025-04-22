@@ -1,0 +1,216 @@
+# > HTTP 端口
+port: 7890
+# > Socks5 代理端口
+socks-port: 7891
+# > HTTP / Sock5 混合端口
+mixed-port: 7892
+# > 透明代理转发端口
+redir-port: 7893
+tproxy-port: 7894
+# > 允许局域网连接
+allow-lan: false
+bind-address: "*"
+# > 进程运行模式（Linux 或 Unix）
+find-process-mode: strict
+# > 运行模式
+mode: rule
+# > 日志等级
+log-level: error
+# > IPv6 总开关
+ipv6: false
+# > 减少移动设备耗电
+keep-alive-interval: 15
+keep-alive-idle: 15
+disable-keep-alive: false
+# > 统一延迟
+unified-delay: true
+# > TCP 并发
+tcp-concurrent: true
+# > 全局 TLS 指纹
+global-client-fingerprint: chrome
+# > GEOIP 数据模式
+geodata-mode: true
+# > GEO 文件加载模式
+geodata-loader: memconservative
+# > 自动更新 GEO
+geo-auto-update: true
+geo-update-interval: 24
+# > 自定 GEO 下载地址
+geox-url:
+  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
+  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
+  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
+# > 缓存
+profile:
+  store-selected: true
+  store-fake-ip: true
+# > NTP
+ntp:
+  enable: false
+  write-to-system: false
+  server: time.apple.com
+  port: 123
+  interval: 30
+# > 域名嗅探
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - +.push.apple.com      
+# > TUN 模式
+tun:
+  enable: true
+  stack: system
+  device: Mihomo
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  strict-route: true
+  mtu: 9000
+# > DNS 配置
+dns:
+  enable: true
+  ipv6: false
+  prefer-h3: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114   
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - "+.lan"
+    - "+.local"
+    - time.*.com
+    - ntp.*.com   
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  fallback:
+    - 1.1.1.1
+    - 8.8.8.8    
+  nameserver-policy:
+    geosite:cn,private:
+    - 223.5.5.5
+    - 114.114.114.114
+    geosite:geolocation-!cn:
+    - 1.1.1.1
+    - 8.8.8.8   
+
+proxies:
+  - {"name":"Direct","type":"direct","udp":true}  
+      
+rule-providers: 
+   Reject:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Reject.txt
+    path: ./profiles/ruleset/Reject.txt
+
+   HTTPDNS:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/HTTPDNS.txt
+    path: ./profiles/ruleset/HTTPDNS.txt    
+
+   Special:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Special.txt
+    path: ./profiles/ruleset/Special.txt
+
+   AI:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/AI.txt
+    path: ./profiles/ruleset/AI.txt
+
+   Apple:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Apple.txt
+    path: ./profiles/ruleset/Apple.txt
+
+   Social:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Social.txt
+    path: ./profiles/ruleset/Social.txt
+
+   Stream:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Stream.txt
+    path: ./profiles/ruleset/Stream.txt   
+
+   Proxy:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Proxy.txt
+    path: ./profiles/ruleset/Proxy.txt
+
+   Oracle:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Oracle.txt
+    path: ./profiles/ruleset/Oracle.txt
+
+   PayPal:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/PayPal.txt
+    path: ./profiles/ruleset/PayPal.txt
+
+   Direct:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Direct.txt
+    path: ./profiles/ruleset/Direct.txt 
+       
+   LAN:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/LAN.txt
+    path: ./profiles/ruleset/LAN.txt
