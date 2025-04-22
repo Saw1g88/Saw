@@ -85,7 +85,7 @@ tun:
 dns:
   enable: true
   ipv6: false
-  prefer-h3: false
+  prefer-h3: true
   use-hosts: true
   use-system-hosts: true
   respect-rules: false
