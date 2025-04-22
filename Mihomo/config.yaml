@@ -118,22 +118,22 @@ dns:
 proxies:
   - {"name":"Direct","type":"direct","udp":true}  
       
-rule-providers: 
-   Reject:
-    type: http
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Reject.txt
-    path: ./profiles/ruleset/Reject.txt
-
+rule-providers:
    HTTPDNS:
     type: http
     behavior: classical
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/HTTPDNS.txt
-    path: ./profiles/ruleset/HTTPDNS.txt    
+    path: ./profiles/ruleset/HTTPDNS.txt
+
+   Reject:
+    type: http
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Reject.txt
+    path: ./profiles/ruleset/Reject.txt    
 
    Special:
     type: http
