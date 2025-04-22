@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,camscanner.com
+DOMAIN-SUFFIX,intsig.net
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
