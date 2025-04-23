@@ -17,7 +17,7 @@ mode: rule
 # > 日志等级
 log-level: error
 # > IPv6 总开关
-ipv6: false
+ipv6: true
 # > 减少移动设备耗电
 keep-alive-interval: 15
 keep-alive-idle: 15
@@ -84,7 +84,7 @@ tun:
 # > DNS 配置
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   prefer-h3: true
   use-hosts: true
   use-system-hosts: true
