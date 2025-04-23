@@ -113,14 +113,7 @@ dns:
     - https://223.6.6.6/dns-query
     geosite:geolocation-!cn:
     - https://8.8.8.8/dns-query
-    - https://9.9.9.9/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - geolocation-!cn
-    ipcidr:
-      - 240.0.0.0/4    
+    - https://9.9.9.9/dns-query   
 
 proxies:
   - {"name":"Direct","type":"direct","udp":true}  
