@@ -89,7 +89,7 @@ dns:
   use-hosts: true
   use-system-hosts: true
   respect-rules: false
-  listen: 0.0.0.0:1053
+  listen: :53
   default-nameserver:
     - 223.5.5.5
     - 114.114.114.114   
