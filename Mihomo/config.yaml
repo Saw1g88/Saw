@@ -21,7 +21,7 @@ ipv6: true
 # > 减少移动设备耗电
 keep-alive-interval: 15
 keep-alive-idle: 15
-disable-keep-alive: false
+disable-keep-alive: true
 # > 统一延迟
 unified-delay: true
 # > TCP 并发
