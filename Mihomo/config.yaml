@@ -110,7 +110,12 @@ dns:
     - https://223.6.6.6/dns-query
     geosite:geolocation-!cn:
     - https://8.8.8.8/dns-query
-    - https://9.9.9.9/dns-query   
+    - https://9.9.9.9/dns-query 
+
+# > MetaCubeXD（面板）
+external-controller: 127.0.0.1:9090
+external-ui: ui
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/tags/v1.186.1.zip
 
 proxies:
   - {"name":"Direct","type":"direct","udp":true}  
