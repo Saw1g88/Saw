@@ -44,7 +44,7 @@ geox-url:
 # > MetaCubeXD（面板）
 external-controller: 127.0.0.1:9090
 external-ui: ui
-external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/tags/v1.186.1.zip  
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip 
 # > 缓存
 profile:
   store-selected: true
