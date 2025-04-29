@@ -80,7 +80,7 @@ tun:
     - any:53
     - tcp://any:53
   strict-route: true
-  mtu: 9000
+  mtu: 1500
 # > DNS 配置
 dns:
   enable: true
