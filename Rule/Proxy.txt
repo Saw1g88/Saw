@@ -250,6 +250,13 @@ DOMAIN-SUFFIX,xiaomi.eu
 DOMAIN-SUFFIX,zaobao.com.sg
 DOMAIN-SUFFIX,zoom.us
 
+# > Speedtest
+DOMAIN,speed.dler.io
+DOMAIN-SUFFIX,fast.com
+DOMAIN-SUFFIX,ooklaserver.net
+DOMAIN-SUFFIX,speed.cloudflare.com
+DOMAIN-KEYWORD,speedtest
+
 # > Wikimedia
 DOMAIN-SUFFIX,mediawiki.org
 DOMAIN-SUFFIX,toolforge.org
@@ -433,6 +440,7 @@ USER-AGENT,battleroyalei*
 USER-AGENT,hearthstone*
 USER-AGENT,Duolingo*
 USER-AGENT,Roam*
+USER-AGENT,SpeedTest*
 USER-AGENT,TikTok*
 
 
