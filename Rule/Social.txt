@@ -23,9 +23,10 @@ DOMAIN-SUFFIX,telesco.pe
 DOMAIN-KEYWORD,telegram
 
 # > Matrix
-DOMAIN,fluffychat.im
 DOMAIN,matrix.160603.xyz
-DOMAIN,matrix.org
+DOMAIN-SUFFIX,element.io
+DOMAIN-SUFFIX,fluffychat.im
+DOMAIN-SUFFIX,matrix.org
 
 # > Meta
 DOMAIN-SUFFIX,accountkit.com
