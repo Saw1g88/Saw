@@ -1,5 +1,8 @@
 ## DOMAIN
 
+# > Others
+DOMAIN-SUFFIX,lightlayer.net
+
 # > Apple CDN
 DOMAIN,aod.itunes.apple.com
 DOMAIN,api.smoot.apple.cn
