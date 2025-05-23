@@ -42,10 +42,10 @@ geox-url:
   mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
   asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
 # > MetaCubeXD（面板）
-# external-controller: 127.0.0.1:9090
-# external-ui: ui
-# external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
-# secret: smalealex
+external-controller: 127.0.0.1:9090
+external-ui: ui
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+secret: xxxxxx
 # > 缓存
 profile:
   store-selected: true
@@ -119,6 +119,10 @@ dns:
 
 proxies:
   - {"name":"Direct","type":"direct","udp":true}  
+
+proxy-providers:
+
+proxy-groups:
       
 rule-providers:
    HTTPDNS:
@@ -216,3 +220,5 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/LAN.txt
     path: ./profiles/ruleset/LAN.txt
+
+rules:    
