@@ -433,7 +433,6 @@ DOMAIN-SUFFIX,skk.moe
 DOMAIN-SUFFIX,smaato.net
 DOMAIN-SUFFIX,smadex.com
 DOMAIN-SUFFIX,snapkit.com
-DOMAIN-SUFFIX,speedtest.net
 DOMAIN-SUFFIX,split.io
 DOMAIN-SUFFIX,spmailtechno.com
 DOMAIN-SUFFIX,ssr.rs
