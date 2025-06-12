@@ -9,7 +9,7 @@ DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,camscanner.com
 DOMAIN-SUFFIX,intsig.net
-DOMAIN-SUFFIX,api.follow.is
+DOMAIN-SUFFIX,follow.is
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
