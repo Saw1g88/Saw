@@ -173,13 +173,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Social.txt
     path: ./profiles/ruleset/Social.txt
 
-   Stream:
+   Streaming:
     type: http
     behavior: classical
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Stream.txt
-    path: ./profiles/ruleset/Stream.txt   
+    url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Streaming.txt
+    path: ./profiles/ruleset/Streaming.txt   
 
    Proxy:
     type: http
