@@ -21,6 +21,16 @@ DOMAIN-SUFFIX,spankbang.com
 DOMAIN-SUFFIX,ptgncdn.com
 DOMAIN-SUFFIX,sb-cd.com
 
+# > Spotify
+DOMAIN-SUFFIX,pscdn.co
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,spoti.fi
+DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,spotifycdn.com
+DOMAIN-SUFFIX,spotifycdn.net
+DOMAIN-KEYWORD,-spotify-
+DOMAIN-KEYWORD,spotify.com
+
 # > XVIDEOS
 DOMAIN-SUFFIX,c513.1ka.com
 DOMAIN-SUFFIX,xvideos.com
@@ -46,6 +56,9 @@ IP-CIDR,216.73.80.0/20,no-resolve
 IP-CIDR6,2620:120:e000::/40,no-resolve
 
 ## UA
+
+# > Spotify
+USER-AGENT,Spotify*
 
 # > Youtube
 USER-AGENT,*YouTubeMusic*
