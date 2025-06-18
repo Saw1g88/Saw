@@ -10,6 +10,13 @@ DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,camscanner.com
 DOMAIN-SUFFIX,intsig.net
 DOMAIN-SUFFIX,follow.is
+DOMAIN-SUFFIX,strava.com
+DOMAIN-SUFFIX,mapbox.com
+DOMAIN-SUFFIX,raceroster.com
+DOMAIN-SUFFIX,runkeeper.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,fitnesskeeperapi.com
+DOMAIN-SUFFIX,iterable.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
@@ -503,6 +510,13 @@ IP-CIDR,74.125.0.0/16,no-resolve
 IP-CIDR6,2620:120:e000::/40,no-resolve
 
 ## UA
+
+# > Apple
+USER-AGENT,AppleNews*
+USER-AGENT,AppleTV*
+USER-AGENT,com.apple.news*
+USER-AGENT,com.apple.trustd*
+USER-AGENT,com.apple.tv*
 
 # > Google
 USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
