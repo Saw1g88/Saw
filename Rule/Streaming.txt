@@ -7,19 +7,30 @@ DOMAIN,emby.bangumi.ca
 DOMAIN,embyplus.org
 DOMAIN,tanhuatv.site
 
-# > Pornhub
+# > Porn
+DOMAIN-SUFFIX,8teenxxx.com
+DOMAIN-SUFFIX,ahcdn.com
+DOMAIN-SUFFIX,bcvcdn.com
+DOMAIN-SUFFIX,bongacams.com
+DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-SUFFIX,dditscdn.com
+DOMAIN-SUFFIX,livejasmin.com
 DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,pornhubpremium.com
-
-# > spankbang
-DOMAIN-SUFFIX,cherry.tv
-DOMAIN-SUFFIX,cherrytv.media
-DOMAIN-SUFFIX,iluvestreaming.com
-DOMAIN-SUFFIX,spankbang.com
-DOMAIN-SUFFIX,ptgncdn.com
+DOMAIN-SUFFIX,rdtcdn.com
+DOMAIN-SUFFIX,redtube.com
 DOMAIN-SUFFIX,sb-cd.com
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,t66y.com
+DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,xnxx-cdn.com
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,xvideos-cdn.com
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,ypncdn.com
+DOMAIN-KEYWORD,porn
 
 # > Spotify
 DOMAIN-SUFFIX,pscdn.co
@@ -30,11 +41,6 @@ DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,spotifycdn.net
 DOMAIN-KEYWORD,-spotify-
 DOMAIN-KEYWORD,spotify.com
-
-# > XVIDEOS
-DOMAIN-SUFFIX,c513.1ka.com
-DOMAIN-SUFFIX,xvideos.com
-DOMAIN-SUFFIX,xvideos-cdn.com
 
 # > Youtube
 DOMAIN-SUFFIX,ggpht.cn
