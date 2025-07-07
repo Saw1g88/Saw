@@ -155,6 +155,27 @@ EOF
     fi
 }
 
+# IPv4 优先设置
+configure_ipv4_preference() {
+    log "${YELLOW}检查 IPv4 优先设置...${NC}"
+
+    # 若规则已存在则无需重复添加
+    if grep -q "precedence ::ffff:0:0/96" /etc/gai.conf; then
+        log "${CYAN}IPv4 优先规则已存在，跳过。${NC}"
+        return
+    fi
+
+    # 让用户自行选择
+    read -p "是否添加 IPv4 优先规则？(y/n) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo "precedence ::ffff:0:0/96  100" >> /etc/gai.conf
+        log "${GREEN}已成功添加 IPv4 优先规则${NC}"
+    else
+        log "${CYAN}用户选择跳过 IPv4 优先设置${NC}"
+    fi
+}
+
 # 配置 DNS
 configure_dns() {
     log "${YELLOW}检查 DNS 配置...${NC}"
@@ -392,6 +413,7 @@ main() {
     install_docker
     configure_tfo
     configure_bbr_fq
+    configure_ipv4_preference
     configure_dns
     configure_swap
     configure_timezone
