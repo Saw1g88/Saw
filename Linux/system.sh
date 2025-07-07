@@ -160,8 +160,8 @@ configure_ipv4_preference() {
     log "${YELLOW}检查 IPv4 优先设置...${NC}"
 
     # 若规则已存在则无需重复添加
-    if grep -q "precedence ::ffff:0:0/96" /etc/gai.conf; then
-        log "${CYAN}IPv4 优先规则已存在，跳过。${NC}"
+    if grep -q "^[[:space:]]*precedence[[:space:]]\+::ffff:0:0/96" /etc/gai.conf; then
+        log "${CYAN}IPv4 优先规则已生效，跳过。${NC}"
         return
     fi
 
