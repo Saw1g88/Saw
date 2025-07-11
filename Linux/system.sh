@@ -121,21 +121,6 @@ install_docker() {
     fi
 }
 
-# 配置 TCP Fast Open
-configure_tfo() {
-    log "${YELLOW}检查 TCP Fast Open 设置...${NC}"
-    current_tfo_setting=$(cat /proc/sys/net/ipv4/tcp_fastopen)
-    if [ "$current_tfo_setting" == "3" ]; then
-        log "${CYAN}TCP Fast Open 已开启，跳过设置。${NC}"
-    else
-        log "${YELLOW}开启 TCP Fast Open...${NC}"
-        echo "3" > /proc/sys/net/ipv4/tcp_fastopen || handle_error "设置 tcp_fastopen 失败"
-        echo "net.ipv4.tcp_fastopen=3" > /etc/sysctl.d/30-tcp_fastopen.conf
-        sysctl --system || handle_error "应用 sysctl 设置失败"
-        log "${GREEN}已开启 TCP Fast Open${NC}"
-    fi
-}
-
 # 配置 BBR 和 FQ
 configure_bbr_fq() {
     log "${YELLOW}检查 BBR 和 FQ 设置...${NC}"
@@ -155,13 +140,63 @@ EOF
     fi
 }
 
+# TCP 优化参数配置
+configure_tcp_optimization() {
+    log "${YELLOW}检查是否已设置 TCP 优化参数...${NC}"
+
+    if grep -q "# TCP_OPTIMIZED_MARKER_BEGIN" /etc/sysctl.conf; then
+        log "${CYAN}检测到已存在 TCP 优化参数配置，跳过设置。${NC}"
+        return
+    fi
+
+    read -p "是否应用 TCP 优化？(y/n) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        log "${YELLOW}应用 TCP 优化参数...${NC}"
+
+        # 确保 BBR 和 FQ 相关设置存在
+        grep -q "net.core.default_qdisc" /etc/sysctl.conf || echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
+        grep -q "net.ipv4.tcp_congestion_control" /etc/sysctl.conf || echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
+
+        # 添加 TCP 优化参数（带标识）
+        cat >> /etc/sysctl.conf <<EOF
+
+# TCP_OPTIMIZED_MARKER_BEGIN
+net.ipv4.tcp_fastopen = 3
+net.ipv4.tcp_syn_retries = 2
+net.ipv4.tcp_synack_retries = 2
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_dsack = 1
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_fin_timeout = 15
+net.core.rmem_max = 25625000
+net.core.wmem_max = 25625000
+net.ipv4.tcp_rmem = 4096 87380 25625000
+net.ipv4.tcp_wmem = 4096 65536 25625000
+net.core.somaxconn = 65535
+net.ipv4.tcp_max_syn_backlog = 8192
+net.core.netdev_max_backlog = 16384
+net.ipv4.ip_local_port_range = 1024 65535
+net.ipv4.tcp_syncookies = 1
+# TCP_OPTIMIZED_MARKER_END
+EOF
+
+        sysctl --system || handle_error "应用 TCP 优化参数失败"
+        log "${GREEN}TCP 优化参数已成功应用${NC}"
+    else
+        log "${CYAN}用户选择跳过 TCP 优化配置${NC}"
+    fi
+}
+
 # IPv4 优先设置
 configure_ipv4_preference() {
     log "${YELLOW}检查 IPv4 优先设置...${NC}"
 
     # 若规则已存在则无需重复添加
-    if grep -q "^[[:space:]]*precedence[[:space:]]\+::ffff:0:0/96" /etc/gai.conf; then
-        log "${CYAN}IPv4 优先规则已生效，跳过。${NC}"
+    if grep -q "precedence ::ffff:0:0/96" /etc/gai.conf; then
+        log "${CYAN}IPv4 优先规则已存在，跳过。${NC}"
         return
     fi
 
@@ -411,8 +446,8 @@ main() {
     check_and_install unzip
     
     install_docker
-    configure_tfo
     configure_bbr_fq
+    configure_tcp_optimization
     configure_ipv4_preference
     configure_dns
     configure_swap
