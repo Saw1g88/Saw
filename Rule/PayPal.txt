@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypal.me
 DOMAIN-SUFFIX,paypal-mktg.com
 DOMAIN-SUFFIX,paypalobjects.com
+DOMAIN-KEYWORD,paypal
 
 ## UA
 
