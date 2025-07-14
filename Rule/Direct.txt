@@ -1,5 +1,11 @@
 ## DOMAIN
 
+# > Others
+DOMAIN-SUFFIX,runkeeper.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,fitnesskeeperapi.com
+DOMAIN-SUFFIX,iterable.com
+
 # > Alibaba
 DOMAIN-SUFFIX,1688.com
 DOMAIN-SUFFIX,aliapp.org
