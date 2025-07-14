@@ -13,10 +13,6 @@ DOMAIN-SUFFIX,follow.is
 DOMAIN-SUFFIX,strava.com
 DOMAIN-SUFFIX,mapbox.com
 DOMAIN-SUFFIX,raceroster.com
-DOMAIN-SUFFIX,runkeeper.com
-DOMAIN-SUFFIX,amplitude.com
-DOMAIN-SUFFIX,fitnesskeeperapi.com
-DOMAIN-SUFFIX,iterable.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
