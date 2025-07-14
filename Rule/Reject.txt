@@ -6,6 +6,7 @@ DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
 DOMAIN,app-analytics-services.com
 DOMAIN,appcloud2.in.zhihu.com
+DOMAIN,browser-intake-datadoghq.com
 DOMAIN,duclick.baidu.com
 DOMAIN,hm.baidu.com
 DOMAIN,hmma.baidu.com
@@ -1388,6 +1389,7 @@ DOMAIN-SUFFIX,apps.supfast.net
 DOMAIN-SUFFIX,appsdk.tanv.com
 DOMAIN-SUFFIX,appservices.comcsoft.com
 DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,appspromote.wostore.cn
 DOMAIN-SUFFIX,appsrv1.madserving.com
 DOMAIN-SUFFIX,appsrv4.madserving.com
