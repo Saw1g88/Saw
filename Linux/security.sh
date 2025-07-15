@@ -248,26 +248,8 @@ logpath = /var/log/auth.log
 maxretry = ${maxretry}
 bantime = ${bantime}
 findtime = ${findtime}
+action = iptables-multiport
 EOF
-
-    # 询问是否配置邮件通知
-    read -p "是否配置邮件通知？(Y/N): " configure_email
-    case "$configure_email" in
-        [Yy])
-            read -p "请输入发送通知的邮箱地址: " destemail
-            if [ ! -z "$destemail" ]; then
-                cat >> /etc/fail2ban/jail.local <<EOF
-
-# 邮件通知配置
-destemail = ${destemail}
-sendername = Fail2Ban
-mta = sendmail
-action = %(action_mwl)s
-EOF
-                echo -e "${GREEN}已配置邮件通知${NC}"
-            fi
-            ;;
-    esac
 
     # 重新启动并启用 fail2ban 服务
     echo -e "${YELLOW}重启并启用 fail2ban 服务...${NC}"
