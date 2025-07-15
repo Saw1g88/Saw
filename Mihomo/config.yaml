@@ -86,13 +86,25 @@ tun:
     - tcp://any:53
   strict-route: true
   mtu: 1500
+# > HOSTS  
+hosts:
+  www.youtusoft.com: ["127.0.0.1"]
+  youtusoft.com: ["127.0.0.1"]
+  hostbuf.com: ["127.0.0.1"]
+  www.hostbuf.com: ["127.0.0.1"]
+  dkys.org: ["127.0.0.1"]
+  tcpspeed.com: ["127.0.0.1"]
+  www.wn1998.com: ["127.0.0.1"]
+  wn1998.com: ["127.0.0.1"]
+  pwlt.wn1998.com: ["127.0.0.1"]
+  backup.www.hostbuf.com: ["127.0.0.1"]
 # > DNS 配置
 dns:
   enable: true
   ipv6: true
   prefer-h3: true
   use-hosts: true
-  use-system-hosts: true
+  use-system-hosts: false
   respect-rules: false
   listen: :53
   default-nameserver:
