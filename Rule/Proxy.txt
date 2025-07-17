@@ -14,6 +14,8 @@ DOMAIN-SUFFIX,strava.com
 DOMAIN-SUFFIX,mapbox.com
 DOMAIN-SUFFIX,raceroster.com
 DOMAIN-SUFFIX,trustarc.com
+DOMAIN-SUFFIX,garmin.com
+DOMAIN-SUFFIX,garmincdn.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
