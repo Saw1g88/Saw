@@ -5,8 +5,6 @@ DOMAIN-SUFFIX,runkeeper.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,fitnesskeeperapi.com
 DOMAIN-SUFFIX,iterable.com
-DOMAIN-SUFFIX,garmin.com
-DOMAIN-SUFFIX,garmincdn.com
 
 # > Alibaba
 DOMAIN-SUFFIX,1688.com
