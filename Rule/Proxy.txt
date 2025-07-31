@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,raceroster.com
 DOMAIN-SUFFIX,trustarc.com
 DOMAIN-SUFFIX,garmin.com
 DOMAIN-SUFFIX,garmincdn.com
+DOMAIN-SUFFIX,fit-pay.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
