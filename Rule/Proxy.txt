@@ -18,6 +18,9 @@ DOMAIN-SUFFIX,garmin.com
 DOMAIN-SUFFIX,garmincdn.com
 DOMAIN-SUFFIX,fit-pay.com
 DOMAIN-SUFFIX,quitnow.app
+DOMAIN-SUFFIX,subhd.tv
+DOMAIN-SUFFIX,subhd.cc
+DOMAIN-SUFFIX,subhd.me
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
