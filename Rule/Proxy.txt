@@ -21,6 +21,7 @@ DOMAIN-SUFFIX,quitnow.app
 DOMAIN-SUFFIX,subhd.tv
 DOMAIN-SUFFIX,subhd.cc
 DOMAIN-SUFFIX,subhd.me
+DOMAIN-SUFFIX,icons8.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
