@@ -1,14 +1,5 @@
 ## DOMAIN
 
-# > Emby
-DOMAIN,789.123456.al
-DOMAIN,cdn.lyrebirdemby.com
-DOMAIN,emby.bangumi.ca
-DOMAIN,embyplus.org
-DOMAIN,tanhuatv.site
-DOMAIN,public.shrekmedia.org
-DOMAIN,lite.cn2gias.uk
-
 # > Porn
 DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,ahcdn.com
