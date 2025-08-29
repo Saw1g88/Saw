@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,intsig.net
 DOMAIN-SUFFIX,follow.is
 DOMAIN-SUFFIX,strava.com
 DOMAIN-SUFFIX,mapbox.com
+DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,raceroster.com
 DOMAIN-SUFFIX,trustarc.com
 DOMAIN-SUFFIX,garmin.com
