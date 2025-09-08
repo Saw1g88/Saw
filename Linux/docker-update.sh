@@ -10,7 +10,7 @@ send_notification() {
     case $status in
         "success") icon="✅" ;;
         "warning") icon="⚠️" ;;
-        "info") icon="ℹ️" ;;
+        "info") icon="🟢" ;;
     esac
     
     local telegram_message="*[$SERVER_NAME | Watchtower]*
