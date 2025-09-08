@@ -20,7 +20,7 @@ send_notification() {
     case $status in
         "success") icon="✅" ;;
         "info") icon="🟢" ;;
-        "warning") icon="ℹ️" ;;
+        "warning") icon="⚠️" ;;
     esac
     
     local telegram_message="*[$SERVER_NAME | Certbot]*
