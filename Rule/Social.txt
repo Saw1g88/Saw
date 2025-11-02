@@ -24,6 +24,7 @@ DOMAIN-KEYWORD,telegram
 
 # > Matrix
 DOMAIN,matrix.160603.xyz
+DOMAIN,matrix-direct.160603.xyz
 DOMAIN-SUFFIX,matrix.org
 DOMAIN-SUFFIX,matrix.to
 DOMAIN-SUFFIX,vector.im
