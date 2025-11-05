@@ -2,7 +2,6 @@
 #!desc=Talkatone 去广告, 解除节点限制.
 #!category=功能模块
 #!arguments=策略:Proxy
-#!arguments-desc=策略: 请求使用的策略
 
 [Rule]
 
