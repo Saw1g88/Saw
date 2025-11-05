@@ -1,0 +1,9 @@
+#!name=BiliBili Enhance
+#!desc=解锁1080P
+#!category=功能模块
+
+[MITM]
+hostname= %APPEND% app.bilibili.com
+
+[Script]
+Bili1080P=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=JS/BiliBili.js
