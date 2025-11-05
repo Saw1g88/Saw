@@ -1,6 +1,5 @@
 #!name=Block HTTPDNS
 #!desc=阻止常见的 HTTPDNS 服务器
-#!category=功能模块
 
 [General]
 force-http-engine-hosts = %APPEND% 119.29.29.29:80, dns.weixin.qq.com:80, dns.weixin.qq.com:8080, dns.weixin.qq.com:443
