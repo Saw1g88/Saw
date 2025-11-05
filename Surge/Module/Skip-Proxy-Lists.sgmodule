@@ -1,6 +1,5 @@
 #!name=Skip Proxy And Real-IP Lists
 #!desc=跳过部分应用的代理检测
-#!category=功能模块
 
 [Rule]
 DOMAIN,msmp.abchina.com.cn,REJECT
