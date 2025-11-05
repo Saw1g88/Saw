@@ -1,6 +1,5 @@
 #!name=Google Rewrite
 #!desc=Google 地址重定向
-#!category=功能模块
 
 [URL Rewrite]
 ^https?://(www.)?g.cn https://www.google.com 302
