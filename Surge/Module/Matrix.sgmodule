@@ -1,7 +1,6 @@
 #!name=Matrix
 #!desc= Element X 正常登录
 #!arguments=服务器网址:matrix.160603.xyz,策略:Proxy
-#!arguments-desc=服务器网址: Synapse 服务器部署的域名\n策略: 请求使用的策略
 
 [Rule]
 DOMAIN,{{{服务器网址}}},{{{策略}}}
