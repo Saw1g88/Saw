@@ -1,6 +1,5 @@
 #!name=Rule Storage
 #!desc=自动收集规则
-#!category=功能模块
 #!arguments=Proxy+数量参数:5 ,Proxy+间隔参数:10 ,Direct+数量参数:5 ,Direct+间隔参数:10
 
 [Script]
