@@ -8,8 +8,8 @@
 DNS.js = type=dns,script-path=https://raw.githubusercontent.com/Saw1g88/Saw/main/Surge/Script/dns.js,desc=DNS.js,argument="type={{{type}}}&doh={{{doh}}}&ttl={{{ttl}}}&timeout={{{timeout}}}&edns={{{edns}}}&log={{{log}}}&fallback={{{fallback}}}&policy={{{policy}}}"
 
 [Host]
-RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Apple.txt = server:{{{direct-dns}}}
-RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Direct.txt = server:{{{direct-dns}}}
-RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Other/WeChat.txt = server:{{{direct-dns}}}
-RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Other/China.txt = server:{{{direct-dns}}}
+RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/main/Rule/Apple.txt = server:{{{direct-dns}}}
+RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/main/Rule/Direct.txt = server:{{{direct-dns}}}
+RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/main/Rule/Other/WeChat.txt = server:{{{direct-dns}}}
+RULE-SET:https://raw.githubusercontent.com/Saw1g88/Saw/main/Rule/Other/China.txt = server:{{{direct-dns}}}
 * = script:DNS.js
