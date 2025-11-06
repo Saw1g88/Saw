@@ -1,0 +1,8 @@
+#!name=BiliBili Enhance
+#!desc=去广告，解锁高帧率
+
+[Script]
+Bili1080P=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=https://raw.githubusercontent.com/Saw1g88/Saw/main/Surge/Script/Bili.js
+
+[MITM]
+hostname= %APPEND% app.bilibili.com
