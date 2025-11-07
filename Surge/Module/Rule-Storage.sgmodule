@@ -1,7 +1,0 @@
-#!name=Rule Storage
-#!desc=自动收集规则
-#!arguments=Proxy+数量参数:5 ,Proxy+间隔参数:10 ,Direct+数量参数:5 ,Direct+间隔参数:10
-
-[Script]
-Save-Final-Rule = type=rule,script-path=https://raw.githubusercontent.com/Saw1g88/Saw/main/Surge/Script/Rule-Storage.js,argument=region=global&quantity={{{Proxy+数量参数}}}&interval={{{Proxy+间隔参数}}},script-update-interval=-1
-Save-China-Rule = type=rule,script-path=https://raw.githubusercontent.com/Saw1g88/Saw/main/Surge/Script/Rule-Storage.js,argument=region=china&matched=1&quantity={{{Direct+数量参数}}}&interval={{{Direct+间隔参数}}},script-update-interval=-1
