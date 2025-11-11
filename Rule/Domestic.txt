@@ -6,12 +6,6 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,fitnesskeeperapi.com
 DOMAIN-SUFFIX,iterable.com
 
-# > CN
-DOMAIN-SUFFIX,cn
-DOMAIN-SUFFIX,xn--fiqs8s
-DOMAIN-SUFFIX,xn--55qx5d
-DOMAIN-SUFFIX,xn--io0a7i
-
 # > Keyword
 DOMAIN-KEYWORD,360buy
 DOMAIN-KEYWORD,alicdn
@@ -751,3 +745,9 @@ USER-AGENT,QQ*
 USER-AGENT,RemotePlay*
 USER-AGENT,TIM*
 USER-AGENT,TeamViewer*
+
+## Domestic
+DOMAIN-SUFFIX,cn
+DOMAIN-SUFFIX,xn--fiqs8s
+DOMAIN-SUFFIX,xn--55qx5d
+DOMAIN-SUFFIX,xn--io0a7i
