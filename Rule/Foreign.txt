@@ -132,12 +132,10 @@ DOMAIN-SUFFIX,gitter.im
 
 # > Google
 DOMAIN-SUFFIX,abc.xyz
-DOMAIN-SUFFIX,admin.recaptcha.net
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
-DOMAIN-SUFFIX,appspot.com
+DOMAIN-SUFFIX,dialogflow.com
 DOMAIN-SUFFIX,autodraw.com
-DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,capitalg.com
 DOMAIN-SUFFIX,certificate-transparency.org
 DOMAIN-SUFFIX,chrome.com
@@ -147,24 +145,24 @@ DOMAIN-SUFFIX,chromium.org
 DOMAIN-SUFFIX,creativelab5.com
 DOMAIN-SUFFIX,debug.com
 DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,dialogflow.com
 DOMAIN-SUFFIX,firebaseio.com
 DOMAIN-SUFFIX,getmdl.io
-DOMAIN-SUFFIX,getoutline.org
+DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,gmodules.com
 DOMAIN-SUFFIX,godoc.org
 DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,gstatic.cn
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,gv.com
-DOMAIN-SUFFIX,gvt0.com
-DOMAIN-SUFFIX,gvt1.com
-DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,gwtproject.org
 DOMAIN-SUFFIX,itasoftware.com
 DOMAIN-SUFFIX,madewithcode.com
 DOMAIN-SUFFIX,material.io
 DOMAIN-SUFFIX,polymer-project.org
+DOMAIN-SUFFIX,admin.recaptcha.net
 DOMAIN-SUFFIX,recaptcha.net
 DOMAIN-SUFFIX,shattered.io
 DOMAIN-SUFFIX,synergyse.com
@@ -178,10 +176,19 @@ DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,whatbrowser.org
 DOMAIN-SUFFIX,widevine.com
 DOMAIN-SUFFIX,x.company
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,ytimg.com
+# (DNS Cache Pollution Protection)
+DOMAIN-SUFFIX,appspot.com
+DOMAIN-SUFFIX,blogger.com
+DOMAIN-SUFFIX,getoutline.org
+DOMAIN-SUFFIX,gvt0.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-DOMAIN-KEYWORD,blogspot
-DOMAIN-KEYWORD,gmail
 DOMAIN-KEYWORD,google
+DOMAIN-KEYWORD,blogspot
 
 # > Grok
 DOMAIN-SUFFIX,grok.com
@@ -504,22 +511,6 @@ DOMAIN-SUFFIX,yimg.com
 DOMAIN,disk.yandex.com
 DOMAIN-SUFFIX,yadi.sk
 DOMAIN-SUFFIX,yandex.ru
-
-# > Youtube
-DOMAIN,youtubei.googleapis.com
-DOMAIN,yt3.ggpht.com
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,gvt2.com
-DOMAIN-SUFFIX,withyoutube.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtubeeducation.com
-DOMAIN-SUFFIX,youtubegaming.com
-DOMAIN-SUFFIX,youtubekids.com
-DOMAIN-SUFFIX,yt.be
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-KEYWORD,youtube
 
 # > Z-Library
 DOMAIN-SUFFIX,articles.sk
