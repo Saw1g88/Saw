@@ -15,8 +15,6 @@ DOMAIN-SUFFIX,mapbox.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,raceroster.com
 DOMAIN-SUFFIX,trustarc.com
-DOMAIN-SUFFIX,garmin.com
-DOMAIN-SUFFIX,garmincdn.com
 DOMAIN-SUFFIX,fit-pay.com
 DOMAIN-SUFFIX,quitnow.app
 DOMAIN-SUFFIX,subhd.tv
@@ -106,6 +104,11 @@ DOMAIN-SUFFIX,dockerhub.com
 DOMAIN-SUFFIX,db.tt
 DOMAIN-SUFFIX,paper-attachments.s3.amazonaws.com
 DOMAIN-KEYWORD,dropbox
+
+# > Garmin
+DOMAIN-SUFFIX,dciwx.com
+DOMAIN-SUFFIX,garmin.com
+DOMAIN-SUFFIX,garmincdn.com
 
 # > Github
 DOMAIN-SUFFIX,atom.io
