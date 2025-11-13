@@ -5,6 +5,9 @@ DOMAIN-SUFFIX,runkeeper.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,fitnesskeeperapi.com
 DOMAIN-SUFFIX,iterable.com
+DOMAIN-SUFFIX,dewu.com
+DOMAIN-SUFFIX,volccdn.com
+DOMAIN-SUFFIX,volcvod.com
 
 # > Keyword
 DOMAIN-KEYWORD,360buy
