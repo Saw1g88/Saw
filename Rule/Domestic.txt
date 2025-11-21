@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,iterable.com
 DOMAIN-SUFFIX,dewu.com
 DOMAIN-SUFFIX,volccdn.com
 DOMAIN-SUFFIX,volcvod.com
+DOMAIN-SUFFIX,kejishou.net
 
 # > Keyword
 DOMAIN-KEYWORD,360buy
