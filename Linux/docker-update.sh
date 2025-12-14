@@ -50,26 +50,20 @@ init_environment() {
 
 # 检查容器更新情况
 check_updates() {
-    if grep -qE "Updated=[1-9][0-9]*" "$WT_LOG"; then
+    # 修改：匹配小写的 updated= 并且值大于 0
+    if grep -qE "updated=[1-9][0-9]*" "$WT_LOG"; then
         # 提取更新的容器信息
-        local updated_info=$(grep -E "Updated=[1-9][0-9]*" "$WT_LOG" | head -1)
-        local updated_count=$(echo "$updated_info" | grep -oE "Updated=[0-9]+" | cut -d= -f2)
+        local updated_count=$(grep -oE "updated=[0-9]+" "$WT_LOG" | tail -1 | cut -d= -f2)
         
-        # 从 Watchtower 日志中提取容器名称
-        # 方法1: 从 "Stopping /容器名" 中提取
-        UPDATED_CONTAINERS_RAW=$(grep -oE "Stopping /[a-zA-Z0-9_-]+" "$WT_LOG" | sed 's|Stopping /||g' | sort -u)
+        # 从日志中提取已更新的容器名称（从 "Started new container" 行）
+        UPDATED_CONTAINERS_RAW=$(grep "Started new container" "$WT_LOG" | grep -oE "container=[a-zA-Z0-9_-]+" | cut -d= -f2 | sort -u)
         
-        # 方法2: 如果方法1没找到，尝试从 "Creating /容器名" 中提取
+        # 如果上面方法没找到，尝试从 "Found new image" 中提取
         if [ -z "$UPDATED_CONTAINERS_RAW" ]; then
-            UPDATED_CONTAINERS_RAW=$(grep -oE "Creating /[a-zA-Z0-9_-]+" "$WT_LOG" | sed 's|Creating /||g' | sort -u)
+            UPDATED_CONTAINERS_RAW=$(grep "Found new image" "$WT_LOG" | grep -oE "container=[a-zA-Z0-9_-]+" | cut -d= -f2 | sort -u)
         fi
         
-        # 方法3: 如果还没找到，尝试从镜像信息中推断
-        if [ -z "$UPDATED_CONTAINERS_RAW" ]; then
-            UPDATED_CONTAINERS_RAW=$(grep -oE "Found new [a-zA-Z0-9/_.-]+:[a-zA-Z0-9._-]+ image" "$WT_LOG" | sed 's/Found new //g' | sed 's/ image.*//g' | sed 's/.*\///g' | sed 's/:.*//g' | sort -u)
-        fi
-        
-        # 格式化容器列表，每行一个容器，前面加上项目符号
+        # 格式化容器列表
         if [ -n "$UPDATED_CONTAINERS_RAW" ]; then
             UPDATED_CONTAINERS_FORMATTED=$(echo "$UPDATED_CONTAINERS_RAW" | sed 's/^/- /')
             UPDATED_CONTAINERS_LIST=$(echo "$UPDATED_CONTAINERS_RAW" | paste -sd ", " -)
