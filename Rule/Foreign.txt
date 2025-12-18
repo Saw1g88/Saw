@@ -36,6 +36,8 @@ DOMAIN-SUFFIX,amazonaws.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,prodregistryv2.org
+DOMAIN-SUFFIX,siftscience.com
 
 # > Cloudflare
 DOMAIN-SUFFIX,cf-ipfs.com
