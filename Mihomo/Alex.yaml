@@ -44,7 +44,7 @@ geox-url:
 # > MetaCubeXD（面板）
 external-controller: 127.0.0.1:9090
 external-ui: ui
-external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist-no-fonts.zip
 secret: xxxxxx
 # > 缓存
 profile:
@@ -157,7 +157,7 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Foreign.txt
-    path: ./profiles/ruleset/AI.txt
+    path: ./profiles/ruleset/Foreign.txt
 
    Domestic:
     type: http
@@ -165,7 +165,7 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Rule/Domestic.txt
-    path: ./profiles/ruleset/Direct.txt 
+    path: ./profiles/ruleset/Domestic.txt 
        
    LAN:
     type: http
