@@ -171,6 +171,8 @@ net.ipv4.tcp_sack = 1
 net.ipv4.tcp_dsack = 1
 net.ipv4.tcp_tw_reuse = 1
 net.ipv4.tcp_fin_timeout = 15
+net.ipv4.tcp_slow_start_after_idle = 0
+net.ipv4.tcp_mtu_probing = 1
 net.core.rmem_max = 25625000
 net.core.wmem_max = 25625000
 net.ipv4.tcp_rmem = 4096 87380 25625000
@@ -178,7 +180,7 @@ net.ipv4.tcp_wmem = 4096 65536 25625000
 net.core.somaxconn = 65535
 net.ipv4.tcp_max_syn_backlog = 8192
 net.core.netdev_max_backlog = 16384
-net.ipv4.ip_local_port_range = 1024 65535
+net.ipv4.ip_local_port_range = 10000 65535
 net.ipv4.tcp_syncookies = 1
 # TCP_OPTIMIZED_MARKER_END
 EOF
