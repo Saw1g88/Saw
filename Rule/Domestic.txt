@@ -11,8 +11,6 @@ DOMAIN-SUFFIX,volcvod.com
 DOMAIN-SUFFIX,kejishou.net
 DOMAIN-SUFFIX,duoduocdn.com
 DOMAIN-SUFFIX,qiumibao.com
-DOMAIN-SUFFIX,zhibo8.cc
-DOMAIN-SUFFIX,zhibo8.com
 
 # > Keyword
 DOMAIN-KEYWORD,360buy
