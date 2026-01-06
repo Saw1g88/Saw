@@ -118,6 +118,22 @@ DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com
 DOMAIN-SUFFIX,ghcr.io
 DOMAIN-SUFFIX,git.io
+DOMAIN-SUFFIX,github-atom-io-herokuapp-com.freetls.fastly.net
+DOMAIN-SUFFIX,github-avatars.oss-cn-hongkong.aliyuncs.com
+DOMAIN-SUFFIX,github-cloud.s3.amazonaws.com
+DOMAIN-SUFFIX,github.blog
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,github.community
+DOMAIN-SUFFIX,github.dev
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,githubapp.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,githubhackathon.com
+DOMAIN-SUFFIX,githubnext.com
+DOMAIN-SUFFIX,githubpreview.dev
+DOMAIN-SUFFIX,githubstatus.com
+DOMAIN-SUFFIX,githubuniverse.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,myoctocat.com
 DOMAIN-SUFFIX,npm.community
@@ -125,7 +141,9 @@ DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,npmjs.org
 DOMAIN-SUFFIX,opensource.guide
 DOMAIN-SUFFIX,rawgit.com
+DOMAIN-SUFFIX,rawgithub.com
 DOMAIN-SUFFIX,repo.new
+DOMAIN-SUFFIX,thegithubshop.com
 DOMAIN-KEYWORD,github
 
 # > GitLab
@@ -466,12 +484,35 @@ DOMAIN-KEYWORD,spotify.com
 DOMAIN-SUFFIX,tktn.be
 
 # > Telegram
+DOMAIN,api.mixpanel.com
+DOMAIN,events-gateway.ncdev.site
+DOMAIN-SUFFIX,cdn-telegram.org
+DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,contest.com
+DOMAIN-SUFFIX,graph.org
+DOMAIN-SUFFIX,imem.app
+DOMAIN-SUFFIX,iturrit.com
+DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,mbrx.app
+DOMAIN-SUFFIX,quiz.directory
+DOMAIN-SUFFIX,stel.com
+DOMAIN-SUFFIX,swiftgram.app
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telega.one
 DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,telegram.dog
 DOMAIN-SUFFIX,telegram.me
 DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegram.space
+DOMAIN-SUFFIX,telegramdownload.com
 DOMAIN-SUFFIX,telesco.pe
+DOMAIN-SUFFIX,tg.dev
+DOMAIN-SUFFIX,tx.me
+DOMAIN-SUFFIX,usercontent.dev
+DOMAIN-SUFFIX,walletbot.me
+DOMAIN-KEYWORD,nicegram
 DOMAIN-KEYWORD,telegram
 
 # > Wikimedia
