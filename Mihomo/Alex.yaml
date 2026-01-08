@@ -37,8 +37,8 @@ geo-auto-update: true
 geo-update-interval: 24
 # > 自定 GEO 下载地址
 geox-url:
-  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
   geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat  
 # > MetaCubeXD（面板）
 external-controller: 127.0.0.1:9090
 external-ui: ui
