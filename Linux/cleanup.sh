@@ -1,6 +1,6 @@
 #!/bin/bash
 # =========================================
-# VPS 年度安全清理脚本（优化版）
+# VPS 安全清理脚本
 # 功能：
 # 1. 清理 systemd 日志并限制大小
 # 2. 安全清理 /tmp 和 /var/tmp（基于时间）
@@ -114,21 +114,6 @@ if command -v docker >/dev/null 2>&1; then
     echo "清理 Docker 容器日志..."
     find /var/lib/docker/containers/ -name "*-json.log" -exec truncate -s 0 {} \; 2>/dev/null || true
     
-    # 检查是否已配置日志限制
-    if [ -f /etc/docker/daemon.json ]; then
-        if ! grep -q "log-driver" /etc/docker/daemon.json; then
-            echo -e "${YELLOW}提示: 建议在 /etc/docker/daemon.json 中增加日志限制${NC}"
-        fi
-    else
-        echo -e "${YELLOW}提示: 建议创建 /etc/docker/daemon.json 并配置日志限制:${NC}"
-        echo '{
-  "log-driver": "json-file",
-  "log-opts": {
-    "max-size": "10m",
-    "max-file": "3"
-  }
-}'
-    fi
     echo -e "${GREEN}✓ Docker 清理完成${NC}"
 else
     echo -e "\n${YELLOW}[4/7] 未检测到 Docker，跳过${NC}"
@@ -215,12 +200,4 @@ else
     echo -e "\n${GREEN}✓ 清理完成（空间变化较小）${NC}"
 fi
 
-# 显示最大的目录（可选）
-echo -e "\n${YELLOW}当前占用空间最大的 10 个目录:${NC}"
-du -h --max-depth=2 / 2>/dev/null | sort -rh | head -10
-
-echo -e "\n${GREEN}====== VPS 年度清理完成 ======${NC}"
-echo -e "${YELLOW}建议:${NC}"
-echo "1. 重启服务器以释放被占用的文件句柄"
-echo "2. 检查 Docker 日志配置 (/etc/docker/daemon.json)"
-echo "3. 考虑设置 logrotate 自动清理日志"
+echo -e "\n${GREEN}====== VPS 清理完成 ======${NC}"
