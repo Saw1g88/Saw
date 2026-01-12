@@ -5,7 +5,7 @@
 # 1. 清理 systemd 日志并限制大小
 # 2. 安全清理 /tmp 和 /var/tmp（基于时间）
 # 3. 清理 apt/yum 缓存和旧内核
-# 4. 清理 Docker 停止容器、无用镜像、日志
+# 4. 清理 Docker 日志
 # 5. 清理 pip/npm 缓存
 # 6. 清理旧日志文件
 # 7. 输出清理前后对比
@@ -106,10 +106,7 @@ fi
 # ------------------------------
 if command -v docker >/dev/null 2>&1; then
     echo -e "\n${YELLOW}[4/7] 清理 Docker 资源...${NC}"
-    
-    # 清理停止的容器、无用镜像、网络、构建缓存
-    docker system prune -af --volumes 2>/dev/null || docker system prune -f
-    
+     
     # 清理 Docker 容器日志
     echo "清理 Docker 容器日志..."
     find /var/lib/docker/containers/ -name "*-json.log" -exec truncate -s 0 {} \; 2>/dev/null || true
