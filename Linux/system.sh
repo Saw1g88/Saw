@@ -113,11 +113,63 @@ install_docker() {
             yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo || handle_error "添加 Docker 仓库失败"
             yum install -y docker-ce docker-ce-cli containerd.io || handle_error "安装 Docker 失败"
         fi
+        
+        # 配置 Docker 日志限制
+        log "${YELLOW}配置 Docker 日志限制...${NC}"
+        mkdir -p /etc/docker
+        cat > /etc/docker/daemon.json <<'EOF'
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  }
+}
+EOF
+        log "${GREEN}Docker 日志限制配置完成${NC}"
+        
         systemctl start docker || handle_error "启动 Docker 失败"
         systemctl enable docker || handle_error "设置 Docker 开机自启动失败"
         log "${GREEN}Docker 安装完成${NC}"
     else
         log "${CYAN}Docker 已安装，跳过安装。${NC}"
+        
+        # 检查是否已配置日志限制
+        if [ -f /etc/docker/daemon.json ]; then
+            if ! grep -q "log-driver" /etc/docker/daemon.json; then
+                log "${YELLOW}提示: 建议在 /etc/docker/daemon.json 中增加日志限制${NC}"
+                log "${YELLOW}参考配置:${NC}"
+                echo '{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  }
+}'
+            else
+                log "${GREEN}Docker 日志限制已配置${NC}"
+            fi
+        else
+            log "${YELLOW}提示: 建议创建 /etc/docker/daemon.json 并配置日志限制:${NC}"
+            echo '{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  }
+}'
+            log "${YELLOW}执行以下命令配置日志限制:${NC}"
+            echo "cat > /etc/docker/daemon.json <<'EOF'
+{
+  \"log-driver\": \"json-file\",
+  \"log-opts\": {
+    \"max-size\": \"10m\",
+    \"max-file\": \"3\"
+  }
+}
+EOF"
+            echo "systemctl restart docker"
+        fi
     fi
 }
 
