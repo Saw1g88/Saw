@@ -35,7 +35,7 @@ df -h /
 # ------------------------------
 # 1️⃣ systemd 日志清理与限制
 # ------------------------------
-echo -e "\n${YELLOW}[1/7] 清理 systemd 日志并限制大小...${NC}"
+echo -e "\n${YELLOW}[1/6] 清理 systemd 日志并限制大小...${NC}"
 journalctl --vacuum-time=7d
 journalctl --vacuum-size=200M
 
@@ -60,7 +60,7 @@ journalctl --disk-usage
 # ------------------------------
 # 2️⃣ /tmp 安全清理（只删除 7 天前的文件）
 # ------------------------------
-echo -e "\n${YELLOW}[2/7] 清理 /tmp 和 /var/tmp（7天前的文件）...${NC}"
+echo -e "\n${YELLOW}[2/6] 清理 /tmp 和 /var/tmp（7天前的文件）...${NC}"
 # 只删除文件，保留目录结构
 find /tmp -type f -atime +7 -delete 2>/dev/null || true
 find /var/tmp -type f -atime +7 -delete 2>/dev/null || true
@@ -78,7 +78,7 @@ echo -e "${GREEN}✓ /tmp 清理完成${NC}"
 # ------------------------------
 # 3️⃣ 软件包缓存清理
 # ------------------------------
-echo -e "\n${YELLOW}[3/7] 清理软件包缓存和旧内核...${NC}"
+echo -e "\n${YELLOW}[3/6] 清理软件包缓存和旧内核...${NC}"
 if command -v apt >/dev/null 2>&1; then
     echo "检测到 Debian/Ubuntu 系统"
     # 清理 apt 锁文件（如果存在）
@@ -103,7 +103,7 @@ fi
 # ------------------------------
 # 4️⃣ 清理 pip/npm 缓存
 # ------------------------------
-echo -e "\n${YELLOW}[5/7] 清理开发工具缓存...${NC}"
+echo -e "\n${YELLOW}[4/6] 清理开发工具缓存...${NC}"
 
 # pip 缓存
 if command -v pip3 >/dev/null 2>&1; then
@@ -137,7 +137,7 @@ fi
 # ------------------------------
 # 5️⃣ 清理旧日志文件
 # ------------------------------
-echo -e "\n${YELLOW}[6/7] 清理旧日志文件（30天前）...${NC}"
+echo -e "\n${YELLOW}[5/6] 清理旧日志文件（30天前）...${NC}"
 
 # 清理系统日志
 find /var/log -name "*.log.*" -mtime +30 -delete 2>/dev/null || true
@@ -168,7 +168,7 @@ echo -e "${GREEN}✓ 旧日志清理完成${NC}"
 # ------------------------------
 # 6️⃣ 清理后统计
 # ------------------------------
-echo -e "\n${YELLOW}[7/7] 清理后磁盘占用:${NC}"
+echo -e "\n${YELLOW}[6/6] 清理后磁盘占用:${NC}"
 df -h /
 
 # 计算释放的空间
