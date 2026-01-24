@@ -23,6 +23,7 @@ DOMAIN-SUFFIX,subhd.me
 DOMAIN-SUFFIX,icons8.com
 DOMAIN-SUFFIX,lightlayer.net
 DOMAIN-SUFFIX,pp.ua
+DOMAIN-SUFFIX,egernlicense.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
