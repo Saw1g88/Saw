@@ -25,6 +25,8 @@ DOMAIN-SUFFIX,lightlayer.net
 DOMAIN-SUFFIX,pp.ua
 DOMAIN-SUFFIX,egernlicense.com
 DOMAIN-SUFFIX,egernapp.com
+DOMAIN-SUFFIX,nodeimage.com
+DOMAIN-SUFFIX,quantumult.app
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
