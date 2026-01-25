@@ -362,6 +362,7 @@ DOMAIN-SUFFIX,notion.site
 DOMAIN-SUFFIX,notion.so
 
 # > OpenAI
+DOMAIN,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,chatgpt.com
