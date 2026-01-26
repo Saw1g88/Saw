@@ -123,6 +123,9 @@ dns:
     
 
 proxies: 
+- name: "Domestic"
+  type: direct
+  udp: true
 
 proxy-providers:
 
