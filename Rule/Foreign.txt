@@ -767,14 +767,6 @@ IP-CIDR6,2803:f800::/32,no-resolve
 IP-CIDR6,2a06:98c0::/29,no-resolve
 IP-CIDR6,2c0f:f248::/32,no-resolve
 
-# > DNS
-IP-CIDR,1.0.0.1/32,no-resolve
-IP-CIDR,1.1.1.1/32,no-resolve
-IP-CIDR,8.8.4.4/32,no-resolve
-IP-CIDR,8.8.8.8/32,no-resolve
-IP-CIDR,9.9.9.9/32,no-resolve
-IP-CIDR,149.112.112.112/32,no-resolve
-
 # > Google
 IP-CIDR,172.110.32.0/21,no-resolve
 IP-CIDR,173.194.0.0/16,no-resolve
