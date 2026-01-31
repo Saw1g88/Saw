@@ -302,7 +302,6 @@ DOMAIN-SUFFIX,msftauth.net
 DOMAIN-SUFFIX,msftauthimages.net
 DOMAIN-SUFFIX,msftidentity.com
 DOMAIN-SUFFIX,msidentity.com
-DOMAIN-SUFFIX,msn.cn
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,msocdn.com
 DOMAIN-SUFFIX,msocsp.com
@@ -349,6 +348,7 @@ DOMAIN-SUFFIX,yammerusercontent.com
 DOMAIN-KEYWORD,1drv
 DOMAIN-KEYWORD,microsoft
 DOMAIN-KEYWORD,onedrive
+DOMAIN-KEYWORD,skydrive
 
 # > My Domain
 DOMAIN-SUFFIX,160603.xyz
