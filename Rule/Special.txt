@@ -1,20 +1,5 @@
 ## DOMAIN
 
-# > Apple CDN
-DOMAIN,aod.itunes.apple.com
-DOMAIN,api.smoot.apple.cn
-DOMAIN,appldnld.apple.com
-DOMAIN,apptrailers.itunes.apple.com
-DOMAIN,gs-loc-cn.apple.com
-DOMAIN,iosapps.itunes.apple.com
-DOMAIN,music.apple.com
-DOMAIN,mvod.itunes.apple.com
-DOMAIN,osxapps.itunes.apple.com
-DOMAIN,supportdownload.apple.com
-DOMAIN,swcdn.apple.com
-DOMAIN,updates-http.cdn-apple.com
-DOMAIN-SUFFIX,ls.apple.com
-
 # > Microsoft
 DOMAIN,res-1.cdn.office.net
 DOMAIN,res.cdn.office.net
@@ -58,9 +43,6 @@ IP-CIDR,69.46.75.0/24,no-resolve
 IP-CIDR,205.164.56.0/24,no-resolve
 
 ## UA
-
-# > Apple CDN
-USER-AGENT,com.apple.appstored*
 
 # > Microsoft
 USER-AGENT,Microsoft%20Remote%20Desktop*
