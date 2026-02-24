@@ -804,13 +804,6 @@ IP-CIDR6,2a0a:f280::/32,no-resolve
 
 ## UA
 
-# > Apple
-USER-AGENT,AppleNews*
-USER-AGENT,AppleTV*
-USER-AGENT,com.apple.news*
-USER-AGENT,com.apple.trustd*
-USER-AGENT,com.apple.tv*
-
 # > Google
 USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
 USER-AGENT,*com.google.Drive*
