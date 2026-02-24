@@ -94,24 +94,38 @@ DOMAIN-SUFFIX,youku.com
 DOMAIN-SUFFIX,qwen.ai
 
 # > Apple
+DOMAIN,apple.comscoreresearch.com
 DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,apple.co
-DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple
 DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apple-livephotoskit.com
 DOMAIN-SUFFIX,apple-mapkit.com
-DOMAIN-SUFFIX,applemusic.com
+DOMAIN-SUFFIX,apple-support.akadns.net
+DOMAIN-SUFFIX,apple.cn
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple.com.cdn20.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,apple.com.edgekey.net
+DOMAIN-SUFFIX,apple.com.edgekey.net.globalredir.akadns.net
+DOMAIN-SUFFIX,apple.com.mwcloudcdn.com
+DOMAIN-SUFFIX,apple.com.mwcname.com
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,appstore.com
-DOMAIN-SUFFIX,apzones.com
 DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,digicert.com
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,itunes.com.edgekey.net
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-KEYWORD,apple.com.akadns.net
 DOMAIN-KEYWORD,apple.com.edgekey.net
 DOMAIN-KEYWORD,apple-support.akadns.net
-DOMAIN-KEYWORD,icloud.com.akadns.net
+DOMAIN-KEYWORD,icloud
+DOMAIN-KEYWORD,testflight
 
 # > Baidu
 DOMAIN-SUFFIX,baidu.com
