@@ -23,6 +23,9 @@ DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,itunes.com.edgekey.net
@@ -31,7 +34,7 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-KEYWORD,apple.com.akadns.net
 DOMAIN-KEYWORD,apple.com.edgekey.net
 DOMAIN-KEYWORD,apple-support.akadns.net
-DOMAIN-KEYWORD,icloud
+DOMAIN-KEYWORD,icloud.com.akadns.net
 DOMAIN-KEYWORD,testflight
 
 ## IP
