@@ -63,6 +63,10 @@
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/notebook.png"
         },
         {
+            "name": "Oracle",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/oracle.png"
+        },
+        {
             "name": "PayPal",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/paypal.png"
         },
@@ -97,6 +101,10 @@
         {
             "name": "Social",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/social-media.png"
+        },
+        {
+            "name": "Speed",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/speed.png"
         },
         {
             "name": "Streaming",
