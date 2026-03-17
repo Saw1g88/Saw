@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,egernapp.com
 DOMAIN-SUFFIX,nodeimage.com
 DOMAIN-SUFFIX,quantumult.app
 DOMAIN-SUFFIX,nutrepo.com
+DOMAIN-SUFFIX,ip-api.com
 
 # > Amazon
 DOMAIN,d3c33hcgiwev3.cloudfront.net
