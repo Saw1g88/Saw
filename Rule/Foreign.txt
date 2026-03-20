@@ -444,7 +444,9 @@ DOMAIN-SUFFIX,bcvcdn.com
 DOMAIN-SUFFIX,bongacams.com
 DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-SUFFIX,dditscdn.com
+DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,livejasmin.com
+DOMAIN-SUFFIX,mushroomtrack.com
 DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
@@ -460,6 +462,7 @@ DOMAIN-SUFFIX,xnxx.com
 DOMAIN-SUFFIX,xvideos-cdn.com
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,ypncdn.com
+DOMAIN-KEYWORD,img.cc
 DOMAIN-KEYWORD,porn
 
 # > Region-Restricted Access Denied
