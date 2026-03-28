@@ -6,6 +6,7 @@
 [Header Rewrite]
 http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{{{USERNAME}}} header-del Authorization
 http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{{{USERNAME}}} header-add Authorization "token {{{TOKEN}}}"
+http-request (raw|gist).githubusercontent.com header-replace Accept-Language en-us
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com
