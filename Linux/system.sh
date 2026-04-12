@@ -101,7 +101,6 @@ install_docker() {
     if ! command -v docker &> /dev/null; then
         log "${YELLOW}安装 Docker...${NC}"
         if [[ "$os" == "debian" || "$os" == "ubuntu" ]]; then
-            # 添加 Docker 官方 GPG 密钥和仓库
             apt-get install -y ca-certificates curl gnupg lsb-release || handle_error "安装 Docker 依赖失败"
             mkdir -p /etc/apt/keyrings
             curl -fsSL https://download.docker.com/linux/$os/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg || handle_error "添加 Docker GPG 密钥失败"
@@ -206,11 +205,9 @@ configure_tcp_optimization() {
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         log "${YELLOW}应用 TCP 优化参数...${NC}"
 
-        # 确保 BBR 和 FQ 相关设置存在
         grep -q "net.core.default_qdisc" /etc/sysctl.conf || echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
         grep -q "net.ipv4.tcp_congestion_control" /etc/sysctl.conf || echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
 
-        # 添加 TCP 优化参数（带标识）
         cat >> /etc/sysctl.conf <<EOF
 
 # TCP_OPTIMIZED_MARKER_BEGIN
@@ -248,13 +245,11 @@ EOF
 configure_ipv4_preference() {
     log "${YELLOW}检查 IPv4 优先设置...${NC}"
 
-    # 若规则已存在则无需重复添加
     if grep -q "^[^#]*precedence ::ffff:0:0/96" /etc/gai.conf; then
         log "${CYAN}IPv4 优先规则已存在，跳过。${NC}"
         return
     fi
 
-    # 让用户自行选择
     read -p "是否添加 IPv4 优先规则？(y/n) " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -269,7 +264,6 @@ configure_ipv4_preference() {
 configure_dns() {
     log "${YELLOW}检查 DNS 配置...${NC}"
     
-    # 检查是否安装了 chattr
     if ! command -v chattr &> /dev/null; then
         log "${YELLOW}安装 chattr...${NC}"
         if [[ "$os" == "debian" || "$os" == "ubuntu" ]]; then
@@ -279,41 +273,34 @@ configure_dns() {
         fi
     fi
 
-    # 检查当前 DNS 设置
     if grep -q 'nameserver 8.8.8.8' /etc/resolv.conf && \
        grep -q 'nameserver 1.1.1.1' /etc/resolv.conf && \
        grep -q 'nameserver 2001:4860:4860::8888' /etc/resolv.conf && \
        grep -q 'nameserver 2606:4700:4700::1111' /etc/resolv.conf; then
-        # 检查是否已经设置了不可变属性
         if lsattr /etc/resolv.conf | grep -q 'i'; then
             log "${CYAN}DNS 已正确设置且已锁定，跳过设置。${NC}"
             return
         fi
     fi
 
-    # 如果文件有不可变属性，先移除
     if lsattr /etc/resolv.conf | grep -q 'i'; then
         chattr -i /etc/resolv.conf || handle_error "移除 resolv.conf 不可变属性失败"
     fi
 
-    # 备份当前 DNS 配置
     if [ -f /etc/resolv.conf ]; then
         cp /etc/resolv.conf /etc/resolv.conf.bak || handle_error "DNS 配置备份失败"
     fi
 
-    # 如果存在 systemd-resolved，停用它
     if systemctl is-active systemd-resolved &>/dev/null; then
         log "${YELLOW}停用 systemd-resolved...${NC}"
         systemctl stop systemd-resolved
         systemctl disable systemd-resolved
     fi
 
-    # 如果是符号链接，则删除它
     if [ -L /etc/resolv.conf ]; then
         rm /etc/resolv.conf
     fi
 
-    # 设置新的 DNS 配置
     cat > /etc/resolv.conf <<EOF
 nameserver 8.8.8.8
 nameserver 1.1.1.1
@@ -321,13 +308,10 @@ nameserver 2001:4860:4860::8888
 nameserver 2606:4700:4700::1111
 EOF
 
-    # 设置文件为不可变
     chattr +i /etc/resolv.conf || handle_error "设置 resolv.conf 不可变属性失败"
 
-    # 如果存在 NetworkManager，配置其 DNS 设置
     if command -v nmcli &> /dev/null; then
         log "${YELLOW}配置 NetworkManager DNS 设置...${NC}"
-        # 获取所有连接
         connections=$(nmcli -g NAME connection show)
         for conn in $connections; do
             log "${YELLOW}配置连接 '$conn' 的 DNS 设置...${NC}"
@@ -341,12 +325,10 @@ EOF
 
     log "${GREEN}DNS 设置完成并已锁定配置文件${NC}"
     
-    # 验证设置
     if ! grep -q 'nameserver 8.8.8.8' /etc/resolv.conf; then
         handle_error "DNS 配置验证失败"
     fi
     
-    # 验证不可变属性
     if ! lsattr /etc/resolv.conf | grep -q 'i'; then
         handle_error "DNS 配置文件锁定验证失败"
     fi
@@ -356,7 +338,6 @@ EOF
 configure_swap() {
     log "${YELLOW}检查虚拟内存设置...${NC}"
     
-    # 如果已存在 swap，询问是否重新配置
     if swapon --show | grep -q "/swapfile"; then
         log "${CYAN}检测到已存在 Swap 配置${NC}"
         read -p "是否要重新配置 Swap？(y/n) " -n 1 -r
@@ -365,17 +346,14 @@ configure_swap() {
             log "${CYAN}保留现有 Swap 配置${NC}"
             return
         fi
-        # 如果选择重新配置，先关闭并移除现有的 swap
         swapoff /swapfile || handle_error "关闭现有 swap 失败"
         rm -f /swapfile || handle_error "删除现有 swap 文件失败"
         sed -i '/\/swapfile/d' /etc/fstab || handle_error "从 fstab 移除 swap 配置失败"
     fi
 
-    # 检查系统内存
     total_mem=$(free -m | awk '/^Mem:/{print $2}')
     suggested_swap=$((total_mem / 2))
     
-    # 询问用户想要设置的 swap 大小
     while true; do
         read -p "请输入要设置的 Swap 大小(MB)[建议值: ${suggested_swap}MB, 输入0取消设置]: " swap_size
         if [[ "$swap_size" =~ ^[0-9]+$ ]]; then
@@ -385,7 +363,6 @@ configure_swap() {
         fi
     done
 
-    # 如果输入0，取消设置
     if [ "$swap_size" -eq 0 ]; then
         log "${YELLOW}取消 Swap 设置${NC}"
         return
@@ -393,7 +370,6 @@ configure_swap() {
 
     log "${YELLOW}开始创建 ${swap_size}MB 的 swap 文件...${NC}"
     
-    # 创建 swap 文件
     if ! dd if=/dev/zero of=/swapfile bs=1M count="$swap_size" status=progress; then
         handle_error "创建 swap 文件失败"
         return
@@ -403,12 +379,10 @@ configure_swap() {
     mkswap /swapfile || handle_error "格式化 swap 文件失败"
     swapon /swapfile || handle_error "启用 swap 失败"
 
-    # 添加到 fstab
     if ! grep -q '/swapfile' /etc/fstab; then
         echo '/swapfile none swap sw 0 0' >> /etc/fstab || handle_error "更新 fstab 失败"
     fi
 
-    # 验证 swap 是否成功启用
     if swapon --show | grep -q "/swapfile"; then
         actual_swap_size=$(free -m | awk '/^Swap:/{print $2}')
         log "${GREEN}Swap 设置完成！当前 Swap 大小: ${actual_swap_size}MB${NC}"
@@ -431,11 +405,41 @@ configure_timezone() {
     fi
 }
 
+# 同步系统时间
+sync_time() {
+    log "${YELLOW}同步系统时间...${NC}"
+
+    # 优先使用 chrony
+    if command -v chronyc &> /dev/null; then
+        chronyc makestep &>/dev/null && log "${GREEN}时间同步完成（chrony）${NC}" && return
+    fi
+
+    # 其次使用 ntpdate
+    if command -v ntpdate &> /dev/null; then
+        ntpdate -u pool.ntp.org &>/dev/null && log "${GREEN}时间同步完成（ntpdate）${NC}" && return
+    fi
+
+    # 尝试安装 ntpdate 并同步
+    log "${YELLOW}未找到时间同步工具，尝试安装 ntpdate...${NC}"
+    if [[ "$os" == "debian" || "$os" == "ubuntu" ]]; then
+        apt-get install -y ntpdate -qq && ntpdate -u pool.ntp.org &>/dev/null \
+            && log "${GREEN}时间同步完成（ntpdate）${NC}" && return
+    elif [[ "$os" == "centos" || "$os" == "rhel" ]]; then
+        yum install -y ntpdate -q && ntpdate -u pool.ntp.org &>/dev/null \
+            && log "${GREEN}时间同步完成（ntpdate）${NC}" && return
+    fi
+
+    # 最后退路：启用 systemd-timesyncd
+    log "${YELLOW}尝试使用 systemd-timesyncd 同步时间...${NC}"
+    timedatectl set-ntp true
+    sleep 5
+    log "${GREEN}已启用 NTP 自动同步${NC}"
+}
+
 # 检查并配置语言环境
 configure_locale() {
     log "${YELLOW}检查语言环境配置...${NC}"
     
-    # 1. 安装 locales 包
     if ! dpkg -l | grep -q "^ii.*locales"; then
         log "${YELLOW}安装 locales 包...${NC}"
         apt-get install -y locales || handle_error "安装 locales 失败"
@@ -443,27 +447,21 @@ configure_locale() {
         log "${CYAN}locales 已安装，跳过安装步骤${NC}"
     fi
 
-    # 2. 检查并修改 locale.gen
     if ! grep -q "^zh_CN.UTF-8 UTF-8" /etc/locale.gen; then
         log "${YELLOW}添加中文语言支持...${NC}"
-        # 先备份原文件
         cp /etc/locale.gen /etc/locale.gen.bak
-        # 添加中文支持
         echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
         echo "zh_TW.UTF-8 UTF-8" >> /etc/locale.gen
     else
         log "${CYAN}中文语言环境已在配置文件中，跳过添加步骤${NC}"
     fi
 
-    # 3. 生成语言文件
     log "${YELLOW}生成语言文件...${NC}"
     locale-gen zh_CN.UTF-8 || handle_error "生成中文语言环境失败"
     locale-gen zh_TW.UTF-8 || handle_error "生成繁体中文语言环境失败"
 
-    # 4. 验证语言环境是否已生成
     if locale -a | grep -q "zh_CN.utf8"; then
         log "${CYAN}中文语言环境已成功生成${NC}"
-        # 5. 设置系统默认语言
         update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8 || handle_error "设置默认语言失败"
         log "${GREEN}语言环境配置完成${NC}"
     else
@@ -477,7 +475,7 @@ configure_fonts() {
     
     if ! dpkg -l | grep -q "^ii.*fonts-noto-cjk"; then
         log "${YELLOW}安装中文字体...${NC}"
-        sudo apt install -y fonts-noto-cjk || handle_error "安装字体失败"
+        apt install -y fonts-noto-cjk || handle_error "安装字体失败"
     else
         log "${CYAN}中文字体已安装，跳过安装步骤${NC}"
     fi
@@ -486,29 +484,30 @@ configure_fonts() {
 # 主函数
 main() {
     log "${GREEN}开始系统初始化配置...${NC}"
-    
-    # 执行各项配置
+
+    configure_timezone
+    sync_time
+
     check_disk_space
     detect_os
     update_system
-    
+
     # 安装必要工具
     check_and_install jq
     check_and_install wget
     check_and_install curl
     check_and_install ntp
     check_and_install unzip
-    
+
     install_docker
     configure_bbr_fq
     configure_tcp_optimization
     configure_ipv4_preference
     configure_dns
     configure_swap
-    configure_timezone
     configure_locale
     configure_fonts
-    
+
     log "${GREEN}所有配置完成！${NC}"
 }
 
