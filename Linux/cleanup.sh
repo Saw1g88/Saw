@@ -139,14 +139,6 @@ if [ -d /var/log/mysql ]; then
     find /var/log/mysql -name "*.log.*" -mtime +30 -delete 2>/dev/null || true
 fi
 
-# 清理 core dump（排除虚拟文件系统）
-find / -name "core.*" -type f -mtime +7 \
-    -not -path "/proc/*" \
-    -not -path "/sys/*" \
-    -not -path "/dev/*" \
-    -not -path "/run/*" \
-    -delete 2>/dev/null || true
-
 echo -e "${GREEN}✓ 旧日志清理完成${NC}"
 
 # ------------------------------
