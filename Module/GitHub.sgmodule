@@ -1,5 +1,5 @@
 #!name=GitHub
-#!desc=访问私有仓库
+#!desc=拉取私库内容
 #!arguments=USERNAME:GITHUB_USERNAME,TOKEN:GITHUB_TOKEN,
 #!arguments-desc=[Token获取方式]\nSettings -> Developer settings -> Personal access tokens -> Generate new token -> 在权限列表中找到并勾选 repo 和 gist 提交生成
 
