@@ -1,6 +1,5 @@
 ## DOMAIN
 
-DOMAIN,identity.apple.com
 DOMAIN-SUFFIX,push.apple.com
 
 ## IP
