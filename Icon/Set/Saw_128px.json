@@ -15,6 +15,18 @@
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/apple.png"
         },
         {
+            "name": "Bilibili",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/bilibili.png"
+        },
+        {
+            "name": "Block",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/block.png"
+        },
+        {
+            "name": "Bypass",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/bypass.png"
+        },
+        {
             "name": "Chain",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/chain.png"
         },
@@ -41,6 +53,10 @@
         {
             "name": "Final",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/endless.png"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/github.png"
         },
         {
             "name": "Google",
@@ -85,6 +101,10 @@
         {
             "name": "Safe",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/secure-shield.png"
+        },
+        {
+            "name": "Scanner",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/script.png"
         },
         {
             "name": "Script",
