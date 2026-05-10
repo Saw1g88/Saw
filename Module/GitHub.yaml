@@ -1,0 +1,30 @@
+name: Github
+description: 拉取私库内容
+icon: https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/github.png
+compat_arguments:
+  用户名: 
+  令牌: 
+compat_arguments_desc: |-
+  [令牌获取方式]
+  头像菜单 -> Settings -> Developer settings -> Personal access tokens -> Generate new token -> 在权限列表中找到并勾选 repo 和 gist 然后提交生成
+dns: {}
+header_rewrites:
+- delete:
+    match: ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{{{用户名}}}
+    name: Authorization
+    type: request
+- add:
+    match: ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{{{用户名}}}
+    name: Authorization
+    value: token {{{令牌}}}
+    type: request
+- replace:
+    match: (raw|gist).githubusercontent.com
+    name: Accept-Language
+    value: en-us
+    type: request
+mitm:
+  hostnames:
+    includes:
+    - raw.githubusercontent.com
+    - gist.githubusercontent.com
