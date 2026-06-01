@@ -125,7 +125,7 @@ renew_certificates() {
 
     # 拉取最新镜像，防止镜像损坏导致续期失败
     log "拉取最新 certbot 镜像..."
-    docker compose pull certbot >> "$LOG_FILE" 2>&1
+    docker compose pull >> "$LOG_FILE" 2>&1
 
     local output=$(docker compose run --rm certbot certbot renew --non-interactive --agree-tos 2>&1)
     local result=$?
