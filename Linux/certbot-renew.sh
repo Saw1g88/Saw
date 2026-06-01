@@ -212,6 +212,11 @@ $all_certs_status"
         error_exit "证书更新过程出错，退出码: $renew_result"
     fi
 
+    # 检查输出中是否含有明显错误标志
+    if echo "$certbot_output" | grep -q "Traceback\|Error\|error"; then
+        error_exit "certbot 输出包含错误信息，请检查日志"
+    fi    
+
     current_cert_info=$(get_cert_info)
     all_certs_status=$(format_cert_status "$current_cert_info")
 
