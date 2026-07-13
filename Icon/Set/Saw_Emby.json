@@ -1,0 +1,46 @@
+{
+    "name": "Saw_Emby",
+    "description": "by Saw",
+    "icons": [
+        {
+            "name": "Saw",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Saw.jpg"
+        },
+        {
+            "name": "悲伤小鸡",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/beishangxiaoji.png"
+        },
+        {
+            "name": "Lunaris",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/lunaris.png"
+        },
+        {
+            "name": "Mirai",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/mirai.png"
+        },
+        {
+            "name": "Nya",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/nya.png"
+        },
+        {
+            "name": "OkEmby",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/okemby.png"
+        },
+        {
+            "name": "起点站",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/qidianzhan.png"
+        },
+        {
+            "name": "Shrek",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/shrek.png"
+        },
+        {
+            "name": "SNTP",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/sntp.png"
+        },
+        {
+            "name": "野草地",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/yecaodi.png"
+        }
+    ]
+}
