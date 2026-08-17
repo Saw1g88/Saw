@@ -1,14 +1,14 @@
-#!name=GitHub
-#!desc=拉取 GitHub 私库内容
+#!name = GitHub
+#!desc = 拉取私库内容
+#!arguments = username:用户名,token:令牌
+#!arguments-desc = [令牌获取方式]\nSettings -> Developer settings -> Personal access tokens -> Generate new token -> 在权限列表中找到并勾选 repo 和 gist 提交生成\n\n注意：本插件需要将 github_auth.js 放到你自己可访问的位置（比如你自己的 GitHub 仓库或 gist），并把下面 [Script] 里的 script-path 换成你的 raw 链接。
 
 [Argument]
-用户名 = input,"",tag=用户名,desc=GitHub 用户名
-令牌 = input,"",tag=令牌,desc=GitHub Personal Access Token
+username = input,"用户名",tag=用户名,desc=填入你的 GitHub 用户名
+token = input,"令牌",tag=令牌,desc=填入生成的 Personal access token
 
-[Rewrite]
-^https?:\/\/(raw|gist)\.githubusercontent\.com\/${用户名} header-del Authorization
-^https?:\/\/(raw|gist)\.githubusercontent\.com\/${用户名} header-add Authorization token ${令牌}
-^https?:\/\/(raw|gist)\.githubusercontent\.com header-replace Accept-Language en-us
+[Script]
+http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com script-path=https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Module/Script/github.js, requires-body=false, timeout=10, tag=github_private_auth, argument=[{username},{token}]
 
-[Mitm]
+[MITM]
 hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com
