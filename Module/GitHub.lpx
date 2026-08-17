@@ -1,0 +1,14 @@
+#!name=GitHub
+#!desc=拉取 GitHub 私库内容
+
+[Argument]
+用户名 = input,"",tag=用户名,desc=GitHub 用户名
+令牌 = input,"",tag=令牌,desc=GitHub Personal Access Token
+
+[Rewrite]
+^https?:\/\/(raw|gist)\.githubusercontent\.com\/${用户名} header-del Authorization
+^https?:\/\/(raw|gist)\.githubusercontent\.com\/${用户名} header-add Authorization token ${令牌}
+^https?:\/\/(raw|gist)\.githubusercontent\.com header-replace Accept-Language en-us
+
+[Mitm]
+hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com
