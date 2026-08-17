@@ -1,0 +1,16 @@
+#!name = GitHub
+#!desc = 拉取私库内容
+#!arguments = username:用户名,token:令牌
+#!arguments-desc = [令牌获取方式]\nSettings -> Developer settings -> Personal access tokens -> Generate new token -> 在权限列表中找到并勾选 repo 和 gist 提交生成
+
+[Argument]
+username = input,"用户名",tag=用户名,desc=填入你的 GitHub 用户名
+token = input,"令牌",tag=令牌,desc=填入生成的 Personal access token
+
+[Rewrite]
+http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{username} header-del Authorization
+http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{username} header-add Authorization "token {token}"
+http-request (raw|gist).githubusercontent.com header-replace Accept-Language en-us
+
+[MITM]
+hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com
