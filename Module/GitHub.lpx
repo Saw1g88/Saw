@@ -1,10 +1,9 @@
-#!name = GitHub Private Access
-#!desc = GitHub 访问私有仓库
-#!author = Peng-YM (modified)
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+#!name = GitHub
+#!desc = 拉取私库内容
+#!icon = https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/github.png
 
 [Argument]
-username = input,"",tag=GitHub用户名,desc=你的GitHub用户名，用于判断是否为你自己的私库
+username = input,"",tag=GitHub 用户名,desc=GitHub 用户名
 token = input,"",tag=Token,desc=GitHub Personal Access Token（Settings->Developer settings->Personal access tokens，勾选repo权限）
 
 [Script]
