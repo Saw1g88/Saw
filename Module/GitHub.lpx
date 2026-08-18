@@ -1,0 +1,14 @@
+#!name = Github
+#!desc = 拉取私库内容
+#!icon = https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/github.png
+
+[Argument]
+username = input,"",tag=用户名,desc=GitHub 用户名，用于限定只对自己仓库的 raw 链接附加 Token
+token = input,"",tag=令牌,desc=GitHub Personal Access Token，需要勾选 repo 和 gist 权限
+
+[Rewrite]
+request if ${url} ~= /^https?:\/\/(raw|gist)\.githubusercontent\.com\// && ${url} ~= ${username} then request.header.set("Authorization", "token ${token}")
+request if ${url} ~= /^https?:\/\/(raw|gist)\.githubusercontent\.com\// then request.header.set("Accept-Language", "en-us")
+
+[MITM]
+hostname = raw.githubusercontent.com, gist.githubusercontent.com
