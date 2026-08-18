@@ -3,11 +3,10 @@
 #!icon = https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/github.png
 
 [Argument]
-username = input,"",tag=用户名,desc=GitHub 用户名
 token = input,"",tag=令牌,desc=GitHub Personal Access Token
 
 [Rewrite]
-request if ${url} ~= /^https?:\/\/(?:raw|gist)\.githubusercontent\.com\/${username}(?:\/|$)/ then request.header.del("Authorization") | request.header.set("Authorization", "token ${token}")
+request if ${url} ~= /^https?:\/\/(?:raw|gist)\.githubusercontent\.com/ then request.header.del("Authorization") | request.header.set("Authorization", "token ${token}")
 request if ${url} ~= /^https?:\/\/(?:raw|gist)\.githubusercontent\.com/ then request.header.set("Accept-Language", "en-us")
 
 [Mitm]
