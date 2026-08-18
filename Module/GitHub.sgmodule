@@ -1,5 +1,8 @@
 #!name=GitHub
 #!desc=拉取私库内容
+#!category=GitHub
+#!arguments=USERNAME:GITHUB_USERNAME,TOKEN:GITHUB_TOKEN,
+#!arguments-desc=[Token获取方式]\n头像菜单 -> Settings -> Developer settings -> Personal access tokens -> Generate new token -> 在权限列表中找到并勾选 repo 和 gist 然后提交生成
 
 [Header Rewrite]
 http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{{{USERNAME}}} header-del Authorization
