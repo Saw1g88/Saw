@@ -1,13 +1,15 @@
-#!name = Github
-#!desc = 拉取私库内容
-#!icon = https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/128px/github.png
+#!name=GitHub
+#!desc=拉取私库内容
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1048.png
 
 [Argument]
-token = input,"",tag=令牌,desc=GitHub Personal Access Token
+用户名=input,"",tag=用户名,desc=GitHub 用户名
+令牌=input,"",tag=令牌,desc=GitHub Personal Access Token
 
 [Rewrite]
-request if ${url} ~= /^https?:\/\/(?:raw|gist)\.githubusercontent\.com/ then request.header.del("Authorization") | request.header.set("Authorization", "token ${token}")
-request if ${url} ~= /^https?:\/\/(?:raw|gist)\.githubusercontent\.com/ then request.header.set("Accept-Language", "en-us")
+^https?:\/\/(raw|gist)\.githubusercontent\.com\/{用户名} header-del Authorization
+^https?:\/\/(raw|gist)\.githubusercontent\.com\/{用户名} header-add Authorization token {令牌}
+^https?:\/\/(raw|gist)\.githubusercontent\.com header-replace Accept-Language en-us
 
-[Mitm]
-hostname = %APPEND% raw\.githubusercontent\.com, gist\.githubusercontent\.com
+[MITM]
+hostname = raw.githubusercontent.com, gist.githubusercontent.com
