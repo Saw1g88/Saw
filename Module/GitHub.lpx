@@ -8,7 +8,7 @@ username = input,"",tag=GitHub用户名,desc=你的GitHub用户名，用于判�
 token = input,"",tag=Token,desc=GitHub Personal Access Token（Settings->Developer settings->Personal access tokens，勾选repo权限）
 
 [Script]
-http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com requires-body=false, script-path=https://你的脚本托管地址/github-private-repo.js, tag=Github Private, argument=[{username},{token}]
+http-request ^https?:\/\/(raw|gist)\.githubusercontent\.com requires-body=false, script-path=https://raw.githubusercontent.com/Saw1g88/Saw/refs/heads/main/Module/Script/GitHub/github.js, tag=Github Private, argument=[{username},{token}]
 
 [MITM]
 hostname = raw.githubusercontent.com, gist.githubusercontent.com
