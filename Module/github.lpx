@@ -1,0 +1,13 @@
+#!name = GitHub Private Access
+#!desc = 拉取私有仓库/Gist内容（无需脚本）
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+
+[Argument]
+username = input,"",tag=GitHub用户名,desc=你的GitHub用户名，只有URL属主匹配这个值才会附加token
+token = input,"",tag=Token,desc=GitHub Personal Access Token（Classic token，勾选repo权限）
+
+[Rewrite]
+request if ${url} ~= /^https?:\/\/(?:raw|gist)\.githubusercontent\.com\/([^\/]+)\// as owner && ${owner.1} == ${username} then request.header.set("Authorization", "token ${token}") | request.header.set("Accept-Language", "en-us")
+
+[MITM]
+hostname = raw.githubusercontent.com, gist.githubusercontent.com
