@@ -67,7 +67,7 @@ init_environment() {
     done
     
     # 创建日志目录
-    mkdir -p logs
+    mkdir -p error
     
     # 设置同步方向
     SYNC_DIRECTION=$(get_sync_direction)
@@ -75,7 +75,7 @@ init_environment() {
 
 # 运行同步任务
 run_sync_task() {
-    local log_file="logs/${CONTAINER_NAME}_$(date '+%Y%m%d_%H%M%S').log"
+    local log_file="error/${CONTAINER_NAME}_$(date '+%Y%m%d_%H%M%S').log"
     
     echo -e "${GREEN}开始运行 Garmin 同步任务${SYNC_DIRECTION}...${NC}"
     
