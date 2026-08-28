@@ -30,12 +30,27 @@ error_exit() {
     exit 1
 }
 
-# 获取同步方向
+# 获取同步方向和类型描述
 get_sync_direction() {
     case "$YARN_SYNC" in
-        *sync_global*) echo "（国际→中国）" ;;
-        *sync_cn*) echo "（中国→国际）" ;;
-        *) echo "" ;;
+        "yarn sync_cn")
+            echo "（国际→中国，仅活动数据）" ;;
+        "yarn sync_global")
+            echo "（中国→国际，仅活动数据）" ;;
+        "yarn sync_all_cn_to_global")
+            echo "（中国→国际，活动数据 + Wellness）" ;;
+        "yarn sync_all_global_to_cn")
+            echo "（国际→中国，活动数据 + Wellness）" ;;
+        "yarn sync_wellness_cn_to_global")
+            echo "（中国→国际，仅 Wellness）" ;;
+        "yarn sync_wellness_global_to_cn")
+            echo "（国际→中国，仅 Wellness）" ;;
+        "yarn migrate_garmin_cn_to_global")
+            echo "（中国→国际，历史数据迁移）" ;;
+        "yarn migrate_garmin_global_to_cn")
+            echo "（国际→中国，历史数据迁移）" ;;
+        *)
+            echo "" ;;
     esac
 }
 
@@ -70,16 +85,16 @@ run_sync_task() {
         
         if echo "$last_line" | grep -q "Done"; then
             # 同步成功
-            echo -e "${GREEN}运动数据同步完成${SYNC_DIRECTION}${NC}"
-            send_notification "success" "运动数据同步完成${SYNC_DIRECTION}"
+            echo -e "${GREEN}数据同步完成${SYNC_DIRECTION}${NC}"
+            send_notification "success" "数据同步完成${SYNC_DIRECTION}"
             
             # 成功时删除日志文件（可选）
             rm "$log_file"
             return 0
         else
             # 同步失败（程序执行了但结果不是 Done）
-            echo -e "${RED}运动数据同步异常${SYNC_DIRECTION}${NC}"
-            send_notification "error" "运动数据同步异常${SYNC_DIRECTION}
+            echo -e "${RED}数据同步异常${SYNC_DIRECTION}${NC}"
+            send_notification "error" "数据同步异常${SYNC_DIRECTION}
 日志文件：$log_file"
             return 1
         fi
