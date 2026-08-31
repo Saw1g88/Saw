@@ -52,10 +52,10 @@ error_exit() {
 get_sync_direction() {
     case "$SYNC_DIRECTION" in
         "GARMIN_TO_COROS")
-            echo "（Garmin Sync COROS）"
+            echo "（Garmin → COROS）"
             ;;
         "COROS_TO_GARMIN")
-            echo "（COROS Sync Garmin）"
+            echo "（COROS → Garmin）"
             ;;
         "BIDIRECTIONAL")
             echo "（COROS ↔ Garmin）"
