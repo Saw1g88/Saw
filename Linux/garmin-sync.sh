@@ -14,7 +14,7 @@ send_notification() {
         icon="✅"
     fi
 
-    local telegram_message="*[$SERVER_NAME | Garmin Connect]*
+    local telegram_message="*[$SERVER_NAME | Garmin Sync]*
 $icon $message"
 
     curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
