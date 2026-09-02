@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================
-# Garmin COROS Sync
+# Garmin Coros Sync
 # ============================================================
 
 GREEN='\033[0;32m'
@@ -55,10 +55,10 @@ error_exit() {
 get_sync_description() {
     case "$SYNC_COMMAND" in
         *sync_garmin_to_coros*)
-            echo "（Garmin → COROS）"
+            echo "（Garmin → Coros）"
             ;;
         *sync_coros_to_garmin*)
-            echo "（COROS → Garmin）"
+            echo "（Coros → Garmin）"
             ;;
         *)
             echo "（${SYNC_COMMAND}）"
