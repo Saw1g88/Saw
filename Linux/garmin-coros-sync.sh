@@ -22,7 +22,7 @@ send_notification() {
         icon="✅"
     fi
 
-    local telegram_message="*[$SERVER_NAME | Garmin COROS Sync]*
+    local telegram_message="*[$SERVER_NAME | Garmin Coros Sync]*
 $icon $message"
 
     curl -s -X POST \
