@@ -33,29 +33,29 @@ error_exit() {
 get_sync_direction() {
     case "$YARN_SYNC" in
         "yarn sync_cn")
-            echo "（国际→中国，仅活动数据）" ;;
+            echo "（国际 → 中国，仅活动数据）" ;;
         "yarn sync_global")
-            echo "（中国→国际，仅活动数据）" ;;
+            echo "（中国 → 国际，仅活动数据）" ;;
         "yarn sync_all_cn_to_global")
-            echo "（中国→国际，活动数据 + Wellness）" ;;
+            echo "（中国 → 国际，活动数据 + Wellness）" ;;
         "yarn sync_all_global_to_cn")
-            echo "（国际→中国，活动数据 + Wellness）" ;;
+            echo "（国际 → 中国，活动数据 + Wellness）" ;;
         "yarn sync_wellness_cn_to_global")
-            echo "（中国→国际，仅 Wellness）" ;;
+            echo "（中国 → 国际，仅 Wellness）" ;;
         "yarn sync_wellness_global_to_cn")
-            echo "（国际→中国，仅 Wellness）" ;;
+            echo "（国际 → 中国，仅 Wellness）" ;;
         "yarn migrate_garmin_cn_to_global")
-            echo "（中国→国际，历史数据迁移）" ;;
+            echo "（中国 → 国际，历史数据迁移）" ;;
         "yarn migrate_garmin_global_to_cn")
-            echo "（国际→中国，历史数据迁移）" ;;
+            echo "（国际 → 中国，历史数据迁移）" ;;
         "yarn migrate_all_cn_to_global")
-            echo "（中国→国际，历史数据 + Wellness 迁移）" ;;
+            echo "（中国 → 国际，历史数据 + Wellness 迁移）" ;;
         "yarn migrate_all_global_to_cn")
-            echo "（国际→中国，历史数据 + Wellness 迁移）" ;;
+            echo "（国际 → 中国，历史数据 + Wellness 迁移）" ;;
         "yarn migrate_wellness_cn_to_global")
-            echo "（中国→国际，历史 Wellness 迁移）" ;;
+            echo "（中国 → 国际，历史 Wellness 迁移）" ;;
         "yarn migrate_wellness_global_to_cn")
-            echo "（国际→中国，历史 Wellness 迁移）" ;;
+            echo "（国际 → 中国，历史 Wellness 迁移）" ;;
         *)
             echo "" ;;
     esac
