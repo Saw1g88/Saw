@@ -46,10 +46,6 @@ error_exit() {
 
 # ============================================================
 # 根据 SYNC_COMMAND 生成通知里用的方向描述
-#
-# 不需要额外维护 SYNC_DIRECTION 变量——直接从实际要跑的命令里
-# 识别方向，两者不会对不上；识别不出来的命令就直接把命令本身
-# 当描述用，不会报错
 # ============================================================
 
 get_sync_description() {
@@ -73,18 +69,9 @@ get_sync_description() {
 
 init_environment() {
 
-    # --------------------------------------------------------
-    # 加载 .env
-    # --------------------------------------------------------
-
     [ ! -f .env ] && error_exit "未找到 .env 文件"
 
     source .env
-
-
-    # --------------------------------------------------------
-    # 检查必要变量
-    # --------------------------------------------------------
 
     local required_vars=(
         "CONTAINER_NAME"
@@ -100,17 +87,7 @@ init_environment() {
         fi
     done
 
-
-    # --------------------------------------------------------
-    # 创建日志目录
-    # --------------------------------------------------------
-
     mkdir -p error
-
-
-    # --------------------------------------------------------
-    # 通知文案里用的同步方向描述
-    # --------------------------------------------------------
 
     SYNC_DESCRIPTION=$(get_sync_description)
 }
@@ -119,12 +96,11 @@ init_environment() {
 # ============================================================
 # 运行同步任务
 #
-# 只根据 Docker 返回码判断成功/失败
-#
-# 0     = 成功
-# 非 0  = 异常
-#
-# 有没有新数据都算同步完成
+# 注意：不能只看 docker compose run 的退出码来判断成功/失败——
+# 单条活动同步失败时（比如 COROS token 失效导致某条导入失败），
+# 进程本身仍然会正常 exit 0（失败的活动标记为未同步，下次自动
+# 重试，不会因为一条失败就让整个任务报异常退出）。真正有没有
+# 失败要从日志里"成功: N / 失败: N"这一行解析出来
 #
 # 注意：docker compose run --rm "$CONTAINER_NAME" 里的
 # $CONTAINER_NAME 传的是 docker-compose.yml 里的 service 名，
@@ -137,12 +113,39 @@ run_sync_task() {
 
     local log_file="error/${CONTAINER_NAME}_$(date '+%Y%m%d_%H%M%S').log"
 
-    echo -e "${GREEN}开始运行 Garmin Sync COROS${SYNC_DESCRIPTION}...${NC}"
+    echo -e "${GREEN}开始运行 Garmin Coros Sync${SYNC_DESCRIPTION}...${NC}"
 
     docker rm -f "$CONTAINER_NAME" 2>/dev/null
 
-    if docker compose run --rm "$CONTAINER_NAME" \
-        > "$log_file" 2>&1; then
+    docker compose run --rm "$CONTAINER_NAME" > "$log_file" 2>&1
+    local exit_code=$?
+
+    local failed_count
+    failed_count=$(grep -o '失败: [0-9]*' "$log_file" | tail -n 1 | grep -o '[0-9]*')
+
+    if [ "$exit_code" -ne 0 ]; then
+
+        echo -e "${RED}同步异常${SYNC_DESCRIPTION}${NC}"
+
+        send_notification \
+            "error" \
+            "同步异常${SYNC_DESCRIPTION}
+日志文件：$log_file"
+
+        return 1
+
+    elif [ -n "$failed_count" ] && [ "$failed_count" -gt 0 ]; then
+
+        echo -e "${RED}同步存在失败项${SYNC_DESCRIPTION}（失败 ${failed_count} 条）${NC}"
+
+        send_notification \
+            "error" \
+            "同步存在失败项${SYNC_DESCRIPTION}
+失败 ${failed_count} 条，详情见：$log_file"
+
+        return 1
+
+    else
 
         echo -e "${GREEN}数据同步完成${SYNC_DESCRIPTION}${NC}"
 
@@ -154,16 +157,6 @@ run_sync_task() {
 
         return 0
 
-    else
-
-        echo -e "${RED}同步异常${SYNC_DESCRIPTION}${NC}"
-
-        send_notification \
-            "error" \
-            "同步异常${SYNC_DESCRIPTION}
-日志文件：$log_file"
-
-        return 1
     fi
 }
 
