@@ -80,31 +80,6 @@ init_environment() {
     SYNC_DIRECTION=$(get_sync_direction)
 }
 
-# 导出 Garmin 登录 session（对应 compose 里 profiles: tools 的 garmin-sessions 服务）
-# 用于首次登录，或者同步任务因 session 失效而报错时手动/自动重新生成
-run_export_sessions() {
-    local log_file="error/sessions_$(date '+%Y%m%d_%H%M%S').log"
-
-    echo -e "${GREEN}开始导出 Garmin 登录 session...${NC}"
-
-    # 兜底清理同名残留容器，避免 --rm 未及时清理导致命名冲突
-    docker rm -f garmin-sessions 2>/dev/null
-
-    # garmin-sessions 服务打了 profiles: tools 标签，不显式激活 profile 的话
-    # compose 会把它过滤掉，导致 "no such service" 报错，所以这里必须加 --profile tools
-    if docker compose --profile tools run --rm garmin-sessions > "$log_file" 2>&1; then
-        echo -e "${GREEN}Session 导出完成${NC}"
-        send_notification "success" "Session 导出完成"
-        rm "$log_file"
-        return 0
-    else
-        echo -e "${RED}Session 导出失败${NC}"
-        send_notification "error" "Session 导出失败
-日志文件：$log_file"
-        return 1
-    fi
-}
-
 # 运行同步任务
 run_sync_task() {
     local log_file="error/${CONTAINER_NAME}_$(date '+%Y%m%d_%H%M%S').log"
@@ -114,47 +89,50 @@ run_sync_task() {
     # 兜底清理同名残留容器
     docker rm -f "$CONTAINER_NAME" 2>/dev/null
 
-    # 用 run --rm 一次性执行，避免 up -d 与 start -a 重复触发同一次同步
-    if docker compose run --rm "$CONTAINER_NAME" > "$log_file" 2>&1; then
-        local last_line
-        last_line=$(tail -n 1 "$log_file")
+    # 用 tee 把输出同时打到屏幕（方便直接在 VPS 上盯着看进度）和日志文件；
+    # 用 PIPESTATUS[0] 拿 docker 命令本身的退出码，而不是 tee 的
+    docker compose run --rm "$CONTAINER_NAME" 2>&1 | tee "$log_file"
+    local exit_code=${PIPESTATUS[0]}
 
-        if echo "$last_line" | grep -q "Done"; then
-            # 同步成功
-            echo -e "${GREEN}数据同步完成${SYNC_DIRECTION}${NC}"
-            send_notification "success" "数据同步完成${SYNC_DIRECTION}"
-           # 删除 error 日志
-           # rm "$log_file"
-           # return 0
-        else
-            # 同步失败（程序执行了但结果不是 Done，可能是 session 失效等原因）
-            echo -e "${RED}数据同步异常${SYNC_DIRECTION}${NC}"
-            send_notification "error" "数据同步异常${SYNC_DIRECTION}
-日志文件：$log_file"
-            return 1
-        fi
-    else
-        # Docker 命令执行失败
+    # 不能只看最后一行有没有 "Done"——那只是 yarn 命令跑完固定打印的收尾提示
+    # （"Done in Xs."），跟这次同步里每一天 wellness 数据有没有真的传成功没有
+    # 必然关系：只要 yarn 进程没崩溃退出，就会打印这行，哪怕中间某一天真的
+    # 有失败也一样。真正的结果要看日志里每一行
+    # "sync <日期> done, total=X, uploaded=Y, duplicate=Z, failed=N"
+    # 里的 failed 字段（duplicate 是正常重复跳过，不算失败），把所有天数的
+    # failed 加总，才是这次运行真正失败了多少条
+    local total_failed=0
+    while IFS= read -r n; do
+        total_failed=$((total_failed + n))
+    done < <(grep -o 'failed=[0-9]*' "$log_file" | grep -o '[0-9]*')
+
+    if [ "$exit_code" -ne 0 ]; then
+        # Docker 命令本身执行失败
         echo -e "${RED}Docker 容器启动或执行失败${NC}"
         send_notification "error" "Docker 容器启动或执行失败${SYNC_DIRECTION}
 日志文件：$log_file"
         return 1
+
+    elif [ "$total_failed" -gt 0 ]; then
+        # 进程正常跑完，但里面有真正失败（非重复）的条目
+        echo -e "${RED}数据同步存在失败项${SYNC_DIRECTION}（失败 ${total_failed} 条）${NC}"
+        send_notification "error" "数据同步存在失败项${SYNC_DIRECTION}
+失败 ${total_failed} 条，详情见：$log_file"
+        return 1
+
+    else
+        # 同步成功
+        echo -e "${GREEN}数据同步完成${SYNC_DIRECTION}${NC}"
+        send_notification "success" "数据同步完成${SYNC_DIRECTION}"
+        # 日志始终保留，方便随时查看，不删除
+        return 0
     fi
 }
 
 # 主函数
 main() {
     init_environment
-
-    case "$1" in
-        sessions)
-            # 用法：./garmin-sync.sh sessions
-            run_export_sessions
-            ;;
-        *)
-            run_sync_task
-            ;;
-    esac
+    run_sync_task
 }
 
 main "$@"
