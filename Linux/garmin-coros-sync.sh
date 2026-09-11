@@ -117,8 +117,10 @@ run_sync_task() {
 
     docker rm -f "$CONTAINER_NAME" 2>/dev/null
 
-    docker compose run --rm "$CONTAINER_NAME" > "$log_file" 2>&1
-    local exit_code=$?
+    # 用 tee 把输出同时打到屏幕（方便你直接在 VPS 上盯着看进度）和日志文件；
+    # 用 PIPESTATUS[0] 拿 docker 命令本身的退出码，而不是 tee 的（管道里 $? 默认是最后一个命令的）
+    docker compose run --rm "$CONTAINER_NAME" 2>&1 | tee "$log_file"
+    local exit_code=${PIPESTATUS[0]}
 
     local failed_count
     failed_count=$(grep -o '失败: [0-9]*' "$log_file" | tail -n 1 | grep -o '[0-9]*')
