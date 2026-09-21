@@ -22,7 +22,7 @@ send_notification() {
         icon="✅"
     fi
 
-    local telegram_message="*[$SERVER_NAME | Garmin Coros Sync]*
+    local telegram_message="*[$SERVER_NAME | COROS Sync]*
 $icon $message"
 
     curl -s -X POST \
@@ -51,10 +51,10 @@ error_exit() {
 get_sync_description() {
     case "$SYNC_COMMAND" in
         *sync_garmin_to_coros*)
-            echo "（Garmin → Coros）"
+            echo "（Garmin → COROS）"
             ;;
         *sync_coros_to_garmin*)
-            echo "（Coros → Garmin）"
+            echo "（COROS → Garmin）"
             ;;
         *)
             echo "（${SYNC_COMMAND}）"
@@ -113,7 +113,7 @@ run_sync_task() {
 
     local log_file="error/${CONTAINER_NAME}_$(date '+%Y%m%d_%H%M%S').log"
 
-    echo -e "${GREEN}开始运行 Garmin Coros Sync${SYNC_DESCRIPTION}...${NC}"
+    echo -e "${GREEN}开始运行 COROS Sync${SYNC_DESCRIPTION}...${NC}"
 
     docker rm -f "$CONTAINER_NAME" 2>/dev/null
 
