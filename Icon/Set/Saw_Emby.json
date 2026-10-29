@@ -16,7 +16,11 @@
         },
         {
             "name": "宸澄",
-            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/cc.png"
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/chencheng.png"
+        },
+        {
+            "name": "宸澄",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/chencheng2.png"
         },
         {
             "name": "ETF",
@@ -77,6 +81,10 @@
         {
             "name": "这只猫",
             "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/zhezhimao.png"
+        },
+        {
+            "name": "这只猫",
+            "url": "https://raw.githubusercontent.com/Saw1g88/Saw/main/Icon/Emby/zhezhimao2.png"
         }
     ]
 }
